@@ -1,0 +1,100 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   android:background="@drawable/dialpad_backgroundd">
+
+    <TextView
+        android:id="@+id/CHECK_HEADER"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="VOUCHER REFILL"
+        android:visibility="gone"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        android:textStyle="bold" 
+        android:gravity="center"
+         android:background="#108DB9"/>
+ 
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/CHECK_HEADER"
+        android:layout_marginTop="23dp"
+        android:text="Enter Your Voucher Number"
+        android:textColor="#026D95" 
+         android:gravity="center"
+        android:textSize="18sp"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/ADD_CONTACT_CHECH_RATE"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/CHECK_REFILL_EDIT"
+        android:layout_marginRight="14dp"
+        android:background="@drawable/add_contact"
+        android:onClick="onClick"
+        android:visibility="gone"
+       
+        />
+
+    <Button
+        android:id="@+id/REFILL_BUTTON"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_below="@+id/CHECK_REFILL_EDIT"
+        android:layout_marginTop="40dp"
+        android:background="#32B5E3"
+        android:onClick="onClick"
+        android:text="Submit"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/CHECK_REFILL_EDIT"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="76dp"
+        android:background="@drawable/bar"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Enter Your Voucher Number"
+        android:inputType="phone"
+        android:textColor="#000000"
+        android:textColorHint="#696969"
+        android:textCursorDrawable="@drawable/cursor" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/exit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/REFILL_BUTTON"
+        android:layout_below="@+id/REFILL_BUTTON"
+        android:layout_marginTop="24dp"
+        android:background="#F73537"
+        android:onClick="onClick"
+        android:text="Back"
+         android:layout_marginRight="25dp"
+        
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <string name="next">Volgende</string>
+  <string name="invalid_sip_uri">Sip uri nie geldig vir oproep nie</string>
+  <string name="cancel">Kanselleer</string>
+  <string name="use">Gebruik :</string>
+  <string name="recentCalls_empty">Geen Oproep Registers</string>
+  <string name="callLog_delete_entry">Skrap hierdie oproep</string>
+  <string name="callLog_delete_all">Skrap alle oproepe</string>
+  <string name="callLog_delDialog_title">Skrap Oproep Registers</string>
+  <string name="callLog_delDialog_yes">Ja</string>
+  <string name="callLog_delDialog_no">Nee</string>
+  <string name="dial_tab_name_text">Skakel</string>
+  <string name="calllog_tab_name_text">OproepRegisters</string>
+  <string name="messages_tab_name_text">Boodskappe</string>
+  <string name="service_ticker_registered_text">SIP Geregistreer</string>
+  <string name="outgoing_call_chooser_call_text">Bel</string>
+  <string name="help">Help</string>
+  <string name="ok">Anvaar</string>
+  <string name="warning">Quit Dialer ?</string>
+  <string name="choose_phone">Selekteer foon</string>
+  <!--Presence stuff-->
+  
+  <!-- Login page -->
+    <string name="hint_sip">SIP Server IP</string>
+    <string name="hint_proxy">Tik Proxy (opsioneel)</string>
+    <string name="hint_pass">Tik PIN /wagwoord</string>
+    <string name="hint_user">Voer jou gebruikersnaam</string>
+    
+  
+        <string name="about">nie About</string>
+    <string name="about_desc">oor ons</string>
+    <string name="exit">uitgang</string>
+    <string name="exit_desc">uitgang van die app</string>
+</resources>

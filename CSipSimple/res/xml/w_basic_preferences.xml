@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <EditTextPreference
+        android:dialogMessage="@string/w_common_display_name_desc"
+        android:key="display_name"
+        android:singleLine="true"
+        android:summary="@string/w_common_display_name_desc"
+        android:title="@string/w_common_display_name" />
+    <EditTextPreference
+        android:dialogMessage="@string/w_basic_username_desc"
+        android:inputType="textVisiblePassword"
+        android:key="username"
+        android:singleLine="true"
+        android:summary="@string/w_basic_username_desc"
+        android:title="@string/w_basic_username" />
+    <EditTextPreference
+        android:dialogMessage="@string/w_common_server_desc"
+        android:inputType="textVisiblePassword"
+        android:key="server"
+        android:singleLine="true"
+        android:summary="@string/w_common_server_desc"
+        android:title="@string/w_common_server" />
+
+    <com.numberone.widgets.PasswordPreference
+        android:dialogMessage="@string/w_basic_password_desc"
+        android:key="password"
+        android:password="true"
+        android:singleLine="true"
+        android:summary="@string/w_basic_password_desc"
+        android:title="@string/w_basic_password" />
+
+</PreferenceScreen>

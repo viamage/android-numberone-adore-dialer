@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Copyright (C) 2010 Regis Montoya (aka r3gis - www.r3gis.fr)
+
+	This file is part of CSipSimple. 
+-->
+
+<resources>
+
+    <string name="app_name">Number One</string>
+    <string name="cdr">CDR</string>
+        <string name="recharge">Recharge</string>
+        <string name="rates">Rates</string>
+    <string name="permdesc_useSip">Place SIP calls, send SIP messages and control SIP communications</string>
+    <string name="permlab_configureSip">Use sip</string>
+    <string name="permdesc_configureSip">Place SIP calls, send SIP messages and control SIP communications</string>
+
+</resources>

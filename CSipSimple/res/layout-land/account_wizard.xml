@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/account_layout"
+    android:layout_width="fill_parent"
+     android:background="#FFFFFF"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+           
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/adore22" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignRight="@+id/imageView1"
+            android:layout_below="@+id/imageView1"
+            android:text=""
+             android:layout_marginTop="50dip"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/acc_sip"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignRight="@+id/status"
+            android:layout_below="@+id/status"
+            android:layout_marginTop="5dip"
+            android:autoText="false"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            android:ems="10"
+             android:hint="@string/hint_sip"
+            android:lines="1"
+            android:maxLines="1"
+            android:singleLine="true"
+           />
+
+        <EditText
+            android:id="@+id/acc_proxy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/acc_sip"
+            android:layout_below="@+id/acc_sip"
+            android:layout_marginTop="10dp"
+            android:autoText="false"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            android:hint="@string/hint_proxy"
+            android:lines="1"
+            android:maxLines="1"
+            android:singleLine="true"
+                     
+           />
+
+        <EditText
+            android:id="@+id/acc_user"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignRight="@+id/acc_sip"
+            android:layout_below="@id/acc_proxy"
+            android:layout_marginTop="10dip"
+            android:autoText="false"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            android:ems="10"
+            android:hint="@string/hint_user"
+            android:lines="1"
+            android:maxLines="1"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/acc_pass"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignRight="@+id/acc_user"
+            android:layout_below="@+id/acc_user"
+            android:layout_marginTop="10dip"
+            android:autoText="false"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            android:ems="10"
+            android:hint="@string/hint_pass"
+            android:lines="1"
+            android:maxLines="1"
+            android:password="true"
+            android:singleLine="true" >
+        </EditText>
+
+        <Button
+            android:id="@+id/acc_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/acc_user"
+            android:layout_weight="0.24"
+            android:background="@drawable/clear_img"
+            android:onClick="onClick" />
+
+        <Button
+            android:id="@+id/acc_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_weight="0.24"
+            android:background="@drawable/login_img"
+            android:onClick="onClick" />
+
+    </RelativeLayout>
+
+</ScrollView>

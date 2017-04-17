@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <string name="next">Naslednja</string>
+  <string name="accounts">Računi</string>
+  <string name="other_accounts">Ostali računi</string>
+  <string name="save">Shrani</string>
+  <string name="cancel">Prekliči</string>
+  <!--Presence stuff-->
+  
+  
+    <!-- Login page -->
+    <string name="hint_sip">Vpišite strežnika IP</string>
+    <string name="hint_proxy">Vpišite Proxy (po želji)</string>
+    <string name="hint_pass">Vnesite kodo PIN / Geslo</string>
+    <string name="hint_user">Vpišite uporabniško ime</string>
+</resources>

@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:tools="http://schemas.android.com/tools" 
+     android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+     
+      tools:context="tutorials.android.com.radiobutton.MainActivity">
+      
+      <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:background="#F8FBBF" >
+    
+        <TextView
+        android:id="@+id/CHECK_HEADER"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+       
+        android:text="SELECT CITY"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        android:textStyle="bold" 
+        android:gravity="center"
+        android:background="#380000"/> 
+        
+        
+    
+    
+       <ScrollView
+       android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+        android:fillViewport="true"
+       > 
+                           
+ 
+       <RadioGroup
+           android:id="@+id/radioGroup"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_alignParentTop="true"
+           android:background="#2E8D92"
+           android:layout_centerHorizontal="true"
+           >
+
+         
+           
+           <RadioButton
+               android:id="@+id/radioButton1Id"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textColor="#fff"
+                  android:layout_marginLeft="5dp"
+               android:text="Australia,Melbourne 61386580564" 
+               android:visibility="gone"
+               />
+
+           <RadioButton
+               android:id="@+id/radioButton2Id"
+               android:layout_width="wrap_content"
+                android:textColor="#fff"
+                 android:visibility="gone"
+                   android:layout_marginLeft="5dp"
+               android:layout_height="wrap_content"
+               android:text="Australia,Sydney 61280730557" />
+
+           <RadioButton
+               android:id="@+id/radioButton3Id"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+                android:visibility="gone"
+                 android:textColor="#fff"
+                  android:layout_marginLeft="5dp"
+               android:text="Canada,Toronto 4164772112" />
+
+           <RadioButton
+               android:id="@+id/radioButton4Id"
+               android:layout_width="wrap_content"
+                android:textColor="#fff"
+                 android:visibility="gone"
+                   android:layout_marginLeft="5dp"
+               android:layout_height="wrap_content"
+               android:text="Canada,Calgary 5878872277" />
+
+           <RadioButton
+               android:id="@+id/radioButton5Id"
+               android:layout_width="wrap_content"
+                android:textColor="#fff"
+                 android:visibility="gone"
+                   android:layout_marginLeft="5dp"
+               android:layout_height="wrap_content"
+               android:text="Canada,Edmonton 7806694412" />
+
+           <RadioButton
+               android:id="@+id/radioButton6Id"
+               android:layout_width="wrap_content"
+                 android:textColor="#fff"
+                  android:visibility="gone"
+                    android:layout_marginLeft="5dp"
+               android:layout_height="wrap_content"
+               android:text="Canada,Vancouver 7787852088" />
+
+           <RadioButton
+               android:id="@+id/radioButton7Id"
+                 android:textColor="#fff"
+               android:layout_width="wrap_content"
+                  android:layout_marginLeft="5dp"
+                   android:visibility="gone"
+               android:layout_height="wrap_content"
+               android:text="France,National 33975122807" />
+
+           <RadioButton
+               android:id="@+id/radioButton52Id"
+               android:textColor="#fff"
+                android:visibility="gone"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+                  android:layout_marginLeft="5dp"
+               android:text="Mexico,Cancun 529982876739" />
+
+           <RadioButton
+               android:id="@+id/radioButton8Id"
+               android:layout_width="wrap_content"
+                  android:layout_marginLeft="5dp"
+                   android:visibility="gone"
+                 android:textColor="#fff"
+               android:layout_height="wrap_content"
+               android:text="Toronto,Ontario 6472589522" />
+
+           <RadioButton
+               android:id="@+id/radioButton9Id"
+                  android:layout_marginLeft="5dp"
+                 android:textColor="#fff"
+               android:layout_width="wrap_content"
+                android:visibility="gone"
+               android:layout_height="wrap_content"
+               android:text="Toronto,Ontario 6473671488" />
+
+           <RadioButton
+               android:id="@+id/radioButton10Id"
+             android:textColor="#fff"
+                android:layout_marginLeft="5dp"
+               android:layout_width="wrap_content"
+                android:visibility="gone"
+               android:layout_height="wrap_content"
+               android:text="Toronto,Ontario 4164772112" />
+
+           <RadioButton
+               android:id="@+id/radioButton11Id"
+                  android:textColor="#fff"
+                     android:layout_marginLeft="5dp"
+               android:layout_width="wrap_content"
+                android:visibility="gone"
+               android:layout_height="wrap_content"
+               android:text="Hong Kong,National 85239733713" />
+
+           <RadioButton
+               android:id="@+id/radioButton51Id"
+                  android:textColor="#fff"
+                     android:layout_marginLeft="5dp"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+                android:visibility="gone"
+               android:text="Israel,National,972772200053" />
+
+           <RadioButton
+               android:id="@+id/radioButton12Id"
+               android:layout_width="wrap_content"
+                android:textColor="#fff"
+                   android:layout_marginLeft="5dp"
+               android:layout_height="wrap_content"
+                android:visibility="gone"
+               android:text="Toronto,Ontario 4164771050" />
+
+           <RadioButton
+               android:id="@+id/radioButton13Id"
+                  android:layout_marginLeft="5dp"
+               android:layout_width="wrap_content"
+                 android:textColor="#fff"
+                  android:visibility="gone"
+               android:layout_height="wrap_content"
+               android:text="Kitchener,Ontario 5194891258" />
+
+           <RadioButton
+               android:id="@+id/radioButton14Id"
+                  android:layout_marginLeft="5dp"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+                android:visibility="gone"
+                 android:textColor="#fff"
+               android:text="Waterloo,Ontario 5198041500" />
+
+           <RadioButton
+               android:id="@+id/radioButton15Id"
+               android:layout_width="wrap_content"
+                  android:layout_marginLeft="5dp"
+                 android:textColor="#fff"
+                  android:visibility="gone"
+               android:layout_height="wrap_content"
+               android:text="London,Ontario 2262891588" />
+
+           <RadioButton
+               android:id="@+id/radioButton16Id"
+               android:layout_width="wrap_content"
+                  android:layout_marginLeft="5dp"
+                   android:visibility="gone"
+               android:layout_height="wrap_content"
+                 android:textColor="#fff"
+               android:text="Guelph,Ontario 2267061555" />
+
+           <RadioButton
+               android:id="@+id/radioButton17Id"
+                  android:layout_marginLeft="5dp"
+               android:layout_width="wrap_content"
+                  android:textColor="#fff"
+                   android:visibility="gone"
+               android:layout_height="wrap_content"
+               android:text="Brantford,Ontario 2262271522" />
+
+           <RadioButton
+               android:id="@+id/radioButton18Id"
+                android:visibility="gone"
+               android:layout_width="wrap_content"
+                  android:layout_marginLeft="5dp"
+                 android:textColor="#fff"
+               android:layout_height="wrap_content"
+               android:text="Windsor,Ontario 2269461511" />
+
+           <RadioButton
+               android:id="@+id/radioButton19Id"
+                  android:layout_marginLeft="5dp"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+                android:visibility="gone"
+               android:textColor="#fff"
+               android:text="Oakville,Ontario 2896441888" />
+
+           <RadioButton
+               android:id="@+id/radioButton20Id"
+               android:layout_width="wrap_content"
+                 android:textColor="#fff"
+                  android:visibility="gone"
+                    android:layout_marginLeft="5dp"
+               android:layout_height="wrap_content"
+               android:text="Oshawa,Ontario 2896341101" />
+
+           <RadioButton
+               android:id="@+id/radioButton21Id"
+               android:layout_width="wrap_content"
+                  android:textColor="#fff"
+                   android:visibility="gone"
+                     android:layout_marginLeft="5dp"
+               android:layout_height="wrap_content"
+               android:text="Burlington,Ontario 2896351515" />
+
+           <RadioButton
+               android:id="@+id/radioButton22Id"
+               android:layout_width="wrap_content"
+                  android:layout_marginLeft="5dp"
+                   android:visibility="gone"
+                 android:textColor="#fff"
+               android:layout_height="wrap_content"
+               android:text="Hamilton,Ontario 2893091222" />
+
+           <RadioButton
+               android:id="@+id/radioButton23Id"
+               android:layout_width="wrap_content"
+                  android:layout_marginLeft="5dp"
+                   android:visibility="gone"
+               android:layout_height="wrap_content"
+                 android:textColor="#fff"
+               android:text="Barrie,Ontario 7058811558" />
+
+           <RadioButton
+               android:id="@+id/radioButton24Id"
+                  android:layout_marginLeft="5dp"
+               android:layout_width="wrap_content"
+                android:visibility="gone"
+                android:textColor="#fff"
+               android:layout_height="wrap_content"
+               android:text="Sudbury,Ontario 7058851695" />
+
+           <RadioButton
+               android:id="@+id/radioButton25Id"
+               android:layout_width="wrap_content"
+                  android:layout_marginLeft="5dp"
+                   android:visibility="gone"
+               android:layout_height="wrap_content"
+                  android:textColor="#fff"
+               android:text="Milton,Ontario 2896271522" />
+
+           <RadioButton
+               android:id="@+id/radioButton26Id"
+               android:layout_width="wrap_content"
+                  android:layout_marginLeft="5dp"
+                   android:visibility="gone"
+               android:layout_height="wrap_content"
+                android:textColor="#fff"
+               android:text="St.Catherine,Ontario 9053463426" />
+
+           <RadioButton
+               android:id="@+id/radioButton27Id"
+               android:layout_width="wrap_content"
+                android:visibility="gone"
+                  android:layout_marginLeft="5dp"
+                 android:textColor="#fff"
+               android:layout_height="wrap_content"
+               android:text="Ottawa,Ontario 6136867014" />
+
+           <RadioButton
+               android:id="@+id/radioButton28Id"
+               android:layout_width="wrap_content"
+                  android:textColor="#fff"
+                     android:layout_marginLeft="5dp"
+                      android:visibility="gone"
+               android:layout_height="wrap_content"
+               android:text="Kingston,Ontario 6138172700" />
+
+           <RadioButton
+               android:id="@+id/radioButton29Id"
+                 android:textColor="#fff"
+                  android:visibility="gone"
+                    android:layout_marginLeft="5dp"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Vancouver,BC 7787852088" />
+
+           <RadioButton
+               android:id="@+id/radioButton30Id"
+                  android:layout_marginLeft="5dp"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+                android:visibility="gone"
+                  android:textColor="#fff"
+               android:text="Vancouver,BC 7787855225" />
+
+           <RadioButton
+               android:id="@+id/radioButton31Id"
+               android:layout_width="wrap_content"
+                android:textColor="#fff"
+                 android:visibility="gone"
+                   android:layout_marginLeft="5dp"
+               android:layout_height="wrap_content"
+               android:text="Vancouver,BC 7783002555" />
+
+           <RadioButton
+               android:id="@+id/radioButton32Id"
+               android:layout_width="wrap_content"
+                  android:layout_marginLeft="5dp"
+               android:layout_height="wrap_content"
+                android:visibility="gone"
+                  android:textColor="#fff"
+               android:text="New Westminster,BC 7788011577" />
+
+           <RadioButton
+               android:id="@+id/radioButton33Id"
+               android:layout_width="wrap_content"
+                  android:layout_marginLeft="5dp"
+                   android:visibility="gone"
+               android:layout_height="wrap_content"
+                 android:textColor="#fff"
+               android:text="New Westminster,BC 7788011577" />
+
+           <RadioButton
+               android:id="@+id/radioButton34Id"
+               android:layout_width="wrap_content"
+                  android:layout_marginLeft="5dp"
+                  android:textColor="#fff"
+                   android:visibility="gone"
+               android:layout_height="wrap_content"
+               android:text="Abbotsford,BC 6047568856" />
+
+           <RadioButton
+               android:id="@+id/radioButton35Id"
+               android:textColor="#fff"
+                android:visibility="gone"
+               android:layout_width="wrap_content"
+                  android:layout_marginLeft="5dp"
+               android:layout_height="wrap_content"
+               android:text="Calgary,AB 4037759675" />
+
+           <RadioButton
+               android:id="@+id/radioButton36Id"
+                  android:layout_marginLeft="5dp"
+               android:layout_width="wrap_content"
+                  android:textColor="#fff"
+               android:layout_height="wrap_content"
+                android:visibility="gone"
+                 
+               android:text="Calgary,AB 5878872277" />
+
+           <RadioButton
+               android:id="@+id/radioButton37Id"
+               android:layout_width="wrap_content"
+                  android:textColor="#fff"
+                   android:visibility="gone"
+                   android:layout_marginLeft="5dp"
+               android:layout_height="wrap_content"
+               android:text="Edmonton,AB 7806694412" />
+
+           <RadioButton
+               android:id="@+id/radioButton38Id"
+               android:layout_width="wrap_content"
+                  android:textColor="#fff"
+                   android:visibility="gone"
+                   android:layout_marginLeft="5dp"
+               android:layout_height="wrap_content"
+               android:text="Edmonton,AB 7806694411" />
+
+           <RadioButton
+               android:id="@+id/radioButton39Id"
+               android:layout_width="wrap_content"
+                android:layout_marginLeft="5dp"
+               android:layout_height="wrap_content"
+                android:visibility="gone"
+                 android:textColor="#fff"
+               android:text="Regina,SK 3062060428" />
+
+           <RadioButton
+               android:id="@+id/radioButton40Id"
+               android:layout_width="wrap_content"
+                android:layout_marginLeft="5dp"
+                 android:visibility="gone"
+               android:layout_height="wrap_content"
+                  android:textColor="#fff"
+               android:text="Winnipeg,Manitoba 3065000282" />
+
+           <RadioButton
+               android:id="@+id/radioButton41Id"
+               android:layout_width="wrap_content"
+                android:visibility="gone"
+                android:layout_marginLeft="5dp"
+               android:layout_height="wrap_content"
+                 android:textColor="#fff"
+               android:text="Halifax,NS 9029823309" />
+
+           <RadioButton
+               android:id="@+id/radioButton42Id"
+                 android:textColor="#fff"
+                  android:layout_marginLeft="5dp"
+                   android:visibility="gone"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Montreal,QC 4383381588" />
+
+           <RadioButton
+               android:id="@+id/radioButton43Id"
+               android:layout_width="wrap_content"
+                android:layout_marginLeft="5dp"
+                 android:visibility="gone"
+                 android:textColor="#fff"
+               android:layout_height="wrap_content"
+               android:text="Quebec City,QC 4182634479" />
+
+           <RadioButton
+               android:id="@+id/radioButton44Id"
+                android:layout_marginLeft="5dp"
+               android:layout_width="wrap_content"
+                android:textColor="#fff"
+                 android:visibility="gone"
+               android:layout_height="wrap_content"
+               android:text="Sherbrooke,QC 8195607552" />
+
+           <RadioButton
+               android:id="@+id/radioButton45Id"
+                 android:textColor="#fff"
+                  android:layout_marginLeft="5dp"
+                   android:visibility="gone"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="United Kingdom,National 443300270193" />
+
+           <RadioButton
+               android:id="@+id/radioButton46Id"
+                android:layout_marginLeft="5dp"
+               android:layout_width="wrap_content"
+                 android:textColor="#fff"
+                  android:visibility="gone"
+               android:layout_height="wrap_content"
+               android:text="USA,ALL 2132895005" />
+
+           <RadioButton
+               android:id="@+id/radioButton47Id"
+                 android:textColor="#fff"
+                  android:layout_marginLeft="5dp"
+                   android:visibility="gone"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="USA 2132895002" />
+
+           <RadioButton
+               android:id="@+id/radioButton48Id"
+                  android:textColor="#fff"
+               android:layout_width="wrap_content"
+                android:visibility="gone"
+                android:layout_marginLeft="5dp"
+               android:layout_height="wrap_content"
+               android:text="USA 2132895005" />
+
+           <RadioButton
+               android:id="@+id/radioButton49Id"
+               android:layout_width="wrap_content"
+                 android:textColor="#fff"
+                  android:visibility="gone"
+                  android:layout_marginLeft="5dp"
+               android:layout_height="wrap_content"
+               android:text="USA 9173985788" />
+
+           <RadioButton
+               android:id="@+id/radioButton50Id"
+               android:layout_width="wrap_content"
+               android:layout_marginLeft="5dp"
+                android:visibility="gone"
+                 android:textColor="#fff"
+               android:layout_height="wrap_content"
+               android:text="Wasaga Beach,Ontario 17056171666" />
+
+             <RadioButton
+               android:id="@+id/radioButton54Id"
+               android:layout_width="wrap_content"
+               android:layout_marginLeft="5dp"
+                 android:textColor="#fff"
+               android:layout_height="44dp"
+               android:text="Australia Sydney 280730557" />
+             
+                 <RadioButton
+               android:id="@+id/radioButton55Id"
+               android:layout_width="wrap_content"
+               android:layout_marginLeft="5dp"
+                 android:textColor="#fff"
+              android:layout_height="44dp"
+               android:text="Australia Melbourne 386580564" />
+                 
+                 
+                   <RadioButton
+               android:id="@+id/radioButton56Id"
+               android:layout_width="wrap_content"
+               android:layout_marginLeft="5dp"
+                 android:textColor="#fff"
+             android:layout_height="44dp"
+               android:text="Calgary 5872880662" />
+                   
+                   
+                     <RadioButton
+               android:id="@+id/radioButton57Id"
+               android:layout_width="wrap_content"
+               android:layout_marginLeft="5dp"
+                 android:textColor="#fff"
+               android:layout_height="44dp"
+               android:text="Edmonton 7808511777" />
+                     
+                       <RadioButton
+               android:id="@+id/radioButton58Id"
+               android:layout_width="wrap_content"
+               android:layout_marginLeft="5dp"
+                 android:textColor="#fff"
+              android:layout_height="44dp"
+               android:text="France	0975122807" />
+                       
+                       
+                         <RadioButton
+               android:id="@+id/radioButton59Id"
+               android:layout_width="wrap_content"
+               android:layout_marginLeft="5dp"
+                 android:textColor="#fff"
+               android:layout_height="44dp"
+               android:text="HongKong 39733713" />
+                         
+                           <RadioButton
+               android:id="@+id/radioButton60Id"
+               android:layout_width="wrap_content"
+               android:layout_marginLeft="5dp"
+                 android:textColor="#fff"
+            android:layout_height="44dp"
+               android:text="Isreal	0772200053" />
+                           
+                             <RadioButton
+               android:id="@+id/radioButton61Id"
+               android:layout_width="wrap_content"
+               android:layout_marginLeft="5dp"
+                 android:textColor="#fff"
+              android:layout_height="44dp"
+               android:text="Montreal 4387881530" />
+                             
+                             
+                               <RadioButton
+               android:id="@+id/radioButton62Id"
+               android:layout_width="wrap_content"
+               android:layout_marginLeft="5dp"
+                 android:textColor="#fff"
+               android:layout_height="44dp"
+               android:text="Mexico Cancun	09982876739" />
+                               
+                                 <RadioButton
+               android:id="@+id/radioButton63Id"
+               android:layout_width="wrap_content"
+               android:layout_marginLeft="5dp"
+                 android:textColor="#fff"
+           android:layout_height="44dp"
+               android:text="New Zealand 036694781" />
+                                 
+                                   <RadioButton
+               android:id="@+id/radioButton64Id"
+               android:layout_width="wrap_content"
+               android:layout_marginLeft="5dp"
+                 android:textColor="#fff"
+              android:layout_height="44dp"
+               android:text="Ontario 4164770053" />
+                                   
+                                     <RadioButton
+               android:id="@+id/radioButton65Id"
+               android:layout_width="wrap_content"
+               android:layout_marginLeft="5dp"
+                 android:textColor="#fff"
+                android:layout_height="44dp"
+               android:text="Ottawa	6136931286" />
+                                     
+                                     
+                                            <RadioButton
+               android:id="@+id/radioButton66Id"
+               android:layout_width="wrap_content"
+               android:layout_marginLeft="5dp"
+                 android:textColor="#fff"
+                android:layout_height="44dp"
+               android:text="Regina	3069934657" />
+                                            
+                                                   <RadioButton
+               android:id="@+id/radioButton67Id"
+               android:layout_width="wrap_content"
+               android:layout_marginLeft="5dp"
+                 android:textColor="#fff"
+              android:layout_height="44dp"
+               android:text="Sasktoon 3068035965" />
+                                                   
+                                                          <RadioButton
+               android:id="@+id/radioButton68Id"
+               android:layout_width="wrap_content"
+               android:layout_marginLeft="5dp"
+                 android:textColor="#fff"
+                 android:visibility="gone"
+              android:layout_height="44dp"
+               android:text="Ottawa	6136931286" />
+                                                          
+                                                                 <RadioButton
+               android:id="@+id/radioButton69Id"
+               android:layout_width="wrap_content"
+               android:layout_marginLeft="5dp"
+                 android:textColor="#fff"
+                android:layout_height="44dp"
+               android:text="UK 03300270193" />
+                                                                 
+                                                                        <RadioButton
+               android:id="@+id/radioButton70Id"
+               android:layout_width="wrap_content"
+               android:layout_marginLeft="5dp"
+                 android:textColor="#fff"
+               android:layout_height="44dp"
+               android:text="Vancouver 7787830022" />
+             
+          
+       </RadioGroup>
+                        </ScrollView>    
+                        </LinearLayout>  
+                             </RelativeLayout>
