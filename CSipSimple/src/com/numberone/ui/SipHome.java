@@ -44,7 +44,9 @@ import com.numberone.ui.calllog.CallLogListFragment;
 import com.numberone.ui.contacts.ContactManager;
 import com.numberone.ui.dialpad.DialerFragment;
 import com.numberone.ui.messages.ConversationsListFragment;
+import com.numberone.ui.more.MobileMessage;
 import com.numberone.ui.more.More;
+import com.numberone.ui.more.NewAccount;
 import com.numberone.utils.AccountListUtils;
 import com.numberone.utils.Compatibility;
 import com.numberone.utils.CustomDistribution;
@@ -66,11 +68,13 @@ public class SipHome extends SherlockFragmentActivity {
 
 
     private static final String THIS_FILE = "SIP_HOME";
-    private final static int TAB_ID_CONTACTS = 0;
-    private final static int TAB_ID_DIALER = 1;
+    private final static int CONTACTS = 0;
+    private final static int TAB_ID_CONTACTS = 1;
+    
+    private final static int TAB_ID_DIALER = 2;
   
-    private final static int TAB_ID_CALL_LOG = 2;
-    private final static int TAB_ID_FAVORITES = 3;
+    private final static int TAB_ID_CALL_LOG = 3;
+    private final static int TAB_ID_FAVORITES = 4;
 
     public static String user,pass;
     SipProfile account;
@@ -125,6 +129,12 @@ public class SipHome extends SherlockFragmentActivity {
                .setContentDescription(R.string.contact)
               .setIcon(R.drawable.phone_book);
        
+       
+       Tab contactsTab1 = ab.newTab()
+               .setContentDescription(R.string.contact)
+              .setIcon(R.drawable.tab_contacts);
+       
+       
         Tab dialerTab = ab.newTab()
                  .setContentDescription(R.string.dial_tab_name_text)
                 .setIcon(R.drawable.ic_ab_dialer_holo_dark);
@@ -153,8 +163,8 @@ public class SipHome extends SherlockFragmentActivity {
         mViewPager = (ViewPager) findViewById(R.id.pager);
         mViewPager.setOffscreenPageLimit(4);
         mTabsAdapter = new TabsAdapter(this, getSupportActionBar(), mViewPager);
-     
-        mTabsAdapter.addTab(contactsTab, ContactManager.class, TAB_ID_CONTACTS);
+        mTabsAdapter.addTab(contactsTab1, ContactManager.class, CONTACTS);
+        mTabsAdapter.addTab(contactsTab, NewAccount.class, TAB_ID_CONTACTS);
         mTabsAdapter.addTab(dialerTab, DialerFragment.class, TAB_ID_DIALER);
         mTabsAdapter.addTab(callLogTab, CallLogListFragment.class, TAB_ID_CALL_LOG);
         mTabsAdapter.addTab(favoritesTab, More.class, TAB_ID_FAVORITES);

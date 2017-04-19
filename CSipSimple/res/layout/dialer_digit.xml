@@ -56,7 +56,7 @@
             android:ems="10"
             android:paddingRight="65dp"
             android:gravity="center"
-            android:layout_marginTop="80dip"
+            android:layout_marginTop="50dip"
             android:singleLine="true"
             android:imeActionLabel="@string/call"
             android:inputType="none"
@@ -98,7 +98,7 @@
             android:id="@+id/balance"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_alignParentRight="true"
+            android:layout_alignParentLeft="true"
            android:textColor="#000000"
             android:text=""
             android:hint="" />

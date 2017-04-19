@@ -2,7 +2,7 @@
 <!-- Horizontal row of buttons (Voicemail + DialButton + Delete.) -->
 <merge xmlns:android="http://schemas.android.com/apk/res/android" >
    
-     <ImageButton
+     <TextView
         android:id="@+id/accountButton"
         android:layout_width="0px"
         android:layout_height="match_parent"
@@ -11,7 +11,7 @@
         android:layout_marginLeft="7dp"
         android:background="?attr/actionBarItemBackground"
         android:contentDescription="@string/description_dial_video_button"
-        android:src="@drawable/account_over"
+      
         android:state_enabled="true" />
     <View
         android:id="@+id/divider1"

@@ -51,6 +51,7 @@ import com.numberone.db.DBProvider;
 import com.numberone.models.Filter;
 import com.numberone.ui.SipHome;
 import com.numberone.ui.dialpad.DialerFragment;
+import com.numberone.ui.more.Signup;
 import com.numberone.utils.AccountListUtils;
 import com.numberone.utils.PreferencesWrapper;
 import com.numberone.utils.AccountListUtils.AccountStatusDisplay;
@@ -76,7 +77,7 @@ public class AccountWizard extends SherlockActivity {
 	LongOperation1 asyncTask2 =new LongOperation1(AccountWizard.this);
 	private String wizardId = "";
 	private BroadcastReceiver mReceiver;
-	public static Button register;
+	public static Button register,button11;
 	public static String str,message;
 	IntentFilter intentFilter;
 	private ProgressDialog dialog;
@@ -95,6 +96,7 @@ public class AccountWizard extends SherlockActivity {
 		tv1 = (TextView) findViewById(R.id.textView1);
 		user = (EditText) findViewById(R.id.acc_user);
 		register = (Button) findViewById(R.id.acc_Register);
+	//	button11 = (Button) findViewById(R.id.button1);
 		//proxy = (EditText) findViewById(R.id.acc_proxy);
 		status = (TextView) findViewById(R.id.status);
 		long accountId = 1;
@@ -231,12 +233,7 @@ public class AccountWizard extends SherlockActivity {
 					Toast.makeText(this, "Please enter your number with country-code", Toast.LENGTH_LONG).show();
 				}*/
 			
-			
-			
 		
-				
-			
-			
 			   
 			break;		
 			
@@ -278,11 +275,8 @@ public class AccountWizard extends SherlockActivity {
 			break;
 			
 			
-	
-			
-			
 		case R.id.Login_page:
-			// Go to login page (Already I have a PIN)
+		/*	// Go to login page (Already I have a PIN)
 			findViewById(R.id.acc_Mobile).setVisibility(View.GONE);
 			findViewById(R.id.Login_page).setVisibility(View.GONE);
 		//	findViewById(R.id.checkBox1).setVisibility(View.GONE);
@@ -295,12 +289,12 @@ public class AccountWizard extends SherlockActivity {
 			findViewById(R.id.acc_pass).setVisibility(View.VISIBLE);
 	findViewById(R.id.acc_clear).setVisibility(View.VISIBLE);
 			findViewById(R.id.acc_user).setVisibility(View.VISIBLE);
-			findViewById(R.id.status).setVisibility(View.VISIBLE);
+			findViewById(R.id.status).setVisibility(View.VISIBLE);*/
 			
 			break;
 			
 		case R.id.Register_page:
-			// Go to Register Page 
+		/*	// Go to Register Page 
 			findViewById(R.id.acc_Mobile).setVisibility(View.VISIBLE);
 			//findViewById(R.id.term).setVisibility(View.VISIBLE);
 			findViewById(R.id.Login_page).setVisibility(View.VISIBLE);
@@ -313,7 +307,7 @@ public class AccountWizard extends SherlockActivity {
 			findViewById(R.id.acc_pass).setVisibility(View.GONE);
 			findViewById(R.id.acc_user).setVisibility(View.GONE);
 			findViewById(R.id.Register_page).setVisibility(View.GONE);
-			findViewById(R.id.status).setVisibility(View.GONE);
+			findViewById(R.id.status).setVisibility(View.GONE);*/
 			break;
 		case R.id.acc_clear:
 			// checkbox script
@@ -323,10 +317,15 @@ public class AccountWizard extends SherlockActivity {
 			
 			
 		case R.id.forget_button:
-			Toast.makeText(this, "Under Development", Toast.LENGTH_LONG).show();
-			  /* Intent intent1 = new Intent(this, ForgotActivity.class);
-			    startActivity(intent1);*/
+			Intent intent= new Intent(Intent.ACTION_VIEW,Uri.parse("http://portal.numone.keios.eu/signup"));
+			startActivity(intent);
 			  break;
+			  
+	/*	case R.id.button1:
+			Toast.makeText(this, "Under Development", Toast.LENGTH_LONG).show();
+			  Intent intent1 = new Intent(this, Signup.class);
+			    startActivity(intent1);
+			  break;*/
 			  
 		}		  			  
 		
@@ -950,7 +949,7 @@ return null;
     							{
     							if(message.contains("Your OTP is sent to your Mobile number."))
     							{
-    								findViewById(R.id.acc_Mobile).setVisibility(View.GONE);
+    								/*findViewById(R.id.acc_Mobile).setVisibility(View.GONE);
     							//	findViewById(R.id.term).setVisibility(View.GONE);
     							//	findViewById(R.id.checkBox1).setVisibility(View.GONE);
     								findViewById(R.id.Login_page).setVisibility(View.GONE);
@@ -962,7 +961,7 @@ return null;
     								findViewById(R.id.acc_clear).setVisibility(View.VISIBLE);
     								findViewById(R.id.acc_pass).setVisibility(View.VISIBLE);
     								findViewById(R.id.acc_user).setVisibility(View.VISIBLE);
-    								findViewById(R.id.status).setVisibility(View.VISIBLE);
+    								findViewById(R.id.status).setVisibility(View.VISIBLE);*/
     							}else{
     								
     							}

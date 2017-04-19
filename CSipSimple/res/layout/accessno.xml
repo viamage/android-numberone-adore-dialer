@@ -51,108 +51,108 @@
                android:layout_height="wrap_content"
                android:textColor="#fff"
                   android:layout_marginLeft="5dp"
-               android:text="Australia,Melbourne 61386580564" 
-               android:visibility="gone"
+               android:text="AUSTRIA +431253022432" 
+             
                />
 
            <RadioButton
                android:id="@+id/radioButton2Id"
                android:layout_width="wrap_content"
                 android:textColor="#fff"
-                 android:visibility="gone"
+              
                    android:layout_marginLeft="5dp"
                android:layout_height="wrap_content"
-               android:text="Australia,Sydney 61280730557" />
+               android:text="ANI AUSTRIA +431253022432" />
 
            <RadioButton
                android:id="@+id/radioButton3Id"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-                android:visibility="gone"
+              
                  android:textColor="#fff"
                   android:layout_marginLeft="5dp"
-               android:text="Canada,Toronto 4164772112" />
+               android:text="BELGIUM +3235009392" />
 
            <RadioButton
                android:id="@+id/radioButton4Id"
                android:layout_width="wrap_content"
                 android:textColor="#fff"
-                 android:visibility="gone"
+                
                    android:layout_marginLeft="5dp"
                android:layout_height="wrap_content"
-               android:text="Canada,Calgary 5878872277" />
+               android:text="CANADA +16475032850" />
 
            <RadioButton
                android:id="@+id/radioButton5Id"
                android:layout_width="wrap_content"
                 android:textColor="#fff"
-                 android:visibility="gone"
+                 
                    android:layout_marginLeft="5dp"
                android:layout_height="wrap_content"
-               android:text="Canada,Edmonton 7806694412" />
+               android:text="CYPRUS +35724000361" />
 
            <RadioButton
                android:id="@+id/radioButton6Id"
                android:layout_width="wrap_content"
                  android:textColor="#fff"
-                  android:visibility="gone"
+                 
                     android:layout_marginLeft="5dp"
                android:layout_height="wrap_content"
-               android:text="Canada,Vancouver 7787852088" />
+               android:text="FINLAND +358974790011" />
 
            <RadioButton
                android:id="@+id/radioButton7Id"
                  android:textColor="#fff"
                android:layout_width="wrap_content"
                   android:layout_marginLeft="5dp"
-                   android:visibility="gone"
+                
                android:layout_height="wrap_content"
-               android:text="France,National 33975122807" />
+               android:text="FRANCE +33170069889" />
 
            <RadioButton
                android:id="@+id/radioButton52Id"
                android:textColor="#fff"
-                android:visibility="gone"
+               
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                   android:layout_marginLeft="5dp"
-               android:text="Mexico,Cancun 529982876739" />
+               android:text="GERMANY +49211361894722" />
 
            <RadioButton
                android:id="@+id/radioButton8Id"
                android:layout_width="wrap_content"
                   android:layout_marginLeft="5dp"
-                   android:visibility="gone"
+                  
                  android:textColor="#fff"
                android:layout_height="wrap_content"
-               android:text="Toronto,Ontario 6472589522" />
+               android:text="GREECE +302111983955" />
 
            <RadioButton
                android:id="@+id/radioButton9Id"
                   android:layout_marginLeft="5dp"
                  android:textColor="#fff"
                android:layout_width="wrap_content"
-                android:visibility="gone"
+               
                android:layout_height="wrap_content"
-               android:text="Toronto,Ontario 6473671488" />
+               android:text="INDIA +911171279007" />
 
            <RadioButton
                android:id="@+id/radioButton10Id"
              android:textColor="#fff"
                 android:layout_marginLeft="5dp"
                android:layout_width="wrap_content"
-                android:visibility="gone"
+                
                android:layout_height="wrap_content"
-               android:text="Toronto,Ontario 4164772112" />
+               android:text="IRELAND +35314373285" />
 
            <RadioButton
                android:id="@+id/radioButton11Id"
                   android:textColor="#fff"
                      android:layout_marginLeft="5dp"
                android:layout_width="wrap_content"
-                android:visibility="gone"
+               
                android:layout_height="wrap_content"
-               android:text="Hong Kong,National 85239733713" />
+               android:text="ITALY +390645200147" />
 
            <RadioButton
                android:id="@+id/radioButton51Id"
@@ -160,8 +160,8 @@
                      android:layout_marginLeft="5dp"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-                android:visibility="gone"
-               android:text="Israel,National,972772200053" />
+                
+               android:text="MALTA +35627780352" />
 
            <RadioButton
                android:id="@+id/radioButton12Id"
@@ -169,44 +169,44 @@
                 android:textColor="#fff"
                    android:layout_marginLeft="5dp"
                android:layout_height="wrap_content"
-                android:visibility="gone"
-               android:text="Toronto,Ontario 4164771050" />
+                
+               android:text="NETHERLANDS +31202620339" />
 
            <RadioButton
                android:id="@+id/radioButton13Id"
                   android:layout_marginLeft="5dp"
                android:layout_width="wrap_content"
                  android:textColor="#fff"
-                  android:visibility="gone"
+                 
                android:layout_height="wrap_content"
-               android:text="Kitchener,Ontario 5194891258" />
+               android:text="ROMANIA TELEKOM 40213039730" />
 
            <RadioButton
                android:id="@+id/radioButton14Id"
                   android:layout_marginLeft="5dp"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-                android:visibility="gone"
+              
                  android:textColor="#fff"
-               android:text="Waterloo,Ontario 5198041500" />
+               android:text="ROMANIA ORANGE +40374337218" />
 
            <RadioButton
                android:id="@+id/radioButton15Id"
                android:layout_width="wrap_content"
                   android:layout_marginLeft="5dp"
                  android:textColor="#fff"
-                  android:visibility="gone"
+             
                android:layout_height="wrap_content"
-               android:text="London,Ontario 2262891588" />
+               android:text="ROMANIA ORANGE +40374337217" />
 
            <RadioButton
                android:id="@+id/radioButton16Id"
                android:layout_width="wrap_content"
                   android:layout_marginLeft="5dp"
-                   android:visibility="gone"
+                  
                android:layout_height="wrap_content"
                  android:textColor="#fff"
-               android:text="Guelph,Ontario 2267061555" />
+               android:text="ROMANIA VODAFONE +40372128620" />
 
            <RadioButton
                android:id="@+id/radioButton17Id"
@@ -215,34 +215,34 @@
                   android:textColor="#fff"
                    android:visibility="gone"
                android:layout_height="wrap_content"
-               android:text="Brantford,Ontario 2262271522" />
+               android:text="POLAND +48221168155" />
 
            <RadioButton
                android:id="@+id/radioButton18Id"
-                android:visibility="gone"
+               
                android:layout_width="wrap_content"
                   android:layout_marginLeft="5dp"
                  android:textColor="#fff"
                android:layout_height="wrap_content"
-               android:text="Windsor,Ontario 2269461511" />
+               android:text="SPAIN +34910807961" />
 
            <RadioButton
                android:id="@+id/radioButton19Id"
                   android:layout_marginLeft="5dp"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-                android:visibility="gone"
+              
                android:textColor="#fff"
-               android:text="Oakville,Ontario 2896441888" />
+               android:text="SWITZERLAND +41225550261" />
 
            <RadioButton
                android:id="@+id/radioButton20Id"
                android:layout_width="wrap_content"
                  android:textColor="#fff"
-                  android:visibility="gone"
+                 
                     android:layout_marginLeft="5dp"
                android:layout_height="wrap_content"
-               android:text="Oshawa,Ontario 2896341101" />
+               android:text="TURKEY +908503901931" />
 
            <RadioButton
                android:id="@+id/radioButton21Id"
@@ -251,7 +251,7 @@
                    android:visibility="gone"
                      android:layout_marginLeft="5dp"
                android:layout_height="wrap_content"
-               android:text="Burlington,Ontario 2896351515" />
+               android:text="UK +442078626345" />
 
            <RadioButton
                android:id="@+id/radioButton22Id"
@@ -260,7 +260,7 @@
                    android:visibility="gone"
                  android:textColor="#fff"
                android:layout_height="wrap_content"
-               android:text="Hamilton,Ontario 2893091222" />
+               android:text="USA +1989898" />
 
            <RadioButton
                android:id="@+id/radioButton23Id"
@@ -519,6 +519,7 @@
                android:id="@+id/radioButton54Id"
                android:layout_width="wrap_content"
                android:layout_marginLeft="5dp"
+                android:visibility="gone"
                  android:textColor="#fff"
                android:layout_height="44dp"
                android:text="Australia Sydney 280730557" />
@@ -528,6 +529,7 @@
                android:layout_width="wrap_content"
                android:layout_marginLeft="5dp"
                  android:textColor="#fff"
+                  android:visibility="gone"
               android:layout_height="44dp"
                android:text="Australia Melbourne 386580564" />
                  
@@ -538,6 +540,7 @@
                android:layout_marginLeft="5dp"
                  android:textColor="#fff"
              android:layout_height="44dp"
+              android:visibility="gone"
                android:text="Calgary 5872880662" />
                    
                    
@@ -547,12 +550,14 @@
                android:layout_marginLeft="5dp"
                  android:textColor="#fff"
                android:layout_height="44dp"
+                android:visibility="gone"
                android:text="Edmonton 7808511777" />
                      
                        <RadioButton
                android:id="@+id/radioButton58Id"
                android:layout_width="wrap_content"
                android:layout_marginLeft="5dp"
+                android:visibility="gone"
                  android:textColor="#fff"
               android:layout_height="44dp"
                android:text="France	0975122807" />
@@ -563,6 +568,7 @@
                android:layout_width="wrap_content"
                android:layout_marginLeft="5dp"
                  android:textColor="#fff"
+                  android:visibility="gone"
                android:layout_height="44dp"
                android:text="HongKong 39733713" />
                          
@@ -572,6 +578,7 @@
                android:layout_marginLeft="5dp"
                  android:textColor="#fff"
             android:layout_height="44dp"
+             android:visibility="gone"
                android:text="Isreal	0772200053" />
                            
                              <RadioButton
@@ -580,12 +587,14 @@
                android:layout_marginLeft="5dp"
                  android:textColor="#fff"
               android:layout_height="44dp"
+               android:visibility="gone"
                android:text="Montreal 4387881530" />
                              
                              
                                <RadioButton
                android:id="@+id/radioButton62Id"
                android:layout_width="wrap_content"
+                android:visibility="gone"
                android:layout_marginLeft="5dp"
                  android:textColor="#fff"
                android:layout_height="44dp"
@@ -595,6 +604,7 @@
                android:id="@+id/radioButton63Id"
                android:layout_width="wrap_content"
                android:layout_marginLeft="5dp"
+                android:visibility="gone"
                  android:textColor="#fff"
            android:layout_height="44dp"
                android:text="New Zealand 036694781" />
@@ -604,6 +614,7 @@
                android:layout_width="wrap_content"
                android:layout_marginLeft="5dp"
                  android:textColor="#fff"
+                  android:visibility="gone"
               android:layout_height="44dp"
                android:text="Ontario 4164770053" />
                                    
@@ -611,6 +622,7 @@
                android:id="@+id/radioButton65Id"
                android:layout_width="wrap_content"
                android:layout_marginLeft="5dp"
+                android:visibility="gone"
                  android:textColor="#fff"
                 android:layout_height="44dp"
                android:text="Ottawa	6136931286" />
@@ -621,6 +633,7 @@
                android:layout_width="wrap_content"
                android:layout_marginLeft="5dp"
                  android:textColor="#fff"
+                  android:visibility="gone"
                 android:layout_height="44dp"
                android:text="Regina	3069934657" />
                                             
@@ -629,6 +642,7 @@
                android:layout_width="wrap_content"
                android:layout_marginLeft="5dp"
                  android:textColor="#fff"
+                  android:visibility="gone"
               android:layout_height="44dp"
                android:text="Sasktoon 3068035965" />
                                                    
@@ -639,6 +653,7 @@
                  android:textColor="#fff"
                  android:visibility="gone"
               android:layout_height="44dp"
+           
                android:text="Ottawa	6136931286" />
                                                           
                                                                  <RadioButton
@@ -647,6 +662,7 @@
                android:layout_marginLeft="5dp"
                  android:textColor="#fff"
                 android:layout_height="44dp"
+                 android:visibility="gone"
                android:text="UK 03300270193" />
                                                                  
                                                                         <RadioButton
@@ -654,6 +670,7 @@
                android:layout_width="wrap_content"
                android:layout_marginLeft="5dp"
                  android:textColor="#fff"
+                 android:visibility="gone"
                android:layout_height="44dp"
                android:text="Vancouver 7787830022" />
              

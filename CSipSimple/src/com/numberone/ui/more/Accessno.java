@@ -11,6 +11,7 @@ import com.numberone.R;
 import com.numberone.api.SipManager;
 import com.numberone.api.SipUri;
 import com.numberone.ui.SipHome;
+import com.numberone.writer.StorageFile;
 
 public class Accessno extends Activity {
 	public static String str,item;
@@ -124,7 +125,7 @@ public class Accessno extends Activity {
 	                case R.id.radioButton54Id:
                     	str = (String) aaa.getText();
                     	System.out.println(str);
-                    	 //item=str.replaceAll("[a-zA-Z,]+", "");
+                    	 item=str.replaceAll("[a-zA-Z,]+", "");
                     	
                     	  msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
                     	 System.out.println("HEmant "+msg+":File path "+filepath);
@@ -140,7 +141,7 @@ public class Accessno extends Activity {
 	                case R.id.radioButton55Id:
                     	str = (String) bbb.getText();
                     	System.out.println(str);
-                    	 //item=str.replaceAll("[a-zA-Z,]+", "");
+                    	 item=str.replaceAll("[a-zA-Z,]+", "");
                     	
                     	  msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
                     	 System.out.println("HEmant "+msg+":File path "+filepath);
@@ -156,7 +157,7 @@ public class Accessno extends Activity {
 	                case R.id.radioButton56Id:
                     	str = (String) ccc.getText();
                     	System.out.println(str);
-                    	 //item=str.replaceAll("[a-zA-Z,]+", "");
+                    	 item=str.replaceAll("[a-zA-Z,]+", "");
                     	
                     	  msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
                     	 System.out.println("HEmant "+msg+":File path "+filepath);
@@ -172,7 +173,7 @@ public class Accessno extends Activity {
 	                case R.id.radioButton57Id:
                     	str = (String) ddd.getText();
                     	System.out.println(str);
-                    	 //item=str.replaceAll("[a-zA-Z,]+", "");
+                    	 item=str.replaceAll("[a-zA-Z,]+", "");
                     	
                     	  msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
                     	 System.out.println("HEmant "+msg+":File path "+filepath);
@@ -188,7 +189,7 @@ public class Accessno extends Activity {
 	                case R.id.radioButton58Id:
                     	str = (String) eee.getText();
                     	System.out.println(str);
-                    	 //item=str.replaceAll("[a-zA-Z,]+", "");
+                    	 item=str.replaceAll("[a-zA-Z,]+", "");
                     	
                     	  msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
                     	 System.out.println("HEmant "+msg+":File path "+filepath);
@@ -398,7 +399,7 @@ public class Accessno extends Activity {
 	                    case R.id.radioButton1Id:
 	                    	str = (String) a.getText();
 	                    	System.out.println(str);
-	                    	 //item=str.replaceAll("[a-zA-Z,]+", "");
+	                    	 item=str.replaceAll("[a-zA-Z,]+", "");
 	                    	
 	                    	  msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
 	                    	 System.out.println("HEmant "+msg+":File path "+filepath);
@@ -414,6 +415,7 @@ public class Accessno extends Activity {
 	                       // getWindow().getDecorView().setBackgroundColor(Color.parseColor("#FFFF00"));
 	                    	str = (String) b.getText();
 	                    	System.out.println(str);
+	                    	 item=str.replaceAll("[a-zA-Z,]+", "");
 	                    	/* item=str.replaceAll("[a-zA-Z,]+", "");
 	               		  System.out.println("xxxxxxxxxxxxxxxxxx"+item);*/
 	                    	msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
@@ -430,6 +432,7 @@ public class Accessno extends Activity {
 	                       // getWindow().getDecorView().setBackgroundColor(Color.parseColor("#FF00FF"));
 	                    	str = (String) c.getText();
 	                    	System.out.println(str);
+	                    	 item=str.replaceAll("[a-zA-Z,]+", "");
 	                    	msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
 	                    	 System.out.println("HEmant "+msg+":File path "+filepath);
 		               		 Intent nnn = new Intent(Accessno.this,SipHome.class);
@@ -443,6 +446,7 @@ public class Accessno extends Activity {
 	                       // getWindow().getDecorView().setBackgroundColor(Color.parseColor("#00FFFF"));
 	                    	str = (String) d.getText();
 	                    	System.out.println(str); 
+	                    	 item=str.replaceAll("[a-zA-Z,]+", "");
 	                    	msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
 	                    	 System.out.println("HEmant "+msg+":File path "+filepath);
 		               		  System.out.println("xxxxxxxxxxxxxxxxxx"+item);
@@ -457,6 +461,7 @@ public class Accessno extends Activity {
 		                       // getWindow().getDecorView().setBackgroundColor(Color.parseColor("#00FFFF"));
 	                    	str = (String) e.getText();
 	                    	System.out.println(str);
+	                     	 item=str.replaceAll("[a-zA-Z,]+", "");
 	                    	msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
 	                    	 System.out.println("HEmant "+msg+":File path "+filepath);
 		               		  System.out.println("xxxxxxxxxxxxxxxxxx"+item);
@@ -471,6 +476,7 @@ public class Accessno extends Activity {
 		                       // getWindow().getDecorView().setBackgroundColor(Color.parseColor("#00FFFF"));
 	                    	str = (String) f.getText();
 	                    	System.out.println(str);
+	                     	 item=str.replaceAll("[a-zA-Z,]+", "");
 	                    	msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
 	                    	 System.out.println("HEmant "+msg+":File path "+filepath);
 		               		  System.out.println("xxxxxxxxxxxxxxxxxx"+item);
@@ -485,6 +491,7 @@ public class Accessno extends Activity {
 		                       // getWindow().getDecorView().setBackgroundColor(Color.parseColor("#00FFFF"));
 	                    	str = (String) g.getText();
 	                    	System.out.println(str);
+	                     	 item=str.replaceAll("[a-zA-Z,]+", "");
 	                    	msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
 	                    	 System.out.println("HEmant "+msg+":File path "+filepath);
 		               		  System.out.println("xxxxxxxxxxxxxxxxxx"+item);
@@ -499,6 +506,7 @@ public class Accessno extends Activity {
 		                       // getWindow().getDecorView().setBackgroundColor(Color.parseColor("#00FFFF"));
 	                    	str = (String) h.getText();
 	                    	System.out.println(str);
+	                     	 item=str.replaceAll("[a-zA-Z,]+", "");
 	                    	msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
 	                    	 System.out.println("HEmant "+msg+":File path "+filepath);
 		               		  System.out.println("xxxxxxxxxxxxxxxxxx"+item);
@@ -513,6 +521,7 @@ public class Accessno extends Activity {
 		                       // getWindow().getDecorView().setBackgroundColor(Color.parseColor("#00FFFF"));
 	                    	str = (String) iii.getText();
 	                    	System.out.println(str);
+	                     	 item=str.replaceAll("[a-zA-Z,]+", "");
 	                    	msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
 	                    	 System.out.println("HEmant "+msg+":File path "+filepath);
 		               		  System.out.println("xxxxxxxxxxxxxxxxxx"+item);
@@ -527,6 +536,7 @@ public class Accessno extends Activity {
 		                       // getWindow().getDecorView().setBackgroundColor(Color.parseColor("#00FFFF"));
 	                    	str = (String) j.getText();
 	                    	System.out.println(str);
+	                     	 item=str.replaceAll("[a-zA-Z,]+", "");
 	                    	msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
 	                    	 System.out.println("HEmant "+msg+":File path "+filepath);
 		               		 Intent sss = new Intent(Accessno.this,SipHome.class);
@@ -540,6 +550,7 @@ public class Accessno extends Activity {
 		                       // getWindow().getDecorView().setBackgroundColor(Color.parseColor("#00FFFF"));
 	                    	str = (String) k.getText();
 	                    	System.out.println(str);
+	                     	 item=str.replaceAll("[a-zA-Z,]+", "");
 	                    	msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
 	                    	 System.out.println("HEmant "+msg+":File path "+filepath);
 		               		 Intent ddd = new Intent(Accessno.this,SipHome.class);
@@ -553,6 +564,7 @@ public class Accessno extends Activity {
 		                       // getWindow().getDecorView().setBackgroundColor(Color.parseColor("#00FFFF"));
 	                    	str = (String) l.getText();
 	                    	System.out.println(str);
+	                     	 item=str.replaceAll("[a-zA-Z,]+", "");
 	                    	msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
 	                    	 System.out.println("HEmant "+msg+":File path "+filepath);
 		               		 Intent fff = new Intent(Accessno.this,SipHome.class);
@@ -566,6 +578,7 @@ public class Accessno extends Activity {
 		                       // getWindow().getDecorView().setBackgroundColor(Color.parseColor("#00FFFF"));
 	                    	str = (String) m.getText();
 	                    	System.out.println(str);
+	                     	 item=str.replaceAll("[a-zA-Z,]+", "");
 	                    	msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
 	                    	 System.out.println("HEmant "+msg+":File path "+filepath);
 		               		 Intent ggg = new Intent(Accessno.this,SipHome.class);
@@ -579,6 +592,7 @@ public class Accessno extends Activity {
 		                       // getWindow().getDecorView().setBackgroundColor(Color.parseColor("#00FFFF"));
 	                    	str = (String) n.getText();
 	                    	System.out.println(str);
+	                     	 item=str.replaceAll("[a-zA-Z,]+", "");
 	                    	msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
 	                    	 System.out.println("HEmant "+msg+":File path "+filepath);
 		               		 Intent hhh = new Intent(Accessno.this,SipHome.class);
@@ -592,6 +606,7 @@ public class Accessno extends Activity {
 		                       // getWindow().getDecorView().setBackgroundColor(Color.parseColor("#00FFFF"));
 	                    	str = (String) o.getText();
 	                    	System.out.println(str);
+	                     	 item=str.replaceAll("[a-zA-Z,]+", "");
 	                    	msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
 	                    	 System.out.println("HEmant "+msg+":File path "+filepath);
 		               		 Intent jjj = new Intent(Accessno.this,SipHome.class);
@@ -605,6 +620,7 @@ public class Accessno extends Activity {
 		                       // getWindow().getDecorView().setBackgroundColor(Color.parseColor("#00FFFF"));
 	                    	str = (String) p.getText();
 	                    	System.out.println(str);
+	                     	 item=str.replaceAll("[a-zA-Z,]+", "");
 	                    	msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
 	                    	 System.out.println("HEmant "+msg+":File path "+filepath);
 		               		 Intent kkk = new Intent(Accessno.this,SipHome.class);
@@ -618,6 +634,7 @@ public class Accessno extends Activity {
 		                       // getWindow().getDecorView().setBackgroundColor(Color.parseColor("#00FFFF"));
 	                    	str = (String) q.getText();
 	                    	System.out.println(str);
+	                     	 item=str.replaceAll("[a-zA-Z,]+", "");
 	                    	msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
 	                    	 System.out.println("HEmant "+msg+":File path "+filepath);
 		               		 Intent lll = new Intent(Accessno.this,SipHome.class);
@@ -631,6 +648,7 @@ public class Accessno extends Activity {
 		                       // getWindow().getDecorView().setBackgroundColor(Color.parseColor("#00FFFF"));
 	                    	str = (String) r.getText();
 	                    	System.out.println(str);
+	                     	 item=str.replaceAll("[a-zA-Z,]+", "");
 	                    	msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
 	                    	 System.out.println("HEmant "+msg+":File path "+filepath);
 		               		 
@@ -645,6 +663,7 @@ public class Accessno extends Activity {
 		                       // getWindow().getDecorView().setBackgroundColor(Color.parseColor("#00FFFF"));
 	                    	str = (String) s.getText();
 	                    	System.out.println(str);
+	                     	 item=str.replaceAll("[a-zA-Z,]+", "");
 	                    	msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
 	                    	 System.out.println("HEmant "+msg+":File path "+filepath);
 		               		 Intent ooo = new Intent(Accessno.this,SipHome.class);
@@ -658,6 +677,7 @@ public class Accessno extends Activity {
 		                       // getWindow().getDecorView().setBackgroundColor(Color.parseColor("#00FFFF"));
 	                    	str = (String) t.getText();
 	                    	System.out.println(str);
+	                     	 item=str.replaceAll("[a-zA-Z,]+", "");
 	                    	msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
 	                    	 System.out.println("HEmant "+msg+":File path "+filepath);
 		               		 Intent uuu = new Intent(Accessno.this,SipHome.class);
@@ -671,6 +691,7 @@ public class Accessno extends Activity {
 		                       // getWindow().getDecorView().setBackgroundColor(Color.parseColor("#00FFFF"));
 	                    	str = (String) u.getText();
 	                    	System.out.println(str);
+	                     	 item=str.replaceAll("[a-zA-Z,]+", "");
 	                    	msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
 	                    	 System.out.println("HEmant "+msg+":File path "+filepath);
 		               		 Intent yyy = new Intent(Accessno.this,SipHome.class);
@@ -684,6 +705,7 @@ public class Accessno extends Activity {
 		                       // getWindow().getDecorView().setBackgroundColor(Color.parseColor("#00FFFF"));
 	                    	str = (String) v.getText();
 	                    	System.out.println(str);
+	                     	 item=str.replaceAll("[a-zA-Z,]+", "");
 	                    	msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
 	                    	 System.out.println("HEmant "+msg+":File path "+filepath);
 		               		 Intent ttt = new Intent(Accessno.this,SipHome.class);
@@ -697,6 +719,7 @@ public class Accessno extends Activity {
 		                       // getWindow().getDecorView().setBackgroundColor(Color.parseColor("#00FFFF"));
 	                    	str = (String) w.getText();
 	                    	System.out.println(str);
+	                     	 item=str.replaceAll("[a-zA-Z,]+", "");
 	                    	msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
 	                    	 System.out.println("HEmant "+msg+":File path "+filepath);
 		               		 Intent rrr = new Intent(Accessno.this,SipHome.class);
@@ -710,6 +733,7 @@ public class Accessno extends Activity {
 		                       // getWindow().getDecorView().setBackgroundColor(Color.parseColor("#00FFFF"));
 	                    	str = (String) x.getText();
 	                    	System.out.println(str);
+	                     	 item=str.replaceAll("[a-zA-Z,]+", "");
 	                    	msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
 	                    	 System.out.println("HEmant "+msg+":File path "+filepath);
 		               		 Intent eee = new Intent(Accessno.this,SipHome.class);
@@ -723,6 +747,7 @@ public class Accessno extends Activity {
 		                       // getWindow().getDecorView().setBackgroundColor(Color.parseColor("#00FFFF"));
 	                    	str = (String) y.getText();
 	                    	System.out.println(str);
+	                     	 item=str.replaceAll("[a-zA-Z,]+", "");
 	                    	msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
 	                    	 System.out.println("HEmant "+msg+":File path "+filepath);
 		               		 Intent www = new Intent(Accessno.this,SipHome.class);

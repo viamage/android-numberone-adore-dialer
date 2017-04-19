@@ -1,16 +1,15 @@
 package com.numberone.ui.more;
 import java.io.BufferedReader;
-import java.io.DataOutputStream;
 import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
+import java.io.StringReader;
 import java.net.URL;
 
-import javax.crypto.Cipher;
-import javax.crypto.spec.SecretKeySpec;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
 
-import org.apache.commons.codec.binary.Base64;
-import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Document;
+import org.xml.sax.InputSource;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -40,19 +39,18 @@ import com.numberone.ui.dialpad.DigitsEditText;
 import com.numberone.utils.Log;
 
 
-      
-    public class MobileMessage extends Activity{ 
-    	
+public class MobileMessage extends Activity{ 
+	
 	private ProgressDialog dialog;
 	EditText edittext1,mobile;
 	public static EditText job;
 	TextView refill,balance,country;
-    public static String str,user,pass,msg,ccp,jsonvalue;
+   public static String str,user,pass,msg,ccp,jsonvalue;
 	SipProfile account;
-    Button send,cancel,contact;
-    private static final int PICK_CONTACT = 0;
-    private DigitsEditText digits;
-    
+   Button send,cancel,contact;
+   private static final int PICK_CONTACT = 0;
+   private DigitsEditText digits;
+   
 	public void onCreate(Bundle savedInstanceState){
 	super.onCreate(savedInstanceState);
 	
@@ -63,7 +61,7 @@ import com.numberone.utils.Log;
 	job = (EditText) findViewById(R.id.cw_job);
 	/*if(More.count==1)
 	{
-	job.setText("Please download the numberone app! Calls starting to International destination from 1/2p. Click the link https://www.numberone.co.uk/download.php. numberone Call More Pay Less");
+	job.setText("Please download the vsvoip app! Calls starting to International destination from 1/2p. Click the link https://www.vsvoip.co.uk/download.php. vsvoip Call More Pay Less");
 	More.count=0;
 	}else
 	{
@@ -71,7 +69,7 @@ import com.numberone.utils.Log;
 	}*/
 	
 	
-    send=(Button)findViewById(R.id.save_bt);
+   send=(Button)findViewById(R.id.save_bt);
 	cancel=(Button)findViewById(R.id.cancel_bt);
 	contact=(Button)findViewById(R.id.contacts);
 	
@@ -108,8 +106,8 @@ import com.numberone.utils.Log;
 	
 	}
 	
-  public void onResume()
-  {
+ public void onResume()
+ {
 	super.onResume();
 			
 	 send.setOnClickListener(new OnClickListener() 
@@ -178,9 +176,9 @@ import com.numberone.utils.Log;
 				contact();
 			}
 		});
-  }
-  
-  void showNetworkAlert() 
+ }
+ 
+ void showNetworkAlert() 
 	{
 		new AlertDialog.Builder(this)
 				.setTitle("Status")
@@ -200,38 +198,38 @@ import com.numberone.utils.Log;
 				
 	}
 
-  
-  
- 	public void onActivityResult(int requestCode, int resultCode, Intent data) {
- 	    // TODO Auto-generated method stub
- 	    super.onActivityResult(requestCode, resultCode, data);
- 	    
- 	    try{
+ 
+ 
+	public void onActivityResult(int requestCode, int resultCode, Intent data) {
+	    // TODO Auto-generated method stub
+	    super.onActivityResult(requestCode, resultCode, data);
+	    
+	    try{
 
- 	   if(requestCode == PICK_CONTACT){
- 	   if(resultCode == resultCode){
- 	    Uri contactData = data.getData();
- 	    Cursor cursor =  getContentResolver().query(contactData, null, null, null, null);
- 	                    
- 	      cursor.moveToFirst();
+	   if(requestCode == PICK_CONTACT){
+	   if(resultCode == resultCode){
+	    Uri contactData = data.getData();
+	    Cursor cursor =  getContentResolver().query(contactData, null, null, null, null);
+	                    
+	      cursor.moveToFirst();
 
- 	      String number = cursor.getString(cursor.getColumnIndexOrThrow(ContactsContract.CommonDataKinds.Phone.NUMBER));
- 	      mobile.setText(number);
- 	      mobile.requestFocus();
- 	      
- 	      System.out.println(cursor+"xxxxxxxxxxxxxxxxxxxxxxxnumber="+number);
+	      String number = cursor.getString(cursor.getColumnIndexOrThrow(ContactsContract.CommonDataKinds.Phone.NUMBER));
+	      mobile.setText(number);
+	      mobile.requestFocus();
+	      
+	      System.out.println(cursor+"xxxxxxxxxxxxxxxxxxxxxxxnumber="+number);
 
- 	      //contactName.setText(name);
- 	      //contactNumber.setText(number);
- 	      //contactEmail.setText(email);
- 	     }
- 	     }
- 	   
- 	    }catch(NullPointerException e){
- 	    	System.out.println(e);
- 	    }
- 	     }
-  @SuppressLint("NewApi") public void contact() {
+	      //contactName.setText(name);
+	      //contactNumber.setText(number);
+	      //contactEmail.setText(email);
+	     }
+	     }
+	   
+	    }catch(NullPointerException e){
+	    	System.out.println(e);
+	    }
+	     }
+ @SuppressLint("NewApi") public void contact() {
 		// TODO Auto-generated method stub
 
 		
@@ -240,16 +238,16 @@ import com.numberone.utils.Log;
 		Intent pickContactIntent = new Intent(Intent.ACTION_PICK,ContactsContract.Contacts.CONTENT_URI);
 	    pickContactIntent.setType(ContactsContract.CommonDataKinds.Phone.CONTENT_TYPE);
 	    startActivityForResult(pickContactIntent, PICK_CONTACT);
-        
+       
 	    System.out.println("hello you had click the contact method <*><*><*><*><*><*>");
 	
 	}
 
-  
-  
-  
-  
-  
+ 
+ 
+ 
+ 
+ 
 public boolean validate()
 {
 	String str=mobile.getText().toString();
@@ -312,9 +310,9 @@ void showPinAlert()
 
 private class LongOperation extends AsyncTask<String, Void, String> {
     
+	
 	 JSONObject json;
 	 String message;
-	
    @Override
    protected String doInBackground(String... params) {
    	
@@ -323,20 +321,18 @@ private class LongOperation extends AsyncTask<String, Void, String> {
    }      
 
    @Override
-   public void onPostExecute(String result) {  
-   	 try{
-   		
-   		 System.out.println("DEVTADIYAL"+ccp);
-   	    	json = new JSONObject(jsonvalue);
-   	    	message=json.getString("msg");
-   	    	System.out.println("QQQQQQQQQQQQQQQQQQQQQQQQQQ"+message);
-   	    	
-   	       
-   	    	if(message.contains("You have enter wrong Number.")||message.contains("Error loading your account information!"))
-   	    	{  
-   	    		showPinAlert();	
-   	    	}else
-   	    	{ 
+   protected void onPostExecute(String result) {  
+       try{
+   	json = new JSONObject(result);
+   	message=json.getString("status");
+   	System.out.println("QQQQQQQQQQQQQQQQQQQQQQQQQQ"+message);
+   	
+      
+   	if(message.contains("You have enter wrong Number.")||message.contains("Error loading your account information!"))
+   	{  
+   		showPinAlert();	
+   	}else
+   	{    
    		
    		new AlertDialog.Builder(MobileMessage.this)
 			.setTitle("Alert")
@@ -347,23 +343,7 @@ private class LongOperation extends AsyncTask<String, Void, String> {
 				public void onClick(DialogInterface dialog, int which)
 				{
 					
-					if(message.startsWith("You Enter wrong Mobile Number."))
-					{
-						System.out.println("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
-						
-					}else
-					{
-						/* Intent it = new Intent(InviteFriend.this,SipHome.class);
-				        	//  it.putExtra("did",str);
-				        	  it.setAction(SipManager.ACTION_SIP_DIALER);
-				        	  it.setData(SipUri.forgeSipUri(SipManager.PROTOCOL_SIP, ""));
-				        	  startActivity(it);*/
-						finish();
-					}
-									// anurag
-					/*Intent intent = new Intent(Intent.ACTION_MAIN);
-					intent.setAction(android.provider.Settings.ACTION_WIRELESS_SETTINGS);
-					startActivity(intent);*/
+					
 				}
 			}).show();
    	}
@@ -374,30 +354,23 @@ private class LongOperation extends AsyncTask<String, Void, String> {
        	
        }
    	
-   
+   	
+   	}
+   	/*toast.setMargin();  */
     }
 
   protected void onPreExecute() {
-	  
-	 /*  dialog=new ProgressDialog(MobileMessage.this);
-		//dialog.setTitle("Please wait.....");
-	   dialog.setTitle("Alert");
-		//dialog.setMessage("sending........");
-		dialog.setMessage("Message sending...");
-		dialog.setCancelable(true);
-
-		dialog.show();*/
-		
-		
-		
-    }
 	   
-   
+	  
+	   
+   }
 
    protected void onProgressUpdate(Void... values) {
    }
    public String getBalance(String user) {
 		
+		String Currency = "";
+		int mode = Context.MODE_PRIVATE;
 		try {
 			System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@ : "+user);
 			
@@ -405,86 +378,42 @@ private class LongOperation extends AsyncTask<String, Void, String> {
 			long accountId = 1;
 			account = SipProfile.getProfileFromDbId(MobileMessage.this, accountId,
 					DBProvider.ACCOUNT_FULL_PROJECTION);
-			String inputLine;
+			String user1, pass1;
+		
+			String Balance,doller;
+			user1 = account.getSipUserName();
+			pass1 = account.getPassword();
 			String str=mobile.getText().toString();
 		   String   str1=str.replaceAll("[()\\s-]+", "");
 			System.out.println(str+"<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<"+str1);
 			 msg=job.getText().toString();
-			 
-		//	 String numberCode=CountryDialog.savedCountryCode.substring(1, CountryDialog.savedCountryCode.length());
-			 String url = "https://sarge.virtualsystems.co.za/nontech/billing_send_sms/send_web_sms_clickatell.php";
-			 
-		        URL obj = new URL(url);
-		        HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-	    
-	  //add reuqest header
-	  con.setRequestMethod("POST");
-	  //con.setRequestProperty("User-Agent", USER_AGENT);
-	  con.setRequestProperty("Accept-Language", "en-US,en;q=0.5");
-	  String key = "887&try&%F834512";
-	  String data1 = account.getSipUserName();
-	  System.out.println("USERNAME "+data1);
-	  String data2=account.getPassword();	  
-	  System.out.println("PASSWORD "+data2);
-	  String data3=mobile.getText().toString();
-	  System.out.println("MOBILENUMBER "+data3);
-	  String data4=job.getText().toString();
-	  System.out.println("MESSAGE "+data4);
-	  
-	  String output1 =encrypt(data1, key);
-	  String output2 =encrypt(data2, key);
-	  String output3= encrypt(data3, key);
-	  String output4=encrypt(data4, key);
+			 String msg1  = msg.replaceAll(" ", "%20");
 		
-	  
-		String a=(asHex(output1.getBytes()));
-		System.out.println("ENCRYPTED USERNAME " +a);
-		String b=(asHex(output2.getBytes()));
-		System.out.println("ENCRYPTED PASSWORD "+b);
-		String c=(asHex(output3.getBytes()));
-		System.out.println("ENCRYPTED MOBILENUMBER "+c);
-		String d=(asHex(output4.getBytes()));
-		System.out.println("ENCRYPTED MESSAGE "+d);
-		
-		String e  = d.replaceAll(" ", "%20");
-	  
-	  String urlParameters = "username="+a+"&password="+b+"&receiver="+c+"&r_message="+e;
+			 
+				URL oracle = new URL("http://91.212.52.5/VSServices/SendSms.ashx?login="+user1+"&pass="+pass1+"&text="+msg+"&from="+user1+"&to="+str1);
+           BufferedReader in = new BufferedReader(new InputStreamReader(oracle.openStream()));
+           String inputLine;
+           int i=1;
+           String inputLine1="";
+           inputLine=in.readLine();
+           while((inputLine = in.readLine()) != null)
+           {
+           inputLine1+=inputLine;
+           }
+           String xml = inputLine1;
+           System.out.println("DEVTADIYAL)$ "+xml);
 
-	  // Send post request
-	  con.setDoOutput(true);
-	  DataOutputStream wr = new DataOutputStream(con.getOutputStream());
-	  wr.writeBytes(urlParameters);
-	  wr.flush();
-	  wr.close();
 
-	  // System.out.println("\nSending 'POST' request to URL : " + url);
-	//  System.out.println("Post parameters : " + urlParameters);
-	  //System.out.println("Response Code : " + responseCode);
+         /*  DocumentBuilder builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
+           InputSource src = new InputSource();
+           src.setCharacterStream(new StringReader(xml));
 
-	  BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
-	 
-	  StringBuilder response = new StringBuilder();
-	  while ((inputLine = in.readLine()) != null) {
-		   response.append(inputLine);
-		  }
-		  in.close();
-		  System.out.println(response.toString());  
-		  jsonvalue=response.toString();
-		  System.out.println("TADIYALSINGHDEV"+jsonvalue);
-		  JSONObject json = null;
-		  try {
-		  	json = new JSONObject(response.toString());
-		  	String  result123 = json.getString("result");
-		  /*String msg123 = json.getString("msg");
-		  ccp=msg123;
-		  System.out.println(ccp);*/
-		    
-		  //  System.out.println("balance "+result123  +"\n curreny "+msg123);
-		  }
-		  catch (JSONException e1) {
-		  	// TODO Auto-generated catch block
-		  	e1.printStackTrace();
-		  }
+           Document doc = builder.parse(src);
+           age = doc.getElementsByTagName("balance").item(0).getTextContent();
+           System.out.println(age);*/
+         
+           in.close();
+			
 			return inputLine;
 
 		} catch (Exception e) {
@@ -494,36 +423,7 @@ private class LongOperation extends AsyncTask<String, Void, String> {
 		}
 
 	}
-
-	private String encrypt(String input, String key) {
-		// TODO Auto-generated method stub
-		byte[] crypted = null;
-		try{
-		SecretKeySpec skey = new SecretKeySpec(key.getBytes(), "AES");
-		Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5Padding");
-		cipher.init(Cipher.ENCRYPT_MODE, skey);
-		crypted = cipher.doFinal(input.getBytes());
-		}catch(Exception e){
-		System.out.println(e.toString());
-		}
-		return new String(Base64.encodeBase64(crypted));
-		}
-
-		public final char[] HEX_CHARS = "0123456789abcdef".toCharArray();
-
-		public  String asHex(byte[] buf)
-		{
-		char[] chars = new char[2 * buf.length];
-		for (int i = 0; i < buf.length; ++i)
-		{
-		chars[2 * i] = HEX_CHARS[(buf[i] & 0xF0) >>> 4];
-		chars[2 * i + 1] = HEX_CHARS[buf[i] & 0x0F];
-		}
-		return new String(chars);
-		}
-	}
-   }
-
+}  
 
 
 

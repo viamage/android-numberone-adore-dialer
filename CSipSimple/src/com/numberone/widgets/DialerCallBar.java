@@ -1,5 +1,7 @@
 package com.numberone.widgets;
 
+import java.io.File;
+
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
@@ -13,10 +15,13 @@ import android.view.View.OnClickListener;
 import android.view.View.OnLongClickListener;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.numberone.R;
 import com.numberone.ui.account.AccountWizard;
 import com.numberone.ui.account.AdoreSharedPreferences;
+import com.numberone.ui.dialpad.DialerFragment.LongOperation;
+import com.numberone.writer.StorageFile;
 
 public class DialerCallBar extends LinearLayout implements OnClickListener, OnLongClickListener {
 
@@ -41,7 +46,7 @@ public class DialerCallBar extends LinearLayout implements OnClickListener, OnLo
         /**
          * The account button has been pressed
          */
-        void editAccount();
+      //  void editAccount();
 
 		void phonebook();
 
@@ -59,17 +64,22 @@ public class DialerCallBar extends LinearLayout implements OnClickListener, OnLo
         this(context, attrs, 0);
     }
     
+   
+    
     public DialerCallBar(Context context, AttributeSet attrs, int style) {
         super(context, attrs);
         LayoutInflater inflater = LayoutInflater.from(context);
         inflater.inflate(R.layout.dialpad_additional_buttons, this, true);
         findViewById(R.id.phonebook).setOnClickListener(this);
         findViewById(R.id.phonebook).setEnabled(true);
-        findViewById(R.id.accountButton).setOnClickListener(this);
-        findViewById(R.id.accountButton).setEnabled(true);
+      //  findViewById(R.id.accountButton).setOnClickListener(this);
+    TextView balance = (TextView) findViewById(R.id.accountButton);
+   // balance.setText();
+      //  findViewById(R.id.accountButton).setEnabled(true);
         findViewById(R.id.dialButton).setOnClickListener(this);
       //  findViewById(R.id.deleteButton1).setOnClickListener(this);
-      //  findViewById(R.id.deleteButton1).setOnLongClickListener(this);
+      //  findViewById(R.id.deleteButton1).setOnLongClickListener(this);  
+        
         adorePreferences=new AdoreSharedPreferences(getContext());
         if(getOrientation() == LinearLayout.VERTICAL) {
             LayoutParams lp;
@@ -82,10 +92,12 @@ public class DialerCallBar extends LinearLayout implements OnClickListener, OnLo
                 // Added for clarity but not necessary
                 getChildAt(i).setLayoutParams(lp);
                 
+               
+                
             }
         }
     }
-
+  
     /**
      * Set a listener for this widget actions
      * @param l the listener called back when some user action is done on this widget
@@ -114,9 +126,10 @@ public class DialerCallBar extends LinearLayout implements OnClickListener, OnLo
     public void onClick(View v) {
         if (actionListener != null) {
             int viewId = v.getId();
-            if (viewId == R.id.accountButton) {
-                actionListener.editAccount();
-            }if (viewId == R.id.phonebook) {
+            //if (viewId == R.id.accountButton) {
+               // actionListener.editAccount();
+            //}
+        if (viewId == R.id.phonebook) {
                 actionListener.phonebook();
             }
             else if(viewId == R.id.dialButton) {
@@ -145,36 +158,45 @@ public class DialerCallBar extends LinearLayout implements OnClickListener, OnLo
 
 					}
 				});
-            	Button local=(Button)dialog.findViewById(R.id.localcall);
+Button local=(Button)dialog.findViewById(R.id.localcall);
             	
             	local.setOnClickListener(new OnClickListener() 
             	{
-					
+				
 					@Override
 					public void onClick(View v)
-					{   adorePreferences.loadCountryValue();
-					    
-						if(adorePreferences.accessnum!=null)
-	                   	{
-						 actionListener.gsmCall();
-	                   	}else
-	                	{
-	                		showSavingNmberAlert();
-	                	}
-						 dialog .dismiss();
+					{   
+					     
+						try {
+							adorePreferences.loadCountryValue();
+							File internalStorageDir = getContext().getFilesDir();
+							File devfile = new File(internalStorageDir, "/ukww");
+							String filepath = devfile+"/accessno.txt";
+							StorageFile sf = new StorageFile();
+							String accessno =null;
+							
+							accessno = sf.readStorageFile(filepath);
+							System.out.println(" WHILE CALLING HEMANT FILE PATH: "+filepath+" DEVTADIYAL04 ACCESS NO "+accessno);
+							 
+							  actionListener.gsmCall();
+							  dialog .dismiss();
+							
+						} catch (Exception e) {
+							// TODO Auto-generated catch block
+						//	showSavingNmberAlert();
+							 dialog .dismiss();
+							System.out.println("QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ "+e);
 						
+					        }
 					}
 				});
             	
             	
     			dialog.show();	
             	
-            	
-               
+             
             }
-            }/*else if(viewId == R.id.deleteButton1) {
-                actionListener.deleteChar();
-            }*/
+            }
         }
     
 

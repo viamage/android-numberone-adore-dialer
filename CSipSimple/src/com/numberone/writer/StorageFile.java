@@ -1,4 +1,4 @@
-package com.numberone.ui.more;
+package com.numberone.writer;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -8,7 +8,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-import com.numberone.ui.account.AccountWizard.Authrosied;
 
 public class StorageFile {
 	

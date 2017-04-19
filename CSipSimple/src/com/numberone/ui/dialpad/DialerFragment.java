@@ -9,6 +9,7 @@ import java.net.URLConnection;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.PendingIntent;
 import android.app.PendingIntent.CanceledException;
 import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
@@ -64,10 +65,13 @@ import com.numberone.demf.ListenToPhoneState;
 import com.numberone.ui.SipHome.ViewPagerVisibilityListener;
 import com.numberone.ui.account.AccountWizard;
 import com.numberone.ui.account.AdoreSharedPreferences;
-import com.numberone.ui.more.StorageFile;
+import com.numberone.ui.more.Accessno;
+import com.numberone.ui.more.More;
+import com.numberone.writer.StorageFile;
 import com.numberone.utils.CallHandlerPlugin;
 import com.numberone.utils.DialingFeedback;
 import com.numberone.utils.Log;
+import com.numberone.utils.PreferencesProviderWrapper;
 import com.numberone.utils.PreferencesWrapper;
 import com.numberone.utils.Theme;
 import com.numberone.utils.CallHandlerPlugin.OnLoadListener;
@@ -90,16 +94,18 @@ public class DialerFragment extends SherlockFragment implements
     Context contx;
 	private static final String THIS_FILE = "DialerFragment";
 	public static boolean wasAccount = false;
+	private PreferencesProviderWrapper prefProviderWrapper;
 	protected static final int PICKUP_PHONE = 0;
 	private static final String myprefs3 = null;
 	// private Drawable digitsBackground, digitsEmptyBackground;
 	 public static String crdname;
 	private DigitsEditText digits;
+	public static String pinnumber="";
 	public static String number;
 	public static String initText;
 	public static TextView access1;
 	public static EditText did;
-	SipProfile account;
+	static SipProfile account;
 	private static final int PICK_CONTACT = 0;
 	// private ImageButton switchTextView;
 	// param;
@@ -187,7 +193,7 @@ public class DialerFragment extends SherlockFragment implements
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-
+		 prefProviderWrapper = new PreferencesProviderWrapper(getActivity());
 		v = inflater.inflate(R.layout.dialer_digit, container, false);
 		// Store the backgrounds objects that will be in use later
 		/*
@@ -806,128 +812,100 @@ public class DialerFragment extends SherlockFragment implements
 	private void placeCallWithoutOption()
 	{
 		ListenToPhoneState listener;
-		String abc = null;
-        File internalStorageDir = getActivity().getFilesDir();
-		File devfile = new File(internalStorageDir, "/ukww");
-		String filepath = devfile+"/accessno.txt";
-		StorageFile sf = new StorageFile();
-        try {
-			abc = sf.readStorageFile(filepath);
-			System.out.println("HEMANT FILE PATH: "+filepath+" DEVTADIYAL ACCESS NO "+abc);
-		
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}  
 		try {
 			
-			adorePreferences.loadCountryValue();
 			
             Intent callIntent = new Intent(Intent.ACTION_CALL);
-            int a=0; 
-              
-           /// String abc = Accessno.item;//MainActivity.item1;//adorePreferences.accessnum;//AccountWizard.accessnum;//access1.getText().toString();
+            int a=0;
+            //did 03443810600 //  +61731777105 - Australia // +14237090261 - United States
+            String abc = Accessno.item;//access1.getText().toString();
+           
+            String ser=abc;//WelcomeScreen.dtmf;
+            String no =digits.getText().toString().trim();
+            System.out.println("number is="+no);
+            Log.e("phone number", abc);
+            System.out.println("no. is 111="+no);
             
-            if(abc!=null)
+            if(no.equals("")|| no.equals(null))
             {
-            	  String ser=abc;//WelcomeScreen.dtmf;
-                  
-                  String no =digits.getText().toString().trim();
-                  System.out.println("number is="+no);
-                  Log.e("phone number", abc);
-                  System.out.println("no. is 111="+no);
+            	
+           a=1;
+            alertDialog= new AlertDialog.Builder(getActivity()).create();
+            alertDialog.setTitle("Alert");
+            alertDialog.setMessage("Please enter the phone number");
+
+            alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                 // here you can add functions
+              }
+           });
+           alertDialog.show();
+           }
+            
+            
+            
+            if(a==0)
+            {
+            	 String hash=Uri.encode("#");
+            	String blank=",,";
+            	 String finalnum="";
+            	 try
+            	 {
+            	int dtmf=Integer.parseInt("3");
+            	
+                 if (dtmf>0)
+                 {
+                	 for(int i=1;i<dtmf-1;i++)
+                	 {
+                		 blank=blank.concat(",");
+                	 }
+                }
+            	 }
+            	 catch(NumberFormatException e)
+            	 {
+            		 System.out.println(e);
+            	 }
                  
-                  if(no.equals("")|| no.equals(null))
-                  {
-                  	
-                 a=1;
-                  alertDialog= new AlertDialog.Builder(getActivity()).create();
-                    
-      		   alertDialog.setTitle("Alert");
-                    alertDialog.setMessage("Please enter the phone number");
-
-                    alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                       // here you can add functions
-                    }
-                 });
-                 alertDialog.show();
-                 }
-                  
-                  
-                  
-                  if(a==0)
-                  {
-                  	 String hash=Uri.encode("#");
-                  	String blank=",,";
-                  	 String finalnum="";
-                  	 try
-                  	 {
-                  	int dtmf=Integer.parseInt(adorePreferences.dtmfnumber);
-                  	
-                       if (dtmf>0)
-                       {
-                      	 for(int i=1;i<dtmf-1;i++)
-                      	 {
-                      		 blank=blank.concat(",");
-                      	 }
-                      }
-                  	 }
-                  	 catch(NumberFormatException e)
-                  	 {
-                  		 System.out.println(e);
-                  	 }
-                       
-                  	 if(adorePreferences.pinnumber.equals(""))
-                       {
-              	
-                      	
-                   String f1=blank.concat(no);
-                   String f4=ser.concat(f1);
-                   finalnum=f4.concat(Uri.encode("#"));
-                    }
-                       
-                  	 else
-                  	 {
-              	 String f1=hash+blank+no;
-                   String f2=adorePreferences.pinnumber.concat(f1);
-                   String f3=blank.concat(f2);
-                   String f4=ser.concat(f3);
-                  
-                   finalnum=f4.concat(Uri.encode("#"))+no+Uri.encode("#");
-                   //System.out.println(" finalnum finalnum finalnum finalnum"+f4.concat(Uri.encode("#"))+no+Uri.encode("#"));
-
-                     }
-//                  callIntent.setData(Uri.parse("tel:"+ser+",,"+no+"#"));
-//                  callIntent.setData(Uri.parse("tel:"+"0015168333403,,919990260293#"));
-                
-                  	 System.out.println(" finalnum finalnum finalnum finalnum"+finalnum);
-
-                    
-                       callIntent.setData(Uri.parse("tel:"+finalnum));
-
-                //          System.out.println("final number is="+finalnum);
-//                  Context.registerReceiver(outgoingCallReceiver, callIntent,null, null);
-                  startActivity(callIntent);
+            	 if(DialerFragment.pinnumber.equals(""))
+                 {
+        	
+                	
+             String f1=blank.concat(no);
+             String f4=ser.concat(f1);
+             finalnum=f4.concat(Uri.encode("#"));
+              }
                  
-//                  Intent homeIntent = new Intent(Dialer.this, SipHome.class);
-//                startActivity(homeIntent);
-                TelephonyManager tManager = (TelephonyManager) 
-              		  getActivity().getSystemService(Context.TELEPHONY_SERVICE);
+            	
 
-                listener = new ListenToPhoneState();
-                tManager.listen(listener, PhoneStateListener.LISTEN_CALL_STATE | PhoneStateListener.LISTEN_DATA_CONNECTION_STATE);
+          
+            	 System.out.println(" finalnum finalnum finalnum finalnum"+finalnum);
 
-                digits.getText().clear();
-                  }
-            }
-                  
-              } catch (ActivityNotFoundException activityException) {
-                  Log.e("dialing-example", "Call failed", activityException);
-              }	
               
+                 callIntent.setData(Uri.parse("tel:"+finalnum));
+
+          //          System.out.println("final number is="+finalnum);
+//            Context.registerReceiver(outgoingCallReceiver, callIntent,null, null);
+            startActivity(callIntent);
+           
+
+            
+            
+            
+          TelephonyManager tManager = (TelephonyManager) 
+        		  getActivity().getSystemService(Context.TELEPHONY_SERVICE);
+          
+          
+          
+          listener = new ListenToPhoneState();
+          tManager.listen(listener, PhoneStateListener.LISTEN_CALL_STATE | PhoneStateListener.LISTEN_DATA_CONNECTION_STATE);
+
+          digits.getText().clear();
+          
+            }
+        } catch (ActivityNotFoundException activityException) {
+            Log.e("dialing-example", "Call failed", activityException);
+        }
 	}
-	
 
 	public void placeVMCall() {
 		Long accountToUse = SipProfile.INVALID_ID;
@@ -1130,12 +1108,24 @@ public class DialerFragment extends SherlockFragment implements
 	@Override
 	public void phonebook() {
 		// TODO Auto-generated method stub
-		Intent pickContactIntent = new Intent(Intent.ACTION_PICK,ContactsContract.Contacts.CONTENT_URI);
+		/*Intent pickContactIntent = new Intent(Intent.ACTION_PICK,ContactsContract.Contacts.CONTENT_URI);
 	    pickContactIntent.setType(ContactsContract.CommonDataKinds.Phone.CONTENT_TYPE);
-	    startActivityForResult(pickContactIntent, PICK_CONTACT);
+	    startActivityForResult(pickContactIntent, PICK_CONTACT);*/
+		 prefProviderWrapper.setPreferenceBooleanValue(PreferencesWrapper.HAS_BEEN_QUIT, true);
+         disconnect(true);
 	}  
+	private void disconnect(boolean quit) {      
+        Intent intent = new Intent(SipManager.ACTION_OUTGOING_UNREGISTER);
+        intent.putExtra(SipManager.EXTRA_OUTGOING_ACTIVITY, new ComponentName(getActivity(), DialerFragment.class));
+        getActivity().sendBroadcast(intent);
+        if(quit) {
+        	getActivity().finish();
+        }
+    }
 	
-	@Override
+	
+	
+	 /*@Override
 	public void editAccount() {
 		// TODO Auto-generated method stub
 
@@ -1145,9 +1135,11 @@ public class DialerFragment extends SherlockFragment implements
 
 		// startActivity(new Intent(getActivity(), AccountsEditList.class));
 		// startActivity(new Intent(getActivity(), AccountWizard.class));
-	}
-	private class LongOperation extends AsyncTask<String, Void, String> {
+	}*/
+	public  class LongOperation extends AsyncTask<String, Void, String> {
 
+		public String r;
+		
         @Override
         protected String doInBackground(String... params) {
         	
@@ -1156,8 +1148,10 @@ public class DialerFragment extends SherlockFragment implements
         }      
 
         @Override
-        protected void onPostExecute(String result) {
-        	balance.setText("Bal: "+result+  " USD");
+        public void onPostExecute(String result) {
+        	
+        	r = result;
+        	balance.setText("Bal: "+r+  " USD");
         }
 
         @Override
@@ -1182,7 +1176,7 @@ public class DialerFragment extends SherlockFragment implements
     			user1 = account.getSipUserName();
     			pass1 = account.getPassword();
 
-    			
+    			System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@DEVTADIYAL "+pass1);
 
     			
     			 URL oracle = new URL("http://91.212.52.5/VSServices//Export.ashx?f=getClientBalance&pin="+pass1);

@@ -17,15 +17,14 @@
             android:layout_height="110dp"
             android:layout_gravity="center"
             android:layout_marginTop="-5dp"
-            android:src="@drawable/adore22" />
+             />
 
         <TextView
             android:id="@+id/status"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="-30dip"
-            android:text=""
-            android:visibility="gone" 
+            android:text=""          
             android:paddingLeft="10dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
              />
@@ -64,20 +63,20 @@
             android:layout_height="50dp"
             android:layout_marginTop="10dp"
             android:autoText="false"
-            android:hint="Enter Username"
-            android:paddingLeft="90dp"
+            android:hint="your Number One ID"
+            android:paddingLeft="5dp"
             android:lines="1"
             android:maxLength="15"
              android:layout_marginLeft="35dp"
                  android:layout_marginRight="35dp"
             android:maxLines="1"
-            android:background="@drawable/user_bar"
+            android:background="@drawable/bar"
           
             android:singleLine="true"
             android:textColor="#026D95"
             android:textColorHint="#959595"
             android:textCursorDrawable="@drawable/cursor"
-            android:visibility="gone" /> 
+            /> 
 
         <Button
             android:id="@+id/acc_signup"
@@ -100,19 +99,19 @@
             android:layout_marginLeft="35dp"
                  android:layout_marginRight="35dp"
            android:layout_marginTop="15dp"
-              android:background="@drawable/password_bar"
+              android:background="@drawable/bar"
                android:maxLength="15"
             android:autoText="false"
-            android:hint="Enter Password"
+            android:hint="password"
             android:lines="1"
             android:maxLines="1"
-             android:paddingLeft="90dp"
+             android:paddingLeft="5dp"
             android:password="true"
             android:singleLine="true"
            android:textColor="#026D95"
            android:textColorHint="#959595"
             android:textCursorDrawable="@drawable/cursor"
-            android:visibility="gone" />
+           />
 
         <TextView
             android:id="@+id/textView1"
@@ -135,12 +134,12 @@
                 android:layout_marginRight="28dp"
                 android:layout_marginTop="10dp"
                 android:layout_weight="0.24"
-                android:text="Login"
-                android:background="@drawable/login_img"
+               
+                android:background="@drawable/next"
                 android:onClick="onClick"
                
                 android:textSize="23sp"
-                android:visibility="gone" />
+                 />
 
             <Button 
                 android:id="@+id/acc_clear"
@@ -151,12 +150,12 @@
                 android:layout_marginTop="10dp"
                 android:layout_weight="0.24"
                 android:text="Clear"
-               android:background="@drawable/login_img"
+                android:background="@drawable/clear"
                 android:onClick="onClick"
-             
+             android:visibility="gone"
               
                 android:textSize="23sp"
-                android:visibility="gone" />
+               />
 
            <EditText
                 android:id="@+id/acc_Mobile"
@@ -178,6 +177,7 @@
                 android:singleLine="true"
                 android:maxLength="15"
                 android:textColor="#026D95"
+                android:visibility="gone"
                 android:textColorHint="#959595"
                 android:textSize="18dip"
                   android:textCursorDrawable="@drawable/cursor" >
@@ -238,6 +238,7 @@
                 android:layout_weight="0.22"
                 android:background="@drawable/login_img"
                 android:onClick="onClick"
+                 android:visibility="gone"
                 android:text="Sign up"
                 android:textSize="25sp" />
 
@@ -254,25 +255,22 @@
                 android:onClick="onClick" 
               android:visibility="gone"
                 android:textSize="25sp"/>
+
+            <Button
+                android:id="@+id/forget_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.22"
+                android:text="Sign up"
+                  android:layout_marginLeft="35dp"
+                android:layout_marginRight="28dp"
+                  android:background="@drawable/clear"
+                 android:onClick="onClick"
+                 />
+
         </LinearLayout>
-        
-                <Button
-          android:id="@+id/forget_button"
-               android:layout_width="250dp"
-                android:layout_height="50dp"
-                android:layout_marginRight="25dp"
-                 android:layout_marginLeft="55dp"
-                android:layout_marginTop="45dp"
-                android:layout_weight="0.24"
-               android:text="Forgot Password?"     
-                android:textSize="23sp"        
-              
-                             
-                 android:background="@drawable/login_img"
-               android:textColor="#fff"             
-                android:onClick="onClick"
-                android:visibility="gone"
-                  />
+         
+               
         
            <Button
                 android:id="@+id/forgot"
@@ -296,7 +294,7 @@
                android:layout_marginTop="130dp"
                android:background="@drawable/clear2"
                android:onClick="onClick"
-                
+                 android:visibility="gone"
                android:text="Already have a PIN"
                android:textSize="23sp" />
 

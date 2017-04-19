@@ -125,6 +125,9 @@
     <string name="access">Access Number</string>
     <string name="access_desc"></string>
     
+      <string name="msg">Mobile Message</string>
+    <string name="msg_desc"></string>
+    
     <string name="hint_sip">SIP Server IP</string>
     <string name="hint_proxy">Enter Proxy(Optional)</string>
     <string name="hint_pass">Enter PIN/Password</string>
