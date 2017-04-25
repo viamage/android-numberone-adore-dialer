@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center_vertical"
-        android:text="Zone Call V 1.1.0"
+        android:text="No 1 V 1.0.0"
         android:textColor="#ff9700"
         android:textSize="18sp"
         android:textStyle="bold" />
@@ -30,7 +30,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="20dip"
         android:gravity="center_vertical"
-        android:text="© Copyright Zone Call Pvt Ltd"
+        android:text="© Copyright No 1 Pvt Ltd"
         android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold" />
@@ -42,7 +42,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="20dip"
         android:gravity="center_vertical"
-        android:text="www.Zonecall.com"
+        android:text="www.No1.com"
         android:textColor="#ff9700"
         android:clickable="true"
         android:onClick="openWeb"

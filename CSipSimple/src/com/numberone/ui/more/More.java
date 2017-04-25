@@ -34,12 +34,12 @@ public class More extends SherlockFragment implements ViewPagerVisibilityListene
 	private final static int CHANGE_PREFS = 1;
 	private final static int SETTINGS = 0;
 	//private final static int RECORDING = 1;
-	private final static int ABOUT = 1;
-	private final static int VOUCHER = 2;
-	private final static int ACCESSNO = 3;
-	//private final static int MSG = 4;
-	private final static int EXIT= 4; 
-	private final static int EXIT1= 5;
+	private final static int ABOUT = 4;
+	private final static int VOUCHER = 1;
+	private final static int ACCESSNO = 2;
+	private final static int PROFILE = 3;
+	private final static int EXIT= 5; 
+	private final static int EXIT1= 6;
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -67,9 +67,11 @@ public class More extends SherlockFragment implements ViewPagerVisibilityListene
         //    list.add(new MoreItem("CDR",R.drawable.cdr_img,"call history"));
             //   list.add(new MoreItem("Rates",R.drawable.rate,"check international call rates"));
     //    list.add(new MoreItem("Recharge",R.drawable.recharge,"recharge your existing account"));
-        list.add(new MoreItem(getString(R.string.about),R.drawable.about,getString(R.string.about_desc)));
         list.add(new MoreItem(getString(R.string.voucher),R.drawable.voucher,getString(R.string.voucher_desc)));
         list.add(new MoreItem(getString(R.string.access),R.drawable.access,getString(R.string.access_desc)));
+        list.add(new MoreItem(getString(R.string.profile),R.drawable.profile,getString(R.string.profile_desc)));  
+        list.add(new MoreItem(getString(R.string.about),R.drawable.about,getString(R.string.about_desc)));  
+      
        // list.add(new MoreItem(getString(R.string.msg),R.drawable.exit,getString(R.string.msg_desc)));
         list.add(new MoreItem(getString(R.string.exit),R.drawable.exit,getString(R.string.exit_desc)));
         list.add(new MoreItem(getString(R.string.exit),R.drawable.exit,getString(R.string.exit_desc)));
@@ -103,6 +105,12 @@ public class More extends SherlockFragment implements ViewPagerVisibilityListene
 				case VOUCHER:
 					//TODO: CDR
 					openAboutDialog1();
+					
+					break;
+					
+				case PROFILE:
+					//TODO: CDR
+					openAboutDialog6();
 					
 					break;
 					
@@ -160,6 +168,10 @@ public class More extends SherlockFragment implements ViewPagerVisibilityListene
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+		}
+		private void openAboutDialog6() {
+			// TODO Auto-generated method stub
+			startActivity(new Intent(getActivity(),AccountUpdate.class));
 		}
 		private void openAboutDialog3() {
 			// TODO Auto-generated method stub

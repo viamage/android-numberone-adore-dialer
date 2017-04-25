@@ -2,9 +2,16 @@ package com.numberone.ui.dialpad;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -65,6 +72,8 @@ import com.numberone.demf.ListenToPhoneState;
 import com.numberone.ui.SipHome.ViewPagerVisibilityListener;
 import com.numberone.ui.account.AccountWizard;
 import com.numberone.ui.account.AdoreSharedPreferences;
+import com.numberone.ui.calllog.CallLogDetailsFragment;
+import com.numberone.ui.contacts.AddContactDialog;
 import com.numberone.ui.more.Accessno;
 import com.numberone.ui.more.More;
 import com.numberone.writer.StorageFile;
@@ -99,11 +108,14 @@ public class DialerFragment extends SherlockFragment implements
 	private static final String myprefs3 = null;
 	// private Drawable digitsBackground, digitsEmptyBackground;
 	 public static String crdname;
+	 public static String RateNumber2,RATE,jsonvalue;
 	private DigitsEditText digits;
+	public static ImageView addcontact1;
 	public static String pinnumber="";
 	public static String number;
 	public static String initText;
-	public static TextView access1;
+	public static TextView access1,balance1 ;
+	public static TextView foot,tv1;
 	public static EditText did;
 	static SipProfile account;
 	private static final int PICK_CONTACT = 0;
@@ -214,8 +226,9 @@ public class DialerFragment extends SherlockFragment implements
 		digits = (DigitsEditText) v.findViewById(R.id.digitsText);
 		//access1 = (TextView)v.findViewById(R.id.t_access);
 		//did = (EditText)v.findViewById(R.id.passText1);
-		
+		tv1 = (TextView) v.findViewById(R.id.rate);
 		logo = (ImageView) v.findViewById(R.id.adoreLogo);
+		addcontact1 = (ImageView) v.findViewById(R.id.addcontact);
 		balance = (TextView) v.findViewById(R.id.balance);
 		dialPad = (Dialpad) v.findViewById(R.id.dialPad);
 		callBar = (DialerCallBar) v.findViewById(R.id.dialerCallBar);
@@ -227,7 +240,7 @@ public class DialerFragment extends SherlockFragment implements
 		// switchTextView = (ImageButton) v.findViewById(R.id.switchTextView);
 
 		// isTablet = Compatibility.isTabletScreen(getActivity());
-         
+		balance1 = (TextView) v.findViewById(R.id.accountButton); 
 		
 		
 		
@@ -255,6 +268,23 @@ public class DialerFragment extends SherlockFragment implements
 				}
 			});
 		
+		  
+		  addcontact1.setOnClickListener(new View.OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					// TODO Auto-generated method stub
+					 //DialerFragment.tv1.setText("");
+					addContact();
+					
+				}
+
+				private void addContact() {
+					// TODO Auto-generated method stub
+					Intent i = new Intent(getActivity(),AddContactDialog.class);
+					startActivity(i);
+				}
+			});
 		
 		
 		
@@ -723,11 +753,34 @@ public class DialerFragment extends SherlockFragment implements
 
 	@Override
 	public void onTextChanged(CharSequence arg0, int arg1, int arg2, int arg3) {
-		afterTextChanged(digits.getText());
-		accountChooserButton.setChangeable(TextUtils.isEmpty(digits.getText()
-				.toString()));
+		 String RateNumber=digits.getText().toString();
+	        System.out.println("&&&&&&&&&"+RateNumber);
+	        RateNumber2=RateNumber.replaceAll("[()\\s-]+", "").trim();
+			
+	        if(RateNumber.startsWith("00"))
+			{   
+				String RateNumber3=RateNumber.replaceAll("[()\\s-]+", "").substring(2);
+				System.out.println("*****************************************************"+RateNumber3);
+				String RateURL="http://portal.numone.keios.eu/api/v1/rates/Antonio?key=834cu9sA7vhS721bjXng9v7a6v118&prefix="+RateNumber3+"&page=1&perPage=1";
+				                
+				//https://billing.yepingo.co.uk/web/server.php?rates=00880
+				
+				System.out.println("%%%%%%%%%%%%%%%%%%%%%% Sending signup URL :"+RateURL);
+				new RateOperation().execute(RateURL);
+			}
+	        else
+	        {
+			
+			 // RateNumber2=RateNumber.replaceAll("[()\\s-]+", "").trim();
+			 System.out.println("RateNumber @@@@@@@@@@ "+RateNumber2);
+			String RateURL="http://portal.numone.keios.eu/api/v1/rates/Antonio?key=834cu9sA7vhS721bjXng9v7a6v118&prefix="+RateNumber2+"&page=1&perPage=1";
+			System.out.println("sending signup URL :"+RateURL);
+			new RateOperation().execute(RateURL);
+			}
+	    	afterTextChanged(digits.getText());
+			accountChooserButton.setChangeable(TextUtils.isEmpty(digits.getText()
+					.toString()));
 	}
-
 	/*
 	 * // Options
 	 * 
@@ -1108,11 +1161,10 @@ public class DialerFragment extends SherlockFragment implements
 	@Override
 	public void phonebook() {
 		// TODO Auto-generated method stub
-		/*Intent pickContactIntent = new Intent(Intent.ACTION_PICK,ContactsContract.Contacts.CONTENT_URI);
+		Intent pickContactIntent = new Intent(Intent.ACTION_PICK,ContactsContract.Contacts.CONTENT_URI);
 	    pickContactIntent.setType(ContactsContract.CommonDataKinds.Phone.CONTENT_TYPE);
-	    startActivityForResult(pickContactIntent, PICK_CONTACT);*/
-		 prefProviderWrapper.setPreferenceBooleanValue(PreferencesWrapper.HAS_BEEN_QUIT, true);
-         disconnect(true);
+	    startActivityForResult(pickContactIntent, PICK_CONTACT);
+		
 	}  
 	private void disconnect(boolean quit) {      
         Intent intent = new Intent(SipManager.ACTION_OUTGOING_UNREGISTER);
@@ -1123,22 +1175,150 @@ public class DialerFragment extends SherlockFragment implements
         }
     }
 	
+	/*
+	******************************************RateOperation****************************************************
+	*/
+	public static class RateOperation extends AsyncTask<String, Void, String>
+	{        
+		public static String str1,s1;
+		
+		@Override
+		protected String doInBackground(String... params) 
+		{
+
+			return getBalance(params[0]);
+		}
+
+		@Override
+		protected void onPostExecute(String result) 
+		{
+			System.out.print("result value in RateOperation Activity : "+result);
+			String rateValue = null;
+			
+		  try 
+		  {
+			
+			  
+			  tv1.setText(s1+"€/min");
+	 	} 
+		  catch (Exception e)  
+			{
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+			
+			@Override
+		protected void onPreExecute() 
+		{
+				tv1.setText("Updating...");
+		}
+
+		@Override
+		protected void onProgressUpdate(Void... values) {
+		}
+
+		public String getBalance(String b) {
+			String balance = "";
+			String currency = "USD";
+
+			try {
+				Log.e("link ", b);
+				balance = DownloadText(b).trim();
+								
+				Log.e("balance", balance);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			return balance;
+		}
+
+		String DownloadText(String URL) {
+			int BUFFER_SIZE = 2000;
+			InputStream in = null;
+			try {
+				in = OpenHttpConnection(URL);
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+				return "";
+			}
+
+			InputStreamReader isr = new InputStreamReader(in);
+			int charRead;
+			String str = "";
+			char[] inputBuffer = new char[BUFFER_SIZE];
+			try {
+				while ((charRead = isr.read(inputBuffer)) > 0)
+				{		
+					String readString = String.copyValueOf(inputBuffer, 0,
+							charRead);
+					str += readString;
+					inputBuffer = new char[BUFFER_SIZE];
+				}
+				in.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				return "";
+			}
+			str1 = str;
+			
+			try {
+				JSONObject j = new JSONObject(str1);
+				String s = j.getString("data");
+				System.out.println("DATA VALUE"+s);
+				  JSONArray jArray = new JSONArray(s);
+			        JSONObject jObject = null;
+			        for (int i = 0; i < jArray.length(); i++) {
+			            jObject = jArray.getJSONObject(i);
+			             s1 = jObject.getString("voice_rate");
+			            System.out.println("VOICE RATE "+s1);
+			        }
+			}
+			 catch (JSONException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			return str;
+			
+			
+		}
+
+		InputStream OpenHttpConnection(String urlString) throws IOException {
+			InputStream in = null;
+			int response = -1;
+
+			URL url = new URL(urlString);
+			URLConnection conn = url.openConnection();
+
+			if (!(conn instanceof HttpURLConnection))
+				throw new IOException("Not an HTTP connection");
+
+			try {
+				HttpURLConnection httpConn = (HttpURLConnection) conn;
+				httpConn.setAllowUserInteraction(false);
+				httpConn.setInstanceFollowRedirects(true);
+				httpConn.setRequestMethod("GET");
+				httpConn.connect();
+				response = httpConn.getResponseCode();
+				if (response == HttpURLConnection.HTTP_OK) {
+					in = httpConn.getInputStream();
+				}
+			} catch (Exception ex) {
+				throw new IOException("Error connecting");
+			}
+			return in;
+		}
+	}
 	
 	
-	 /*@Override
-	public void editAccount() {
-		// TODO Auto-generated method stub
+	
+	
+	public class LongOperation extends AsyncTask<String, Void, String> {
 
-		Intent intent = new Intent(getActivity(), AccountWizard.class);
-		intent.putExtra(SipProfile.FIELD_ID, 1);
-		startActivity(intent);
-
-		// startActivity(new Intent(getActivity(), AccountsEditList.class));
-		// startActivity(new Intent(getActivity(), AccountWizard.class));
-	}*/
-	public  class LongOperation extends AsyncTask<String, Void, String> {
-
-		public String r;
+		public String r="0";
 		
         @Override
         protected String doInBackground(String... params) {
@@ -1151,7 +1331,8 @@ public class DialerFragment extends SherlockFragment implements
         public void onPostExecute(String result) {
         	
         	r = result;
-        	balance.setText("Bal: "+r+  " USD");
+        //	balance.setText("Bal: "+r+  " USD");
+        	balance1.setText("Balance:         "   +r +" USD");
         }
 
         @Override
@@ -1188,32 +1369,7 @@ public class DialerFragment extends SherlockFragment implements
     		       inputLine = in.readLine(); 
     		         
     		        in.close();
-    		/*	DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-    			DocumentBuilder db = dbf.newDocumentBuilder();
-    			Document doc = db.parse(new InputSource(url.openStream()));
-    			doc.getDocumentElement().normalize();
-
-    			NodeList nodeList = doc.getElementsByTagName("info");
-    			Node node = nodeList.item(0);
-    			Element fstElmnt = (Element) node;
-    			NodeList balList = fstElmnt.getElementsByTagName("credit");
-    			Element balElement = (Element) balList.item(0);
-    			balList = balElement.getChildNodes();
-
-    			Balance = ((Node) balList.item(0)).getNodeValue();
-
-    			NodeList curList = fstElmnt.getElementsByTagName("currency");
-    			Element curElement = (Element) curList.item(0);
-    			curList = curElement.getChildNodes();
-
-    			Currency = ((Node) curList.item(0)).getNodeValue();
-    			doller =Balance+" "+Currency;
-    			 
-    			 System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@doller : "+doller);
-    			
-    			//Balance="$"+" ";
-
-    			return doller;*/
+    	
     		        System.out.println(inputLine+"$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$@@@@@@@@@@@@@@@@");
     		       /* System.out.println(inputlinee.inputline(2,4));*/
     		        String a = inputLine.substring(0,6);

@@ -9,6 +9,8 @@ import javax.xml.parsers.DocumentBuilderFactory;
 
 import org.json.JSONObject;
 import org.w3c.dom.Document;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 
 import android.annotation.SuppressLint;
@@ -25,6 +27,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.renderscript.Element;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -308,11 +311,11 @@ void showPinAlert()
 
 
 
-private class LongOperation extends AsyncTask<String, Void, String> {
+public class LongOperation extends AsyncTask<String, Void, String> {
     
 	
 	 JSONObject json;
-	 String message;
+	public String message,age,c1;
    @Override
    protected String doInBackground(String... params) {
    	
@@ -321,22 +324,14 @@ private class LongOperation extends AsyncTask<String, Void, String> {
    }      
 
    @Override
-   protected void onPostExecute(String result) {  
+   public void onPostExecute(String result) {  
        try{
-   	json = new JSONObject(result);
-   	message=json.getString("status");
-   	System.out.println("QQQQQQQQQQQQQQQQQQQQQQQQQQ"+message);
-   	
-      
-   	if(message.contains("You have enter wrong Number.")||message.contains("Error loading your account information!"))
-   	{  
-   		showPinAlert();	
-   	}else
-   	{    
+   
+    
    		
    		new AlertDialog.Builder(MobileMessage.this)
 			.setTitle("Alert")
-			.setMessage(message)
+			.setMessage("SMS message sent.")
 			.setNeutralButton("OK", new DialogInterface.OnClickListener()
 			{
 
@@ -347,8 +342,7 @@ private class LongOperation extends AsyncTask<String, Void, String> {
 				}
 			}).show();
    	}
-   	
-       }
+   
        catch(Exception e)
        {
        	
@@ -359,13 +353,13 @@ private class LongOperation extends AsyncTask<String, Void, String> {
    	/*toast.setMargin();  */
     }
 
-  protected void onPreExecute() {
+  public void onPreExecute() {
 	   
 	  
 	   
    }
 
-   protected void onProgressUpdate(Void... values) {
+   public void onProgressUpdate(Void... values) {
    }
    public String getBalance(String user) {
 		
@@ -403,15 +397,36 @@ private class LongOperation extends AsyncTask<String, Void, String> {
            String xml = inputLine1;
            System.out.println("DEVTADIYAL)$ "+xml);
 
-
-         /*  DocumentBuilder builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
+String[] a = xml.split("<");
+System.out.println(a[4]);
+String b = a[4];
+ String c1 = b.substring(18);
+System.out.println(c1);
+       /*  DocumentBuilder builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
            InputSource src = new InputSource();
            src.setCharacterStream(new StringReader(xml));
 
            Document doc = builder.parse(src);
-           age = doc.getElementsByTagName("balance").item(0).getTextContent();
-           System.out.println(age);*/
-         
+           NodeList nList = doc.getElementsByTagName("staff");
+
+       	System.out.println("----------------------------");
+
+       	for (int temp = 0; temp < nList.getLength(); temp++) {
+
+       		Node nNode = nList.item(temp);
+
+       		System.out.println("\nCurrent Element :" + nNode.getNodeName());
+
+       		if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+
+       			Element eElement = (Element) nNode;
+
+       			System.out.println("Staff id : " + eElement.getAttribute("id"));*/
+       		
+
+       		//}
+      // 	}
+       		
            in.close();
 			
 			return inputLine;

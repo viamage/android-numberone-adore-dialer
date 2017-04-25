@@ -18,13 +18,16 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.numberone.R;
+import com.numberone.api.SipProfile;
 import com.numberone.ui.account.AccountWizard;
 import com.numberone.ui.account.AdoreSharedPreferences;
+import com.numberone.ui.dialpad.DialerFragment;
 import com.numberone.ui.dialpad.DialerFragment.LongOperation;
 import com.numberone.writer.StorageFile;
 
 public class DialerCallBar extends LinearLayout implements OnClickListener, OnLongClickListener {
-
+	protected static SipProfile account;
+	
     public interface OnDialActionListener {
         /**
          * The make call button has been pressed
@@ -74,7 +77,15 @@ public class DialerCallBar extends LinearLayout implements OnClickListener, OnLo
         findViewById(R.id.phonebook).setEnabled(true);
       //  findViewById(R.id.accountButton).setOnClickListener(this);
     TextView balance = (TextView) findViewById(R.id.accountButton);
-   // balance.setText();
+    DialerFragment df = new DialerFragment();
+   df.new LongOperation().execute("");
+   LongOperation l = df.new LongOperation();
+    
+    //String data1 = account.getSipUserName();
+   // String data2=account.getPassword();
+    //l.execute("Antonio");
+    System.out.println("HEMANT .........."+l.r);
+   // balance.setText(l.r);
       //  findViewById(R.id.accountButton).setEnabled(true);
         findViewById(R.id.dialButton).setOnClickListener(this);
       //  findViewById(R.id.deleteButton1).setOnClickListener(this);
@@ -98,6 +109,8 @@ public class DialerCallBar extends LinearLayout implements OnClickListener, OnLo
         }
     }
   
+    
+    
     /**
      * Set a listener for this widget actions
      * @param l the listener called back when some user action is done on this widget

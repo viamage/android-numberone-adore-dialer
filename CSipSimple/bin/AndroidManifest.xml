@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.numberone"
     android:installLocation="auto"
-    android:versionCode="17"
-    android:versionName="3.3.6" >
+    android:versionCode="18"
+    android:versionName="3.4.7" >
 
     <supports-screens
         android:anyDensity="true"
@@ -13,7 +13,7 @@
         android:xlargeScreens="true" />
 
     <uses-sdk
-        android:minSdkVersion="4"
+        android:minSdkVersion="8"
         android:targetSdkVersion="18" />
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -540,6 +540,16 @@
              <activity
             android:name="com.numberone.ui.more.MobileMessage"
             android:theme="@style/DarkTheme" />
+             
+              
+         <activity
+            android:name="com.numberone.ui.more.AccountUpdate"
+            android:label="Profile"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+             
+             
         
            <activity
             android:name="com.numberone.ui.more.Support"

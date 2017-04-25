@@ -68,13 +68,13 @@ public class SipHome extends SherlockFragmentActivity {
 
 
     private static final String THIS_FILE = "SIP_HOME";
-    private final static int CONTACTS = 0;
+   // private final static int CONTACTS = 0;
     private final static int TAB_ID_CONTACTS = 1;
     
-    private final static int TAB_ID_DIALER = 2;
+    private final static int TAB_ID_DIALER = 0;
   
-    private final static int TAB_ID_CALL_LOG = 3;
-    private final static int TAB_ID_FAVORITES = 4;
+    private final static int TAB_ID_CALL_LOG = 2;
+    private final static int TAB_ID_FAVORITES = 3;
 
     public static String user,pass;
     SipProfile account;
@@ -163,9 +163,10 @@ public class SipHome extends SherlockFragmentActivity {
         mViewPager = (ViewPager) findViewById(R.id.pager);
         mViewPager.setOffscreenPageLimit(4);
         mTabsAdapter = new TabsAdapter(this, getSupportActionBar(), mViewPager);
-        mTabsAdapter.addTab(contactsTab1, ContactManager.class, CONTACTS);
-        mTabsAdapter.addTab(contactsTab, NewAccount.class, TAB_ID_CONTACTS);
+       // mTabsAdapter.addTab(contactsTab1, ContactManager.class, CONTACTS);
         mTabsAdapter.addTab(dialerTab, DialerFragment.class, TAB_ID_DIALER);
+        mTabsAdapter.addTab(contactsTab, NewAccount.class, TAB_ID_CONTACTS);
+     
         mTabsAdapter.addTab(callLogTab, CallLogListFragment.class, TAB_ID_CALL_LOG);
         mTabsAdapter.addTab(favoritesTab, More.class, TAB_ID_FAVORITES);
 
@@ -378,7 +379,7 @@ public class SipHome extends SherlockFragmentActivity {
     private CallLogListFragment mCallLogFragment;
     private ConversationsListFragment mMessagesFragment;
     private ContactManager mContactManager;
-    private More mPhoneFavoriteFragment;
+    private More mPhoneFavoriteFragment; 
 //    private WarningFragment mWarningFragment;
 
     private Fragment getFragmentAt(int position) {

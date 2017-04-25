@@ -45,10 +45,12 @@
                 android:layout_marginRight="10dp"
                android:layout_marginLeft="10dp"
                android:layout_height="70dp"
-               android:layout_alignParentLeft="true"
-               android:layout_alignParentTop="true"
+              android:gravity="center"
                android:layout_marginTop="116dp" 
-               android:background="@drawable/paypal"
+               android:text="Mobile Message"
+               android:textColor="#fff"
+               android:background="#961515"
+               android:textSize="23sp"
                android:onClick="onClick" />
 
            <ImageButton
