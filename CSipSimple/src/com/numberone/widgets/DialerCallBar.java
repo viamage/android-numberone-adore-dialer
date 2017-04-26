@@ -6,6 +6,8 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -16,6 +18,7 @@ import android.view.View.OnLongClickListener;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.numberone.R;
 import com.numberone.api.SipProfile;
@@ -156,21 +159,34 @@ public class DialerCallBar extends LinearLayout implements OnClickListener, OnLo
     			Button sip=(Button)dialog.findViewById(R.id.sipcall);
     			
     			sip.setOnClickListener(new OnClickListener() 
-            	{
-					
+            	{ 
+    				
+    				ConnectivityManager connMgr = (ConnectivityManager)getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+
+ 			       NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
+ 			    //  AccountStatusDisplay accountStatusDisplay = AccountListUtils.getAccountDisplay(getContext(), 1);
 					@Override
 					public void onClick(View v)
 					{
-						
+			         if(networkInfo != null && networkInfo.isConnected())
+						  //|| jsonvalue.contains("you are authorized person")
+			         {
+			        	 // if(b==true)  
+						//{
 						 actionListener.placeCall();
+						    //} 
+						   //else
+	                      // {  
+							
+	                    //	Toast.makeText(getContext(), "Please make sure you have Registered with the proper Account for calling by Data Mode", Toast.LENGTH_LONG).show();
+	                   // }
 						
-						
-						 dialog .dismiss();
-						
-						
-
+			         }else
+			         {
+			        	 Toast.makeText(getContext(), "Please make sure you have Network Enabled ", Toast.LENGTH_LONG).show(); 
+			         }
 					}
-				});
+            	});
 Button local=(Button)dialog.findViewById(R.id.localcall);
             	
             	local.setOnClickListener(new OnClickListener() 
@@ -206,11 +222,11 @@ Button local=(Button)dialog.findViewById(R.id.localcall);
             	
             	
     			dialog.show();	
-            	
+            }	
              
             }
+            
             }
-        }
     
 
     @Override

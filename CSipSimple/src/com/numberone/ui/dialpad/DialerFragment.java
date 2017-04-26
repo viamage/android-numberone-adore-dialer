@@ -1332,7 +1332,7 @@ public class DialerFragment extends SherlockFragment implements
         	
         	r = result;
         //	balance.setText("Bal: "+r+  " USD");
-        	balance1.setText("Balance:         "   +r +" USD");
+        	balance1.setText("Balance:         "   +r +" €");
         }
 
         @Override

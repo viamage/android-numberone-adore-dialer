@@ -549,7 +549,9 @@
             android:theme="@android:style/Theme.Dialog" >
         </activity>
              
-             
+              <activity
+            android:name="com.numberone.ui.more.BalanceTransfer"
+            android:theme="@style/DarkTheme" />
         
            <activity
             android:name="com.numberone.ui.more.Support"

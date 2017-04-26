@@ -46,6 +46,7 @@ public class AddContactDialog extends Activity implements TextWatcher {
 	}
 
 	public void addContact(View v) {
+		
 		String DisplayName = name.getText().toString();
 		String MobileNumber = mobile.getText().toString();
 		String HomeNumber = home.getText().toString();

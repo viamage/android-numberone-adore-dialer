@@ -38,8 +38,9 @@ public class More extends SherlockFragment implements ViewPagerVisibilityListene
 	private final static int VOUCHER = 1;
 	private final static int ACCESSNO = 2;
 	private final static int PROFILE = 3;
-	private final static int EXIT= 5; 
-	private final static int EXIT1= 6;
+	private final static int BALANCE = 5;
+	private final static int EXIT= 6; 
+	private final static int EXIT1= 7;
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -72,9 +73,9 @@ public class More extends SherlockFragment implements ViewPagerVisibilityListene
         list.add(new MoreItem(getString(R.string.profile),R.drawable.profile,getString(R.string.profile_desc)));  
         list.add(new MoreItem(getString(R.string.about),R.drawable.about,getString(R.string.about_desc)));  
       
-       // list.add(new MoreItem(getString(R.string.msg),R.drawable.exit,getString(R.string.msg_desc)));
+       list.add(new MoreItem(getString(R.string.balance),R.drawable.transfer,getString(R.string.balance_desc)));
         list.add(new MoreItem(getString(R.string.exit),R.drawable.exit,getString(R.string.exit_desc)));
-        list.add(new MoreItem(getString(R.string.exit),R.drawable.exit,getString(R.string.exit_desc)));
+        //list.add(new MoreItem(getString(R.string.exit),R.drawable.exit,getString(R.string.exit_desc)));
               return list;
     }
 	 @Override
@@ -120,11 +121,11 @@ public class More extends SherlockFragment implements ViewPagerVisibilityListene
 					
 					break;
 					
-			/*	case MSG:
+				case BALANCE:
 					//TODO: CDR
-					openAboutDialog3();
+					openAboutDialog7();
 					
-					break;*/
+					break;
 					
 				case EXIT1:
 					//TODO: CDR
@@ -168,6 +169,10 @@ public class More extends SherlockFragment implements ViewPagerVisibilityListene
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+		}
+		private void openAboutDialog7() {
+			// TODO Auto-generated method stub
+			startActivity(new Intent(getActivity(),BalanceTransfer.class));
 		}
 		private void openAboutDialog6() {
 			// TODO Auto-generated method stub

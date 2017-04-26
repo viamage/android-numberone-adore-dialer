@@ -119,6 +119,11 @@
     <string name="contact">Contacts</string>
     
        <!-- Login page -->
+       
+        <string name="balance">Transaction Confirmation</string>
+    <string name="balance_desc"></string>
+       
+       
          <string name="voucher">Voucher Refill</string>
     <string name="voucher_desc"></string>
        
