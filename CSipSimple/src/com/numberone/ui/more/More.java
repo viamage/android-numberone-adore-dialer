@@ -34,13 +34,13 @@ public class More extends SherlockFragment implements ViewPagerVisibilityListene
 	private final static int CHANGE_PREFS = 1;
 	private final static int SETTINGS = 0;
 	//private final static int RECORDING = 1;
-	private final static int ABOUT = 4;
+	//private final static int ABOUT = 4;
 	private final static int VOUCHER = 1;
 	private final static int ACCESSNO = 2;
 	private final static int PROFILE = 3;
-	private final static int BALANCE = 5;
-	private final static int EXIT= 6; 
-	private final static int EXIT1= 7;
+	private final static int BALANCE = 4;
+	private final static int EXIT1= 5; 
+	private final static int EXIT= 6;
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -71,11 +71,12 @@ public class More extends SherlockFragment implements ViewPagerVisibilityListene
         list.add(new MoreItem(getString(R.string.voucher),R.drawable.voucher,getString(R.string.voucher_desc)));
         list.add(new MoreItem(getString(R.string.access),R.drawable.access,getString(R.string.access_desc)));
         list.add(new MoreItem(getString(R.string.profile),R.drawable.profile,getString(R.string.profile_desc)));  
-        list.add(new MoreItem(getString(R.string.about),R.drawable.about,getString(R.string.about_desc)));  
+      //  list.add(new MoreItem(getString(R.string.about),R.drawable.about,getString(R.string.about_desc)));  
       
        list.add(new MoreItem(getString(R.string.balance),R.drawable.transfer,getString(R.string.balance_desc)));
+        
+        list.add(new MoreItem(getString(R.string.account),R.drawable.accountt,getString(R.string.account_desc)));
         list.add(new MoreItem(getString(R.string.exit),R.drawable.exit,getString(R.string.exit_desc)));
-        //list.add(new MoreItem(getString(R.string.exit),R.drawable.exit,getString(R.string.exit_desc)));
               return list;
     }
 	 @Override
@@ -97,12 +98,12 @@ public class More extends SherlockFragment implements ViewPagerVisibilityListene
 					intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 					startActivity(intent);
 					break;*/
-				case ABOUT:
+				/*case ABOUT:
 					//TODO: CDR
 					openAboutDialog();
 					
 					break;
-					
+					*/
 				case VOUCHER:
 					//TODO: CDR
 					openAboutDialog1();
@@ -176,7 +177,7 @@ public class More extends SherlockFragment implements ViewPagerVisibilityListene
 		}
 		private void openAboutDialog6() {
 			// TODO Auto-generated method stub
-			startActivity(new Intent(getActivity(),AccountUpdate.class));
+			startActivity(new Intent(getActivity(),Rate.class));
 		}
 		private void openAboutDialog3() {
 			// TODO Auto-generated method stub

@@ -1,7 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
      android:id="@+id/account_layout1"
-    android:layout_height="wrap_content"
+    android:layout_height="wrap_content" 
      android:background="#fff"
     >
 
@@ -12,8 +12,10 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="25dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="20dp"
         android:text="First Name" 
+        android:textSize="18sp"
+        android:textStyle="bold"
         android:textColor="#000000"/>
 
     <EditText
@@ -26,8 +28,10 @@
         android:layout_toRightOf="@id/firstName"
         android:ems="10"
         android:layout_marginLeft="5dp"
-      android:textColor="#000"
-        android:hint="first name">
+        android:textColor="#000"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:hint="Enter First Name">
         <requestFocus />
     </EditText>
     
@@ -66,11 +70,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-       android:layout_marginTop="50dp"
+        android:layout_marginTop="50dp"
         android:layout_below="@id/lastName"
         android:text="Last Name" 
+        android:textSize="18sp"
+        android:textStyle="bold"
         android:textColor="#000000"
-        android:layout_marginLeft="10dp"/>
+        android:layout_marginLeft="20dp"/>
 
     <EditText
         android:id="@+id/editPhone"
@@ -81,8 +87,9 @@
         android:layout_alignLeft="@+id/editFirstName"
         android:layout_alignParentRight="true"
         android:ems="10"
-        android:hint="last number"
-        android:textColor="#000"
+        android:hint="last name"
+        android:enabled="false"
+        android:inputType="textPersonName"
       >
        
     </EditText>
@@ -93,11 +100,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-       android:layout_marginTop="50dp"
+        android:layout_marginTop="50dp"
         android:layout_below="@id/phone"
+        android:textSize="18sp"
+        android:textStyle="bold"
         android:text="Credit" 
         android:textColor="#000000"
-        android:layout_marginLeft="10dp"/>
+        android:layout_marginLeft="20dp"/>
 
     <EditText
         android:id="@+id/editPin"
@@ -122,11 +131,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-       android:layout_marginTop="50dp"
+        android:layout_marginTop="50dp"
         android:layout_below="@id/pin"
         android:text="Email Id" 
+        android:textSize="18sp"
+        android:textStyle="bold"
         android:textColor="#000000"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="20dp"
         />
 
     <EditText
@@ -138,8 +149,10 @@
         android:layout_alignLeft="@+id/editPin"
         android:layout_alignParentRight="true"
         android:ems="10"
-        android:hint="email id"
-      android:textColor="#000"
+        android:hint="Enter Email Id"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="#000"
        >
        
     </EditText>
@@ -155,9 +168,9 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:textStyle="bold"
-        android:background="#F73537"
+        android:background="#AC0709"
         android:textColor="#ffffff"
-        android:textSize="25sp"/>
+        android:textSize="20sp"/>
     
     
      <Button
@@ -172,9 +185,9 @@
         android:layout_marginRight="20dp"
         android:textStyle="bold"
         android:visibility="gone"
-        android:background="#F73537"
+        android:background="#AC0709"
         android:textColor="#ffffff"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:onClick="Click"/>
     
     <Button
@@ -188,9 +201,9 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:textStyle="bold"
-        android:background="#F73537"
-        android:textColor="#ffffff"
-        android:textSize="25sp"/>
+        android:background="#AC0709"
+        android:textColor="#fff"
+        android:textSize="20sp"/>
 
     <TextView
         android:id="@+id/textView1"

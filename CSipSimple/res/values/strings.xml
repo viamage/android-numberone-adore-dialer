@@ -130,7 +130,10 @@
     <string name="access">Access Number</string>
     <string name="access_desc"></string>
     
-     <string name="profile">Profile</string>
+      <string name="account">Sign Out</string>
+    <string name="account_desc"></string>
+    
+     <string name="profile">Rate</string>
     <string name="profile_desc"></string>
     
       <string name="msg">Mobile Message</string>

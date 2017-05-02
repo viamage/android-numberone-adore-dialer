@@ -881,203 +881,204 @@ containing a value of this type.
         public static final int access=0x7f020034;
         public static final int account_over=0x7f020035;
         public static final int account_selector=0x7f020036;
-        public static final int add_contact=0x7f020037;
-        public static final int adore22=0x7f020038;
-        public static final int appwidget_bg=0x7f020039;
-        public static final int appwidget_button=0x7f02003a;
-        public static final int appwidget_inner_focus=0x7f02003b;
-        public static final int appwidget_inner_press=0x7f02003c;
-        public static final int appwidget_layers=0x7f02003d;
-        public static final int appwidget_preview=0x7f02003e;
-        public static final int back=0x7f02003f;
-        public static final int bar=0x7f020040;
-        public static final int barrrr=0x7f020041;
-        public static final int bg_add_contact=0x7f020042;
-        public static final int bg_cal_log_name=0x7f020043;
-        public static final int blank_button=0x7f020044;
-        public static final int blank_button_over=0x7f020045;
-        public static final int btn_call=0x7f020046;
-        public static final int btn_call_pressed=0x7f020047;
-        public static final int btn_compound_background=0x7f020048;
-        public static final int call_background=0x7f020049;
-        public static final int call_log=0x7f02004a;
-        public static final int call_log_background=0x7f02004b;
-        public static final int clear=0x7f02004c;
-        public static final int clear2=0x7f02004d;
-        public static final int clear_img=0x7f02004e;
-        public static final int clear_over=0x7f02004f;
-        public static final int cnc=0x7f020050;
-        public static final int cursor=0x7f020051;
-        public static final int decline_call=0x7f020052;
-        public static final int decline_call_bg=0x7f020053;
-        public static final int decline_call_over=0x7f020054;
-        public static final int dial_background_texture=0x7f020055;
-        public static final int dial_num_0=0x7f020056;
-        public static final int dial_num_0_wht=0x7f020057;
-        public static final int dial_num_1=0x7f020058;
-        public static final int dial_num_1_wht=0x7f020059;
-        public static final int dial_num_2=0x7f02005a;
-        public static final int dial_num_2_wht=0x7f02005b;
-        public static final int dial_num_3=0x7f02005c;
-        public static final int dial_num_3_wht=0x7f02005d;
-        public static final int dial_num_4=0x7f02005e;
-        public static final int dial_num_4_wht=0x7f02005f;
-        public static final int dial_num_5=0x7f020060;
-        public static final int dial_num_5_wht=0x7f020061;
-        public static final int dial_num_6=0x7f020062;
-        public static final int dial_num_6_wht=0x7f020063;
-        public static final int dial_num_7=0x7f020064;
-        public static final int dial_num_7_wht=0x7f020065;
-        public static final int dial_num_8=0x7f020066;
-        public static final int dial_num_8_wht=0x7f020067;
-        public static final int dial_num_9=0x7f020068;
-        public static final int dial_num_9_wht=0x7f020069;
-        public static final int dial_num_pound=0x7f02006a;
-        public static final int dial_num_pound_wht=0x7f02006b;
-        public static final int dial_num_star=0x7f02006c;
-        public static final int dial_num_star_wht=0x7f02006d;
-        public static final int dialpad_background=0x7f02006e;
-        public static final int dialpad_backgroundd=0x7f02006f;
-        public static final int edit_text_back=0x7f020070;
-        public static final int end_call=0x7f020071;
-        public static final int end_call_background=0x7f020072;
-        public static final int end_call_bg=0x7f020073;
-        public static final int end_call_over=0x7f020074;
-        public static final int endcall_background_texture=0x7f020075;
-        public static final int exit=0x7f020076;
-        public static final int grabber=0x7f020077;
-        public static final int grey_bottom_gradient=0x7f020078;
-        public static final int grey_left_gradient=0x7f020079;
-        public static final int grey_right_gradient=0x7f02007a;
-        public static final int grey_top_gradient=0x7f02007b;
-        public static final int ic_ab_dialer_holo_dark=0x7f02007c;
-        public static final int ic_ab_dialpad=0x7f02007d;
-        public static final int ic_ab_favourites_holo_dark=0x7f02007e;
-        public static final int ic_ab_history_holo_dark=0x7f02007f;
-        public static final int ic_ab_text_holo_dark=0x7f020080;
-        public static final int ic_ab_trash_dark=0x7f020081;
-        public static final int ic_action_select_invert=0x7f020082;
-        public static final int ic_add_contact=0x7f020083;
-        public static final int ic_add_contact_holo_dark=0x7f020084;
-        public static final int ic_call_incoming_holo_dark=0x7f020085;
-        public static final int ic_call_missed_holo_dark=0x7f020086;
-        public static final int ic_call_outgoing_holo_dark=0x7f020087;
-        public static final int ic_contact_picture_180_holo_dark=0x7f020088;
-        public static final int ic_contact_picture_180_holo_light=0x7f020089;
-        public static final int ic_contact_picture_180_holo_light2=0x7f02008a;
-        public static final int ic_contact_picture_180_holo_light3=0x7f02008b;
-        public static final int ic_contact_picture_holo_dark=0x7f02008c;
-        public static final int ic_contacts_holo_dark=0x7f02008d;
-        public static final int ic_dial_action_call=0x7f02008e;
-        public static final int ic_dial_action_delete=0x7f02008f;
-        public static final int ic_divider_dashed_holo_dark=0x7f020090;
-        public static final int ic_end_call=0x7f020091;
-        public static final int ic_in_call_touch_answer=0x7f020092;
-        public static final int ic_in_call_touch_end=0x7f020093;
-        public static final int ic_in_call_touch_handle_normal=0x7f020094;
-        public static final int ic_in_call_touch_hold=0x7f020095;
-        public static final int ic_indicator_off=0x7f020096;
-        public static final int ic_indicator_on=0x7f020097;
-        public static final int ic_indicator_red=0x7f020098;
-        public static final int ic_indicator_yellow=0x7f020099;
-        public static final int ic_jog_dial_answer=0x7f02009a;
-        public static final int ic_jog_dial_decline=0x7f02009b;
-        public static final int ic_jog_dial_unlock=0x7f02009c;
-        public static final int ic_launcher_nightly=0x7f02009d;
-        public static final int ic_launcher_phone=0x7f02009e;
-        public static final int ic_lockscreen_decline_activated=0x7f02009f;
-        public static final int ic_menu_answer_call=0x7f0200a0;
-        public static final int ic_menu_auto_answer=0x7f0200a1;
-        public static final int ic_menu_blocked_user=0x7f0200a2;
-        public static final int ic_menu_filter=0x7f0200a3;
-        public static final int ic_menu_goto=0x7f0200a4;
-        public static final int ic_menu_msg_compose_holo_dark=0x7f0200a5;
-        public static final int ic_menu_preferences=0x7f0200a6;
-        public static final int ic_micro_dark=0x7f0200a7;
-        public static final int ic_more=0x7f0200a8;
-        public static final int ic_mute_holo_dark=0x7f0200a9;
-        public static final int ic_pause=0x7f0200aa;
-        public static final int ic_play=0x7f0200ab;
-        public static final int ic_prefs_media=0x7f0200ac;
-        public static final int ic_prefs_media_video=0x7f0200ad;
-        public static final int ic_prefs_network=0x7f0200ae;
-        public static final int ic_sound_bluetooth_holo_dark=0x7f0200af;
-        public static final int ic_sound_speakerphone_holo_dark=0x7f0200b0;
-        public static final int ic_speaker_dark=0x7f0200b1;
-        public static final int ic_stat_sipok=0x7f0200b2;
-        public static final int ic_tab_selected_contacts=0x7f0200b3;
-        public static final int ic_wizard_advanced=0x7f0200b4;
-        public static final int ic_wizard_basic=0x7f0200b5;
-        public static final int ic_wizard_expert=0x7f0200b6;
-        public static final int ic_wizard_fusion=0x7f0200b7;
-        public static final int in_call_held_background=0x7f0200b8;
-        public static final int jog_tab_bar_left_answer=0x7f0200b9;
-        public static final int jog_tab_bar_left_end_confirm_green=0x7f0200ba;
-        public static final int jog_tab_bar_left_end_normal=0x7f0200bb;
-        public static final int jog_tab_bar_left_end_pressed=0x7f0200bc;
-        public static final int jog_tab_bar_right_decline=0x7f0200bd;
-        public static final int jog_tab_bar_right_end_confirm_red=0x7f0200be;
-        public static final int jog_tab_bar_right_end_normal=0x7f0200bf;
-        public static final int jog_tab_bar_right_end_pressed=0x7f0200c0;
-        public static final int jog_tab_left_answer=0x7f0200c1;
-        public static final int jog_tab_left_confirm_green=0x7f0200c2;
-        public static final int jog_tab_left_normal=0x7f0200c3;
-        public static final int jog_tab_left_pressed=0x7f0200c4;
-        public static final int jog_tab_right_confirm_red=0x7f0200c5;
-        public static final int jog_tab_right_decline=0x7f0200c6;
-        public static final int jog_tab_right_normal=0x7f0200c7;
-        public static final int jog_tab_right_pressed=0x7f0200c8;
-        public static final int jog_tab_target_green=0x7f0200c9;
-        public static final int jog_tab_target_red=0x7f0200ca;
-        public static final int large_back=0x7f0200cb;
-        public static final int list_selector_background_pressed=0x7f0200cc;
-        public static final int localcall=0x7f0200cd;
-        public static final int login=0x7f0200ce;
-        public static final int login_img=0x7f0200cf;
-        public static final int login_over=0x7f0200d0;
-        public static final int music=0x7f0200d1;
-        public static final int next=0x7f0200d2;
-        public static final int notify_panel_notification_icon_bg=0x7f0200d3;
-        public static final int notify_panel_notification_icon_bg_tile=0x7f0200d4;
-        public static final int password_bar=0x7f0200d5;
-        public static final int paypal=0x7f0200d6;
-        public static final int phone_book=0x7f0200d7;
-        public static final int phonebbook=0x7f0200d8;
-        public static final int profile=0x7f0200d9;
-        public static final int quickaction_arrow_down=0x7f0200da;
-        public static final int quickaction_arrow_up=0x7f0200db;
-        public static final int quickaction_bottom_frame=0x7f0200dc;
-        public static final int quickaction_slider_background=0x7f0200dd;
-        public static final int quickaction_slider_btn=0x7f0200de;
-        public static final int quickaction_slider_btn_normal=0x7f0200df;
-        public static final int quickaction_slider_btn_on=0x7f0200e0;
-        public static final int quickaction_slider_btn_pressed=0x7f0200e1;
-        public static final int quickaction_slider_btn_selected=0x7f0200e2;
-        public static final int quickaction_slider_grip_left=0x7f0200e3;
-        public static final int quickaction_slider_grip_right=0x7f0200e4;
-        public static final int quickaction_top_frame=0x7f0200e5;
-        public static final int recharge=0x7f0200e6;
-        public static final int record=0x7f0200e7;
-        public static final int search=0x7f0200e8;
-        public static final int search_img=0x7f0200e9;
-        public static final int search_over=0x7f0200ea;
-        public static final int send=0x7f0200eb;
-        public static final int setting=0x7f0200ec;
-        public static final int sip_bar=0x7f0200ed;
-        public static final int sipcall=0x7f0200ee;
-        public static final int skip=0x7f0200ef;
-        public static final int smsbar=0x7f0200f0;
-        public static final int splash=0x7f0200f1;
-        public static final int stat_sys_vp_phone_call=0x7f0200f2;
-        public static final int tab_contacts=0x7f0200f3;
-        public static final int take_call_background=0x7f0200f4;
-        public static final int takecall_background_texture=0x7f0200f5;
-        public static final int topup=0x7f0200f6;
-        public static final int transfer=0x7f0200f7;
-        public static final int transparent=0x7f0200f8;
-        public static final int user_bar=0x7f0200f9;
-        public static final int voucher=0x7f0200fa;
-        public static final int warning_bloc_shape=0x7f0200fb;
+        public static final int accountt=0x7f020037;
+        public static final int add_contact=0x7f020038;
+        public static final int adore22=0x7f020039;
+        public static final int appwidget_bg=0x7f02003a;
+        public static final int appwidget_button=0x7f02003b;
+        public static final int appwidget_inner_focus=0x7f02003c;
+        public static final int appwidget_inner_press=0x7f02003d;
+        public static final int appwidget_layers=0x7f02003e;
+        public static final int appwidget_preview=0x7f02003f;
+        public static final int back=0x7f020040;
+        public static final int bar=0x7f020041;
+        public static final int barrrr=0x7f020042;
+        public static final int bg_add_contact=0x7f020043;
+        public static final int bg_cal_log_name=0x7f020044;
+        public static final int blank_button=0x7f020045;
+        public static final int blank_button_over=0x7f020046;
+        public static final int btn_call=0x7f020047;
+        public static final int btn_call_pressed=0x7f020048;
+        public static final int btn_compound_background=0x7f020049;
+        public static final int call_background=0x7f02004a;
+        public static final int call_log=0x7f02004b;
+        public static final int call_log_background=0x7f02004c;
+        public static final int clear=0x7f02004d;
+        public static final int clear2=0x7f02004e;
+        public static final int clear_img=0x7f02004f;
+        public static final int clear_over=0x7f020050;
+        public static final int cnc=0x7f020051;
+        public static final int cursor=0x7f020052;
+        public static final int decline_call=0x7f020053;
+        public static final int decline_call_bg=0x7f020054;
+        public static final int decline_call_over=0x7f020055;
+        public static final int dial_background_texture=0x7f020056;
+        public static final int dial_num_0=0x7f020057;
+        public static final int dial_num_0_wht=0x7f020058;
+        public static final int dial_num_1=0x7f020059;
+        public static final int dial_num_1_wht=0x7f02005a;
+        public static final int dial_num_2=0x7f02005b;
+        public static final int dial_num_2_wht=0x7f02005c;
+        public static final int dial_num_3=0x7f02005d;
+        public static final int dial_num_3_wht=0x7f02005e;
+        public static final int dial_num_4=0x7f02005f;
+        public static final int dial_num_4_wht=0x7f020060;
+        public static final int dial_num_5=0x7f020061;
+        public static final int dial_num_5_wht=0x7f020062;
+        public static final int dial_num_6=0x7f020063;
+        public static final int dial_num_6_wht=0x7f020064;
+        public static final int dial_num_7=0x7f020065;
+        public static final int dial_num_7_wht=0x7f020066;
+        public static final int dial_num_8=0x7f020067;
+        public static final int dial_num_8_wht=0x7f020068;
+        public static final int dial_num_9=0x7f020069;
+        public static final int dial_num_9_wht=0x7f02006a;
+        public static final int dial_num_pound=0x7f02006b;
+        public static final int dial_num_pound_wht=0x7f02006c;
+        public static final int dial_num_star=0x7f02006d;
+        public static final int dial_num_star_wht=0x7f02006e;
+        public static final int dialpad_background=0x7f02006f;
+        public static final int dialpad_backgroundd=0x7f020070;
+        public static final int edit_text_back=0x7f020071;
+        public static final int end_call=0x7f020072;
+        public static final int end_call_background=0x7f020073;
+        public static final int end_call_bg=0x7f020074;
+        public static final int end_call_over=0x7f020075;
+        public static final int endcall_background_texture=0x7f020076;
+        public static final int exit=0x7f020077;
+        public static final int grabber=0x7f020078;
+        public static final int grey_bottom_gradient=0x7f020079;
+        public static final int grey_left_gradient=0x7f02007a;
+        public static final int grey_right_gradient=0x7f02007b;
+        public static final int grey_top_gradient=0x7f02007c;
+        public static final int ic_ab_dialer_holo_dark=0x7f02007d;
+        public static final int ic_ab_dialpad=0x7f02007e;
+        public static final int ic_ab_favourites_holo_dark=0x7f02007f;
+        public static final int ic_ab_history_holo_dark=0x7f020080;
+        public static final int ic_ab_text_holo_dark=0x7f020081;
+        public static final int ic_ab_trash_dark=0x7f020082;
+        public static final int ic_action_select_invert=0x7f020083;
+        public static final int ic_add_contact=0x7f020084;
+        public static final int ic_add_contact_holo_dark=0x7f020085;
+        public static final int ic_call_incoming_holo_dark=0x7f020086;
+        public static final int ic_call_missed_holo_dark=0x7f020087;
+        public static final int ic_call_outgoing_holo_dark=0x7f020088;
+        public static final int ic_contact_picture_180_holo_dark=0x7f020089;
+        public static final int ic_contact_picture_180_holo_light=0x7f02008a;
+        public static final int ic_contact_picture_180_holo_light2=0x7f02008b;
+        public static final int ic_contact_picture_180_holo_light3=0x7f02008c;
+        public static final int ic_contact_picture_holo_dark=0x7f02008d;
+        public static final int ic_contacts_holo_dark=0x7f02008e;
+        public static final int ic_dial_action_call=0x7f02008f;
+        public static final int ic_dial_action_delete=0x7f020090;
+        public static final int ic_divider_dashed_holo_dark=0x7f020091;
+        public static final int ic_end_call=0x7f020092;
+        public static final int ic_in_call_touch_answer=0x7f020093;
+        public static final int ic_in_call_touch_end=0x7f020094;
+        public static final int ic_in_call_touch_handle_normal=0x7f020095;
+        public static final int ic_in_call_touch_hold=0x7f020096;
+        public static final int ic_indicator_off=0x7f020097;
+        public static final int ic_indicator_on=0x7f020098;
+        public static final int ic_indicator_red=0x7f020099;
+        public static final int ic_indicator_yellow=0x7f02009a;
+        public static final int ic_jog_dial_answer=0x7f02009b;
+        public static final int ic_jog_dial_decline=0x7f02009c;
+        public static final int ic_jog_dial_unlock=0x7f02009d;
+        public static final int ic_launcher_nightly=0x7f02009e;
+        public static final int ic_launcher_phone=0x7f02009f;
+        public static final int ic_lockscreen_decline_activated=0x7f0200a0;
+        public static final int ic_menu_answer_call=0x7f0200a1;
+        public static final int ic_menu_auto_answer=0x7f0200a2;
+        public static final int ic_menu_blocked_user=0x7f0200a3;
+        public static final int ic_menu_filter=0x7f0200a4;
+        public static final int ic_menu_goto=0x7f0200a5;
+        public static final int ic_menu_msg_compose_holo_dark=0x7f0200a6;
+        public static final int ic_menu_preferences=0x7f0200a7;
+        public static final int ic_micro_dark=0x7f0200a8;
+        public static final int ic_more=0x7f0200a9;
+        public static final int ic_mute_holo_dark=0x7f0200aa;
+        public static final int ic_pause=0x7f0200ab;
+        public static final int ic_play=0x7f0200ac;
+        public static final int ic_prefs_media=0x7f0200ad;
+        public static final int ic_prefs_media_video=0x7f0200ae;
+        public static final int ic_prefs_network=0x7f0200af;
+        public static final int ic_sound_bluetooth_holo_dark=0x7f0200b0;
+        public static final int ic_sound_speakerphone_holo_dark=0x7f0200b1;
+        public static final int ic_speaker_dark=0x7f0200b2;
+        public static final int ic_stat_sipok=0x7f0200b3;
+        public static final int ic_tab_selected_contacts=0x7f0200b4;
+        public static final int ic_wizard_advanced=0x7f0200b5;
+        public static final int ic_wizard_basic=0x7f0200b6;
+        public static final int ic_wizard_expert=0x7f0200b7;
+        public static final int ic_wizard_fusion=0x7f0200b8;
+        public static final int in_call_held_background=0x7f0200b9;
+        public static final int jog_tab_bar_left_answer=0x7f0200ba;
+        public static final int jog_tab_bar_left_end_confirm_green=0x7f0200bb;
+        public static final int jog_tab_bar_left_end_normal=0x7f0200bc;
+        public static final int jog_tab_bar_left_end_pressed=0x7f0200bd;
+        public static final int jog_tab_bar_right_decline=0x7f0200be;
+        public static final int jog_tab_bar_right_end_confirm_red=0x7f0200bf;
+        public static final int jog_tab_bar_right_end_normal=0x7f0200c0;
+        public static final int jog_tab_bar_right_end_pressed=0x7f0200c1;
+        public static final int jog_tab_left_answer=0x7f0200c2;
+        public static final int jog_tab_left_confirm_green=0x7f0200c3;
+        public static final int jog_tab_left_normal=0x7f0200c4;
+        public static final int jog_tab_left_pressed=0x7f0200c5;
+        public static final int jog_tab_right_confirm_red=0x7f0200c6;
+        public static final int jog_tab_right_decline=0x7f0200c7;
+        public static final int jog_tab_right_normal=0x7f0200c8;
+        public static final int jog_tab_right_pressed=0x7f0200c9;
+        public static final int jog_tab_target_green=0x7f0200ca;
+        public static final int jog_tab_target_red=0x7f0200cb;
+        public static final int large_back=0x7f0200cc;
+        public static final int list_selector_background_pressed=0x7f0200cd;
+        public static final int localcall=0x7f0200ce;
+        public static final int login=0x7f0200cf;
+        public static final int login_img=0x7f0200d0;
+        public static final int login_over=0x7f0200d1;
+        public static final int music=0x7f0200d2;
+        public static final int next=0x7f0200d3;
+        public static final int notify_panel_notification_icon_bg=0x7f0200d4;
+        public static final int notify_panel_notification_icon_bg_tile=0x7f0200d5;
+        public static final int password_bar=0x7f0200d6;
+        public static final int paypal=0x7f0200d7;
+        public static final int phone_book=0x7f0200d8;
+        public static final int phonebbook=0x7f0200d9;
+        public static final int profile=0x7f0200da;
+        public static final int quickaction_arrow_down=0x7f0200db;
+        public static final int quickaction_arrow_up=0x7f0200dc;
+        public static final int quickaction_bottom_frame=0x7f0200dd;
+        public static final int quickaction_slider_background=0x7f0200de;
+        public static final int quickaction_slider_btn=0x7f0200df;
+        public static final int quickaction_slider_btn_normal=0x7f0200e0;
+        public static final int quickaction_slider_btn_on=0x7f0200e1;
+        public static final int quickaction_slider_btn_pressed=0x7f0200e2;
+        public static final int quickaction_slider_btn_selected=0x7f0200e3;
+        public static final int quickaction_slider_grip_left=0x7f0200e4;
+        public static final int quickaction_slider_grip_right=0x7f0200e5;
+        public static final int quickaction_top_frame=0x7f0200e6;
+        public static final int recharge=0x7f0200e7;
+        public static final int record=0x7f0200e8;
+        public static final int search=0x7f0200e9;
+        public static final int search_img=0x7f0200ea;
+        public static final int search_over=0x7f0200eb;
+        public static final int send=0x7f0200ec;
+        public static final int setting=0x7f0200ed;
+        public static final int sip_bar=0x7f0200ee;
+        public static final int sipcall=0x7f0200ef;
+        public static final int skip=0x7f0200f0;
+        public static final int smsbar=0x7f0200f1;
+        public static final int splash=0x7f0200f2;
+        public static final int stat_sys_vp_phone_call=0x7f0200f3;
+        public static final int tab_contacts=0x7f0200f4;
+        public static final int take_call_background=0x7f0200f5;
+        public static final int takecall_background_texture=0x7f0200f6;
+        public static final int topup=0x7f0200f7;
+        public static final int transfer=0x7f0200f8;
+        public static final int transparent=0x7f0200f9;
+        public static final int user_bar=0x7f0200fa;
+        public static final int voucher=0x7f0200fb;
+        public static final int warning_bloc_shape=0x7f0200fc;
     }
     public static final class id {
         public static final int ADD_CONTACT_CHECH_RATE=0x7f060185;
@@ -1590,7 +1591,7 @@ containing a value of this type.
         public static final int dialer_digit=0x7f030033;
         public static final int dialpad=0x7f030034;
         public static final int dialpad_additional_buttons=0x7f030035;
-        public static final int dialpad_compose=0x7f030073;
+        public static final int dialpad_compose=0x7f030074;
         public static final int dialpad_compose_3x5=0x7f030036;
         public static final int dialpad_compose_4x4=0x7f030037;
         public static final int download_notif=0x7f030038;
@@ -1627,33 +1628,34 @@ containing a value of this type.
         public static final int playing=0x7f030057;
         public static final int quickaction=0x7f030058;
         public static final int quickaction_item=0x7f030059;
-        public static final int recipient_filter_item=0x7f03005a;
-        public static final int record_item=0x7f03005b;
-        public static final int recording_list=0x7f03005c;
-        public static final int screen_splash=0x7f03005d;
-        public static final int search_contact_list_item=0x7f03005e;
-        public static final int sherlock_spinner_dropdown_item=0x7f03005f;
-        public static final int sherlock_spinner_item=0x7f030060;
+        public static final int rate=0x7f03005a;
+        public static final int recipient_filter_item=0x7f03005b;
+        public static final int record_item=0x7f03005c;
+        public static final int recording_list=0x7f03005d;
+        public static final int screen_splash=0x7f03005e;
+        public static final int search_contact_list_item=0x7f03005f;
+        public static final int sherlock_spinner_dropdown_item=0x7f030060;
+        public static final int sherlock_spinner_item=0x7f030061;
         /**  Sip home constants 
          */
-        public static final int sip_home=0x7f030072;
-        public static final int sip_home_dual_pane=0x7f030061;
-        public static final int sip_home_one_pane=0x7f030062;
-        public static final int themed_tab=0x7f030063;
-        public static final int valid_preference_row=0x7f030064;
-        public static final int voucherrefill=0x7f030065;
-        public static final int w_mondotalk_create=0x7f030066;
-        public static final int warning_container=0x7f030067;
-        public static final int warning_no_stun=0x7f030068;
-        public static final int warning_privileged_intent=0x7f030069;
-        public static final int warning_sdcard=0x7f03006a;
-        public static final int warning_vpn_ics=0x7f03006b;
-        public static final int webview=0x7f03006c;
-        public static final int widget=0x7f03006d;
-        public static final int widget_shortcut=0x7f03006e;
-        public static final int wizard_account_creation_webview=0x7f03006f;
-        public static final int wizard_prefs_base=0x7f030070;
-        public static final int wizard_row=0x7f030071;
+        public static final int sip_home=0x7f030073;
+        public static final int sip_home_dual_pane=0x7f030062;
+        public static final int sip_home_one_pane=0x7f030063;
+        public static final int themed_tab=0x7f030064;
+        public static final int valid_preference_row=0x7f030065;
+        public static final int voucherrefill=0x7f030066;
+        public static final int w_mondotalk_create=0x7f030067;
+        public static final int warning_container=0x7f030068;
+        public static final int warning_no_stun=0x7f030069;
+        public static final int warning_privileged_intent=0x7f03006a;
+        public static final int warning_sdcard=0x7f03006b;
+        public static final int warning_vpn_ics=0x7f03006c;
+        public static final int webview=0x7f03006d;
+        public static final int widget=0x7f03006e;
+        public static final int widget_shortcut=0x7f03006f;
+        public static final int wizard_account_creation_webview=0x7f030070;
+        public static final int wizard_prefs_base=0x7f030071;
+        public static final int wizard_row=0x7f030072;
     }
     public static final class menu {
         public static final int call_log_menu=0x7f0e0000;
@@ -1663,8 +1665,8 @@ containing a value of this type.
         public static final int main_prefs=0x7f0e0004;
     }
     public static final class string {
-        public static final int about=0x7f0b0245;
-        public static final int about_desc=0x7f0b0246;
+        public static final int about=0x7f0b0247;
+        public static final int about_desc=0x7f0b0248;
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
          */
         public static final int abs__action_bar_home_description=0x7f0b0000;
@@ -1698,6 +1700,8 @@ containing a value of this type.
         public static final int acc_checkStr=0x7f0b0231;
         public static final int access=0x7f0b0239;
         public static final int access_desc=0x7f0b023a;
+        public static final int account=0x7f0b023b;
+        public static final int account_desc=0x7f0b023c;
         public static final int accounts=0x7f0b01d9;
         public static final int accounts_proxies=0x7f0b0177;
         public static final int acct_expired=0x7f0b000c;
@@ -1917,7 +1921,7 @@ Calls settings
         public static final int call=0x7f0b005d;
         public static final int callAgain=0x7f0b005b;
         public static final int callBack=0x7f0b005a;
-        public static final int callDetailsDurationFormat=0x7f0b02e7;
+        public static final int callDetailsDurationFormat=0x7f0b02e9;
         public static final int callLog_delDialog_message=0x7f0b01f0;
         public static final int callLog_delDialog_no=0x7f0b01f2;
         public static final int callLog_delDialog_title=0x7f0b01ef;
@@ -1937,7 +1941,7 @@ Calls settings
         public static final int cancel=0x7f0b01dc;
         public static final int cant_call=0x7f0b0029;
         public static final int cant_write_file=0x7f0b0221;
-        public static final int captcha=0x7f0b028d;
+        public static final int captcha=0x7f0b028f;
         public static final int cdr=0x7f0b0012;
         public static final int cert_file=0x7f0b010c;
         public static final int cert_file_desc=0x7f0b010d;
@@ -2128,8 +2132,8 @@ Individual message context menu item
 Individual message context menu item
          */
         public static final int copy_message_text=0x7f0b0071;
-        public static final int country_code=0x7f0b028e;
-        public static final int create_account=0x7f0b0285;
+        public static final int country_code=0x7f0b0290;
+        public static final int create_account=0x7f0b0287;
         /**  Summary text under "New Message" command; displays in conversation list 
  Summary text under "New Message" command; displays in conversation list 
  Summary text under "New Message" command; displays in conversation list 
@@ -2200,7 +2204,7 @@ Menu item for deleting the entire conversation currently being viewed
               This is especially valuable for views without textual representation like ImageView.
     
          */
-        public static final int description_call=0x7f0b02ec;
+        public static final int description_call=0x7f0b02ee;
         /** 
          String describing the Delete/Backspace ImageButton
 
@@ -3111,7 +3115,7 @@ String describing the image on ImageButton zero
         public static final int disable_tcp_switch_desc=0x7f0b00ff;
         public static final int disabled=0x7f0b0162;
         public static final int disconnect_and_incoming_explaination=0x7f0b0206;
-        public static final int disconnect_and_will_restart=0x7f0b02eb;
+        public static final int disconnect_and_will_restart=0x7f0b02ed;
         public static final int display_icon_in_status_bar=0x7f0b020a;
         public static final int display_icon_in_status_bar_desc=0x7f0b0209;
         public static final int display_icon_in_status_bar_nbr=0x7f0b01b6;
@@ -3215,7 +3219,7 @@ Message displayed in place of the "download message" button once it has been pre
          indicating that the download is in progress
          */
         public static final int downloading=0x7f0b0070;
-        public static final int downloading_text=0x7f0b025d;
+        public static final int downloading_text=0x7f0b025f;
         public static final int dscp_val=0x7f0b00e1;
         public static final int dscp_val_desc=0x7f0b00e2;
         public static final int dtmf_pause_time=0x7f0b013c;
@@ -3245,7 +3249,7 @@ Button text used for editing a slideshow (imperative verb)
 Button text used for editing a slideshow (imperative verb)
          */
         public static final int edit=0x7f0b0083;
-        public static final int email_address=0x7f0b028c;
+        public static final int email_address=0x7f0b028e;
         public static final int empty_description=0x7f0b0098;
         public static final int enable_dns_srv=0x7f0b00ca;
         public static final int enable_dns_srv_desc=0x7f0b00cb;
@@ -3270,8 +3274,8 @@ Button text used for editing a slideshow (imperative verb)
         public static final int enable_vad=0x7f0b0121;
         public static final int enable_vad_desc=0x7f0b0122;
         public static final int ends_with=0x7f0b002f;
-        public static final int exit=0x7f0b0247;
-        public static final int exit_desc=0x7f0b0248;
+        public static final int exit=0x7f0b0249;
+        public static final int exit_desc=0x7f0b024a;
         /**  Settings modes 
 Settings modes
 Settings modes
@@ -3306,7 +3310,7 @@ Settings modes
         public static final int filters=0x7f0b01e8;
         public static final int filters_desc=0x7f0b01e9;
         public static final int filters_for=0x7f0b01ea;
-        public static final int first_name=0x7f0b0286;
+        public static final int first_name=0x7f0b0288;
         /**  Network 
 Network
 Network
@@ -3389,7 +3393,7 @@ UI
 UI
          */
         public static final int general_ui=0x7f0b0191;
-        public static final int generic_wizards_text=0x7f0b02e6;
+        public static final int generic_wizards_text=0x7f0b02e8;
         public static final int gsm=0x7f0b01f3;
         public static final int gsm_integration_type=0x7f0b01ae;
         public static final int gsm_integration_type_desc=0x7f0b01af;
@@ -3415,9 +3419,9 @@ Sender to be used if the sender address has been hidden
 Sender to be used if the sender address has been hidden
          */
         public static final int hidden_sender_address=0x7f0b0080;
-        public static final int hint_did=0x7f0b0243;
-        public static final int hint_pass=0x7f0b0241;
-        public static final int hint_proxy=0x7f0b0240;
+        public static final int hint_did=0x7f0b0245;
+        public static final int hint_pass=0x7f0b0243;
+        public static final int hint_proxy=0x7f0b0242;
         /** Presence stuff
  Login page 
 Presence stuff
@@ -3443,10 +3447,10 @@ Presence stuff
 Presence stuff
  Login page 
          */
-        public static final int hint_sip=0x7f0b023f;
-        public static final int hint_user=0x7f0b0242;
+        public static final int hint_sip=0x7f0b0241;
+        public static final int hint_user=0x7f0b0244;
         public static final int hold_call=0x7f0b004f;
-        public static final int home=0x7f0b0289;
+        public static final int home=0x7f0b028b;
         public static final int ilbc_frame_per_packet=0x7f0b0188;
         /**  Dialog title for warning the user that the picture they are trying to attach is too large 
  Dialog title for warning the user that the picture they are trying to attach is too large 
@@ -3468,7 +3472,7 @@ Dialog title for warning the user that the picture they are trying to attach is 
         public static final int in_band=0x7f0b0167;
         public static final int info=0x7f0b0222;
         public static final int init=0x7f0b01d5;
-        public static final int installing_library_text=0x7f0b025e;
+        public static final int installing_library_text=0x7f0b0260;
         public static final int integrate_tel_privileged=0x7f0b0196;
         public static final int integrate_tel_privileged_desc=0x7f0b0197;
         /** UI
@@ -3479,7 +3483,7 @@ Dialog title for warning the user that the picture they are trying to attach is 
         public static final int integrate_with_native_dialer_desc=0x7f0b0195;
         public static final int integrate_with_native_music=0x7f0b01a8;
         public static final int integrate_with_native_music_desc=0x7f0b01a9;
-        public static final int intializing_text=0x7f0b025c;
+        public static final int intializing_text=0x7f0b025e;
         public static final int invalid_sip_uri=0x7f0b01d8;
         public static final int invert_proximity_sensor=0x7f0b01b0;
         public static final int invert_proximity_sensor_desc=0x7f0b01b1;
@@ -3506,7 +3510,7 @@ Abbreviation for "kilobyte"
 Abbreviation for "kilobyte"
          */
         public static final int kilobyte=0x7f0b006b;
-        public static final int last_name=0x7f0b028b;
+        public static final int last_name=0x7f0b028d;
         /**  Generic 
 Generic
 Generic
@@ -3547,7 +3551,7 @@ Label for the "Me" number of this phone.
 Label for the "Me" number of this phone.
          */
         public static final int me=0x7f0b0095;
-        public static final int menu_add_address_to_contacts=0x7f0b02e9;
+        public static final int menu_add_address_to_contacts=0x7f0b02eb;
         /** 
          Context menu item on a message recipient for adding them to the user's
          contacts (used if the recipient is not already in the address book)
@@ -3746,12 +3750,12 @@ Name of the local user when displaying sender of an outgoing message (personal p
         public static final int micro_source_desc=0x7f0b014d;
         public static final int misc=0x7f0b0204;
         public static final int missed_call=0x7f0b01e6;
-        public static final int mobile=0x7f0b0288;
+        public static final int mobile=0x7f0b028a;
         public static final int modify_account=0x7f0b01e0;
-        public static final int msg=0x7f0b023d;
-        public static final int msg_desc=0x7f0b023e;
+        public static final int msg=0x7f0b023f;
+        public static final int msg_desc=0x7f0b0240;
         public static final int mute=0x7f0b0042;
-        public static final int name=0x7f0b0287;
+        public static final int name=0x7f0b0289;
         public static final int narrowband=0x7f0b0171;
         public static final int nat_traversal=0x7f0b00ce;
         public static final int native_dialer_integration=0x7f0b0192;
@@ -3857,7 +3861,7 @@ Hint text in message body field when keyboard is hidden
         public static final int optional=0x7f0b0163;
         public static final int optional_sip_code=0x7f0b0028;
         public static final int other_accounts=0x7f0b01da;
-        public static final int other_country_providers_text=0x7f0b02e4;
+        public static final int other_country_providers_text=0x7f0b02e6;
         public static final int outbound_proxies=0x7f0b0176;
         public static final int outgoing_call_chooser_call_text=0x7f0b01fa;
         public static final int override_nameserver=0x7f0b00cc;
@@ -3890,8 +3894,8 @@ Hint text in message body field when keyboard is hidden
         public static final int prevent_screen_rotation_desc=0x7f0b01ad;
         public static final int privkey_file=0x7f0b010e;
         public static final int privkey_file_desc=0x7f0b010f;
-        public static final int profile=0x7f0b023b;
-        public static final int profile_desc=0x7f0b023c;
+        public static final int profile=0x7f0b023d;
+        public static final int profile_desc=0x7f0b023e;
         public static final int rates=0x7f0b0014;
         public static final int recentCalls_empty=0x7f0b01e7;
         public static final int recharge=0x7f0b0013;
@@ -3987,7 +3991,7 @@ Brief small label shown to right of message when it is being sent.
  Time and date a message was sent 
  Time and date a message was sent 
          */
-        public static final int sent_on=0x7f0b02ea;
+        public static final int sent_on=0x7f0b02ec;
         public static final int service_ticker_registered_text=0x7f0b01f9;
         public static final int set_android_group=0x7f0b022c;
         public static final int set_audio_generate_tone=0x7f0b0150;
@@ -4159,10 +4163,10 @@ Status in "Report" window
         public static final int take_call=0x7f0b003b;
         public static final int tcp_keep_alive_interval_mobile=0x7f0b00e6;
         public static final int tcp_keep_alive_interval_wifi=0x7f0b00e5;
-        public static final int test_audio=0x7f0b0249;
-        public static final int test_audio_network_failure=0x7f0b024c;
-        public static final int test_audio_ongoing=0x7f0b024b;
-        public static final int test_audio_prepare=0x7f0b024a;
+        public static final int test_audio=0x7f0b024b;
+        public static final int test_audio_network_failure=0x7f0b024e;
+        public static final int test_audio_ongoing=0x7f0b024d;
+        public static final int test_audio_prepare=0x7f0b024c;
         public static final int tg_allowed=0x7f0b01c4;
         public static final int tg_allowed_desc=0x7f0b01c5;
         public static final int theme=0x7f0b01b2;
@@ -4255,7 +4259,7 @@ Security
         public static final int type_incoming=0x7f0b0057;
         public static final int type_missed=0x7f0b0059;
         public static final int type_outgoing=0x7f0b0058;
-        public static final int type_prompt=0x7f0b0244;
+        public static final int type_prompt=0x7f0b0246;
         public static final int type_sip_uri_or_autocomplete=0x7f0b0212;
         /**  Hint text in message body field when keyboard is exposed 
  Hint text in message body field when keyboard is exposed 
@@ -4319,7 +4323,7 @@ Dialog box message indicating that a message could not be delivered
  Error message indicating the format for the specified media type (e.g. "picture") is unsupported 
  Error message indicating the format for the specified media type (e.g. "picture") is unsupported 
          */
-        public static final int unsupported_media_format=0x7f0b02e8;
+        public static final int unsupported_media_format=0x7f0b02ea;
         public static final int update_nightly_build=0x7f0b0215;
         public static final int uri_im=0x7f0b022f;
         public static final int uri_nbr=0x7f0b022e;
@@ -4396,129 +4400,129 @@ Button next to an attachment during message composition to view the attachment (
         public static final int voice_mail_number=0x7f0b0211;
         public static final int voucher=0x7f0b0237;
         public static final int voucher_desc=0x7f0b0238;
-        public static final int w_advanced_auth_id=0x7f0b026b;
-        public static final int w_advanced_auth_id_desc=0x7f0b026c;
-        public static final int w_advanced_caller_id=0x7f0b0262;
-        public static final int w_advanced_caller_id_desc=0x7f0b0263;
-        public static final int w_advanced_display_name=0x7f0b0260;
-        public static final int w_advanced_display_name_desc=0x7f0b0261;
-        public static final int w_advanced_password=0x7f0b0266;
-        public static final int w_advanced_password_desc=0x7f0b0267;
-        public static final int w_advanced_proxy=0x7f0b0269;
-        public static final int w_advanced_proxy_desc=0x7f0b026a;
-        public static final int w_advanced_use_tcp=0x7f0b0268;
-        public static final int w_advanced_username=0x7f0b0264;
-        public static final int w_advanced_username_desc=0x7f0b0265;
-        public static final int w_authorization_auth_name=0x7f0b026d;
-        public static final int w_authorization_auth_name_desc=0x7f0b026e;
-        public static final int w_authorization_phone_number=0x7f0b026f;
-        public static final int w_authorization_phone_number_desc=0x7f0b0270;
-        public static final int w_basic_password=0x7f0b0273;
-        public static final int w_basic_password_desc=0x7f0b0274;
-        public static final int w_basic_username=0x7f0b0271;
-        public static final int w_basic_username_desc=0x7f0b0272;
-        public static final int w_callcentric_display_name=0x7f0b0275;
-        public static final int w_callcentric_display_name_desc=0x7f0b0276;
-        public static final int w_callcentric_password=0x7f0b0279;
-        public static final int w_callcentric_password_desc=0x7f0b027a;
-        public static final int w_callcentric_phone_number=0x7f0b0277;
-        public static final int w_callcentric_phone_number_desc=0x7f0b0278;
-        public static final int w_common_display_name=0x7f0b027b;
-        public static final int w_common_display_name_desc=0x7f0b027c;
-        public static final int w_common_password=0x7f0b0281;
-        public static final int w_common_password_desc=0x7f0b0282;
-        public static final int w_common_phone_number=0x7f0b027f;
-        public static final int w_common_phone_number_desc=0x7f0b0280;
-        public static final int w_common_server=0x7f0b0283;
-        public static final int w_common_server_desc=0x7f0b0284;
-        public static final int w_common_username=0x7f0b027d;
-        public static final int w_common_username_desc=0x7f0b027e;
-        public static final int w_cryptel_password=0x7f0b028f;
-        public static final int w_cryptel_password_desc=0x7f0b0290;
-        public static final int w_ecs_display_name=0x7f0b0291;
-        public static final int w_ecs_display_name_desc=0x7f0b0292;
-        public static final int w_ecs_password=0x7f0b0297;
-        public static final int w_ecs_password_desc=0x7f0b0298;
-        public static final int w_ecs_phone_number=0x7f0b0293;
-        public static final int w_ecs_phone_number_desc=0x7f0b0294;
-        public static final int w_ecs_server_domain=0x7f0b0299;
-        public static final int w_ecs_server_domain_desc=0x7f0b029a;
-        public static final int w_ecs_server_ip_desc=0x7f0b029b;
-        public static final int w_ecs_user_name=0x7f0b0295;
-        public static final int w_ecs_user_name_desc=0x7f0b0296;
-        public static final int w_expert_acc_id=0x7f0b029e;
-        public static final int w_expert_acc_id_desc=0x7f0b029f;
-        public static final int w_expert_allow_contact_rewrite=0x7f0b02b5;
-        public static final int w_expert_allow_via_rewrite=0x7f0b02c1;
-        public static final int w_expert_allow_via_rewrite_desc=0x7f0b02c2;
-        public static final int w_expert_contact_rewrite_method=0x7f0b02b6;
-        public static final int w_expert_data=0x7f0b02a6;
-        public static final int w_expert_data_desc=0x7f0b02a7;
-        public static final int w_expert_datatype=0x7f0b02a8;
-        public static final int w_expert_datatype_desc=0x7f0b02a9;
-        public static final int w_expert_display_name=0x7f0b029c;
-        public static final int w_expert_display_name_desc=0x7f0b029d;
-        public static final int w_expert_force_contact=0x7f0b02b4;
-        public static final int w_expert_ipv6_media_use=0x7f0b02c3;
-        public static final int w_expert_ka_interval=0x7f0b02b3;
-        public static final int w_expert_media_transport=0x7f0b02be;
-        public static final int w_expert_mwi_enabled=0x7f0b02bf;
-        public static final int w_expert_mwi_enabled_desc=0x7f0b02c0;
-        public static final int w_expert_prevent_tcp=0x7f0b02ae;
-        public static final int w_expert_proxy=0x7f0b02ab;
-        public static final int w_expert_proxy_desc=0x7f0b02ac;
-        public static final int w_expert_publish_enabled=0x7f0b02af;
-        public static final int w_expert_realm=0x7f0b02a2;
-        public static final int w_expert_realm_desc=0x7f0b02a3;
-        public static final int w_expert_reg_dbr=0x7f0b02b1;
-        public static final int w_expert_reg_dbr_desc=0x7f0b02b2;
-        public static final int w_expert_reg_timeout=0x7f0b02b0;
-        public static final int w_expert_reg_uri=0x7f0b02a0;
-        public static final int w_expert_reg_uri_desc=0x7f0b02a1;
-        public static final int w_expert_reg_use_proxy=0x7f0b02b7;
-        public static final int w_expert_rtp_bound_addr=0x7f0b02ba;
-        public static final int w_expert_rtp_bound_addr_desc=0x7f0b02bb;
-        public static final int w_expert_rtp_public_addr=0x7f0b02bc;
-        public static final int w_expert_rtp_public_addr_desc=0x7f0b02bd;
-        public static final int w_expert_t_proxy=0x7f0b02aa;
-        public static final int w_expert_try_clean_registers=0x7f0b02b8;
-        public static final int w_expert_try_clean_registers_desc=0x7f0b02b9;
-        public static final int w_expert_use_tcp=0x7f0b02ad;
-        public static final int w_expert_username=0x7f0b02a4;
-        public static final int w_expert_username_desc=0x7f0b02a5;
-        public static final int w_fritz_extension=0x7f0b02c4;
-        public static final int w_fritz_extension_advise=0x7f0b02c8;
-        public static final int w_fritz_extension_desc=0x7f0b02c5;
-        public static final int w_fritz_proxy=0x7f0b02c6;
-        public static final int w_fritz_proxy_desc=0x7f0b02c7;
-        public static final int w_iinet_password=0x7f0b02cd;
-        public static final int w_iinet_password_desc=0x7f0b02ce;
-        public static final int w_iinet_state=0x7f0b02c9;
-        public static final int w_iinet_state_desc=0x7f0b02ca;
-        public static final int w_iinet_username=0x7f0b02cb;
-        public static final int w_iinet_username_desc=0x7f0b02cc;
-        public static final int w_onsip_authentication_name=0x7f0b02cf;
-        public static final int w_onsip_authentication_name_desc=0x7f0b02d0;
-        public static final int w_onsip_password=0x7f0b02d5;
-        public static final int w_onsip_password_desc=0x7f0b02d6;
-        public static final int w_onsip_server=0x7f0b02d3;
-        public static final int w_onsip_server_desc=0x7f0b02d4;
-        public static final int w_onsip_username=0x7f0b02d1;
-        public static final int w_onsip_username_desc=0x7f0b02d2;
-        public static final int w_ovh_phone_number_desc=0x7f0b02d7;
-        public static final int w_pbxes_user_extension=0x7f0b02d9;
-        public static final int w_sapo_phone_number_desc=0x7f0b02d8;
-        public static final int w_sipgate_display_name=0x7f0b02da;
-        public static final int w_sipgate_display_name_desc=0x7f0b02db;
-        public static final int w_sipgate_password=0x7f0b02de;
-        public static final int w_sipgate_password_desc=0x7f0b02df;
-        public static final int w_sipgate_server_desc=0x7f0b02e0;
-        public static final int w_sipgate_username=0x7f0b02dc;
-        public static final int w_sipgate_username_desc=0x7f0b02dd;
-        public static final int w_sipme_phone_number_desc=0x7f0b02e1;
-        public static final int w_sonetel_email=0x7f0b02e2;
-        public static final int w_sonetel_email_desc=0x7f0b02e3;
-        public static final int warn_ignore=0x7f0b024d;
+        public static final int w_advanced_auth_id=0x7f0b026d;
+        public static final int w_advanced_auth_id_desc=0x7f0b026e;
+        public static final int w_advanced_caller_id=0x7f0b0264;
+        public static final int w_advanced_caller_id_desc=0x7f0b0265;
+        public static final int w_advanced_display_name=0x7f0b0262;
+        public static final int w_advanced_display_name_desc=0x7f0b0263;
+        public static final int w_advanced_password=0x7f0b0268;
+        public static final int w_advanced_password_desc=0x7f0b0269;
+        public static final int w_advanced_proxy=0x7f0b026b;
+        public static final int w_advanced_proxy_desc=0x7f0b026c;
+        public static final int w_advanced_use_tcp=0x7f0b026a;
+        public static final int w_advanced_username=0x7f0b0266;
+        public static final int w_advanced_username_desc=0x7f0b0267;
+        public static final int w_authorization_auth_name=0x7f0b026f;
+        public static final int w_authorization_auth_name_desc=0x7f0b0270;
+        public static final int w_authorization_phone_number=0x7f0b0271;
+        public static final int w_authorization_phone_number_desc=0x7f0b0272;
+        public static final int w_basic_password=0x7f0b0275;
+        public static final int w_basic_password_desc=0x7f0b0276;
+        public static final int w_basic_username=0x7f0b0273;
+        public static final int w_basic_username_desc=0x7f0b0274;
+        public static final int w_callcentric_display_name=0x7f0b0277;
+        public static final int w_callcentric_display_name_desc=0x7f0b0278;
+        public static final int w_callcentric_password=0x7f0b027b;
+        public static final int w_callcentric_password_desc=0x7f0b027c;
+        public static final int w_callcentric_phone_number=0x7f0b0279;
+        public static final int w_callcentric_phone_number_desc=0x7f0b027a;
+        public static final int w_common_display_name=0x7f0b027d;
+        public static final int w_common_display_name_desc=0x7f0b027e;
+        public static final int w_common_password=0x7f0b0283;
+        public static final int w_common_password_desc=0x7f0b0284;
+        public static final int w_common_phone_number=0x7f0b0281;
+        public static final int w_common_phone_number_desc=0x7f0b0282;
+        public static final int w_common_server=0x7f0b0285;
+        public static final int w_common_server_desc=0x7f0b0286;
+        public static final int w_common_username=0x7f0b027f;
+        public static final int w_common_username_desc=0x7f0b0280;
+        public static final int w_cryptel_password=0x7f0b0291;
+        public static final int w_cryptel_password_desc=0x7f0b0292;
+        public static final int w_ecs_display_name=0x7f0b0293;
+        public static final int w_ecs_display_name_desc=0x7f0b0294;
+        public static final int w_ecs_password=0x7f0b0299;
+        public static final int w_ecs_password_desc=0x7f0b029a;
+        public static final int w_ecs_phone_number=0x7f0b0295;
+        public static final int w_ecs_phone_number_desc=0x7f0b0296;
+        public static final int w_ecs_server_domain=0x7f0b029b;
+        public static final int w_ecs_server_domain_desc=0x7f0b029c;
+        public static final int w_ecs_server_ip_desc=0x7f0b029d;
+        public static final int w_ecs_user_name=0x7f0b0297;
+        public static final int w_ecs_user_name_desc=0x7f0b0298;
+        public static final int w_expert_acc_id=0x7f0b02a0;
+        public static final int w_expert_acc_id_desc=0x7f0b02a1;
+        public static final int w_expert_allow_contact_rewrite=0x7f0b02b7;
+        public static final int w_expert_allow_via_rewrite=0x7f0b02c3;
+        public static final int w_expert_allow_via_rewrite_desc=0x7f0b02c4;
+        public static final int w_expert_contact_rewrite_method=0x7f0b02b8;
+        public static final int w_expert_data=0x7f0b02a8;
+        public static final int w_expert_data_desc=0x7f0b02a9;
+        public static final int w_expert_datatype=0x7f0b02aa;
+        public static final int w_expert_datatype_desc=0x7f0b02ab;
+        public static final int w_expert_display_name=0x7f0b029e;
+        public static final int w_expert_display_name_desc=0x7f0b029f;
+        public static final int w_expert_force_contact=0x7f0b02b6;
+        public static final int w_expert_ipv6_media_use=0x7f0b02c5;
+        public static final int w_expert_ka_interval=0x7f0b02b5;
+        public static final int w_expert_media_transport=0x7f0b02c0;
+        public static final int w_expert_mwi_enabled=0x7f0b02c1;
+        public static final int w_expert_mwi_enabled_desc=0x7f0b02c2;
+        public static final int w_expert_prevent_tcp=0x7f0b02b0;
+        public static final int w_expert_proxy=0x7f0b02ad;
+        public static final int w_expert_proxy_desc=0x7f0b02ae;
+        public static final int w_expert_publish_enabled=0x7f0b02b1;
+        public static final int w_expert_realm=0x7f0b02a4;
+        public static final int w_expert_realm_desc=0x7f0b02a5;
+        public static final int w_expert_reg_dbr=0x7f0b02b3;
+        public static final int w_expert_reg_dbr_desc=0x7f0b02b4;
+        public static final int w_expert_reg_timeout=0x7f0b02b2;
+        public static final int w_expert_reg_uri=0x7f0b02a2;
+        public static final int w_expert_reg_uri_desc=0x7f0b02a3;
+        public static final int w_expert_reg_use_proxy=0x7f0b02b9;
+        public static final int w_expert_rtp_bound_addr=0x7f0b02bc;
+        public static final int w_expert_rtp_bound_addr_desc=0x7f0b02bd;
+        public static final int w_expert_rtp_public_addr=0x7f0b02be;
+        public static final int w_expert_rtp_public_addr_desc=0x7f0b02bf;
+        public static final int w_expert_t_proxy=0x7f0b02ac;
+        public static final int w_expert_try_clean_registers=0x7f0b02ba;
+        public static final int w_expert_try_clean_registers_desc=0x7f0b02bb;
+        public static final int w_expert_use_tcp=0x7f0b02af;
+        public static final int w_expert_username=0x7f0b02a6;
+        public static final int w_expert_username_desc=0x7f0b02a7;
+        public static final int w_fritz_extension=0x7f0b02c6;
+        public static final int w_fritz_extension_advise=0x7f0b02ca;
+        public static final int w_fritz_extension_desc=0x7f0b02c7;
+        public static final int w_fritz_proxy=0x7f0b02c8;
+        public static final int w_fritz_proxy_desc=0x7f0b02c9;
+        public static final int w_iinet_password=0x7f0b02cf;
+        public static final int w_iinet_password_desc=0x7f0b02d0;
+        public static final int w_iinet_state=0x7f0b02cb;
+        public static final int w_iinet_state_desc=0x7f0b02cc;
+        public static final int w_iinet_username=0x7f0b02cd;
+        public static final int w_iinet_username_desc=0x7f0b02ce;
+        public static final int w_onsip_authentication_name=0x7f0b02d1;
+        public static final int w_onsip_authentication_name_desc=0x7f0b02d2;
+        public static final int w_onsip_password=0x7f0b02d7;
+        public static final int w_onsip_password_desc=0x7f0b02d8;
+        public static final int w_onsip_server=0x7f0b02d5;
+        public static final int w_onsip_server_desc=0x7f0b02d6;
+        public static final int w_onsip_username=0x7f0b02d3;
+        public static final int w_onsip_username_desc=0x7f0b02d4;
+        public static final int w_ovh_phone_number_desc=0x7f0b02d9;
+        public static final int w_pbxes_user_extension=0x7f0b02db;
+        public static final int w_sapo_phone_number_desc=0x7f0b02da;
+        public static final int w_sipgate_display_name=0x7f0b02dc;
+        public static final int w_sipgate_display_name_desc=0x7f0b02dd;
+        public static final int w_sipgate_password=0x7f0b02e0;
+        public static final int w_sipgate_password_desc=0x7f0b02e1;
+        public static final int w_sipgate_server_desc=0x7f0b02e2;
+        public static final int w_sipgate_username=0x7f0b02de;
+        public static final int w_sipgate_username_desc=0x7f0b02df;
+        public static final int w_sipme_phone_number_desc=0x7f0b02e3;
+        public static final int w_sonetel_email=0x7f0b02e4;
+        public static final int w_sonetel_email_desc=0x7f0b02e5;
+        public static final int warn_ignore=0x7f0b024f;
         /**  STUN enabled 
 STUN enabled
 STUN enabled
@@ -4526,10 +4530,10 @@ STUN enabled
 STUN enabled
 STUN enabled
          */
-        public static final int warn_no_stun=0x7f0b024e;
-        public static final int warn_no_stun_description=0x7f0b024f;
-        public static final int warn_no_stun_enable=0x7f0b0250;
-        public static final int warn_no_stun_ignore=0x7f0b0251;
+        public static final int warn_no_stun=0x7f0b0250;
+        public static final int warn_no_stun_description=0x7f0b0251;
+        public static final int warn_no_stun_enable=0x7f0b0252;
+        public static final int warn_no_stun_ignore=0x7f0b0253;
         /**  Privileged intent 
 Privileged intent
 Privileged intent
@@ -4537,12 +4541,12 @@ Privileged intent
 Privileged intent
 Privileged intent
          */
-        public static final int warn_priv_int=0x7f0b0256;
-        public static final int warn_priv_int_description=0x7f0b0257;
-        public static final int warn_priv_int_description2=0x7f0b0258;
-        public static final int warn_priv_int_register=0x7f0b0259;
-        public static final int warn_sdcard=0x7f0b025a;
-        public static final int warn_sdcard_description=0x7f0b025b;
+        public static final int warn_priv_int=0x7f0b0258;
+        public static final int warn_priv_int_description=0x7f0b0259;
+        public static final int warn_priv_int_description2=0x7f0b025a;
+        public static final int warn_priv_int_register=0x7f0b025b;
+        public static final int warn_sdcard=0x7f0b025c;
+        public static final int warn_sdcard_description=0x7f0b025d;
         /**  Vpn on android 4.0 
 Vpn on android 4.0
 Vpn on android 4.0
@@ -4550,20 +4554,20 @@ Vpn on android 4.0
 Vpn on android 4.0
 Vpn on android 4.0
          */
-        public static final int warn_vpn_ics=0x7f0b0252;
-        public static final int warn_vpn_ics_1=0x7f0b0254;
-        public static final int warn_vpn_ics_5=0x7f0b0255;
-        public static final int warn_vpn_ics_description=0x7f0b0253;
+        public static final int warn_vpn_ics=0x7f0b0254;
+        public static final int warn_vpn_ics_1=0x7f0b0256;
+        public static final int warn_vpn_ics_5=0x7f0b0257;
+        public static final int warn_vpn_ics_description=0x7f0b0255;
         public static final int warning=0x7f0b0205;
         public static final int webrtc=0x7f0b016f;
-        public static final int welcome_caption_text=0x7f0b025f;
+        public static final int welcome_caption_text=0x7f0b0261;
         public static final int wideband=0x7f0b0172;
         /** Fast settings
          */
         public static final int wifi_available=0x7f0b01bf;
         public static final int wifi_available_desc=0x7f0b01c0;
-        public static final int work=0x7f0b028a;
-        public static final int world_wide_providers_text=0x7f0b02e5;
+        public static final int work=0x7f0b028c;
+        public static final int world_wide_providers_text=0x7f0b02e7;
         public static final int xfer_uri=0x7f0b004e;
         /**  Text to be used for affirmative response button in dialog boxes 
  Text to be used for affirmative response button in dialog boxes 

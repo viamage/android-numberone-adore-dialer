@@ -537,6 +537,11 @@
             android:name="com.numberone.ui.more.RefillVoucher"
             android:theme="@style/DarkTheme" />
          
+          
+         <activity
+            android:name="com.numberone.ui.more.Rate"
+            android:theme="@style/DarkTheme" />
+         
              <activity
             android:name="com.numberone.ui.more.MobileMessage"
             android:theme="@style/DarkTheme" />
@@ -544,9 +549,8 @@
               
          <activity
             android:name="com.numberone.ui.more.AccountUpdate"
-            android:label="Profile"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Dialog" >
+           
+            android:theme="@style/DarkTheme"  >
         </activity>
              
               <activity
