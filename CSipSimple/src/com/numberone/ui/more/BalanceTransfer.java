@@ -70,7 +70,7 @@ public void onClick(View v) {
 		int dest_Length2=uservalue2.length();
 		
 		
-		if(dest_Length1!=6)
+		if(dest_Length1>20)
 		{
 			Toast.makeText(getApplicationContext(),"Please enter correct mobile number.",Toast.LENGTH_SHORT).show(); 
 			

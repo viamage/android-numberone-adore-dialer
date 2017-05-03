@@ -26,6 +26,7 @@ import com.numberone.ui.account.AccountWizard;
 import com.numberone.ui.account.AdoreSharedPreferences;
 import com.numberone.ui.dialpad.DialerFragment;
 import com.numberone.ui.dialpad.DialerFragment.LongOperation;
+import com.numberone.ui.more.Accessno;
 import com.numberone.writer.StorageFile;
 
 public class DialerCallBar extends LinearLayout implements OnClickListener, OnLongClickListener {
@@ -59,6 +60,7 @@ public class DialerCallBar extends LinearLayout implements OnClickListener, OnLo
 		void gsmCall();
     }
     private AdoreSharedPreferences adorePreferences;
+    public static Button local;
 
     private OnDialActionListener actionListener;
     
@@ -149,79 +151,102 @@ public class DialerCallBar extends LinearLayout implements OnClickListener, OnLo
                 actionListener.phonebook();
             }
             else if(viewId == R.id.dialButton) {
+            	
+            	String a = Accessno.item;
+        		System.out.println("ACCESSNO^^^^^^^^^^^^^^^^^^^^^^^^^"+a);
         		
-            	final Dialog dialog = new Dialog(getContext());
-            	dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-    			dialog.setContentView(R.layout.customcall);
-    			
-    		
-    			
-    			Button sip=(Button)dialog.findViewById(R.id.sipcall);
-    			
-    			sip.setOnClickListener(new OnClickListener() 
-            	{ 
-    				
-    				ConnectivityManager connMgr = (ConnectivityManager)getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+        		if(a!=null)
+        		{
+        			System.out.println("DEVTADIYAL");
+        			final Dialog dialog = new Dialog(getContext());
+                	dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        			dialog.setContentView(R.layout.customcall);
+        			
+        		
+        			
+        			Button sip=(Button)dialog.findViewById(R.id.sipcall);
+        			
+        			sip.setOnClickListener(new OnClickListener() 
+                	{ 
+        				
+        				ConnectivityManager connMgr = (ConnectivityManager)getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
 
- 			       NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
- 			    //  AccountStatusDisplay accountStatusDisplay = AccountListUtils.getAccountDisplay(getContext(), 1);
-					@Override
-					public void onClick(View v)
-					{
-			         if(networkInfo != null && networkInfo.isConnected())
-						  //|| jsonvalue.contains("you are authorized person")
-			         {
-			        	 // if(b==true)  
-						//{
-						 actionListener.placeCall();
-						    //} 
-						   //else
-	                      // {  
-							
-	                    //	Toast.makeText(getContext(), "Please make sure you have Registered with the proper Account for calling by Data Mode", Toast.LENGTH_LONG).show();
-	                   // }
-						
-			         }else
-			         {
-			        	 Toast.makeText(getContext(), "Please make sure you have Network Enabled ", Toast.LENGTH_LONG).show(); 
-			         }
-					}
-            	});
-Button local=(Button)dialog.findViewById(R.id.localcall);
+     			       NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
+     			    //  AccountStatusDisplay accountStatusDisplay = AccountListUtils.getAccountDisplay(getContext(), 1);
+    					@Override
+    					public void onClick(View v)
+    					{
+    			         if(networkInfo != null && networkInfo.isConnected())
+    						  //|| jsonvalue.contains("you are authorized person")
+    			         {
+    			        	 // if(b==true)  
+    						//{
+    						 actionListener.placeCall();
+    						  
+    						
+    			         }else
+    			         {
+    			        	 Toast.makeText(getContext(), "Please make sure you have Network Enabled ", Toast.LENGTH_LONG).show(); 
+    			         }
+    					}
+                	});
+        			local=(Button)dialog.findViewById(R.id.localcall);
+                	
+                	local.setOnClickListener(new OnClickListener() 
+                	{
+    				
+    					@Override
+    					public void onClick(View v)
+    					{   
+    					     
+    						try {
+    							adorePreferences.loadCountryValue();
+    							File internalStorageDir = getContext().getFilesDir();
+    							File devfile = new File(internalStorageDir, "/ukww");
+    							String filepath = devfile+"/accessno.txt";
+    							StorageFile sf = new StorageFile();
+    							String accessno =null;
+    							
+    							accessno = sf.readStorageFile(filepath);
+    							System.out.println(" WHILE CALLING HEMANT FILE PATH: "+filepath+" DEVTADIYAL04 ACCESS NO "+accessno);
+    							 
+    							  actionListener.gsmCall();
+    							  dialog .dismiss();
+    							
+    						} catch (Exception e) {
+    							// TODO Auto-generated catch block
+    						//	showSavingNmberAlert();
+    							 dialog .dismiss();
+    							System.out.println("QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ "+e);
+    						
+    					        }
+    					}
+    				});
+                	
+                	
+        			dialog.show();	
+        		}
+        		else
+        		{
+        			ConnectivityManager connMgr = (ConnectivityManager)getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+
+  			       NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
+  			       
+  			     if(networkInfo != null && networkInfo.isConnected())
+					  
+		         {
+		        	
+					 actionListener.placeCall();
+					 
+					
+		         }
+  			     else
+		         {
+		        	 Toast.makeText(getContext(), "Please make sure you have Network Enabled ", Toast.LENGTH_LONG).show(); 
+		         }
+        			
+        		}
             	
-            	local.setOnClickListener(new OnClickListener() 
-            	{
-				
-					@Override
-					public void onClick(View v)
-					{   
-					     
-						try {
-							adorePreferences.loadCountryValue();
-							File internalStorageDir = getContext().getFilesDir();
-							File devfile = new File(internalStorageDir, "/ukww");
-							String filepath = devfile+"/accessno.txt";
-							StorageFile sf = new StorageFile();
-							String accessno =null;
-							
-							accessno = sf.readStorageFile(filepath);
-							System.out.println(" WHILE CALLING HEMANT FILE PATH: "+filepath+" DEVTADIYAL04 ACCESS NO "+accessno);
-							 
-							  actionListener.gsmCall();
-							  dialog .dismiss();
-							
-						} catch (Exception e) {
-							// TODO Auto-generated catch block
-						//	showSavingNmberAlert();
-							 dialog .dismiss();
-							System.out.println("QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ "+e);
-						
-					        }
-					}
-				});
-            	
-            	
-    			dialog.show();	
             }	
              
             }

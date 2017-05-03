@@ -756,12 +756,17 @@ public class DialerFragment extends SherlockFragment implements
 		 String RateNumber=digits.getText().toString();
 	        System.out.println("&&&&&&&&&"+RateNumber);
 	        RateNumber2=RateNumber.replaceAll("[()\\s-]+", "").trim();
-			
+	        long accountId = 1;
+			account = SipProfile.getProfileFromDbId(getActivity(), accountId,
+					DBProvider.ACCOUNT_FULL_PROJECTION);
+			String user1, pass1;
+			user1 = account.getSipUserName();
+			pass1 = account.getPassword();
 	        if(RateNumber.startsWith("00"))
 			{   
 				String RateNumber3=RateNumber.replaceAll("[()\\s-]+", "").substring(2);
 				System.out.println("*****************************************************"+RateNumber3);
-				String RateURL="http://portal.numone.keios.eu/api/v1/rates/Antonio?key=834cu9sA7vhS721bjXng9v7a6v118&prefix="+RateNumber3+"&page=1&perPage=1";
+				String RateURL="http://portal.numone.keios.eu/api/v1/rates/"+user1+"?key=834cu9sA7vhS721bjXng9v7a6v118&prefix="+RateNumber3+"&page=1&perPage=1";
 				                
 				//https://billing.yepingo.co.uk/web/server.php?rates=00880
 				
@@ -773,7 +778,7 @@ public class DialerFragment extends SherlockFragment implements
 			
 			 // RateNumber2=RateNumber.replaceAll("[()\\s-]+", "").trim();
 			 System.out.println("RateNumber @@@@@@@@@@ "+RateNumber2);
-			String RateURL="http://portal.numone.keios.eu/api/v1/rates/Antonio?key=834cu9sA7vhS721bjXng9v7a6v118&prefix="+RateNumber2+"&page=1&perPage=1";
+			String RateURL="http://portal.numone.keios.eu/api/v1/rates/"+user1+"?key=834cu9sA7vhS721bjXng9v7a6v118&prefix="+RateNumber2+"&page=1&perPage=1";
 			System.out.println("sending signup URL :"+RateURL);
 			new RateOperation().execute(RateURL);
 			}
@@ -1360,7 +1365,7 @@ public class DialerFragment extends SherlockFragment implements
     			System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@DEVTADIYAL "+pass1);
 
     			
-    			 URL oracle = new URL("http://91.212.52.5/VSServices//Export.ashx?f=getClientBalance&pin="+pass1);
+    			 URL oracle = new URL("http://91.212.52.5/VSServices//Export.ashx?f=getClientBalance&pin="+user1);
     		        URLConnection yc = oracle.openConnection();
     		        BufferedReader in = new BufferedReader(new InputStreamReader(yc.getInputStream()));
     		       
