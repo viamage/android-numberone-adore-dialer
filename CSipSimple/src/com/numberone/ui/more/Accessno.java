@@ -4,6 +4,8 @@ import java.io.File;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.CheckBox;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
@@ -16,14 +18,16 @@ import com.numberone.writer.StorageFile;
 public class Accessno extends Activity {
 	public static String str,item;
 	public static String msg ="";
+	public static CheckBox checkBox11;
 	RadioGroup  radioGroup12;
 	RadioButton a,b,c,d,e,f,g,h,iii,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,aa,bb,cc,dd,ee,ff,gg,hh,ii,jj,kk,ll,mm,nn,oo,pp,qq,rr,ss,tt,uu,vv,ww,xx,yy,zz,aaa,bbb,ccc,ddd,eee,fff,ggg,hhh,iiii,jjj,kkk,lll,mmm,nnn,ooo,ppp,qqq;
-	
+	public static Boolean bool;
 	   @Override
 	    protected void onCreate(Bundle savedInstanceState) {
 	        super.onCreate(savedInstanceState);
 	        setContentView(R.layout.accessno);
 
+	        checkBox11 = (CheckBox) findViewById(R.id.checkBox1);
 	        a = (RadioButton) findViewById(R.id.radioButton1Id);
 	        b = (RadioButton) findViewById(R.id.radioButton2Id);
 	        c = (RadioButton) findViewById(R.id.radioButton3Id);
@@ -94,6 +98,9 @@ public class Accessno extends Activity {
 	        ppp= (RadioButton) findViewById(R.id.radioButton69Id);
 	        qqq = (RadioButton) findViewById(R.id.radioButton70Id);
 	        
+	        
+	        
+	      
 	        
 	        
 	     radioGroup12 = (RadioGroup) findViewById(R.id.radioGroup);
@@ -1112,5 +1119,31 @@ public class Accessno extends Activity {
 	            }
 	    });
 
+	   
 	   }
+	   
+	   public void onClick(View v) {
+	     	 
+	     	 
+	     	  if(checkBox11.isChecked()){
+
+	     		  bool = true;
+	     		 System.out.println("DEVTADIYAL "+bool);
+	     		 Intent q = new Intent(Accessno.this,SipHome.class);
+               	//  it.putExtra("did",str);
+               	  q.setAction(SipManager.ACTION_SIP_DIALER);
+               	  q.setData(SipUri.forgeSipUri(SipManager.PROTOCOL_SIP, ""));
+               	  startActivity(q);
+	     		  
+	     	  }
+	     	  else
+	     	  {
+	     		 
+	     		bool = false;
+	     		 System.out.println("PAGAl "+bool);
+	     	  }
+	     	}
+	   
+	   
+	   
 	}

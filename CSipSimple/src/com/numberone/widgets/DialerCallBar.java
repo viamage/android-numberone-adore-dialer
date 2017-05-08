@@ -89,7 +89,7 @@ public class DialerCallBar extends LinearLayout implements OnClickListener, OnLo
     //String data1 = account.getSipUserName();
    // String data2=account.getPassword();
     //l.execute("Antonio");
-    System.out.println("HEMANT .........."+l.r);
+   // System.out.println("HEMANT .........."+l.rr);
    // balance.setText(l.r);
       //  findViewById(R.id.accountButton).setEnabled(true);
         findViewById(R.id.dialButton).setOnClickListener(this);
@@ -152,100 +152,110 @@ public class DialerCallBar extends LinearLayout implements OnClickListener, OnLo
             }
             else if(viewId == R.id.dialButton) {
             	
-            	String a = Accessno.item;
-        		System.out.println("ACCESSNO^^^^^^^^^^^^^^^^^^^^^^^^^"+a);
-        		
-        		if(a!=null)
-        		{
-        			System.out.println("DEVTADIYAL");
-        			final Dialog dialog = new Dialog(getContext());
-                	dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        			dialog.setContentView(R.layout.customcall);
-        			
-        		
-        			
-        			Button sip=(Button)dialog.findViewById(R.id.sipcall);
-        			
-        			sip.setOnClickListener(new OnClickListener() 
-                	{ 
-        				
-        				ConnectivityManager connMgr = (ConnectivityManager)getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
-
-     			       NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
-     			    //  AccountStatusDisplay accountStatusDisplay = AccountListUtils.getAccountDisplay(getContext(), 1);
-    					@Override
-    					public void onClick(View v)
-    					{
-    			         if(networkInfo != null && networkInfo.isConnected())
-    						  //|| jsonvalue.contains("you are authorized person")
-    			         {
-    			        	 // if(b==true)  
-    						//{
-    						 actionListener.placeCall();
-    						  
-    						
-    			         }else
-    			         {
-    			        	 Toast.makeText(getContext(), "Please make sure you have Network Enabled ", Toast.LENGTH_LONG).show(); 
-    			         }
-    					}
-                	});
-        			local=(Button)dialog.findViewById(R.id.localcall);
-                	
-                	local.setOnClickListener(new OnClickListener() 
-                	{
-    				
-    					@Override
-    					public void onClick(View v)
-    					{   
-    					     
-    						try {
-    							adorePreferences.loadCountryValue();
-    							File internalStorageDir = getContext().getFilesDir();
-    							File devfile = new File(internalStorageDir, "/ukww");
-    							String filepath = devfile+"/accessno.txt";
-    							StorageFile sf = new StorageFile();
-    							String accessno =null;
-    							
-    							accessno = sf.readStorageFile(filepath);
-    							System.out.println(" WHILE CALLING HEMANT FILE PATH: "+filepath+" DEVTADIYAL04 ACCESS NO "+accessno);
-    							 
-    							  actionListener.gsmCall();
-    							  dialog .dismiss();
-    							
-    						} catch (Exception e) {
-    							// TODO Auto-generated catch block
-    						//	showSavingNmberAlert();
-    							 dialog .dismiss();
-    							System.out.println("QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ "+e);
-    						
-    					        }
-    					}
-    				});
-                	
-                	
-        			dialog.show();	
-        		}
-        		else
-        		{
-        			ConnectivityManager connMgr = (ConnectivityManager)getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
-
-  			       NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
-  			       
-  			     if(networkInfo != null && networkInfo.isConnected())
-					  
-		         {
-		        	
-					 actionListener.placeCall();
-					 
+            	try {
+					String a = Accessno.item;
+					System.out.println("ACCESSNO^^^^^^^^^^^^^^^^^^^^^^^^^"+a);
 					
-		         }
-  			     else
-		         {
-		        	 Toast.makeText(getContext(), "Please make sure you have Network Enabled ", Toast.LENGTH_LONG).show(); 
-		         }
-        			
-        		}
+					Boolean b = Accessno.bool;
+					System.out.println("BOOLEAN VALUE "+b);
+     	
+					
+					if(b==true)
+					{
+						System.out.println("DEVTADIYAL");
+						final Dialog dialog = new Dialog(getContext());
+						dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+						dialog.setContentView(R.layout.customcall);
+						
+					
+						
+						Button sip=(Button)dialog.findViewById(R.id.sipcall);
+						
+						sip.setOnClickListener(new OnClickListener() 
+						{ 
+							
+							ConnectivityManager connMgr = (ConnectivityManager)getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+
+					       NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
+					    //  AccountStatusDisplay accountStatusDisplay = AccountListUtils.getAccountDisplay(getContext(), 1);
+							@Override
+							public void onClick(View v)
+							{
+					         if(networkInfo != null && networkInfo.isConnected())
+								  //|| jsonvalue.contains("you are authorized person")
+					         {
+					        	 // if(b==true)  
+								//{
+								 actionListener.placeCall();
+								  
+								
+					         }else
+					         {
+					        	 Toast.makeText(getContext(), "Please make sure you have Network Enabled ", Toast.LENGTH_LONG).show(); 
+					         }
+							}
+						});
+						local=(Button)dialog.findViewById(R.id.localcall);
+						
+						local.setOnClickListener(new OnClickListener() 
+						{
+						
+							@Override
+							public void onClick(View v)
+							{   
+							     
+								try {
+									adorePreferences.loadCountryValue();
+									File internalStorageDir = getContext().getFilesDir();
+									File devfile = new File(internalStorageDir, "/ukww");
+									String filepath = devfile+"/accessno.txt";
+									StorageFile sf = new StorageFile();
+									String accessno =null;
+									
+									accessno = sf.readStorageFile(filepath);
+									System.out.println(" WHILE CALLING HEMANT FILE PATH: "+filepath+" DEVTADIYAL04 ACCESS NO "+accessno);
+									 
+									  actionListener.gsmCall();
+									  dialog .dismiss();
+									
+								} catch (Exception e) {
+									// TODO Auto-generated catch block
+								//	showSavingNmberAlert();
+									 dialog .dismiss();
+									System.out.println("QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ "+e);
+								
+							        }
+							}
+						});
+						
+						
+						dialog.show();	
+					}
+					else
+					{
+						ConnectivityManager connMgr = (ConnectivityManager)getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+
+					   NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
+					   
+					 if(networkInfo != null && networkInfo.isConnected())
+						  
+					 {
+						
+						 actionListener.placeCall();
+						 
+						
+					 }
+					 else
+					 {
+						 Toast.makeText(getContext(), "Please make sure you have Network Enabled ", Toast.LENGTH_LONG).show(); 
+					 }
+						
+					}
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+					 actionListener.placeCall();
+				}
             	
             }	
              

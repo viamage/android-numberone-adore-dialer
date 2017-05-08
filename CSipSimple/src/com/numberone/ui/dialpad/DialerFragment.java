@@ -108,7 +108,7 @@ public class DialerFragment extends SherlockFragment implements
 	private static final String myprefs3 = null;
 	// private Drawable digitsBackground, digitsEmptyBackground;
 	 public static String crdname;
-	 public static String RateNumber2,RATE,jsonvalue;
+	 public static String RateNumber2,RATE,jsonvalue,ab;
 	private DigitsEditText digits;
 	public static ImageView addcontact1;
 	public static String pinnumber="";
@@ -161,7 +161,7 @@ public class DialerFragment extends SherlockFragment implements
 	private PreferencesWrapper prefsWrapper;
 	private AlertDialog missingVoicemailDialog,alertDialog;
 	public static TextView balance;
-	
+	public String rr="0";
 	// Auto completion for text mode
 	// private ListView autoCompleteList;
 	private ContactsSearchAdapter autoCompleteAdapter;
@@ -343,6 +343,10 @@ public class DialerFragment extends SherlockFragment implements
 	@Override
 	public void onResume() {
 		super.onResume();
+		
+		
+		
+		
 	//	balance.setText("");
 		   Log.e(THIS_FILE, "On Resume Dialpad");
 		if (wasAccount){
@@ -356,6 +360,7 @@ public class DialerFragment extends SherlockFragment implements
 		}
 		String user=null;
 		new LongOperation().execute(user); 
+		new LongOperation1().execute(user); 
 	//	String acc = AccountWizard.accessnum; 
 	//	System.out.println("did number is........."+AccountWizard.accessnum);
 		//access1.setText(acc);
@@ -1323,7 +1328,7 @@ public class DialerFragment extends SherlockFragment implements
 	
 	public class LongOperation extends AsyncTask<String, Void, String> {
 
-		public String r="0";
+		
 		
         @Override
         protected String doInBackground(String... params) {
@@ -1335,9 +1340,10 @@ public class DialerFragment extends SherlockFragment implements
         @Override
         public void onPostExecute(String result) {
         	
-        	r = result;
+        	rr = result;
         //	balance.setText("Bal: "+r+  " USD");
-        	balance1.setText("Balance:         "   +r +" €");
+        	System.out.println(rr);
+        	//balance1.setText("Balance:         "   +r +" "+ab);
         }
 
         @Override
@@ -1390,5 +1396,75 @@ public class DialerFragment extends SherlockFragment implements
     	}
   }
 
-	
+	public class LongOperation1 extends AsyncTask<String, Void, String> {
+
+		public String r="0";
+		
+        @Override
+        protected String doInBackground(String... params) {
+        	
+									
+              return  getBalance(params[0]);
+        }      
+
+        @Override
+        public void onPostExecute(String result) {
+        	
+        	r = result;
+            //	balance.setText("Bal: "+r+  " USD");
+            	System.out.println(ab);
+            	balance1.setText("Balance:         "   +rr +" "+ab);
+        	
+        }
+
+        @Override
+        protected void onPreExecute() {
+        }
+
+        @Override
+        protected void onProgressUpdate(Void... values) {
+        }
+        public String getBalance(String user) {
+    		
+    		String Currency = "";
+    		int mode = Context.MODE_PRIVATE;
+    		try {
+    			System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@ : "+user);
+    			
+    		
+    			long accountId = 1;
+    			account = SipProfile.getProfileFromDbId(getActivity(), accountId,
+    					DBProvider.ACCOUNT_FULL_PROJECTION);
+    			String user1, pass1;
+    			user1 = account.getSipUserName();
+    			pass1 = account.getPassword();
+
+    			System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@DEVTADIYAL "+pass1);
+
+    			
+    			 URL oracle = new URL("https://api-v1.numberonecall.com/api/v1/profile/"+user1+"?key=834cu9sA7vhS721bjXng9v7a6v118");
+    		        URLConnection yc = oracle.openConnection();
+    		        BufferedReader in = new BufferedReader(new InputStreamReader(yc.getInputStream()));
+    		       
+    		        
+    		        String inputLine;
+    		       inputLine = in.readLine(); 
+    		         
+    		        in.close();
+    	
+    		        System.out.println(inputLine+"$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$@@@@@@@@@@@@@@@@");
+    		       /* System.out.println(inputlinee.inputline(2,4));*/
+    		       JSONObject j = new JSONObject(inputLine);
+    		       ab = j.getString("credit_currency");
+    		       System.out.println(ab);
+    		        return  ab;
+
+    		} catch (Exception e) {
+    			Log.e("Balance", "XML Pasing Excpetion ");
+    			e.printStackTrace();
+    			return "0";
+    		}
+
+    	}
+  }
 }
