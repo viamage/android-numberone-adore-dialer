@@ -143,10 +143,7 @@ public class DialerFragment extends SherlockFragment implements
 		@Override
 		public void onServiceConnected(ComponentName arg0, IBinder arg1) {
 			service = ISipService.Stub.asInterface(arg1);
-			/*
-			 * timings.addSplit("Service connected"); if(configurationService !=
-			 * null) { timings.dumpToLog(); }
-			 */
+			
 		}
 
 		@Override
@@ -231,6 +228,8 @@ public class DialerFragment extends SherlockFragment implements
 		addcontact1 = (ImageView) v.findViewById(R.id.addcontact);
 		balance = (TextView) v.findViewById(R.id.balance);
 		dialPad = (Dialpad) v.findViewById(R.id.dialPad);
+		
+		
 		callBar = (DialerCallBar) v.findViewById(R.id.dialerCallBar);
 		
 		// autoCompleteList = (ListView) v.findViewById(R.id.autoCompleteList);
@@ -361,11 +360,6 @@ public class DialerFragment extends SherlockFragment implements
 		String user=null;
 		new LongOperation().execute(user); 
 		new LongOperation1().execute(user); 
-	//	String acc = AccountWizard.accessnum; 
-	//	System.out.println("did number is........."+AccountWizard.accessnum);
-		//access1.setText(acc);
-		
-		
 	
 	}
     
@@ -388,9 +382,7 @@ public class DialerFragment extends SherlockFragment implements
 		      
 		      System.out.println("number="+number);
 
-		      //contactName.setText(name);
-		      //contactNumber.setText(number);
-		      //contactEmail.setText(email);
+		     
 		     }
 		     }
 		   
@@ -424,14 +416,7 @@ public class DialerFragment extends SherlockFragment implements
 			}
 
 			
-			// gsm button
-						/*subV = v.findViewById(R.id.gsmButton);
-						if (subV != null) {
-							t.applyBackgroundDrawable(subV, "btn_dial_action");
-							t.applyLayoutMargin(subV, "btn_dial_action_margin");
-							t.applyImageDrawable((ImageView) subV, "ic_dial_action_call");
-						}*/
-
+			
 			// Additional button
 			subV = v.findViewById(R.id.accountButton);
 			if (subV != null) {

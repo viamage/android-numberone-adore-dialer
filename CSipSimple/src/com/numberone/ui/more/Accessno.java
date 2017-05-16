@@ -13,6 +13,7 @@ import com.numberone.R;
 import com.numberone.api.SipManager;
 import com.numberone.api.SipUri;
 import com.numberone.ui.SipHome;
+import com.numberone.ui.dialpad.CheckVariable;
 import com.numberone.writer.StorageFile;
 
 public class Accessno extends Activity {
@@ -97,8 +98,8 @@ public class Accessno extends Activity {
 	        ooo= (RadioButton) findViewById(R.id.radioButton68Id);
 	        ppp= (RadioButton) findViewById(R.id.radioButton69Id);
 	        qqq = (RadioButton) findViewById(R.id.radioButton70Id);
-	        
-	        
+	        Boolean mycheck = CheckVariable.checkme;
+	        checkBox11.setChecked(mycheck);
 	        
 	      
 	        
@@ -1122,13 +1123,17 @@ public class Accessno extends Activity {
 	   
 	   }
 	   
+	
+	   
+	   
+	   
 	   public void onClick(View v) {
 	     	 
 	     	 
 	     	  if(checkBox11.isChecked()){
-
-	     		  bool = true;
-	     		 System.out.println("DEVTADIYAL "+bool);
+	     		  CheckVariable.checkme=true;
+	     		 bool = checkBox11.isChecked();
+	     		  System.out.println(bool);
 	     		 Intent q = new Intent(Accessno.this,SipHome.class);
                	//  it.putExtra("did",str);
                	  q.setAction(SipManager.ACTION_SIP_DIALER);
@@ -1138,10 +1143,9 @@ public class Accessno extends Activity {
 	     	  }
 	     	  else
 	     	  {
-	     		 
-	     		bool = false;
-	     		 System.out.println("PAGAl "+bool);
+	     		 CheckVariable.checkme=false;
 	     	  }
+	     	 
 	     	}
 	   
 	   

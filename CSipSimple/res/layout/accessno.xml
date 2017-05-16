@@ -47,7 +47,7 @@
                android:id="@+id/checkBox1"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-               android:text="Enable Callthrough" 
+               android:text="Enable Call Through" 
             
                android:onClick="onClick" 
                  android:layout_marginLeft="5dp"

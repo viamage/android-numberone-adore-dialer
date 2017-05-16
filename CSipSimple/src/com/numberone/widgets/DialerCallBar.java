@@ -24,6 +24,7 @@ import com.numberone.R;
 import com.numberone.api.SipProfile;
 import com.numberone.ui.account.AccountWizard;
 import com.numberone.ui.account.AdoreSharedPreferences;
+import com.numberone.ui.dialpad.CheckVariable;
 import com.numberone.ui.dialpad.DialerFragment;
 import com.numberone.ui.dialpad.DialerFragment.LongOperation;
 import com.numberone.ui.more.Accessno;
@@ -156,7 +157,7 @@ public class DialerCallBar extends LinearLayout implements OnClickListener, OnLo
 					String a = Accessno.item;
 					System.out.println("ACCESSNO^^^^^^^^^^^^^^^^^^^^^^^^^"+a);
 					
-					Boolean b = Accessno.bool;
+					Boolean b = CheckVariable.checkme;
 					System.out.println("BOOLEAN VALUE "+b);
      	
 					
