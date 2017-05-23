@@ -1,0 +1,106 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   android:configChanges="orientation|screenSize"
+    android:background="#000">
+
+    
+    
+     <LinearLayout
+      android:id="@+id/firstLayout"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_toLeftOf="@+id/secondView"
+      android:orientation="vertical">
+
+         
+         
+         
+         <Button
+             android:id="@+id/updateAccountBtn"
+             android:layout_width="match_parent"
+             android:layout_height="40dp"
+             android:layout_marginTop="32dp"
+             android:background="#920000"
+             android:text="Country List"
+             android:textColor="#000"
+             android:textSize="20sp" />
+         
+          <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+          android:textColor="#920000"
+        android:id="@+id/idListView"
+        />
+         
+         
+     </LinearLayout>
+
+   <ListView
+      android:id="@+id/secondView"
+         android:textColor="#0000" 
+      android:layout_width="10dp"
+      android:visibility="gone"
+      android:layout_height="match_parent"
+      android:layout_centerHorizontal="true" />
+
+   <LinearLayout
+      android:id="@+id/thirdLayout"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"  
+      android:layout_toRightOf="@+id/secondView"
+      android:orientation="vertical">
+       
+          <Button
+            
+             android:layout_width="match_parent"
+             android:layout_height="40dp"
+           android:visibility="gone"
+             android:layout_marginTop="32dp"
+             android:background="#fff"
+             android:text="City Name"
+             android:textColor="#000"
+             android:textSize="20sp"
+             />
+         
+          <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="#920000"
+          android:visibility="gone"
+        android:id="@+id/idListView1"
+        />
+
+          <CheckBox
+              android:id="@+id/checkBox1"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              
+               android:text="Enable call without internet " 
+              
+               android:onClick="onClick" 
+                 android:layout_marginLeft="5dp"
+                 android:textColor="#fff"
+               />
+       
+   </LinearLayout>
+    
+
+   
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+     
+</RelativeLayout>

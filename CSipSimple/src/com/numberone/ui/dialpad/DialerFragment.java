@@ -1,7 +1,6 @@
 package com.numberone.ui.dialpad;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -16,7 +15,6 @@ import org.json.JSONObject;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.PendingIntent;
 import android.app.PendingIntent.CanceledException;
 import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
@@ -27,6 +25,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.database.Cursor;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -40,9 +39,13 @@ import android.telephony.PhoneStateListener;
 import android.telephony.TelephonyManager;
 import android.text.Editable;
 import android.text.Selection;
+import android.text.SpannableString;
+import android.text.SpannableStringBuilder;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.text.method.DialerKeyListener;
+import android.text.style.ForegroundColorSpan;
+import android.text.style.RelativeSizeSpan;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -58,11 +61,12 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.TextView.BufferType;
 import android.widget.TextView.OnEditorActionListener;
 
 import com.actionbarsherlock.app.SherlockFragment;
-import com.numberone.api.ISipService;
 import com.numberone.R;
+import com.numberone.api.ISipService;
 import com.numberone.api.SipCallSession;
 import com.numberone.api.SipConfigManager;
 import com.numberone.api.SipManager;
@@ -70,27 +74,23 @@ import com.numberone.api.SipProfile;
 import com.numberone.db.DBProvider;
 import com.numberone.demf.ListenToPhoneState;
 import com.numberone.ui.SipHome.ViewPagerVisibilityListener;
-import com.numberone.ui.account.AccountWizard;
 import com.numberone.ui.account.AdoreSharedPreferences;
-import com.numberone.ui.calllog.CallLogDetailsFragment;
 import com.numberone.ui.contacts.AddContactDialog;
-import com.numberone.ui.more.Accessno;
-import com.numberone.ui.more.More;
-import com.numberone.writer.StorageFile;
+import com.numberone.ui.more.DidFront;
 import com.numberone.utils.CallHandlerPlugin;
+import com.numberone.utils.CallHandlerPlugin.OnLoadListener;
 import com.numberone.utils.DialingFeedback;
 import com.numberone.utils.Log;
 import com.numberone.utils.PreferencesProviderWrapper;
 import com.numberone.utils.PreferencesWrapper;
 import com.numberone.utils.Theme;
-import com.numberone.utils.CallHandlerPlugin.OnLoadListener;
 import com.numberone.utils.animation.ActivitySwitcher;
 import com.numberone.utils.contacts.ContactsSearchAdapter;
 import com.numberone.widgets.AccountChooserButton;
-import com.numberone.widgets.DialerCallBar;
-import com.numberone.widgets.Dialpad;
 import com.numberone.widgets.AccountChooserButton.OnAccountChangeListener;
+import com.numberone.widgets.DialerCallBar;
 import com.numberone.widgets.DialerCallBar.OnDialActionListener;
+import com.numberone.widgets.Dialpad;
 import com.numberone.widgets.Dialpad.OnDialKeyListener;
 
 
@@ -204,22 +204,7 @@ public class DialerFragment extends SherlockFragment implements
 			Bundle savedInstanceState) {
 		 prefProviderWrapper = new PreferencesProviderWrapper(getActivity());
 		v = inflater.inflate(R.layout.dialer_digit, container, false);
-		// Store the backgrounds objects that will be in use later
-		/*
-		 * Resources r = getResources();
-		 * 
-		 * digitsBackground =
-		 * r.getDrawable(R.drawable.btn_dial_textfield_active);
-		 * digitsEmptyBackground =
-		 * r.getDrawable(R.drawable.btn_dial_textfield_normal);
-		 */
-
-		// Store some object that could be useful later
-		//String access =getString(R.string.access);
-		//access1.setText(access);
-						
-		
-		
+	
 		digits = (DigitsEditText) v.findViewById(R.id.digitsText);
 		//access1 = (TextView)v.findViewById(R.id.t_access);
 		//did = (EditText)v.findViewById(R.id.passText1);
@@ -866,7 +851,7 @@ public class DialerFragment extends SherlockFragment implements
             Intent callIntent = new Intent(Intent.ACTION_CALL);
             int a=0;
             //did 03443810600 //  +61731777105 - Australia // +14237090261 - United States
-            String abc = Accessno.item;//access1.getText().toString();
+            String abc = "+"+DidFront.iso;//access1.getText().toString();
            
             String ser=abc;//WelcomeScreen.dtmf;
             String no =digits.getText().toString().trim();
@@ -1309,9 +1294,7 @@ public class DialerFragment extends SherlockFragment implements
 	}
 	
 	
-	
-	
-	public class LongOperation extends AsyncTask<String, Void, String> {
+public class LongOperation extends AsyncTask<String, Void, String> {
 
 		
 		
@@ -1339,20 +1322,16 @@ public class DialerFragment extends SherlockFragment implements
         protected void onProgressUpdate(Void... values) {
         }
         public String getBalance(String user) {
-    		
-    		String Currency = "";
+        	String Currency = "";
     		int mode = Context.MODE_PRIVATE;
+    		
     		try {
     			System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@ : "+user);
-    			
-    		
     			long accountId = 1;
-    			account = SipProfile.getProfileFromDbId(getActivity(), accountId,
-    					DBProvider.ACCOUNT_FULL_PROJECTION);
+    			account = SipProfile.getProfileFromDbId(getActivity(), accountId,DBProvider.ACCOUNT_FULL_PROJECTION);
     			String user1, pass1;
     			user1 = account.getSipUserName();
     			pass1 = account.getPassword();
-
     			System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@DEVTADIYAL "+pass1);
 
     			
@@ -1398,7 +1377,27 @@ public class DialerFragment extends SherlockFragment implements
         	r = result;
             //	balance.setText("Bal: "+r+  " USD");
             	System.out.println(ab);
-            	balance1.setText("Balance:         "   +rr +" "+ab);
+            	
+            	SpannableStringBuilder builder = new SpannableStringBuilder();
+            	
+            	String red = "Balance:         ";
+            	SpannableString redSpannable= new SpannableString(red);
+            	redSpannable.setSpan(Color.parseColor("#FF2233"), 2, red.length(), 2);
+            	builder.append(redSpannable);
+            	
+            	String white = rr;
+            	SpannableString whiteSpannable = new SpannableString(white);
+            	whiteSpannable.setSpan(new ForegroundColorSpan(Color.GRAY), 0, white.length(), 0);
+            	builder.append(whiteSpannable);
+            	
+            	String blue = " €";
+            	SpannableString blueSpannable = new SpannableString(blue);
+            	
+            	blueSpannable.setSpan(new ForegroundColorSpan(Color.GRAY), 0, blue.length(), 0);
+            	builder.append(blueSpannable);
+            	
+            	balance1.setText(builder, BufferType.SPANNABLE);
+            	//balance1.setText("Balance:         "   +rr +" "+"€");
         	
         }
 

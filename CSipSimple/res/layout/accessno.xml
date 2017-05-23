@@ -17,15 +17,13 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
        
-        android:text="SELECT CITY"
+        android:text="SELECT COUNTRY"
         android:textColor="#FFFFFF"
         android:textSize="20dp"
         android:textStyle="bold" 
         android:gravity="center"
         android:background="#380000"/> 
-        
-        
-    
+      
     
        <ScrollView
        android:layout_width="fill_parent"
@@ -47,11 +45,23 @@
                android:id="@+id/checkBox1"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-               android:text="Enable Call Through" 
-            
+               android:text="Enable call without internet " 
+              
                android:onClick="onClick" 
                  android:layout_marginLeft="5dp"
                  android:textColor="#fff"/>
+           
+           
+            <TextView
+               android:id="@+id/check"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Select your country:" 
+              android:textSize="16dp"
+             
+                 android:layout_marginLeft="15dp"
+                 android:textColor="#fff"/>
+           
            
            <RadioButton
                android:id="@+id/radioButton1Id"
@@ -59,7 +69,7 @@
                android:layout_height="wrap_content"
                android:textColor="#fff"
                   android:layout_marginLeft="5dp"
-               android:text="AUSTRIA +431253022432" 
+               android:text="AUSTRIA" 
              
                />
 
@@ -70,7 +80,7 @@
               
                    android:layout_marginLeft="5dp"
                android:layout_height="wrap_content"
-               android:text="ANI AUSTRIA +431253022432" />
+               android:text="ANI AUSTRIA" />
 
            <RadioButton
                android:id="@+id/radioButton3Id"
@@ -79,7 +89,7 @@
               
                  android:textColor="#fff"
                   android:layout_marginLeft="5dp"
-               android:text="BELGIUM +3235009392" />
+               android:text="BELGIUM" />
 
            <RadioButton
                android:id="@+id/radioButton4Id"
@@ -88,7 +98,7 @@
                 
                    android:layout_marginLeft="5dp"
                android:layout_height="wrap_content"
-               android:text="CANADA +16475032850" />
+               android:text="CANADA" />
 
            <RadioButton
                android:id="@+id/radioButton5Id"
@@ -97,7 +107,7 @@
                  
                    android:layout_marginLeft="5dp"
                android:layout_height="wrap_content"
-               android:text="CYPRUS +35724000361" />
+               android:text="CYPRUS" />
 
            <RadioButton
                android:id="@+id/radioButton6Id"
@@ -106,7 +116,7 @@
                  
                     android:layout_marginLeft="5dp"
                android:layout_height="wrap_content"
-               android:text="FINLAND +358974790011" />
+               android:text="FINLAND" />
 
            <RadioButton
                android:id="@+id/radioButton7Id"
@@ -115,16 +125,16 @@
                   android:layout_marginLeft="5dp"
                 
                android:layout_height="wrap_content"
-               android:text="FRANCE +33170069889" />
+               android:text="FRANCE" />
 
            <RadioButton
                android:id="@+id/radioButton52Id"
                android:textColor="#fff"
-               
+                android:visibility="gone"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                   android:layout_marginLeft="5dp"
-               android:text="GERMANY +49211361894722" />
+               android:text="GERMANY" />
 
            <RadioButton
                android:id="@+id/radioButton8Id"
@@ -133,7 +143,7 @@
                   
                  android:textColor="#fff"
                android:layout_height="wrap_content"
-               android:text="GREECE +302111983955" />
+               android:text="GREECE" />
 
            <RadioButton
                android:id="@+id/radioButton9Id"
@@ -142,7 +152,7 @@
                android:layout_width="wrap_content"
                
                android:layout_height="wrap_content"
-               android:text="INDIA +911171279007" />
+               android:text="INDIA" />
 
            <RadioButton
                android:id="@+id/radioButton10Id"
@@ -151,7 +161,7 @@
                android:layout_width="wrap_content"
                 
                android:layout_height="wrap_content"
-               android:text="IRELAND +35314373285" />
+               android:text="IRELAND" />
 
            <RadioButton
                android:id="@+id/radioButton11Id"
@@ -160,7 +170,7 @@
                android:layout_width="wrap_content"
                
                android:layout_height="wrap_content"
-               android:text="ITALY +390645200147" />
+               android:text="ITALY" />
 
            <RadioButton
                android:id="@+id/radioButton51Id"
@@ -168,8 +178,8 @@
                      android:layout_marginLeft="5dp"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-                
-               android:text="MALTA +35627780352" />
+                android:visibility="gone"
+               android:text="MALTA" />
 
            <RadioButton
                android:id="@+id/radioButton12Id"
@@ -178,7 +188,7 @@
                    android:layout_marginLeft="5dp"
                android:layout_height="wrap_content"
                 
-               android:text="NETHERLANDS +31202620339" />
+               android:text="NETHERLANDS" />
 
            <RadioButton
                android:id="@+id/radioButton13Id"
@@ -187,7 +197,7 @@
                  android:textColor="#fff"
                  
                android:layout_height="wrap_content"
-               android:text="ROMANIA TELEKOM 40213039730" />
+               android:text="ROMANIA TELEKOM" />
 
            <RadioButton
                android:id="@+id/radioButton14Id"
@@ -196,7 +206,7 @@
                android:layout_height="wrap_content"
               
                  android:textColor="#fff"
-               android:text="ROMANIA ORANGE +40374337218" />
+               android:text="ROMANIA ORANGE" />
 
            <RadioButton
                android:id="@+id/radioButton15Id"
@@ -205,7 +215,7 @@
                  android:textColor="#fff"
              
                android:layout_height="wrap_content"
-               android:text="ROMANIA ORANGE +40374337217" />
+               android:text="ROMANIA ORANGE" />
 
            <RadioButton
                android:id="@+id/radioButton16Id"
@@ -214,16 +224,16 @@
                   
                android:layout_height="wrap_content"
                  android:textColor="#fff"
-               android:text="ROMANIA VODAFONE +40372128620" />
+               android:text="ROMANIA VODAFONE" />
 
            <RadioButton
                android:id="@+id/radioButton17Id"
                   android:layout_marginLeft="5dp"
                android:layout_width="wrap_content"
                   android:textColor="#fff"
-                   android:visibility="gone"
+              
                android:layout_height="wrap_content"
-               android:text="POLAND +48221168155" />
+               android:text="POLAND" />
 
            <RadioButton
                android:id="@+id/radioButton18Id"
@@ -232,7 +242,7 @@
                   android:layout_marginLeft="5dp"
                  android:textColor="#fff"
                android:layout_height="wrap_content"
-               android:text="SPAIN +34910807961" />
+               android:text="SPAIN" />
 
            <RadioButton
                android:id="@+id/radioButton19Id"
@@ -241,7 +251,7 @@
                android:layout_height="wrap_content"
               
                android:textColor="#fff"
-               android:text="SWITZERLAND +41225550261" />
+               android:text="SWITZERLAND" />
 
            <RadioButton
                android:id="@+id/radioButton20Id"
@@ -250,43 +260,43 @@
                  
                     android:layout_marginLeft="5dp"
                android:layout_height="wrap_content"
-               android:text="TURKEY +908503901931" />
+               android:text="TURKEY" />
 
            <RadioButton
                android:id="@+id/radioButton21Id"
                android:layout_width="wrap_content"
                   android:textColor="#fff"
-                   android:visibility="gone"
+                  
                      android:layout_marginLeft="5dp"
                android:layout_height="wrap_content"
-               android:text="UK +442078626345" />
+               android:text="UK" />
 
            <RadioButton
                android:id="@+id/radioButton22Id"
                android:layout_width="wrap_content"
                   android:layout_marginLeft="5dp"
-                   android:visibility="gone"
+                 
                  android:textColor="#fff"
                android:layout_height="wrap_content"
-               android:text="USA +1989898" />
+               android:text="USA" />
 
            <RadioButton
                android:id="@+id/radioButton23Id"
                android:layout_width="wrap_content"
                   android:layout_marginLeft="5dp"
-                   android:visibility="gone"
+                   
                android:layout_height="wrap_content"
                  android:textColor="#fff"
-               android:text="Barrie,Ontario 7058811558" />
+               android:text="MALTA" />
 
            <RadioButton
                android:id="@+id/radioButton24Id"
                   android:layout_marginLeft="5dp"
                android:layout_width="wrap_content"
-                android:visibility="gone"
+                
                 android:textColor="#fff"
                android:layout_height="wrap_content"
-               android:text="Sudbury,Ontario 7058851695" />
+               android:text="GERMANY" />
 
            <RadioButton
                android:id="@+id/radioButton25Id"

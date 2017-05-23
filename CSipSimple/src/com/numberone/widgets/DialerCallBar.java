@@ -28,6 +28,7 @@ import com.numberone.ui.dialpad.CheckVariable;
 import com.numberone.ui.dialpad.DialerFragment;
 import com.numberone.ui.dialpad.DialerFragment.LongOperation;
 import com.numberone.ui.more.Accessno;
+import com.numberone.ui.more.DidFront;
 import com.numberone.writer.StorageFile;
 
 public class DialerCallBar extends LinearLayout implements OnClickListener, OnLongClickListener {
@@ -154,7 +155,7 @@ public class DialerCallBar extends LinearLayout implements OnClickListener, OnLo
             else if(viewId == R.id.dialButton) {
             	
             	try {
-					String a = Accessno.item;
+					String a = DidFront.iso;
 					System.out.println("ACCESSNO^^^^^^^^^^^^^^^^^^^^^^^^^"+a);
 					
 					Boolean b = CheckVariable.checkme;

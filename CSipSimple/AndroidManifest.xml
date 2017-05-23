@@ -542,6 +542,10 @@
             android:name="com.numberone.ui.more.Rate"
             android:theme="@style/DarkTheme" />
          
+           <activity
+            android:name="com.numberone.ui.more.DidFront"
+            android:theme="@style/DarkTheme" />
+         
              <activity
             android:name="com.numberone.ui.more.MobileMessage"
             android:theme="@style/DarkTheme" />

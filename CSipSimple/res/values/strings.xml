@@ -126,13 +126,13 @@
     <string name="balance_desc"></string>
        
        
-         <string name="voucher">Voucher Refill</string>
+         <string name="voucher">Top Up</string>
     <string name="voucher_desc"></string>
        
-    <string name="access">Access Number</string>
+    <string name="access">Call without internet</string>
     <string name="access_desc"></string>
     
-      <string name="account">Sign Out</string>
+      <string name="account">Log out</string>
     <string name="account_desc"></string>
     
      <string name="profile">Rate</string>
@@ -150,7 +150,7 @@
     <string name="about">About</string>
     <string name="about_desc">About us</string>
     <string name="exit">Exit</string>
-    <string name="exit_desc">Sign out and exit app</string>
+    <string name="exit_desc"></string>
       <string-array name="type_array">
          <item>Pinless</item>
          <item>PinBase</item>

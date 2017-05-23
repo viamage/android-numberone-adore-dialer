@@ -405,8 +405,8 @@ public class Accessno extends Activity {
 	                
 	                
 	                    case R.id.radioButton1Id:
-	                    	str = (String) a.getText();
-	                    	System.out.println(str);
+	                    	str = "+431253022432";
+	                    	System.out.println("DEVTADIYAL "+str);
 	                    	 item=str.replaceAll("[a-zA-Z,]+", "");
 	                    	
 	                    	  msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
@@ -421,7 +421,7 @@ public class Accessno extends Activity {
 	                        break;
 	                    case R.id.radioButton2Id:
 	                       // getWindow().getDecorView().setBackgroundColor(Color.parseColor("#FFFF00"));
-	                    	str = (String) b.getText();
+	                    	str = "+431253022432";
 	                    	System.out.println(str);
 	                    	 item=str.replaceAll("[a-zA-Z,]+", "");
 	                    	/* item=str.replaceAll("[a-zA-Z,]+", "");
@@ -438,7 +438,7 @@ public class Accessno extends Activity {
 	                        break;
 	                    case R.id.radioButton3Id:
 	                       // getWindow().getDecorView().setBackgroundColor(Color.parseColor("#FF00FF"));
-	                    	str = (String) c.getText();
+	                    	str = "+3235009392";
 	                    	System.out.println(str);
 	                    	 item=str.replaceAll("[a-zA-Z,]+", "");
 	                    	msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
@@ -452,7 +452,7 @@ public class Accessno extends Activity {
 	                        break;
 	                    case R.id.radioButton4Id:
 	                       // getWindow().getDecorView().setBackgroundColor(Color.parseColor("#00FFFF"));
-	                    	str = (String) d.getText();
+	                    	str = "+16475032850";
 	                    	System.out.println(str); 
 	                    	 item=str.replaceAll("[a-zA-Z,]+", "");
 	                    	msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
@@ -467,7 +467,7 @@ public class Accessno extends Activity {
 	                        
 	                    case R.id.radioButton5Id:
 		                       // getWindow().getDecorView().setBackgroundColor(Color.parseColor("#00FFFF"));
-	                    	str = (String) e.getText();
+	                    	str = "+35724000361";
 	                    	System.out.println(str);
 	                     	 item=str.replaceAll("[a-zA-Z,]+", "");
 	                    	msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
@@ -482,7 +482,7 @@ public class Accessno extends Activity {
 		                        
 	                    case R.id.radioButton6Id:
 		                       // getWindow().getDecorView().setBackgroundColor(Color.parseColor("#00FFFF"));
-	                    	str = (String) f.getText();
+	                    	str = "+358974790011";
 	                    	System.out.println(str);
 	                     	 item=str.replaceAll("[a-zA-Z,]+", "");
 	                    	msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
@@ -497,7 +497,7 @@ public class Accessno extends Activity {
 		                        
 	                    case R.id.radioButton7Id:
 		                       // getWindow().getDecorView().setBackgroundColor(Color.parseColor("#00FFFF"));
-	                    	str = (String) g.getText();
+	                    	str = "+33170069889";
 	                    	System.out.println(str);
 	                     	 item=str.replaceAll("[a-zA-Z,]+", "");
 	                    	msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
@@ -512,7 +512,7 @@ public class Accessno extends Activity {
 		                        
 	                    case R.id.radioButton8Id:
 		                       // getWindow().getDecorView().setBackgroundColor(Color.parseColor("#00FFFF"));
-	                    	str = (String) h.getText();
+	                    	str = "+302111983955";
 	                    	System.out.println(str);
 	                     	 item=str.replaceAll("[a-zA-Z,]+", "");
 	                    	msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
@@ -527,7 +527,7 @@ public class Accessno extends Activity {
 		                        
 	                    case R.id.radioButton9Id:
 		                       // getWindow().getDecorView().setBackgroundColor(Color.parseColor("#00FFFF"));
-	                    	str = (String) iii.getText();
+	                    	str = "+911171279007";
 	                    	System.out.println(str);
 	                     	 item=str.replaceAll("[a-zA-Z,]+", "");
 	                    	msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
@@ -542,7 +542,7 @@ public class Accessno extends Activity {
 		                        
 	                    case R.id.radioButton10Id:
 		                       // getWindow().getDecorView().setBackgroundColor(Color.parseColor("#00FFFF"));
-	                    	str = (String) j.getText();
+	                    	str = "+35314373285";
 	                    	System.out.println(str);
 	                     	 item=str.replaceAll("[a-zA-Z,]+", "");
 	                    	msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
@@ -556,7 +556,7 @@ public class Accessno extends Activity {
 		                        
 	                    case R.id.radioButton11Id:
 		                       // getWindow().getDecorView().setBackgroundColor(Color.parseColor("#00FFFF"));
-	                    	str = (String) k.getText();
+	                    	str = "+390645200147";
 	                    	System.out.println(str);
 	                     	 item=str.replaceAll("[a-zA-Z,]+", "");
 	                    	msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
@@ -570,7 +570,7 @@ public class Accessno extends Activity {
 		                        
 	                    case R.id.radioButton12Id:
 		                       // getWindow().getDecorView().setBackgroundColor(Color.parseColor("#00FFFF"));
-	                    	str = (String) l.getText();
+	                    	str = "+31202620339";
 	                    	System.out.println(str);
 	                     	 item=str.replaceAll("[a-zA-Z,]+", "");
 	                    	msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
@@ -584,7 +584,7 @@ public class Accessno extends Activity {
 		                        
 	                    case R.id.radioButton13Id:
 		                       // getWindow().getDecorView().setBackgroundColor(Color.parseColor("#00FFFF"));
-	                    	str = (String) m.getText();
+	                    	str = "40213039730";
 	                    	System.out.println(str);
 	                     	 item=str.replaceAll("[a-zA-Z,]+", "");
 	                    	msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
@@ -598,7 +598,7 @@ public class Accessno extends Activity {
 		                        
 	                    case R.id.radioButton14Id:
 		                       // getWindow().getDecorView().setBackgroundColor(Color.parseColor("#00FFFF"));
-	                    	str = (String) n.getText();
+	                    	str = "+40374337218";
 	                    	System.out.println(str);
 	                     	 item=str.replaceAll("[a-zA-Z,]+", "");
 	                    	msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
@@ -612,7 +612,7 @@ public class Accessno extends Activity {
 		                        
 	                    case R.id.radioButton15Id:
 		                       // getWindow().getDecorView().setBackgroundColor(Color.parseColor("#00FFFF"));
-	                    	str = (String) o.getText();
+	                    	str = "+40374337217";
 	                    	System.out.println(str);
 	                     	 item=str.replaceAll("[a-zA-Z,]+", "");
 	                    	msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
@@ -626,7 +626,7 @@ public class Accessno extends Activity {
 		                        
 	                    case R.id.radioButton16Id:
 		                       // getWindow().getDecorView().setBackgroundColor(Color.parseColor("#00FFFF"));
-	                    	str = (String) p.getText();
+	                    	str = "+40372128620";
 	                    	System.out.println(str);
 	                     	 item=str.replaceAll("[a-zA-Z,]+", "");
 	                    	msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
@@ -640,7 +640,7 @@ public class Accessno extends Activity {
 		                        
 	                    case R.id.radioButton17Id:
 		                       // getWindow().getDecorView().setBackgroundColor(Color.parseColor("#00FFFF"));
-	                    	str = (String) q.getText();
+	                    	str = "+48221168155";
 	                    	System.out.println(str);
 	                     	 item=str.replaceAll("[a-zA-Z,]+", "");
 	                    	msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
@@ -654,7 +654,7 @@ public class Accessno extends Activity {
 		                        
 	                    case R.id.radioButton18Id:
 		                       // getWindow().getDecorView().setBackgroundColor(Color.parseColor("#00FFFF"));
-	                    	str = (String) r.getText();
+	                    	str = "+34910807961";
 	                    	System.out.println(str);
 	                     	 item=str.replaceAll("[a-zA-Z,]+", "");
 	                    	msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
@@ -669,7 +669,7 @@ public class Accessno extends Activity {
 		                        
 	                    case R.id.radioButton19Id:
 		                       // getWindow().getDecorView().setBackgroundColor(Color.parseColor("#00FFFF"));
-	                    	str = (String) s.getText();
+	                    	str = "+41225550261";
 	                    	System.out.println(str);
 	                     	 item=str.replaceAll("[a-zA-Z,]+", "");
 	                    	msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
@@ -683,7 +683,7 @@ public class Accessno extends Activity {
 		                        
 	                    case R.id.radioButton20Id:
 		                       // getWindow().getDecorView().setBackgroundColor(Color.parseColor("#00FFFF"));
-	                    	str = (String) t.getText();
+	                    	str = "+908503901931";
 	                    	System.out.println(str);
 	                     	 item=str.replaceAll("[a-zA-Z,]+", "");
 	                    	msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
@@ -697,7 +697,7 @@ public class Accessno extends Activity {
 		                        
 	                    case R.id.radioButton21Id:
 		                       // getWindow().getDecorView().setBackgroundColor(Color.parseColor("#00FFFF"));
-	                    	str = (String) u.getText();
+	                    	str = "+442078626345";
 	                    	System.out.println(str);
 	                     	 item=str.replaceAll("[a-zA-Z,]+", "");
 	                    	msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
@@ -711,7 +711,7 @@ public class Accessno extends Activity {
 		                        
 	                    case R.id.radioButton22Id:
 		                       // getWindow().getDecorView().setBackgroundColor(Color.parseColor("#00FFFF"));
-	                    	str = (String) v.getText();
+	                    	str = "+1989898";
 	                    	System.out.println(str);
 	                     	 item=str.replaceAll("[a-zA-Z,]+", "");
 	                    	msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
@@ -725,7 +725,7 @@ public class Accessno extends Activity {
 		                        
 	                    case R.id.radioButton23Id:
 		                       // getWindow().getDecorView().setBackgroundColor(Color.parseColor("#00FFFF"));
-	                    	str = (String) w.getText();
+	                    	str = "+35627780352";
 	                    	System.out.println(str);
 	                     	 item=str.replaceAll("[a-zA-Z,]+", "");
 	                    	msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
@@ -739,7 +739,7 @@ public class Accessno extends Activity {
 		                        
 	                    case R.id.radioButton24Id:
 		                       // getWindow().getDecorView().setBackgroundColor(Color.parseColor("#00FFFF"));
-	                    	str = (String) x.getText();
+	                    	str = "+49211361894722";
 	                    	System.out.println(str);
 	                     	 item=str.replaceAll("[a-zA-Z,]+", "");
 	                    	msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
@@ -1091,7 +1091,7 @@ public class Accessno extends Activity {
 		                        
 	                    case R.id.radioButton51Id:
 		                       // getWindow().getDecorView().setBackgroundColor(Color.parseColor("#00FFFF"));
-	                    	str = (String) yy.getText();
+	                    	str = "+35627780352";
 	                    	System.out.println(str);
 	                    	msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
 	                    	 System.out.println("HEmant "+msg+":File path "+filepath);
@@ -1104,7 +1104,7 @@ public class Accessno extends Activity {
 		                        
 	                    case R.id.radioButton52Id:
 		                       // getWindow().getDecorView().setBackgroundColor(Color.parseColor("#00FFFF"));
-	                    	str = (String) zz.getText();
+	                    	str = "+49211361894722";
 	                    	System.out.println(str);
 	                    	msg = sf.writeStorageFile(filepath,str.replaceAll("[a-zA-Z,]+", "")); 
 	                    	 System.out.println("HEmant "+msg+":File path "+filepath);
@@ -1134,11 +1134,11 @@ public class Accessno extends Activity {
 	     		  CheckVariable.checkme=true;
 	     		 bool = checkBox11.isChecked();
 	     		  System.out.println(bool);
-	     		 Intent q = new Intent(Accessno.this,SipHome.class);
+	     		/* Intent q = new Intent(Accessno.this,SipHome.class);
                	//  it.putExtra("did",str);
                	  q.setAction(SipManager.ACTION_SIP_DIALER);
                	  q.setData(SipUri.forgeSipUri(SipManager.PROTOCOL_SIP, ""));
-               	  startActivity(q);
+               	  startActivity(q);*/
 	     		  
 	     	  }
 	     	  else

@@ -37,10 +37,10 @@ public class More extends SherlockFragment implements ViewPagerVisibilityListene
 	//private final static int ABOUT = 4;
 	private final static int VOUCHER = 1;
 	private final static int ACCESSNO = 2;
-	private final static int PROFILE = 3;
-	private final static int BALANCE = 4;
-	private final static int EXIT1= 5; 
-	private final static int EXIT= 6;
+	//private final static int PROFILE = 3;
+	private final static int BALANCE = 3;
+	private final static int EXIT1= 4; 
+	private final static int EXIT= 5;
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -70,7 +70,7 @@ public class More extends SherlockFragment implements ViewPagerVisibilityListene
     //    list.add(new MoreItem("Recharge",R.drawable.recharge,"recharge your existing account"));
         list.add(new MoreItem(getString(R.string.voucher),R.drawable.voucher,getString(R.string.voucher_desc)));
         list.add(new MoreItem(getString(R.string.access),R.drawable.access,getString(R.string.access_desc)));
-        list.add(new MoreItem(getString(R.string.profile),R.drawable.profile,getString(R.string.profile_desc)));  
+      //  list.add(new MoreItem(getString(R.string.profile),R.drawable.profile,getString(R.string.profile_desc)));  
       //  list.add(new MoreItem(getString(R.string.about),R.drawable.about,getString(R.string.about_desc)));  
       
        list.add(new MoreItem(getString(R.string.balance),R.drawable.transfer,getString(R.string.balance_desc)));
@@ -110,11 +110,11 @@ public class More extends SherlockFragment implements ViewPagerVisibilityListene
 					
 					break;
 					
-				case PROFILE:
+			/*	case PROFILE:
 					//TODO: CDR
 					openAboutDialog6();
 					
-					break;
+					break;*/
 					
 				case ACCESSNO:
 					//TODO: CDR
@@ -185,7 +185,7 @@ public class More extends SherlockFragment implements ViewPagerVisibilityListene
 		}
 		private void openAboutDialog2() {
 			// TODO Auto-generated method stub
-			startActivity(new Intent(getActivity(),Accessno.class));
+			startActivity(new Intent(getActivity(),DidFront.class));
 		}
 		private void openAboutDialog1() {
 			// TODO Auto-generated method stub

@@ -26,6 +26,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import com.numberone.R;
 import com.numberone.api.SipProfile;
+import com.numberone.db.DBProvider;
 import com.numberone.utils.Log;
 public class BalanceTransfer extends Activity{ 
 	private ProgressDialog dialog;
@@ -187,7 +188,13 @@ public class LongOperation extends AsyncTask<String, Void, String> {
 
 
     try {
-    	String url = "https://api-v1.numberonecall.com/api/v1/transferto/antonio/confirm";
+    	long accountId = 1;
+		account = SipProfile.getProfileFromDbId(getApplicationContext(), accountId,DBProvider.ACCOUNT_FULL_PROJECTION);
+		String user1, pass1;
+		user1 = account.getSipUserName();
+		pass1 = account.getPassword();
+    	
+    	String url = "https://api-v1.numberonecall.com/api/v1/transferto/"+user1+"/confirm";
 		URL obj = new URL(url);
 		HttpsURLConnection con = (HttpsURLConnection) obj.openConnection();
 

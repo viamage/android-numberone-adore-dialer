@@ -44,7 +44,6 @@ import com.numberone.ui.calllog.CallLogListFragment;
 import com.numberone.ui.contacts.ContactManager;
 import com.numberone.ui.dialpad.DialerFragment;
 import com.numberone.ui.messages.ConversationsListFragment;
-import com.numberone.ui.more.MobileMessage;
 import com.numberone.ui.more.More;
 import com.numberone.ui.more.NewAccount;
 import com.numberone.utils.AccountListUtils;
@@ -165,7 +164,7 @@ public class SipHome extends SherlockFragmentActivity {
         mTabsAdapter = new TabsAdapter(this, getSupportActionBar(), mViewPager);
        // mTabsAdapter.addTab(contactsTab1, ContactManager.class, CONTACTS);
         mTabsAdapter.addTab(dialerTab, DialerFragment.class, TAB_ID_DIALER);
-        mTabsAdapter.addTab(contactsTab, NewAccount.class, TAB_ID_CONTACTS);
+      //  mTabsAdapter.addTab(contactsTab, NewAccount.class, TAB_ID_CONTACTS);
      
         mTabsAdapter.addTab(callLogTab, CallLogListFragment.class, TAB_ID_CALL_LOG);
         mTabsAdapter.addTab(favoritesTab, More.class, TAB_ID_FAVORITES);

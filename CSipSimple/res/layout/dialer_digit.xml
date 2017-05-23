@@ -114,6 +114,7 @@
             android:layout_alignParentLeft="true"
            android:textColor="#000000"
             android:text=""
+             android:textStyle="bold"
             android:hint="" />
         
           <TextView
@@ -122,7 +123,7 @@
         android:layout_height="wrap_content"
        android:layout_marginLeft="137dp"
         android:hint=""
-        
+       
         android:paddingLeft="10dp"
         
         android:textColor="#961515" />
