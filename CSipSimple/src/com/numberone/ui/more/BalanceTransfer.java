@@ -43,7 +43,7 @@ public class BalanceTransfer extends Activity{
 	NetworkInfo networkInfo;
 
 	public void onCreate(Bundle savedInstanceState){
-	super.onCreate(savedInstanceState);
+	super.onCreate(savedInstanceState); 
 	setContentView(R.layout.balancetransfer);
 	
 	edittext2= (EditText) findViewById(R.id.editText2);
@@ -52,7 +52,7 @@ public class BalanceTransfer extends Activity{
 	edittext1= (EditText) findViewById(R.id.editText1);
 	button10= (Button) findViewById(R.id.button1);
 	}
-public void onResume()
+public void onResume() 
 {
 	super.onResume();
 	
@@ -202,7 +202,7 @@ public class LongOperation extends AsyncTask<String, Void, String> {
 		con.setRequestMethod("POST");
 		//con.setRequestProperty("User-Agent", USER_AGENT);
 		con.setRequestProperty("Accept-Language", "en-US,en;q=0.5");
-String a = "834cu9sA7vhS721bjXng9v7a6v118";
+        String a = "834cu9sA7vhS721bjXng9v7a6v118";
 		String b = edittext1.getText().toString();
 		String d = edittext2.getText().toString();
 		String urlParameters = "key="+a+"&amount="+d+"&currency=EUR&phone="+b;

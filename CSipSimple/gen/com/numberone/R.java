@@ -1145,19 +1145,19 @@ containing a value of this type.
         public static final int accounts_container=0x7f060166;
         public static final int action_icon=0x7f060138;
         public static final int activeCallsGrid=0x7f06014e;
-        public static final int addCallButton=0x7f0601c3;
+        public static final int addCallButton=0x7f0601c2;
         public static final int addcontact=0x7f0600f2;
         public static final int adoreLogo=0x7f0600ef;
         public static final int arrow_down=0x7f060180;
         public static final int arrow_up=0x7f06017f;
         public static final int attachment=0x7f0600e8;
-        public static final int audio_test=0x7f0601c5;
+        public static final int audio_test=0x7f0601c4;
         public static final int audio_test_text=0x7f0600af;
         public static final int autoCompleteList=0x7f06011d;
         public static final int balance=0x7f0600f4;
         public static final int bar_onoff=0x7f06009e;
         public static final int blue_separator=0x7f0600bd;
-        public static final int bluetoothButton=0x7f0601c2;
+        public static final int bluetoothButton=0x7f0601c1;
         public static final int body=0x7f0600e0;
         public static final int bottom_panel=0x7f0600db;
         public static final int btn_account=0x7f0601a7;
@@ -1257,7 +1257,7 @@ containing a value of this type.
         public static final int dropHold=0x7f06014a;
         public static final int dropXfer=0x7f06014b;
         public static final int dropZones=0x7f060147;
-        public static final int dtmfCallButton=0x7f0601be;
+        public static final int dtmfCallButton=0x7f0601bd;
         public static final int duration=0x7f0600ca;
         public static final int echo_cancellation=0x7f060155;
         public static final int editEmail=0x7f060080;
@@ -1276,7 +1276,7 @@ containing a value of this type.
         public static final int error=0x7f0600e7;
         public static final int error_view=0x7f06015a;
         public static final int exit=0x7f060194;
-        public static final int expert=0x7f0601c6;
+        public static final int expert=0x7f0601c5;
         public static final int filter_action=0x7f060112;
         public static final int filter_matches=0x7f060115;
         public static final int filter_replace=0x7f060118;
@@ -1307,7 +1307,7 @@ containing a value of this type.
         public static final int header_view=0x7f06012f;
         public static final int heldCallsGrid=0x7f06014f;
         public static final int history=0x7f0600c6;
-        public static final int holdCallButton=0x7f0601bb;
+        public static final int holdCallButton=0x7f0601ba;
         public static final int homeAsUp=0x7f060006;
         public static final int icon=0x7f0600d4;
         public static final int icon1=0x7f060169;
@@ -1345,10 +1345,10 @@ containing a value of this type.
         public static final int mainFrame=0x7f06014c;
         public static final int matcher_block=0x7f060113;
         public static final int matcher_type=0x7f060114;
-        public static final int mediaSettingsButton=0x7f0601c4;
+        public static final int mediaSettingsButton=0x7f0601c3;
         public static final int message_block=0x7f060157;
         public static final int micro_level=0x7f060154;
-        public static final int muteButton=0x7f0601c1;
+        public static final int muteButton=0x7f0601c0;
         public static final int name=0x7f0600ce;
         public static final int name_and_label=0x7f060187;
         public static final int normal=0x7f060001;
@@ -1440,12 +1440,12 @@ containing a value of this type.
         public static final int radioGroup=0x7f06002b;
         public static final int rate=0x7f0600f5;
         public static final int recipients_subject_linear=0x7f0600d7;
-        public static final int recordCallButton=0x7f0601bc;
+        public static final int recordCallButton=0x7f0601bb;
         public static final int records=0x7f06018d;
         public static final int refl_vchr=0x7f060163;
         public static final int replace_block=0x7f060116;
         public static final int replace_type=0x7f060117;
-        public static final int reset_settings=0x7f0601c7;
+        public static final int reset_settings=0x7f0601c6;
         public static final int rname=0x7f06018a;
         public static final int row_glob_integrate=0x7f060120;
         public static final int row_glob_profile_always=0x7f060123;
@@ -1473,7 +1473,7 @@ containing a value of this type.
         public static final int sip_uri=0x7f060176;
         public static final int sipcall=0x7f0600ea;
         public static final int skip=0x7f060165;
-        public static final int speakerButton=0x7f0601c0;
+        public static final int speakerButton=0x7f0601bf;
         public static final int speaker_level=0x7f060153;
         public static final int splash=0x7f06018e;
         public static final int status=0x7f060086;
@@ -1507,7 +1507,6 @@ containing a value of this type.
         public static final int topField=0x7f0600ee;
         public static final int topFieldText=0x7f060119;
         public static final int top_digit_dialer=0x7f0600ed;
-        public static final int transferCallButton=0x7f0601ba;
         public static final int tv1=0x7f06015f;
         public static final int tv2=0x7f060160;
         public static final int tx_bar=0x7f0600b1;
@@ -1518,7 +1517,7 @@ containing a value of this type.
         public static final int updateAccountBtn=0x7f060083;
         public static final int useLogo=0x7f060004;
         public static final int validation_bar=0x7f0600a2;
-        public static final int videoCallButton=0x7f0601bf;
+        public static final int videoCallButton=0x7f0601be;
         public static final int vmfield=0x7f0600ac;
         public static final int vmfield_view=0x7f0600ab;
         public static final int warn_desc=0x7f06019f;
@@ -1537,7 +1536,7 @@ containing a value of this type.
         public static final int wizard_icon=0x7f060099;
         public static final int wrap_content=0x7f060000;
         public static final int xferCallButton=0x7f0601b9;
-        public static final int zrtpAcceptance=0x7f0601bd;
+        public static final int zrtpAcceptance=0x7f0601bc;
     }
     public static final class integer {
         public static final int abs__max_action_buttons=0x7f0a0000;

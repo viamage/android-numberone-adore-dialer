@@ -91,19 +91,7 @@ public class More extends SherlockFragment implements ViewPagerVisibilityListene
 				case SETTINGS:
 					startActivityForResult(new Intent(SipManager.ACTION_UI_PREFS_GLOBAL), CHANGE_PREFS);
 					break;
-				/*case RECORDING:
-					startActivity(new Intent(getActivity(),RecordingList.class));
-					break;
-					Intent intent=new Intent(getActivity(),AccountWizard.class);
-					intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-					startActivity(intent);
-					break;*/
-				/*case ABOUT:
-					//TODO: CDR
-					openAboutDialog();
-					
-					break;
-					*/
+				
 				case VOUCHER:
 					//TODO: CDR
 					openAboutDialog1();

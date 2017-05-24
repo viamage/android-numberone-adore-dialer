@@ -318,8 +318,8 @@ public class InCallCard extends FrameLayout implements OnClickListener, Callback
         btnMenuBuilder.findItem(R.id.clearCallButton).setVisible(active);
         
         active = (!callInfo.isAfterEnded() && !callInfo.isBeforeConfirmed());
-        btnMenuBuilder.findItem(R.id.xferCallButton).setVisible(active);
-        btnMenuBuilder.findItem(R.id.transferCallButton).setVisible(active);
+      //  btnMenuBuilder.findItem(R.id.xferCallButton).setVisible(active);
+      //  btnMenuBuilder.findItem(R.id.transferCallButton).setVisible(active);
         btnMenuBuilder.findItem(R.id.holdCallButton).setVisible(active)
                 .setTitle(callInfo.isLocalHeld() ? R.string.resume_call : R.string.hold_call);
         btnMenuBuilder.findItem(R.id.videoCallButton).setVisible(active && canVideo && !callInfo.mediaHasVideo());
@@ -343,8 +343,8 @@ public class InCallCard extends FrameLayout implements OnClickListener, Callback
         if(callInfo.isAfterEnded()) {
             active = false;
         }
-        btnMenuBuilder.findItem(R.id.recordCallButton).setVisible(active).setTitle(
-                callInfo.isRecording() ? R.string.stop_recording : R.string.record);
+       /* btnMenuBuilder.findItem(R.id.recordCallButton).setVisible(active).setTitle(
+              callInfo.isRecording() ? R.string.stop_recording : R.string.record);*/
         
         // ZRTP
         active = callInfo.getHasZrtp() && !callInfo.isAfterEnded();

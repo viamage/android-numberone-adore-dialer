@@ -54,10 +54,9 @@ public class PrefsLogic {
     private static final String MEDIA_CODEC_LIST_KEY = "codecs_list";
     private static final String MEDIA_MISC_KEY = "misc";
     private static final String MEDIA_AUDIO_TROUBLESHOOT_KEY = "audio_troubleshooting";
-
-    private static final String NWK_SECURE_TRANSPORT_KEY = "secure_transport";
+    //private static final String NWK_SECURE_TRANSPORT_KEY = "secure_transport";
     private static final String NWK_KEEP_ALIVE_KEY = "keep_alive";
-    private static final String NWK_NAT_TRAVERSAL_KEY = "nat_traversal";
+  //  private static final String NWK_NAT_TRAVERSAL_KEY = "nat_traversal";
     private static final String NWK_TRANSPORT_KEY = "transport";
     private static final String NWK_SIP_PROTOCOL_KEY = "sip_protocol";
     private static final String NWK_PERFS_KEY = "perfs";
@@ -119,10 +118,10 @@ public class PrefsLogic {
                 return R.string.audio_troubleshooting;
             case TYPE_NETWORK:
                 return R.string.prefs_network;
-            case TYPE_NETWORK_KEEP_ALIVE:
+         /*   case TYPE_NETWORK_KEEP_ALIVE:
                 return R.string.keep_alive_interval;
             case TYPE_NETWORK_SECURE:
-                return R.string.secure_transport;
+                return R.string.secure_transport;*/
             case TYPE_NETWORK_SIP_PROTOCOL:
                 return R.string.sip_protocol;
             case TYPE_CALLS:
@@ -203,10 +202,10 @@ public class PrefsLogic {
                 
                 if(!pfw.isAdvancedUser()) {
                     
-                    pfh.hidePreference(NWK_NAT_TRAVERSAL_KEY, SipConfigManager.ENABLE_TURN);
-                    pfh.hidePreference(NWK_NAT_TRAVERSAL_KEY, SipConfigManager.TURN_SERVER);
-                    pfh.hidePreference(NWK_NAT_TRAVERSAL_KEY, SipConfigManager.TURN_USERNAME);
-                    pfh.hidePreference(NWK_NAT_TRAVERSAL_KEY, SipConfigManager.TURN_PASSWORD);
+                 //   pfh.hidePreference(NWK_NAT_TRAVERSAL_KEY, SipConfigManager.ENABLE_TURN);
+                 //   pfh.hidePreference(NWK_NAT_TRAVERSAL_KEY, SipConfigManager.TURN_SERVER);
+                 //   pfh.hidePreference(NWK_NAT_TRAVERSAL_KEY, SipConfigManager.TURN_USERNAME);
+                 //   pfh.hidePreference(NWK_NAT_TRAVERSAL_KEY, SipConfigManager.TURN_PASSWORD);
                     
                     pfh.hidePreference(NWK_TRANSPORT_KEY, SipConfigManager.ENABLE_TCP);
                     pfh.hidePreference(NWK_TRANSPORT_KEY, SipConfigManager.ENABLE_UDP);
@@ -223,7 +222,7 @@ public class PrefsLogic {
                     pfh.hidePreference(NWK_TRANSPORT_KEY, SipConfigManager.USER_AGENT);
                     pfh.hidePreference(NWK_TRANSPORT_KEY, SipConfigManager.NETWORK_ROUTES_POLLING);
                     
-                    pfh.hidePreference(NWK_NAT_TRAVERSAL_KEY, SipConfigManager.ENABLE_STUN2);
+                 //   pfh.hidePreference(NWK_NAT_TRAVERSAL_KEY, SipConfigManager.ENABLE_STUN2);
 
                     pfh.hidePreference("for_incoming", SipConfigManager.USE_ANYWAY_IN);
                     pfh.hidePreference("for_outgoing", SipConfigManager.USE_ANYWAY_OUT);
@@ -236,8 +235,8 @@ public class PrefsLogic {
                 }
                 
                 // Bind preference screen
-                pfh.setPreferenceScreenType(NWK_KEEP_ALIVE_KEY, TYPE_NETWORK_KEEP_ALIVE);
-                pfh.setPreferenceScreenType(NWK_SECURE_TRANSPORT_KEY, TYPE_NETWORK_SECURE);
+              //  pfh.setPreferenceScreenType(NWK_KEEP_ALIVE_KEY, TYPE_NETWORK_KEEP_ALIVE);
+              //  pfh.setPreferenceScreenType(NWK_SECURE_TRANSPORT_KEY, TYPE_NETWORK_SECURE);
                 
                 break;
             }

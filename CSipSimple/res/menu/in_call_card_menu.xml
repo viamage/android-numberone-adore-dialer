@@ -17,10 +17,10 @@
         android:id="@+id/xferCallButton"
         android:showAsAction="never"
         android:title="@string/xfer_uri"/>
-    <item
+  <!--   <item
         android:id="@+id/transferCallButton"
         android:showAsAction="never"
-        android:title="@string/transfer_to_call"/>
+        android:title="@string/transfer_to_call"/> -->
     <item
         android:id="@+id/holdCallButton"
         android:showAsAction="never"
