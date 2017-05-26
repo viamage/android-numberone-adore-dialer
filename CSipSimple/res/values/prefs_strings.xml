@@ -7,6 +7,7 @@
     <string name="prefs_network">Network</string>
     <string name="prefs_network_desc">How MobileSoftphone can be connected to the network</string>
     <string name="prefs_media">Media</string>
+     <string name="prefs_media1"></string>
     <string name="prefs_recharge">Recharge</string>
     <string name="prefs_rates">Rates</string>
     <string name="prefs_cdr">CDR</string>

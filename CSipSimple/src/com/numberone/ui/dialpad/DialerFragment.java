@@ -1179,11 +1179,11 @@ public class DialerFragment extends SherlockFragment implements
 		  {
 			if(ab.contains("USD"))
 			{
-				tv1.setText("$"+s1+"/min");
+				tv1.setText(s1+"$"+"/min");
 			}
 			else
 			{
-				tv1.setText("€"+s1+"/min");
+				tv1.setText(s1+"€"+"/min");
 			}
 			  
 			  
@@ -1390,28 +1390,43 @@ public class LongOperation extends AsyncTask<String, Void, String> {
 					
 					String red = "Balance:         ";
 					SpannableString redSpannable= new SpannableString(red);
-					redSpannable.setSpan(new ForegroundColorSpan(Color.parseColor("#920000")), 0, red.length(), 2);
+					redSpannable.setSpan(new ForegroundColorSpan(Color.parseColor("#C64F83")), 0, red.length(), 2);
 					builder.append(redSpannable);
 					
-					String white = ab;
-					SpannableString whiteSpannable = new SpannableString(white);
-					whiteSpannable.setSpan(new ForegroundColorSpan(Color.parseColor("#920000")), 0, white.length(), 0);
-					builder.append(whiteSpannable);
+					
 					
 					String blue = rr;
 					SpannableString blueSpannable = new SpannableString(blue);
 					
-					blueSpannable.setSpan(new ForegroundColorSpan(Color.parseColor("#920000")), 0, blue.length(), 0);
+					blueSpannable.setSpan(new ForegroundColorSpan(Color.parseColor("#818181")), 0, blue.length(), 0);
 					builder.append(blueSpannable);
-					 
-					if(ab.contains("USD"))
+					
+					if(ab.contains("EUR"))
 					{
-						balance1.setText(builder.replace(17, 20, "$"), BufferType.SPANNABLE);
+						String white = " €";
+						SpannableString whiteSpannable = new SpannableString(white);
+						whiteSpannable.setSpan(new ForegroundColorSpan(Color.parseColor("#818181")), 0, white.length(), 0);
+						builder.append(whiteSpannable);
 					}
 					else
 					{
-						balance1.setText(builder.replace(17, 20, "€"), BufferType.SPANNABLE);
+						String white = " $";
+						SpannableString whiteSpannable = new SpannableString(white);
+						whiteSpannable.setSpan(new ForegroundColorSpan(Color.parseColor("#818181")), 0, white.length(), 0);
+						builder.append(whiteSpannable);
 					}
+				
+					
+					balance1.setText(builder, BufferType.SPANNABLE);
+					
+				/*	if(ab.contains("USD"))
+					{
+						balance1.setText(builder.replace(26, 2, "$").replace(16, 23, ""), BufferType.SPANNABLE);
+					}
+					else
+					{
+						balance1.setText(builder.replace(26, 26, "€").replace(16, 23, ""), BufferType.SPANNABLE);
+					}*/
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

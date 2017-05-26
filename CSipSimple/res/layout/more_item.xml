@@ -6,8 +6,7 @@
      android:background="#FFFFFF" >
 
 <RelativeLayout android:id="@+id/body"
-    android:layout_width="fill_parent"
-      
+    android:layout_width="fill_parent"  
     android:layout_height="wrap_content" >
     <ImageView
         android:id="@+id/contact_entry_icon"
@@ -20,12 +19,14 @@
         android:id="@+id/contact_entry_title"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textColor="#000000"
+        android:textColor="#696969"
         android:layout_alignTop="@+id/contact_entry_icon"
-        android:layout_margin="5dp"
+        android:layout_margin="15dp"
+       
+       
         android:layout_toRightOf="@+id/contact_entry_icon"
         android:textSize="18sp"
-        android:textStyle="bold" />
+       />
 
 
     <!-- Subtitle contains author and date -->

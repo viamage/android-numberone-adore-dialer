@@ -32,15 +32,15 @@ public class More extends SherlockFragment implements ViewPagerVisibilityListene
 	private MoreListAdapter adapter; 
 	private PreferencesProviderWrapper prefProviderWrapper;
 	private final static int CHANGE_PREFS = 1;
-	private final static int SETTINGS = 0;
+	//private final static int SETTINGS = 0;
 	//private final static int RECORDING = 1;
 	//private final static int ABOUT = 4;
-	private final static int VOUCHER = 1;
-	private final static int ACCESSNO = 2;
+	private final static int VOUCHER = 0;
+	private final static int ACCESSNO = 1;
 	//private final static int PROFILE = 3;
-	private final static int BALANCE = 3;
-	private final static int EXIT1= 4; 
-	private final static int EXIT= 5;
+	//private final static int BALANCE = 3;
+	private final static int EXIT1= 2; 
+	private final static int EXIT= 3;
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -62,8 +62,8 @@ public class More extends SherlockFragment implements ViewPagerVisibilityListene
 	}
     public List<MoreItem> getItems() {
         List<MoreItem> list = new ArrayList<MoreItem>();
-        String prefs_desc=getString(R.string.prefs_network)+" & "+getString(R.string.prefs_media)+" "+getString(R.string.prefs);
-        list.add(new MoreItem(getString(R.string.prefs),R.drawable.ic_menu_preferences,prefs_desc));
+        String prefs_desc=getString(R.string.prefs_network)+""+getString(R.string.prefs_media)+" ";
+       // list.add(new MoreItem(getString(R.string.prefs),R.drawable.ic_menu_preferences,""));
            // list.add(new MoreItem("Account",R.drawable.account_over,"Check Account"));
         //    list.add(new MoreItem("CDR",R.drawable.cdr_img,"call history"));
             //   list.add(new MoreItem("Rates",R.drawable.rate,"check international call rates"));
@@ -73,7 +73,7 @@ public class More extends SherlockFragment implements ViewPagerVisibilityListene
       //  list.add(new MoreItem(getString(R.string.profile),R.drawable.profile,getString(R.string.profile_desc)));  
       //  list.add(new MoreItem(getString(R.string.about),R.drawable.about,getString(R.string.about_desc)));  
       
-       list.add(new MoreItem(getString(R.string.balance),R.drawable.transfer,getString(R.string.balance_desc)));
+    //   list.add(new MoreItem(getString(R.string.balance),R.drawable.transfer,getString(R.string.balance_desc)));
         
         list.add(new MoreItem(getString(R.string.account),R.drawable.accountt,getString(R.string.account_desc)));
         list.add(new MoreItem(getString(R.string.exit),R.drawable.exit,getString(R.string.exit_desc)));
@@ -88,9 +88,9 @@ public class More extends SherlockFragment implements ViewPagerVisibilityListene
 				int position, long id) {
 			try {
 				switch(position){
-				case SETTINGS:
+				/*case SETTINGS:
 					startActivityForResult(new Intent(SipManager.ACTION_UI_PREFS_GLOBAL), CHANGE_PREFS);
-					break;
+					break;*/
 				
 				case VOUCHER:
 					//TODO: CDR
@@ -110,11 +110,11 @@ public class More extends SherlockFragment implements ViewPagerVisibilityListene
 					
 					break;
 					
-				case BALANCE:
+				/*case BALANCE:
 					//TODO: CDR
 					openAboutDialog7();
 					
-					break;
+					break;*/
 					
 				case EXIT1:
 					//TODO: CDR

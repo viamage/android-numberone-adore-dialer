@@ -315,13 +315,13 @@ public class InCallCard extends FrameLayout implements OnClickListener, Callback
         active = !callInfo.isAfterEnded()
                 && (!callInfo.isBeforeConfirmed() || (!callInfo.isIncoming() && callInfo
                         .isBeforeConfirmed()));
-        btnMenuBuilder.findItem(R.id.clearCallButton).setVisible(active);
+        //btnMenuBuilder.findItem(R.id.clearCallButton).setVisible(active);
         
         active = (!callInfo.isAfterEnded() && !callInfo.isBeforeConfirmed());
       //  btnMenuBuilder.findItem(R.id.xferCallButton).setVisible(active);
       //  btnMenuBuilder.findItem(R.id.transferCallButton).setVisible(active);
-        btnMenuBuilder.findItem(R.id.holdCallButton).setVisible(active)
-                .setTitle(callInfo.isLocalHeld() ? R.string.resume_call : R.string.hold_call);
+       /* btnMenuBuilder.findItem(R.id.holdCallButton).setVisible(active)
+                .setTitle(callInfo.isLocalHeld() ? R.string.resume_call : R.string.hold_call);*/
         btnMenuBuilder.findItem(R.id.videoCallButton).setVisible(active && canVideo && !callInfo.mediaHasVideo());
         
 
@@ -622,27 +622,27 @@ public class InCallCard extends FrameLayout implements OnClickListener, Callback
         if(itemId == R.id.takeCallButton) {
             dispatchTriggerEvent(IOnCallActionTrigger.TAKE_CALL);
             return true;
-        }else if(itemId == R.id.clearCallButton) {
+       /* }else if(itemId == R.id.clearCallButton) {
             dispatchTriggerEvent(IOnCallActionTrigger.CLEAR_CALL);
-            return true;
+            return true;*/
         }else if(itemId ==  R.id.declineCallButton) {
             dispatchTriggerEvent(IOnCallActionTrigger.DECLINE_CALL);
             return true;
-        }else if(itemId == R.id.holdCallButton) {
+       /* }else if(itemId == R.id.holdCallButton) {
             dispatchTriggerEvent(IOnCallActionTrigger.TOGGLE_HOLD);
-            return true;
-        }else if(itemId == R.id.recordCallButton) {
+            return true;*/
+       /* }else if(itemId == R.id.recordCallButton) {
             dispatchTriggerEvent(callInfo.isRecording() ? IOnCallActionTrigger.STOP_RECORDING : IOnCallActionTrigger.START_RECORDING);
-            return true;
+            return true;*/
         }else if(itemId == R.id.dtmfCallButton) {
             dispatchTriggerEvent(IOnCallActionTrigger.DTMF_DISPLAY);
             return true;
         }else if(itemId == R.id.videoCallButton) {
             dispatchTriggerEvent(callInfo.mediaHasVideo() ? IOnCallActionTrigger.STOP_VIDEO : IOnCallActionTrigger.START_VIDEO);
             return true;
-        }else if(itemId == R.id.xferCallButton) {
+      /*  }else if(itemId == R.id.xferCallButton) {
             dispatchTriggerEvent(IOnCallActionTrigger.XFER_CALL);
-            return true;
+            return true;*/
         /*}else if(itemId == R.id.transferCallButton) {
             dispatchTriggerEvent(IOnCallActionTrigger.TRANSFER_CALL);
             return true;*/

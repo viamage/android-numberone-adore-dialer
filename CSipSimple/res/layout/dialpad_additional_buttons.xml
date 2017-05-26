@@ -4,21 +4,23 @@
    
      <TextView
         android:id="@+id/accountButton"
-        android:layout_width="0px"
+        android:layout_width="10px"
         android:layout_height="match_parent"
-        android:layout_gravity="center_vertical"
+        android:layout_gravity="center"
         android:layout_weight="0.30"
-      android:layout_marginTop="10dp"
+      android:layout_marginTop="14dp"
+      android:textSize="18sp"
         android:background="?attr/actionBarItemBackground"
         android:contentDescription="@string/description_dial_video_button"
-         android:layout_marginLeft="12dp"
-      android:textColor="#C7417C"
+         android:layout_marginLeft="37dp"
+         android:textStyle="bold"
+     
         android:state_enabled="true" />
     <View
         android:id="@+id/divider1"
         android:layout_width="1dip"
         android:layout_height="24dip"
-        android:visibility="gone"
+       
         android:layout_gravity="center_vertical"
         android:background="@drawable/abs__list_divider_holo_dark" />
 
@@ -28,6 +30,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="center_vertical"
         android:layout_weight="0.30"
+        android:layout_marginRight="5dp"
         android:background="@drawable/btn_call"
         android:contentDescription="@string/description_dial_button"
         android:src="@drawable/ic_dial_action_call"
