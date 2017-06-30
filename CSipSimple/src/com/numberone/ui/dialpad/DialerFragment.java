@@ -900,9 +900,7 @@ public class DialerFragment extends SherlockFragment implements
             	 }
                  
             	 if(DialerFragment.pinnumber.equals(""))
-                 {
-        	
-                	
+              {
              String f1=blank.concat(no);
              String f4=ser.concat(f1);
              finalnum=f4.concat(Uri.encode("#"));
