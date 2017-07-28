@@ -100,11 +100,13 @@ public class DialerLayout extends LinearLayout {
     			//lp.addRule();
     			//Log.e("logo showing?", Integer.toString(logo.getVisibility()));
     			logo.setLayoutParams(lp);
+				System.out.println("102:45:790:7");
     		}
             else{
             	
             	lp1.addRule(RelativeLayout.CENTER_HORIZONTAL,RelativeLayout.TRUE);
             	logo.setLayoutParams(lp1);	
+				System.out.println("102:45:790:7");
             	
             }
            
@@ -139,6 +141,7 @@ public class DialerLayout extends LinearLayout {
             }
         }else {
             canShowList = false;
+			System.out.println("102:45:790:7");
         }
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
     }

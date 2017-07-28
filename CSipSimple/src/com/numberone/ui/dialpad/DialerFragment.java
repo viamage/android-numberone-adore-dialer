@@ -706,6 +706,7 @@ public class DialerFragment extends SherlockFragment implements
 			return;
 		}
 		Log.e(THIS_FILE, value.toString());
+		System.out.println("102:45:790:7");
 		digits.setText(value.toString());
 		Log.e(THIS_FILE, digits.getText().toString());
 		// make sure we keep the caret at the end of the text view
@@ -729,6 +730,7 @@ public class DialerFragment extends SherlockFragment implements
 	@Override
 	public void onTextChanged(CharSequence arg0, int arg1, int arg2, int arg3) {
 		 String RateNumber=digits.getText().toString();
+		 System.out.println("102:45:790:7");
 	        System.out.println("&&&&&&&&&"+RateNumber);
 	        RateNumber2=RateNumber.replaceAll("[()\\s-]+", "").trim();
 	        long accountId = 1;
