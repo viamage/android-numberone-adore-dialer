@@ -2,8 +2,8 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/account_layout"
     android:layout_width="fill_parent"
-    android:background="#fff"
-    
+  
+      android:background="@drawable/loginbg4"
     android:layout_height="match_parent" >
 
     <LinearLayout
@@ -17,6 +17,8 @@
             android:layout_height="110dp"
             android:layout_gravity="center"
             android:layout_marginTop="-5dp"
+            
+      android:background="@drawable/logo"
              />
 
         <TextView
@@ -24,9 +26,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="-30dip"
-            android:text=""          
+             
+            android:textColor="#fff"    
             android:paddingLeft="10dp"
-            android:textAppearance="?android:attr/textAppearanceMedium"
+           
              />
 
         <EditText
@@ -73,8 +76,8 @@
             android:background="@drawable/bar"
           
             android:singleLine="true"
-            android:textColor="#026D95"
-            android:textColorHint="#959595"
+              android:textColor="#fff"    
+           android:textColorHint="#fff"
             android:textCursorDrawable="@drawable/cursor"
             /> 
 
@@ -108,8 +111,8 @@
              android:paddingLeft="5dp"
             android:password="true"
             android:singleLine="true"
-           android:textColor="#026D95"
-           android:textColorHint="#959595"
+           android:textColor="#fff"    
+           android:textColorHint="#fff"
             android:textCursorDrawable="@drawable/cursor"
            />
 

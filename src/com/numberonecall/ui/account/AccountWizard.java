@@ -317,7 +317,7 @@ public class AccountWizard extends SherlockActivity {
 			
 			
 		case R.id.forget_button:
-			Intent intent= new Intent(Intent.ACTION_VIEW,Uri.parse("https://portal.numberonecall.com/signup"));
+			Intent intent= new Intent(Intent.ACTION_VIEW,Uri.parse("https://portal.numberonecall.com/signin?mobile=1"));
 			startActivity(intent);
 		//	http://portal.numone.keios.eu/signup
 			  break;
