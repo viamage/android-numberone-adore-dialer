@@ -573,6 +573,10 @@
              <activity
             android:name="com.numberonecall.ui.more.Authorised"
             android:theme="@style/DarkTheme" />
+             
+                <activity
+            android:name="com.numberonecall.ui.account.CountryDialog"
+            android:theme="@style/DarkTheme" />
            
              <activity
             android:name="com.numberonecall.ui.more.Accessno"

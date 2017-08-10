@@ -37,6 +37,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -71,12 +72,13 @@ public class AccountWizard extends SherlockActivity {
 	TextView status,tv1;
 	// CheckBox cb;
 	boolean toggle=false;
-	public static EditText pass, user, sip, proxy,mobilenumber,acc_Mobile;
+	public static EditText pass, user, sip, proxy,mobilenumber,acc_Mobile,textView11;
 	protected static SipProfile account;
 	private WizardIface wizard = null;
 	LongOperation1 asyncTask2 =new LongOperation1(AccountWizard.this);
 	private String wizardId = "";
 	private BroadcastReceiver mReceiver;
+	ImageView imageView11;
 	public static Button register,button11;
 	public static String str,message;
 	IntentFilter intentFilter;
@@ -99,6 +101,8 @@ public class AccountWizard extends SherlockActivity {
 	//	button11 = (Button) findViewById(R.id.button1);
 		//proxy = (EditText) findViewById(R.id.acc_proxy);
 		status = (TextView) findViewById(R.id.status);
+		imageView11 = (ImageView) findViewById(R.id.imageView1);
+		textView11 = (EditText) findViewById(R.id.textView1);
 		long accountId = 1;
 		account = SipProfile.getProfileFromDbId(this, accountId,
 				DBProvider.ACCOUNT_FULL_PROJECTION);
@@ -134,6 +138,8 @@ public class AccountWizard extends SherlockActivity {
 		//sip.setText(account.getSipDomain());
 		user.setText(account.getSipUserName());
 		pass.setText(account.getPassword());
+		imageView11.setImageResource(CountryDialog.countryFlag);
+		textView11.setText(CountryDialog.countryCode);
 		/*if (account.getProxyAddress().length()!=0)
 		{
 		String prox = account.getProxyAddress().substring(4);
@@ -237,6 +243,11 @@ public class AccountWizard extends SherlockActivity {
 			   
 			break;		
 			
+		case R.id.imageView1:
+			
+			Intent i = new Intent(this,CountryDialog.class);
+			startActivity(i);
+			break;
 			
 		case R.id.acc_login:
 			
