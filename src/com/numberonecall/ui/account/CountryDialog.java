@@ -156,7 +156,7 @@ public class CountryDialog extends Activity implements SearchView.OnQueryTextLis
 	{
 		list=new ArrayList<Map<String, Object>>();
 		
-		Map<String, Object> map1=new HashMap<String, Object>();
+		/*Map<String, Object> map1=new HashMap<String, Object>();
 		map1.put("countryFlag", R.drawable.unitedstates);
 		map1.put("countryName", "USA");
 		map1.put("countryCode", "+1");
@@ -170,7 +170,7 @@ public class CountryDialog extends Activity implements SearchView.OnQueryTextLis
 		map.put("countryCode", "+44");
 		map.put("countryId", "GBR");
 		
-		list.add(map);
+		list.add(map);*/
 		
 		Map<String, Object> map2=new HashMap<String, Object>();
 		map2.put("countryFlag", R.drawable.albania);
@@ -1097,13 +1097,7 @@ public class CountryDialog extends Activity implements SearchView.OnQueryTextLis
 		list.add(map114);
 		
 		
-		Map<String, Object> map911=new HashMap<String, Object>();
-		map911.put("countryFlag", R.drawable.australia);
-		map911.put("countryName", "Antarctica");
-		map911.put("countryCode", "8");
-		map911.put("countryId", "8");
-		
-		list.add(map911);
+	
 		
 		
 		System.out.println("LIST "+list.size());

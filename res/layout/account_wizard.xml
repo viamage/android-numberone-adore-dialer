@@ -13,20 +13,21 @@
         android:orientation="vertical" >
 
         <ImageView
-            android:layout_width="300dp"
+            android:layout_width="255dp"
             android:layout_height="110dp"
             android:layout_gravity="center"
             android:layout_marginTop="45dp"
             
-      android:background="@drawable/logooo"
+      android:background="@drawable/logo11"
              />
 
-        <TextView
+        <TextView 
             android:id="@+id/status"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="-15dip"
+            android:layout_marginTop="-5dip"
             android:text=""      
+            android:textStyle="bold"
             android:textColor="#fff"    
             android:paddingLeft="10dp"
            
@@ -63,10 +64,10 @@
         <ImageView
             android:id="@+id/imageView1"
       
-          android:layout_width="40dp"
-            android:layout_height="35dp"
+          android:layout_width="37dp"
+            android:layout_height="30dp"
             android:layout_gravity="center"
-            android:layout_marginTop="55dp"
+            android:layout_marginTop="60dp"
             android:onClick="onClick"
       android:background="@drawable/india"
              />
@@ -81,7 +82,7 @@
             android:layout_height="50dp"
             android:layout_marginTop="25dp"
             android:autoText="false"
-            android:hint="your Number One ID"
+            android:hint="Your Phone Number"
             android:paddingLeft="5dp"
             android:lines="1"
             android:maxLength="15"
@@ -89,7 +90,7 @@
                  android:layout_marginRight="35dp"
             android:maxLines="1"
             android:background="@drawable/loginbar"
-          
+          android:textStyle="bold"
             android:singleLine="true"
               android:textColor="#fff"    
            android:textColorHint="#fff"
@@ -110,28 +111,27 @@
             android:textSize="25sp"
             android:visibility="gone" />
 
-        
-
         <EditText
             android:id="@+id/acc_pass"
             android:layout_width="match_parent"
-             android:layout_height="50dp"
-          android:layout_marginLeft="85dp"
-                 android:layout_marginRight="35dp"
-           android:layout_marginTop="85dp"
-               android:background="@drawable/loginbar"
-               android:maxLength="15"
+            android:layout_height="50dp"
+            android:layout_alignLeft="@+id/textView1"
+            android:layout_marginRight="35dp"
+            android:layout_marginTop="85dp"
             android:autoText="false"
-            android:hint="password"
+            android:background="@drawable/loginbar"
+            android:hint="Password"
             android:lines="1"
+            android:maxLength="15"
             android:maxLines="1"
-             android:paddingLeft="5dp"
+            android:textStyle="bold"
+            
+            android:paddingLeft="70dp"
             android:password="true"
             android:singleLine="true"
-           android:textColor="#fff"    
-           android:textColorHint="#fff"
-            android:textCursorDrawable="@drawable/cursor"
-           />
+            android:textColor="#fff"
+            android:textColorHint="#fff"
+            android:textCursorDrawable="@drawable/cursor" />
 
         <EditText
             android:id="@+id/textView1"
@@ -142,6 +142,10 @@
             android:layout_alignBottom="@+id/acc_user"
             android:layout_toRightOf="@+id/acc_signup"
             android:background="@drawable/loginbar"
+            android:textStyle="bold"
+              android:clickable="false" 
+        android:cursorVisible="false" 
+        android:focusable="false" 
             android:text="" />
 
        </RelativeLayout>
@@ -154,14 +158,14 @@
 
             <Button
                 android:id="@+id/acc_login"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="35dp"
-                android:layout_marginRight="28dp"
+                android:layout_width="35dp"
+            android:layout_height="40dp"
+                android:layout_marginLeft="145dp"
+                android:layout_marginRight="145dp"
                 android:layout_marginTop="10dp"
                 android:layout_weight="0.24"
                
-                android:background="@drawable/next"
+                android:background="@drawable/next1"
                 android:onClick="onClick"
                
                 android:textSize="23sp"
@@ -284,17 +288,18 @@
 
             <Button
                 android:id="@+id/forget_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                 android:layout_width="35dp"
+               android:layout_height="40dp"
+              android:layout_marginLeft="145dp"
+                android:layout_marginRight="145dp"
                 android:layout_weight="0.22"
-                android:text="Sign up"
-                  android:layout_marginLeft="35dp"
-                android:layout_marginRight="28dp"
-                  android:background="@drawable/clear"
+               
+                 
+                  android:background="@drawable/signup1"
                  android:onClick="onClick"
                  />
 
-        </LinearLayout>
+        </LinearLayout> 
          
                
         
