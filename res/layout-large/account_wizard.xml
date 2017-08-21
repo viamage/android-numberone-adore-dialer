@@ -2,8 +2,8 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/account_layout"
     android:layout_width="fill_parent"
-    android:background="#fff"
-    
+  
+      android:background="@drawable/dev"
     android:layout_height="match_parent" >
 
     <LinearLayout
@@ -13,21 +13,24 @@
         android:orientation="vertical" >
 
         <ImageView
-            android:layout_width="300dp"
+            android:layout_width="255dp"
             android:layout_height="110dp"
             android:layout_gravity="center"
-            android:layout_marginTop="-5dp"
-            android:src="@drawable/adore22" />
+            android:layout_marginTop="45dp"
+            
+      android:background="@drawable/logo11"
+             />
 
-        <TextView
+        <TextView 
             android:id="@+id/status"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="-30dip"
-            android:text=""
-            android:visibility="gone" 
-            android:paddingLeft="10dp"
-            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_marginTop="-5dip"
+            android:text=""      
+            android:textStyle="bold"
+            android:textColor="#fff"    
+            android:paddingLeft="60dp"
+           
              />
 
         <EditText
@@ -58,26 +61,41 @@
             android:textColorHint="#959595"
             android:visibility="gone" />
 
+        <ImageView
+            android:id="@+id/imageView1"
+      
+          android:layout_width="37dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="60dp"
+            android:onClick="onClick"
+      android:background="@drawable/india"
+             />
+ <RelativeLayout android:id="@+id/relativeLayout1" 
+        android:layout_height="wrap_content" 
+        android:layout_width="wrap_content">
+        
+
         <EditText
             android:id="@+id/acc_user"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="25dp"
             android:autoText="false"
-            android:hint="Enter Username"
-            android:paddingLeft="70dp"
+            android:hint="Your Phone Number"
+            android:paddingLeft="5dp"
             android:lines="1"
             android:maxLength="15"
-             android:layout_marginLeft="25dp"
-                 android:layout_marginRight="25dp"
+             android:layout_marginLeft="85dp"
+                 android:layout_marginRight="35dp"
             android:maxLines="1"
-            android:background="@drawable/user_bar"
-          
+            android:background="@drawable/loginbar"
+          android:textStyle="bold"
             android:singleLine="true"
-            android:textColor="#026D95"
-            android:textColorHint="#959595"
+              android:textColor="#fff"    
+           android:textColorHint="#fff"
             android:textCursorDrawable="@drawable/cursor"
-            android:visibility="gone" /> 
+            /> 
 
         <Button
             android:id="@+id/acc_signup"
@@ -96,30 +114,41 @@
         <EditText
             android:id="@+id/acc_pass"
             android:layout_width="match_parent"
-             android:layout_height="50dp"
-            android:layout_marginLeft="25dp"
-                 android:layout_marginRight="25dp"
-           android:layout_marginTop="15dp"
-              android:background="@drawable/password_bar"
-               android:maxLength="15"
+            android:layout_height="50dp"
+            android:layout_alignLeft="@+id/textView1"
+            android:layout_marginRight="35dp"
+            android:layout_marginTop="85dp"
             android:autoText="false"
-            android:hint="Enter Password"
+            android:background="@drawable/loginbar"
+            android:hint="Password"
             android:lines="1"
+            android:maxLength="15"
             android:maxLines="1"
-             android:paddingLeft="70dp"
+            android:textStyle="bold"
+            
+            android:paddingLeft="70dp"
             android:password="true"
             android:singleLine="true"
-           android:textColor="#026D95"
-           android:textColorHint="#959595"
-            android:textCursorDrawable="@drawable/cursor"
-            android:visibility="gone" />
+            android:textColor="#fff"
+            android:textColorHint="#fff"
+            android:textCursorDrawable="@drawable/cursor" />
 
-        <TextView
+        <EditText
             android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="47dp"
-            />
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_alignBaseline="@+id/acc_user"
+             android:layout_marginLeft="20dp"
+            android:layout_alignBottom="@+id/acc_user"
+            android:layout_toRightOf="@+id/acc_signup"
+            android:background="@drawable/loginbar"
+            android:textStyle="bold"
+              android:clickable="false" 
+        android:cursorVisible="false" 
+        android:focusable="false" 
+            android:text="" />
+
+       </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -129,42 +158,42 @@
 
             <Button
                 android:id="@+id/acc_login"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="28dp"
+                android:layout_width="30dp"
+             android:layout_height="30dp"
+                android:layout_marginLeft="210dp"
+                android:layout_marginRight="210dp"
                 android:layout_marginTop="10dp"
                 android:layout_weight="0.24"
-                android:text="Login"
-                android:background="@drawable/login_img"
+     
+                android:background="@drawable/next1"
                 android:onClick="onClick"
                
-                android:textSize="25sp"
-                android:visibility="gone" />
+                android:textSize="23sp"
+                 />
 
             <Button 
                 android:id="@+id/acc_clear"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                    android:layout_marginLeft="28dp"
-                android:layout_marginRight="30dp"
+                android:layout_marginRight="35dp"
                 android:layout_marginTop="10dp"
                 android:layout_weight="0.24"
                 android:text="Clear"
-               android:background="@drawable/login_img"
+                android:background="@drawable/clear"
                 android:onClick="onClick"
-             
+             android:visibility="gone"
               
-                android:textSize="25sp"
-                android:visibility="gone" />
+                android:textSize="23sp"
+               />
 
            <EditText
                 android:id="@+id/acc_Mobile"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
                 android:layout_marginTop="0dp"
                 android:layout_weight="0.24"
                 android:autoText="false"
@@ -173,11 +202,12 @@
                      android:hint="Enter Mobile Number"    
                 android:inputType="phone"
                 android:lines="1"
-                android:paddingLeft="40dp"
+                android:paddingLeft="60dp"
                 android:maxLines="1"
                 android:singleLine="true"
                 android:maxLength="15"
                 android:textColor="#026D95"
+                android:visibility="gone"
                 android:textColorHint="#959595"
                 android:textSize="18dip"
                   android:textCursorDrawable="@drawable/cursor" >
@@ -230,13 +260,15 @@
 
             <Button
                 android:id="@+id/acc_Register"
-                android:layout_width="150dp"
-                android:layout_height="60dp"
-                android:layout_marginLeft="220dp"
-                android:layout_marginRight="120dp"
-                android:layout_marginTop="25dp"
+                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="120dp"
+                 android:layout_marginRight="120dp"
+                android:layout_marginTop="15dp"
+                android:layout_weight="0.22"
                 android:background="@drawable/login_img"
                 android:onClick="onClick"
+                 android:visibility="gone"
                 android:text="Sign up"
                 android:textSize="25sp" />
 
@@ -253,25 +285,20 @@
                 android:onClick="onClick" 
               android:visibility="gone"
                 android:textSize="25sp"/>
-        </LinearLayout>
-        
-                <Button
-          android:id="@+id/forget_button"
-               android:layout_width="230dp"
-                android:layout_height="60dp"
-                android:layout_marginRight="50dp"
-                 android:layout_marginLeft="65dp"
-                android:layout_marginTop="45dp"
-                android:layout_weight="0.24"
-               android:text="Forgot Password?"     
-                android:textSize="25sp"        
-              
-                             
-                 android:background="@drawable/login_img"
-               android:textColor="#fff"             
-                android:onClick="onClick"
-                android:visibility="gone"
-                  />
+
+            <Button
+                android:id="@+id/forget_button"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                 android:layout_marginLeft="210dp"
+                android:layout_marginRight="210dp"
+                android:layout_weight="0.17"
+                android:background="@drawable/signup1"
+                android:onClick="onClick" />
+
+        </LinearLayout> 
+         
+               
         
            <Button
                 android:id="@+id/forgot"
@@ -288,20 +315,21 @@
 
            <Button
                android:id="@+id/Login_page"
-               android:layout_width="350dp"
-               android:layout_height="60dp"
-               android:layout_marginLeft="135dp"
+               android:layout_width="240dp"
+               android:layout_height="50dp"
+               android:layout_marginLeft="65dp"
                android:layout_marginRight="20dp"
-               android:layout_marginTop="300dp"
-               android:background="@drawable/login_img"
+               android:layout_marginTop="130dp"
+               android:background="@drawable/clear2"
                android:onClick="onClick"
+                 android:visibility="gone"
                android:text="Already have a PIN"
-               android:textSize="25sp" />
+               android:textSize="23sp" />
 
          <Button
                 android:id="@+id/Register_page"
                  android:layout_width="250dp"
-               android:layout_height="60dp"
+               android:layout_height="50dp"
                 android:layout_marginLeft="55dp"
                  android:layout_marginRight="25dp"
                 android:layout_marginTop="40dp"
@@ -311,7 +339,7 @@
                 android:onClick="onClick"
                
                 android:visibility="gone"
-                android:textSize="25sp"
+                android:textSize="23sp"
                />
     </LinearLayout>
 

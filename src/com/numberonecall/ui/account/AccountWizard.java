@@ -459,13 +459,13 @@ public class AccountWizard extends SherlockActivity {
 		}*/
 		if (user.getText().length() == 0) {
 			status.setTextColor(Color.RED);
-			status.setText("Enter Your Username and Password");
+			status.setText("Enter Your Phone Number and Password");
 			user.requestFocus();
 			return false;
 		}
 		if (pass.getText().length() == 0) {
 			status.setTextColor(Color.RED);
-			status.setText("Enter Your Username and Password");
+			status.setText("Enter Your Phone Number and Password");
 			pass.requestFocus();
 			return false;
 		}
@@ -701,10 +701,8 @@ DataOutputStream wr = new DataOutputStream(con.getOutputStream());
 //wr.writeBytes(urlParameters);
 wr.flush();
 wr.close();
-
 BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
 String inputLine;
-
 inputLine=in.readLine();
 
 try {  
@@ -731,8 +729,6 @@ return null;
 }
 }
 }
-	
-
 
 /////////////////////////////////////sign up ///////////////////////////////////////////////////////////////////////
 
