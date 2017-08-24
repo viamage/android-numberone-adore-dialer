@@ -21,6 +21,7 @@ public class DialerAutocompleteDetailsFragment extends SherlockListFragment {
         System.out.println("sSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS");
     }
     
+    
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -28,6 +29,9 @@ public class DialerAutocompleteDetailsFragment extends SherlockListFragment {
         setListAdapter(autoCompleteAdapter);
         proposeRestoreFromBundle(savedInstanceState);
         proposeRestoreFromBundle(getArguments());
+        
+        System.out.println("sSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS");
+        System.out.println("SSSS");
     }
     
     private void proposeRestoreFromBundle(Bundle b) {
@@ -59,6 +63,7 @@ public class DialerAutocompleteDetailsFragment extends SherlockListFragment {
                 if (frag != null && frag instanceof DialerFragment) {
                     ((DialerFragment) frag).setTextFieldValue(autoCompleteAdapter.getFilter()
                             .convertResultToString(selectedItem));
+                    System.out.println("sSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS");
                 }
             }
         }
