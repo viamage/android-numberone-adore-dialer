@@ -258,11 +258,23 @@ public class AccountWizard extends SherlockActivity {
 			
 			if(networkInfo != null && networkInfo.isConnected())
 			{   
+				String a = user.getText().toString();
+				if(!(a.startsWith("+")))
+				{
+					
+					
+					 new Authrosied().execute("");
+					saveAndFinish();
 				
-				System.out.println("@@@@@@@@@@@@@@**********Hello user is on line");
-				 new Authrosied().execute("");
-				saveAndFinish();
-			    
+					
+				}
+				else
+				{
+					Toast toast1 = Toast.makeText(this,"Please remove prefix + sign from entered number",Toast.LENGTH_SHORT);
+			        toast1.setGravity(Gravity.CENTER,0,0);
+			        toast1.show();
+				}
+				
 			}
 			else
 			{

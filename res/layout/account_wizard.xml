@@ -223,8 +223,7 @@
         
         
          <TextView 
-            android:id="@+id/term"
-           
+            android:id="@+id/term"  
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#33B5E5"
@@ -292,9 +291,7 @@
                android:layout_height="35dp"
               android:layout_marginLeft="145dp"
                 android:layout_marginRight="145dp"
-                android:layout_weight="0.22"
-               
-                 
+                android:layout_weight="0.22"      
                   android:background="@drawable/signup1"
                  android:onClick="onClick"
                  />
