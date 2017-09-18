@@ -86,11 +86,19 @@ public class Basic extends BaseImplementation {
 	public SipProfile buildAccount(SipProfile account) {
 		Log.d(THIS_FILE, "begin of save ....");
 		// TODO account name
+		
+		
+		
 		String sip ="one.alizeetelecom.com"//"107.160.9.28"//"91.212.52.5"//"107.160.9.28"//AccountWizard.sip.getText().toString()
 		//String sip ="209.126.66.4"
-				,user = AccountWizard.user.getText().toString()
+				
+				
+				
+				,user = (AccountWizard.tv1.getText().toString()+AccountWizard.user.getText().toString()).replace("+", "")
 				, pass = AccountWizard.pass.getText().toString()
 				, proxy="";//AccountWizard.proxy.getText().toString();
+		System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!USER  "+user);
+		
 		account.display_name = "Number One";
 
 		String[] serverParts = sip.split(":");

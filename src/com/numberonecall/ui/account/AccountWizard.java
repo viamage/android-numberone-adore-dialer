@@ -2,6 +2,10 @@ package com.numberonecall.ui.account;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -69,10 +73,13 @@ public class AccountWizard extends SherlockActivity {
 	
 	CheckBox cbS;
 	 TextView tv;
-	TextView status,tv1;
+	TextView status;
+	public static TextView tv1;
+	TextView status1;
 	// CheckBox cb;
 	boolean toggle=false;
 	public static EditText pass, user, sip, proxy,mobilenumber,acc_Mobile,textView11;
+	String no;
 	protected static SipProfile account;
 	private WizardIface wizard = null;
 	LongOperation1 asyncTask2 =new LongOperation1(AccountWizard.this);
@@ -80,7 +87,7 @@ public class AccountWizard extends SherlockActivity {
 	private BroadcastReceiver mReceiver;
 	ImageView imageView11;
 	public static Button register,button11;
-	public static String str,message;
+	public static String str,b,accountvalue,message,a,num,code,ss="";
 	IntentFilter intentFilter;
 	private ProgressDialog dialog;
 	protected void onCreate(Bundle savedInstanceState) {
@@ -101,29 +108,15 @@ public class AccountWizard extends SherlockActivity {
 	//	button11 = (Button) findViewById(R.id.button1);
 		//proxy = (EditText) findViewById(R.id.acc_proxy);
 		status = (TextView) findViewById(R.id.status);
+		status1 = (TextView) findViewById(R.id.status1);
 		imageView11 = (ImageView) findViewById(R.id.imageView1);
-		textView11 = (EditText) findViewById(R.id.textView1);
+	//	textView11 = (EditText) findViewById(R.id.textView1);
 		long accountId = 1;
 		account = SipProfile.getProfileFromDbId(this, accountId,
 				DBProvider.ACCOUNT_FULL_PROJECTION);
 		
 		
-/*term.setOnClickListener(new View.OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				
-				Intent intent=new Intent(AccountWizard.this,TermCondition.class);
-				startActivity(intent);
-				
-			}
-		});*/
-		
-		/* MarketService ms = new MarketService(this);
-	        ms.level(MarketService.MINOR).checkVersion();*/
-	        
-	       // System.out.println("ms.level(MarketService.MINOR).checkVersion();===="+ms.level(MarketService.MINOR));
+//em.out.println("ms.level(MarketService.MINOR).checkVersion();===="+ms.level(MarketService.MINOR));
 		
 		
 	}
@@ -135,16 +128,51 @@ public class AccountWizard extends SherlockActivity {
 		super.onResume();
 		ActivitySwitcher.animationIn(findViewById(R.id.account_layout),
 				getWindowManager());
+		
+		
+		
+		
 		//sip.setText(account.getSipDomain());
-		user.setText(account.getSipUserName());
-		pass.setText(account.getPassword());
-		imageView11.setImageResource(CountryDialog.countryFlag);
-		textView11.setText(CountryDialog.countryCode);
-		/*if (account.getProxyAddress().length()!=0)
-		{
-		String prox = account.getProxyAddress().substring(4);
-			proxy.setText(prox);
-		}*/
+		try {
+			 no = user.getText().toString();
+			 accountvalue = account.getSipUserName();
+			 System.out.println("ACCOUNT NUMBER "+accountvalue);
+			 
+			
+			   user.setText(account.getSipUserName());
+				pass.setText(account.getPassword());
+				
+				b = CountryDialog.countryCode;
+				
+				if(num != null && num != "")
+				{
+					user.setText(num);
+					pass.setText(account.getPassword());
+				}
+				if(code != null && code != "")
+				{
+					tv1.setText(code);
+					pass.setText(account.getPassword());
+				}
+				if( CountryDialog.countryCode != null)
+				{
+					tv1.setText(CountryDialog.countryCode);
+					pass.setText(account.getPassword());
+				}
+				
+				
+			
+			
+			
+		
+			
+			
+			imageView11.setImageResource(CountryDialog.countryFlag);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		this.resolveStatus();
 		
 		// Register Broadcast Reciever
@@ -215,32 +243,7 @@ public class AccountWizard extends SherlockActivity {
 			String str=mobilenumber.getText().toString();
 			int dest_Length=str.length();
 			Toast.makeText(this, "Under Development", Toast.LENGTH_LONG).show();
-			/*if(str.contains("+"))
-			{
-					Toast.makeText(this, "Please enter your number with country-code without + sign "+"", Toast.LENGTH_LONG).show();
-					//Toast.makeText(this, "Please enter your number with country-code", Toast.LENGTH_LONG).show();
-					
-				
-			}
-			else
-			{
-				if(dest_Length!=0)
-				{
-					
-					asyncTask2 = new LongOperation1(LongOperation1.ctx);
-					asyncTask2.execute("");
-				    Intent myIntent = new Intent(this, AccountWizard.class);
-				    startActivity(myIntent);
-					
-				}
-				
-				else
-				{
-					Toast.makeText(this, "Please enter your number with country-code", Toast.LENGTH_LONG).show();
-				}*/
 			
-		
-			   
 			break;		
 			
 		case R.id.imageView1:
@@ -258,22 +261,34 @@ public class AccountWizard extends SherlockActivity {
 			
 			if(networkInfo != null && networkInfo.isConnected())
 			{   
-				String a = user.getText().toString();
-				if(!(a.startsWith("+")))
-				{
-					
-					
-					 new Authrosied().execute("");
-					saveAndFinish();
+				String a = code+user.getText().toString();
+				String b = user.getText().toString();
+				//System.out.println(a+"           EVDE                "+accountvalue);
 				
-					
+				if(!(b.startsWith("0")))
+				{
+					if(!(b.contains("+")))
+					{
+					new Authrosied().execute("");
+					saveAndFinish();
+					}
+				
+					else
+					{
+						Toast toast1 = Toast.makeText(this,"Please remove prefix + sign from entered number",Toast.LENGTH_SHORT);
+				        toast1.setGravity(Gravity.CENTER,0,0);
+				        toast1.show();
+					}
 				}
 				else
 				{
-					Toast toast1 = Toast.makeText(this,"Please remove prefix + sign from entered number",Toast.LENGTH_SHORT);
+					Toast toast1 = Toast.makeText(this,"Please remove 0 before the number",Toast.LENGTH_SHORT);
 			        toast1.setGravity(Gravity.CENTER,0,0);
 			        toast1.show();
 				}
+				
+				
+				
 				
 			}
 			else
@@ -284,7 +299,73 @@ public class AccountWizard extends SherlockActivity {
 				
 			}
 			
-		
+			
+			
+			// user.setText(a+account.getSipUserName());
+			try {
+				File f = new File(getFilesDir(), "devii.txt");
+				try {
+					FileWriter fw = new FileWriter(f);
+					String s = user.getText().toString();
+					
+					
+					fw.write(s);
+					System.out.println(f.getAbsolutePath());
+					
+					fw.close();
+					
+					BufferedReader bf = new BufferedReader(new FileReader(f));
+					String sss;
+					while((sss = bf.readLine())!=null)
+					{
+						num=sss;
+						System.out.println("READING VALUE IN ACCOUNT WIZARD"+sss);
+					}
+					System.out.println("VALUE OF STATIC type number "+num);
+					bf.close();
+					
+					
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			
+			try {
+				File f = new File(getFilesDir(), "devi.txt");
+				try {
+					FileWriter fw = new FileWriter(f);
+					String s = b;//AccountWizard.creditStatus;
+					
+					
+					fw.write(s);
+					System.out.println(f.getAbsolutePath());
+					
+					fw.close();
+					
+					BufferedReader bf = new BufferedReader(new FileReader(f));
+					String sss;
+					while((sss = bf.readLine())!=null)
+					{
+						code=sss;
+					
+					}
+					System.out.println("VALUE OF STATIC country code "+code);
+					bf.close();
+					
+					
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			/*else
 			{   
 				

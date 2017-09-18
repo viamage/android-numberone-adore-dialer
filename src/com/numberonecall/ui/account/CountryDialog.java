@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.Map;
 
 import com.numberonecall.R;
+import com.numberonecall.api.SipProfile;
+import com.numberonecall.db.DBProvider;
 
 import android.annotation.SuppressLint;
 import android.app.Activity; 
@@ -28,8 +30,8 @@ public class CountryDialog extends Activity implements SearchView.OnQueryTextLis
 	ListView listview;
 	SearchView searchView;
 	List<Map<String, Object>> list;
-	 
-	public static String countryCode;
+	protected static SipProfile account;
+	public static String countryCode,code;
 	public static String countryName;
 	public static int countryFlag;
 	public static String countryId;
@@ -108,7 +110,33 @@ public class CountryDialog extends Activity implements SearchView.OnQueryTextLis
 					}
 					}		
 					setSavedContryValues(countryName, countryCode,countryFlag,countryId);
+					
+					AccountWizard.tv1.setText(CountryDialog.countryCode);
 					finish();
+					
+					
+					/*try {
+						if( AccountWizard.accountvalue != null  )
+						{
+							String tempname = AccountWizard.accountvalue;
+							//tempname = tempname.replace("+", "");
+							tempname = tempname.substring((AccountWizard.ss.length())-1);
+							System.out.println("SS length"+AccountWizard.ss);
+							
+							//AccountWizard.user.setText(CountryDialog.countryCode+tempname);
+							
+							code = CountryDialog.countryCode+tempname;
+							//AccountWizard.pass.setText(account.getPassword());
+							System.out.println("!!!DEV TADIUAL ))))))))))))))hhh@"+CountryDialog.countryCode+tempname);
+						}
+					} catch (Exception e) {
+						// TODO Auto-generated catch block
+						
+					
+						e.printStackTrace();
+						
+					}*/
+					
 				}
 			});	
 		getSavedCountryValues();
@@ -202,7 +230,7 @@ public class CountryDialog extends Activity implements SearchView.OnQueryTextLis
 		Map<String, Object> map5=new HashMap<String, Object>();
 		map5.put("countryFlag", R.drawable.andorra);
 		map5.put("countryName", "Andorra");
-		map5.put("countryCode", "5");
+		map5.put("countryCode", "+376");
 		map5.put("countryId", "5");
 		
 		list.add(map5);
@@ -210,7 +238,7 @@ public class CountryDialog extends Activity implements SearchView.OnQueryTextLis
 		Map<String, Object> map6=new HashMap<String, Object>();
 		map6.put("countryFlag", R.drawable.angola);
 		map6.put("countryName", "Angola");
-		map6.put("countryCode", "6");
+		map6.put("countryCode", "+244");
 		map6.put("countryId", "6");
 		
 		list.add(map6);
@@ -218,7 +246,7 @@ public class CountryDialog extends Activity implements SearchView.OnQueryTextLis
 		Map<String, Object> map7=new HashMap<String, Object>();
 		map7.put("countryFlag", R.drawable.argentina);
 		map7.put("countryName", "Argentina");
-		map7.put("countryCode", "10");
+		map7.put("countryCode", "+54");
 		map7.put("countryId", "10");
 		
 		list.add(map7);
@@ -234,7 +262,7 @@ public class CountryDialog extends Activity implements SearchView.OnQueryTextLis
 		Map<String, Object> map9=new HashMap<String, Object>();
 		map9.put("countryFlag", R.drawable.australia);
 		map9.put("countryName", "Australia");
-		map9.put("countryCode", "13");
+		map9.put("countryCode", "+61");
 		
 		list.add(map9);
 		
@@ -246,10 +274,119 @@ public class CountryDialog extends Activity implements SearchView.OnQueryTextLis
 			
 		list.add(map10);
 		
+		
+		Map<String, Object> map200=new HashMap<String, Object>();
+		map200.put("countryFlag", R.drawable.anguilla);
+		map200.put("countryName", "Anguilla");
+		map200.put("countryCode", "+1264");
+		map200.put("countryId", "1");
+			
+		list.add(map200);
+		
+		Map<String, Object> map201=new HashMap<String, Object>();
+		map201.put("countryFlag", R.drawable.ag);
+		map201.put("countryName", "Antigua and Barbuda");
+		map201.put("countryCode", "+1268");
+		map201.put("countryId", "1");
+			
+		list.add(map201);
+		
+		Map<String, Object> map202=new HashMap<String, Object>();
+		map202.put("countryFlag", R.drawable.armenia);
+		map202.put("countryName", "Armenia");
+		map202.put("countryCode", "+374");
+		map202.put("countryId", "1");
+			
+		list.add(map202);
+		
+		Map<String, Object> map203=new HashMap<String, Object>();
+		map203.put("countryFlag", R.drawable.aruba);
+		map203.put("countryName", "Aruba");
+		map203.put("countryCode", "+297");
+		map203.put("countryId", "1");
+			
+		list.add(map203);
+		
+		Map<String, Object> map204=new HashMap<String, Object>();
+		map204.put("countryFlag", R.drawable.austria);
+		map204.put("countryName", "Austria");
+		map204.put("countryCode", "+43");
+		map204.put("countryId", "1");
+			
+		list.add(map204);
+		
+		
+		Map<String, Object> map205=new HashMap<String, Object>();
+		map205.put("countryFlag", R.drawable.azerbaijan);
+		map205.put("countryName", "Azerbaijan");
+		map205.put("countryCode", "+994");
+		map205.put("countryId", "1");
+			
+		list.add(map205);
+		
+		Map<String, Object> map206=new HashMap<String, Object>();
+		map206.put("countryFlag", R.drawable.belarus);
+		map206.put("countryName", "Belarus");
+		map206.put("countryCode", "+375");
+		map206.put("countryId", "1");
+			
+		list.add(map206);
+		
+		Map<String, Object> map207=new HashMap<String, Object>();
+		map207.put("countryFlag", R.drawable.belgium);
+		map207.put("countryName", "Belgium");
+		map207.put("countryCode", "+32");
+		map207.put("countryId", "1");
+			
+		list.add(map207);
+		
+		Map<String, Object> map208=new HashMap<String, Object>();
+		map208.put("countryFlag", R.drawable.ba);
+		map208.put("countryName", "Bosnia Herzegovina");
+		map208.put("countryCode", "+387");
+		map208.put("countryId", "1");
+			
+		list.add(map208);
+		
+		Map<String, Object> map209=new HashMap<String, Object>();
+		map209.put("countryFlag", R.drawable.botswana);
+		map209.put("countryName", "Botswana");
+		map209.put("countryCode", "+267");
+		map209.put("countryId", "1");
+			
+		list.add(map209);
+		
+		Map<String, Object> map210=new HashMap<String, Object>();
+		map210.put("countryFlag", R.drawable.vi);
+		map210.put("countryName", "British Virgin Isl");
+		map210.put("countryCode", "+1284");
+		map210.put("countryId", "1");
+			
+		list.add(map210);
+		
+		
+		Map<String, Object> map211=new HashMap<String, Object>();
+		map211.put("countryFlag", R.drawable.bulgaria);
+		map211.put("countryName", "Bulgaria");
+		map211.put("countryCode", "+359");
+		map211.put("countryId", "1");
+			
+		list.add(map211);
+		
+		Map<String, Object> map212=new HashMap<String, Object>();
+		map212.put("countryFlag", R.drawable.bf);
+		map212.put("countryName", "Burkina Faso");
+		map212.put("countryCode", "+226");
+		map212.put("countryId", "1");
+			
+		list.add(map212);
+		
+		
+		
 		Map<String, Object> map11=new HashMap<String, Object>();
 		map11.put("countryFlag", R.drawable.bahamas);
 		map11.put("countryName", "Bahamas");
-		map11.put("countryCode", "16");
+		map11.put("countryCode", "+1242");
 		
 		list.add(map11);
 		
@@ -280,14 +417,14 @@ public class CountryDialog extends Activity implements SearchView.OnQueryTextLis
 		Map<String, Object> map15=new HashMap<String, Object>();
 		map15.put("countryFlag", R.drawable.belgiumcivil);
 		map15.put("countryName", "Belgium Civil");
-		map15.put("countryCode", "21");
+		map15.put("countryCode", "+21");
 		
 		list.add(map15);
 		
 		Map<String, Object> map16=new HashMap<String, Object>();
 		map16.put("countryFlag", R.drawable.bermuda);
 		map16.put("countryName", "Bermuda");
-		map16.put("countryCode", "24");
+		map16.put("countryCode", "+1441");
 		
 		list.add(map16);
 		
@@ -303,7 +440,7 @@ public class CountryDialog extends Activity implements SearchView.OnQueryTextLis
 		Map<String, Object> map18=new HashMap<String, Object>();
 		map18.put("countryFlag", R.drawable.bhutan);
 		map18.put("countryName", "Bhutan");
-		map18.put("countryCode", "25");
+		map18.put("countryCode", "+975");
 		
 		list.add(map18);
 		
@@ -319,7 +456,7 @@ public class CountryDialog extends Activity implements SearchView.OnQueryTextLis
 		Map<String, Object> map20=new HashMap<String, Object>();
 		map20.put("countryFlag", R.drawable.brazil);
 		map20.put("countryName", "Brazil");
-		map20.put("countryCode", "+55");
+		map20.put("countryCode", "+501");
 		map20.put("countryId", "30");
 		
 		list.add(map20);
@@ -367,7 +504,7 @@ public class CountryDialog extends Activity implements SearchView.OnQueryTextLis
 		Map<String, Object> map26=new HashMap<String, Object>();
 		map26.put("countryFlag", R.drawable.canada);
 		map26.put("countryName", "Canada");
-		map26.put("countryCode", "38");
+		map26.put("countryCode", "+1");
 		map26.put("countryId", "38");
 		
 		list.add(map26);
@@ -399,7 +536,7 @@ public class CountryDialog extends Activity implements SearchView.OnQueryTextLis
 		Map<String, Object> map30=new HashMap<String, Object>();
 		map30.put("countryFlag", R.drawable.comoros);
 		map30.put("countryName", "Comoros");
-		map30.put("countryCode", "48");
+		map30.put("countryCode", "+269");
 		
 		list.add(map30);
 		
@@ -409,12 +546,114 @@ public class CountryDialog extends Activity implements SearchView.OnQueryTextLis
 		map31.put("countryCode", "+53");
 		map31.put("countryId", "55");
 		
-		list.add(map31);
+		Map<String, Object> map213=new HashMap<String, Object>();
+		map213.put("countryFlag", R.drawable.cv);
+		map213.put("countryName", "Cape Verde");
+		map213.put("countryCode", "+53");
+		map213.put("countryId", "238");
+		
+		
+		list.add(map213);
+		
+		Map<String, Object> map214=new HashMap<String, Object>();
+		map214.put("countryFlag", R.drawable.ky);
+		map214.put("countryName", "Cayman Islands");
+		map214.put("countryCode", "+1345");
+		map214.put("countryId", "238");
+		
+		
+		list.add(map214);
+		
+		Map<String, Object> map215=new HashMap<String, Object>();
+		map215.put("countryFlag", R.drawable.chad);
+		map215.put("countryName", "Chad");
+		map215.put("countryCode", "+235");
+		map215.put("countryId", "238");
+		
+		
+		list.add(map215);
+		
+		Map<String, Object> map216=new HashMap<String, Object>();
+		map216.put("countryFlag", R.drawable.cx);
+		map216.put("countryName", "Christmas Islands");
+		map216.put("countryCode", "+6189");
+		map216.put("countryId", "238");
+		
+		
+		list.add(map216);
+		
+		Map<String, Object> map217=new HashMap<String, Object>();
+		map217.put("countryFlag", R.drawable.cd);
+		map217.put("countryName", "Congo Dem. Rep.");
+		map217.put("countryCode", "+243");
+		map217.put("countryId", "238");
+		
+		
+		list.add(map217);
+		
+		Map<String, Object> map218=new HashMap<String, Object>();
+		map218.put("countryFlag", R.drawable.cg);
+		map218.put("countryName", "Congo Rep.");
+		map218.put("countryCode", "+242");
+		map218.put("countryId", "238");
+		
+		
+		list.add(map218);
+		
+		Map<String, Object> map219=new HashMap<String, Object>();
+		map219.put("countryFlag", R.drawable.cr);
+		map219.put("countryName", "Costa Rica");
+		map219.put("countryCode", "+506");
+		map219.put("countryId", "238");
+		
+		
+		list.add(map219);
+		
+		
+		Map<String, Object> map220=new HashMap<String, Object>();
+		map220.put("countryFlag", R.drawable.croatia);
+		map220.put("countryName", "Croatia");
+		map220.put("countryCode", "+385");
+		map220.put("countryId", "238");
+		
+		
+		list.add(map220);
+		
+		
+		
+		Map<String, Object> map221=new HashMap<String, Object>();
+		map221.put("countryFlag", R.drawable.cy);
+		map221.put("countryName", "Cyprus");
+		map221.put("countryCode", "+357");
+		map221.put("countryId", "238");
+		
+		
+		list.add(map221);
+		
+		Map<String, Object> map222=new HashMap<String, Object>();
+		map222.put("countryFlag", R.drawable.djibouti);
+		map222.put("countryName", "Djibouti");
+		map222.put("countryCode", "+253");
+		map222.put("countryId", "238");
+		
+		
+		list.add(map222);
+		
+		
+		Map<String, Object> map223=new HashMap<String, Object>();
+		map223.put("countryFlag", R.drawable.doo);
+		map223.put("countryName", "Dominican Republic");
+		map223.put("countryCode", "+1809");
+		map223.put("countryId", "238");
+		
+		list.add(map223);
+		
+		
 		
 		Map<String, Object> map32=new HashMap<String, Object>();
 		map32.put("countryFlag", R.drawable.denmark);
 		map32.put("countryName", "denmark");
-		map32.put("countryCode", "58");
+		map32.put("countryCode", "+45");
 		map32.put("countryId", "58");
 		
 		list.add(map32);
@@ -444,12 +683,24 @@ public class CountryDialog extends Activity implements SearchView.OnQueryTextLis
 			
 		list.add(map35);
 		
-		Map<String, Object> map351=new HashMap<String, Object>();
-		map351.put("countryFlag", R.drawable.albania);
-		map351.put("countryName", "Albania");
-		map351.put("countryCode", "+355");
-		map351.put("countryId", "2");
-		list.add(map22);
+		Map<String, Object> map224=new HashMap<String, Object>();
+		map224.put("countryFlag", R.drawable.eritrea);
+		map224.put("countryName", "Eritrea");
+		map224.put("countryCode", "+291");
+		map224.put("countryId", "238");
+		
+		
+		list.add(map224);
+		
+		Map<String, Object> map225=new HashMap<String, Object>();
+		map225.put("countryFlag", R.drawable.estonia);
+		map225.put("countryName", "Estonia");
+		map225.put("countryCode", "+372");
+		map225.put("countryId", "238");
+		
+		
+		list.add(map225);
+		
 		
 		
 		Map<String, Object> map36=new HashMap<String, Object>();
@@ -463,9 +714,37 @@ public class CountryDialog extends Activity implements SearchView.OnQueryTextLis
 		Map<String, Object> map37=new HashMap<String, Object>();
 		map37.put("countryFlag", R.drawable.ethiopia);
 		map37.put("countryName", "Ethiopia");
-		map37.put("countryCode", "68");
+		map37.put("countryCode", "+251");
 		map37.put("countryId", "68");
 		list.add(map37);
+		
+		
+		Map<String, Object> map226=new HashMap<String, Object>();
+		map226.put("countryFlag", R.drawable.fo);
+		map226.put("countryName", "Faroe Islands");
+		map226.put("countryCode", "+298");
+		map226.put("countryId", "238");
+		
+	    list.add(map226);
+		
+		
+		Map<String, Object> map227=new HashMap<String, Object>();
+		map227.put("countryFlag", R.drawable.gy);
+		map227.put("countryName", "French Guyana");
+		map227.put("countryCode", "+594");
+		map227.put("countryId", "238");
+		
+	    list.add(map227);
+		
+		
+		Map<String, Object> map228=new HashMap<String, Object>();
+		map228.put("countryFlag", R.drawable.pf);
+		map228.put("countryName", "French Polynesia");
+		map228.put("countryCode", "+689");
+		map228.put("countryId", "238");
+		
+	    list.add(map228);
+		
 		
 		Map<String, Object> map38=new HashMap<String, Object>();
 		map38.put("countryFlag", R.drawable.finland);
@@ -491,10 +770,80 @@ public class CountryDialog extends Activity implements SearchView.OnQueryTextLis
 		
 		list.add(map40);
 		
+		Map<String, Object> map229=new HashMap<String, Object>();
+		map229.put("countryFlag", R.drawable.guam);
+		map229.put("countryName", "Guam");
+		map229.put("countryCode", "+1671");
+		map229.put("countryId", "238");
+		
+	    list.add(map229);
+	
+	
+	    Map<String, Object> map230=new HashMap<String, Object>();
+		map230.put("countryFlag", R.drawable.guatemala);
+		map230.put("countryName", "Guatemala");
+		map230.put("countryCode", "+502");
+		map230.put("countryId", "238");
+		
+	    list.add(map230);
+		
+		Map<String, Object> map231=new HashMap<String, Object>();
+		map231.put("countryFlag", R.drawable.gn);
+		map231.put("countryName", "Guinea Rep.");
+		map231.put("countryCode", "+224");
+		map231.put("countryId", "238");
+		
+	    list.add(map231);
+		
+		
+		Map<String, Object> map2311=new HashMap<String, Object>();
+		map2311.put("countryFlag", R.drawable.gy);
+		map2311.put("countryName", "Guyana");
+		map2311.put("countryCode", "+592");
+		map2311.put("countryId", "238");
+		
+	    list.add(map2311);
+		
+				
+		Map<String, Object> map232=new HashMap<String, Object>();
+		map232.put("countryFlag", R.drawable.ga);
+		map232.put("countryName", "Gabon");
+		map232.put("countryCode", "+241");
+		map232.put("countryId", "238");
+		
+	    list.add(map232);
+		
+		/*Map<String, Object> map233=new HashMap<String, Object>();
+		map233.put("countryFlag", R.drawable.georgia.);
+		map233.put("countryName", "Georgia");
+		map233.put("countryCode", "+995");
+		map233.put("countryId", "238");
+		
+	    list.add(map233);*/
+		
+		
+		Map<String, Object> map234=new HashMap<String, Object>();
+		map234.put("countryFlag", R.drawable.gl);
+		map234.put("countryName", "Greenland");
+		map234.put("countryCode", "+299");
+		map234.put("countryId", "238");
+		
+	    list.add(map234);
+		
+		/*Map<String, Object> map235=new HashMap<String, Object>();
+		map235.put("countryFlag", R.drawable.guadeloupe.);
+		map235.put("countryName", "Guadeloupe");
+		map235.put("countryCode", "+590");
+		map235.put("countryId", "238");
+		
+	    list.add(map235);*/
+		
+		
+		
 		Map<String, Object> map41=new HashMap<String, Object>();
 		map41.put("countryFlag", R.drawable.guinea);
 		map41.put("countryName", "Guinea Bissau");
-		map41.put("countryCode", "+240");
+		map41.put("countryCode", "+245");
 		map41.put("countryId", "90");
 			
 		list.add(map41);
@@ -525,7 +874,7 @@ public class CountryDialog extends Activity implements SearchView.OnQueryTextLis
 		Map<String, Object> map45=new HashMap<String, Object>();
 		map45.put("countryFlag", R.drawable.grenada);
 		map45.put("countryName", "Grenada");
-		map45.put("countryCode", "+1273");
+		map45.put("countryCode", "+1473");
 		map45.put("countryId", "85");
 		
 		list.add(map45);
@@ -541,7 +890,7 @@ public class CountryDialog extends Activity implements SearchView.OnQueryTextLis
 		Map<String, Object> map47=new HashMap<String, Object>();
 		map47.put("countryFlag", R.drawable.hongkong);
 		map47.put("countryName", "Hongkong");
-		map47.put("countryCode", "96");
+		map47.put("countryCode", "+852");
 		map47.put("countryId", "96");
 	
 		list.add(map47);
@@ -550,11 +899,39 @@ public class CountryDialog extends Activity implements SearchView.OnQueryTextLis
 		Map<String, Object> map48=new HashMap<String, Object>();
 		map48.put("countryFlag", R.drawable.hungary);
 		map48.put("countryName", "Hungary");
-		map48.put("countryCode", "97");
+		map48.put("countryCode", "+97");
 		map48.put("countryId", "97");
 		
 		list.add(map48);
 		
+		
+		Map<String, Object> map236=new HashMap<String, Object>();
+		map236.put("countryFlag", R.drawable.hn);
+		map236.put("countryName", "Honduras");
+		map236.put("countryCode", "+504");
+		map236.put("countryId", "238");
+		
+	    list.add(map236);
+		
+		Map<String, Object> map237=new HashMap<String, Object>();
+		map237.put("countryFlag", R.drawable.is);
+		map237.put("countryName", "Iceland");
+		map237.put("countryCode", "+354");
+		map237.put("countryId", "238");
+		
+	    list.add(map237);
+		
+		
+		Map<String, Object> map238=new HashMap<String, Object>();
+		map238.put("countryFlag", R.drawable.ie);
+		map238.put("countryName", "Ivory Coast");
+		map238.put("countryCode", "+255");
+		map238.put("countryId", "238");
+		
+	    list.add(map238);
+		
+		
+	
 		Map<String, Object> map49=new HashMap<String, Object>();
 		map49.put("countryFlag", R.drawable.india);
 		map49.put("countryName", "India");
@@ -575,7 +952,7 @@ public class CountryDialog extends Activity implements SearchView.OnQueryTextLis
 		Map<String, Object> map51=new HashMap<String, Object>();
 		map51.put("countryFlag", R.drawable.iran);
 		map51.put("countryName", "Iran");
-		map51.put("countryCode", "101");
+		map51.put("countryCode", "+98");
 		map51.put("countryId", "101");
 		
 		list.add(map51);
@@ -628,6 +1005,34 @@ public class CountryDialog extends Activity implements SearchView.OnQueryTextLis
 			
 		list.add(map57);
 		
+			
+		Map<String, Object> map239=new HashMap<String, Object>();
+		map239.put("countryFlag", R.drawable.japan);
+		map239.put("countryName", "Japan");
+		map239.put("countryCode", "+81");
+		map239.put("countryId", "238");
+		
+	    list.add(map239);
+		
+			
+		Map<String, Object> map240=new HashMap<String, Object>();
+		map240.put("countryFlag", R.drawable.kr);
+		map240.put("countryName", "KoreaSouth");
+		map240.put("countryCode", "+82");
+		map240.put("countryId", "238");
+		
+	    list.add(map240);
+		
+		Map<String, Object> map241=new HashMap<String, Object>();
+		map241.put("countryFlag", R.drawable.kyrgyzstan);
+		map241.put("countryName", "Kyrgyzstan");
+		map241.put("countryCode", "+996");
+		map241.put("countryId", "238");
+		
+	    list.add(map241);
+		
+		
+		
 		Map<String, Object> map58=new HashMap<String, Object>();
 		map58.put("countryFlag", R.drawable.kazakhstan);
 		map58.put("countryName", "Kazakhstan");
@@ -652,6 +1057,48 @@ public class CountryDialog extends Activity implements SearchView.OnQueryTextLis
 		
 		list.add(map60);
 		
+		Map<String, Object> map242=new HashMap<String, Object>();
+		map242.put("countryFlag", R.drawable.latvia);
+		map242.put("countryName", "Latvia");
+		map242.put("countryCode", "+371");
+		map242.put("countryId", "238");
+		
+	    list.add(map242);
+		
+		Map<String, Object> map243=new HashMap<String, Object>();
+		map243.put("countryFlag", R.drawable.lesotho);
+		map243.put("countryName", "Lesotho");
+		map243.put("countryCode", "+266");
+		map243.put("countryId", "238");
+		
+	    list.add(map243);
+		
+		Map<String, Object> map244=new HashMap<String, Object>();
+		map244.put("countryFlag", R.drawable.liberia);
+		map244.put("countryName", "Liberia");
+		map244.put("countryCode", "+231");
+		map244.put("countryId", "238");
+		
+	    list.add(map244);
+		
+		Map<String, Object> map245=new HashMap<String, Object>();
+		map245.put("countryFlag", R.drawable.li);
+		map245.put("countryName", "Liechtenstein");
+		map245.put("countryCode", "+423");
+		map245.put("countryId", "238");
+		
+	    list.add(map245);
+		
+		Map<String, Object> map246=new HashMap<String, Object>();
+		map246.put("countryFlag", R.drawable.luxembourg);
+		map246.put("countryName", "Luxembourgn");
+		map246.put("countryCode", "+352");
+		map246.put("countryId", "238");
+		
+	    list.add(map246);
+		
+		
+	
 		Map<String, Object> map61=new HashMap<String, Object>();
 		map61.put("countryFlag", R.drawable.laos);
 		map61.put("countryName", "Laos");
@@ -734,6 +1181,166 @@ public class CountryDialog extends Activity implements SearchView.OnQueryTextLis
 		list.add(map70);
 		
 		
+		Map<String, Object> map247=new HashMap<String, Object>();
+		map247.put("countryFlag", R.drawable.mo);
+		map247.put("countryName", "Macau");
+		map247.put("countryCode", "+853");
+		map247.put("countryId", "238");
+		
+	    list.add(map247);
+		
+		Map<String, Object> map248=new HashMap<String, Object>();
+		map248.put("countryFlag", R.drawable.macedonia);
+		map248.put("countryName", "Macedonia");
+		map248.put("countryCode", "+389");
+		map248.put("countryId", "238");
+		
+	    list.add(map248);
+		
+		
+		Map<String, Object> map249=new HashMap<String, Object>();
+		map249.put("countryFlag", R.drawable.malawi);
+		map249.put("countryName", "Malawi");
+		map249.put("countryCode", "+265");
+		map249.put("countryId", "238");
+		
+	    list.add(map249);
+		
+		
+		
+	    Map<String, Object> map250=new HashMap<String, Object>();
+		map250.put("countryFlag", R.drawable.malta);
+		map250.put("countryName", "Malta");
+		map250.put("countryCode", "+356");
+		map250.put("countryId", "238");
+		
+	    list.add(map250);
+		
+		
+		/* Map<String, Object> map251=new HashMap<String, Object>();
+		map251.put("countryFlag", R.drawable.marshall Islands);
+		map251.put("countryName", "Marshall Islands");
+		map251.put("countryCode", "+692");
+		map251.put("countryId", "238");
+		
+	    list.add(map251);*/
+		
+		
+		/* Map<String, Object> map252=new HashMap<String, Object>();
+		map252.put("countryFlag", R.drawable.martinique);
+		map252.put("countryName", "Martinique");
+		map252.put("countryCode", "+596");
+		map252.put("countryId", "238");
+		
+	    list.add(map252);*/
+		
+		
+		 Map<String, Object> map253=new HashMap<String, Object>();
+		map253.put("countryFlag", R.drawable.mauritania);
+		map253.put("countryName", "Mauritania");
+		map253.put("countryCode", "+222");
+		map253.put("countryId", "238");
+		
+	    list.add(map253);
+		
+		/* Map<String, Object> map254=new HashMap<String, Object>();
+		map254.put("countryFlag", R.drawable.mayotte);
+		map254.put("countryName", "Mayotte");
+		map254.put("countryCode", "+262");
+		map254.put("countryId", "238");
+		
+	    list.add(map254);*/
+		
+		
+		 Map<String, Object> map255=new HashMap<String, Object>();
+		map255.put("countryFlag", R.drawable.micronesia);
+		map255.put("countryName", "Micronesia");
+		map255.put("countryCode", "+691");
+		map255.put("countryId", "238");
+		
+	    list.add(map255);
+		
+		 Map<String, Object> map256=new HashMap<String, Object>();
+		map256.put("countryFlag", R.drawable.moldova);
+		map256.put("countryName", "Moldova");
+		map256.put("countryCode", "+373");
+		map256.put("countryId", "238");
+		
+	    list.add(map256);
+		
+		Map<String, Object> map257=new HashMap<String, Object>();
+		map257.put("countryFlag", R.drawable.monaco);
+		map257.put("countryName", "Monaco");
+		map257.put("countryCode", "+377");
+		map257.put("countryId", "238");
+		
+	    list.add(map257);
+		
+		
+		Map<String, Object> map258=new HashMap<String, Object>();
+		map258.put("countryFlag", R.drawable.mongolia);
+		map258.put("countryName", "Mongolia");
+		map258.put("countryCode", "+976");
+		map258.put("countryId", "238");
+		
+	    list.add(map258);
+		
+		Map<String, Object> map259=new HashMap<String, Object>();
+		map259.put("countryFlag", R.drawable.montenegro);
+		map259.put("countryName", "Montenegro");
+		map259.put("countryCode", "+382");
+		map259.put("countryId", "238");
+		
+	    list.add(map259);
+		
+		
+		Map<String, Object> map260=new HashMap<String, Object>();
+		map260.put("countryFlag", R.drawable.ms);
+		map260.put("countryName", "Montserrat");
+		map260.put("countryCode", "+1664");
+		map260.put("countryId", "238");
+		
+	    list.add(map260);
+		
+		
+		Map<String, Object> map261=new HashMap<String, Object>();
+		map261.put("countryFlag", R.drawable.mz);
+		map261.put("countryName", "Mozambique");
+		map261.put("countryCode", "+258");
+		map261.put("countryId", "238");
+		
+	    list.add(map261);
+		
+		
+		
+		Map<String, Object> map262=new HashMap<String, Object>();
+		map262.put("countryFlag", R.drawable.myanmar);
+		map262.put("countryName", "Myanmar");
+		map262.put("countryCode", "+95");
+		map262.put("countryId", "238");
+		
+	    list.add(map262);
+		
+		
+		
+		
+		Map<String, Object> map263=new HashMap<String, Object>();
+		map263.put("countryFlag", R.drawable.netherlands);
+		map263.put("countryName", "Netherlands Fixed");
+		map263.put("countryCode", "+31");
+		map263.put("countryId", "238");
+		
+	    list.add(map263);
+		
+		
+		/*Map<String, Object> map264=new HashMap<String, Object>();
+		map264.put("countryFlag", R.drawable.newCaledonia);
+		map264.put("countryName", "NewCaledonia");
+		map264.put("countryCode", "+687");
+		map264.put("countryId", "238");
+		
+	    list.add(map264);*/
+		
 		Map<String, Object> map71=new HashMap<String, Object>();
 		map71.put("countryFlag", R.drawable.namibia);
 		map71.put("countryName", "namibia");
@@ -751,8 +1358,8 @@ public class CountryDialog extends Activity implements SearchView.OnQueryTextLis
 		
 		Map<String, Object> map73=new HashMap<String, Object>();
 		map73.put("countryFlag", R.drawable.netherlands);
-		map73.put("countryName", "Netherlands");
-		map73.put("countryCode", "150");
+		map73.put("countryName", "Netherlands Antilles");
+		map73.put("countryCode", "599");
 		map73.put("countryId", "150");
 		
 		list.add(map73);
@@ -791,7 +1398,7 @@ public class CountryDialog extends Activity implements SearchView.OnQueryTextLis
 		Map<String, Object> map78=new HashMap<String, Object>();
 		map78.put("countryFlag", R.drawable.norway);
 		map78.put("countryName", "Norway");
-		map78.put("countryCode", "160");
+		map78.put("countryCode", "47");
 		
 		list.add(map78);
 		
@@ -802,6 +1409,24 @@ public class CountryDialog extends Activity implements SearchView.OnQueryTextLis
 		map79.put("countryId", "161");
 		
 		list.add(map79);
+		
+		Map<String, Object> map265=new HashMap<String, Object>();
+		map265.put("countryFlag", R.drawable.pg);
+		map265.put("countryName", "Papua New Guinea");
+		map265.put("countryCode", "+675");
+		map265.put("countryId", "238");
+		
+	    list.add(map265);
+		
+		
+	/*	Map<String, Object> map266=new HashMap<String, Object>();
+		map266.put("countryFlag", R.drawable.Peru);
+		map266.put("countryName", "Peru");
+		map266.put("countryCode", "+51");
+		map266.put("countryId", "238");
+		
+	    list.add(map266);*/
+		
 		
 		Map<String, Object> map80=new HashMap<String, Object>();
 		map80.put("countryFlag", R.drawable.pakistan);
@@ -848,14 +1473,14 @@ public class CountryDialog extends Activity implements SearchView.OnQueryTextLis
 		Map<String, Object> map85=new HashMap<String, Object>();
 		map85.put("countryFlag", R.drawable.portugal);
 		map85.put("countryName", "portugal");
-		map85.put("countryCode", "172");
+		map85.put("countryCode", "351");
 		
 		list.add(map85);
 		
 		Map<String, Object> map86=new HashMap<String, Object>();
 		map86.put("countryFlag", R.drawable.puertorico);
 		map86.put("countryName", "Puerto Rico");
-		map86.put("countryCode", "+1787");
+		map86.put("countryCode", "+1");
 		map86.put("countryId", "173");
 			
 		list.add(map86);
@@ -867,6 +1492,17 @@ public class CountryDialog extends Activity implements SearchView.OnQueryTextLis
 		map87.put("countryId", "174");
 		
 		list.add(map87);
+		
+	/*	Map<String, Object> map267=new HashMap<String, Object>();
+		map267.put("countryFlag", R.drawable.reunion Island);
+		map267.put("countryName", "Reunion Island");
+		map267.put("countryCode", "+262");
+		map267.put("countryId", "238");
+		
+	    list.add(map267);*/
+		
+		
+		
 		
 		Map<String, Object> map88=new HashMap<String, Object>();
 		map88.put("countryFlag", R.drawable.rwanda);
@@ -892,10 +1528,149 @@ public class CountryDialog extends Activity implements SearchView.OnQueryTextLis
 		
 		list.add(map90);
 		
+		Map<String, Object> map268=new HashMap<String, Object>();
+		map268.put("countryFlag", R.drawable.reunion);
+		map268.put("countryName", "Reunion Island");
+		map268.put("countryCode", "+262");
+		map268.put("countryId", "238");
+		
+	    list.add(map268);
+		
+		Map<String, Object> map269=new HashMap<String, Object>();
+		map269.put("countryFlag", R.drawable.as);
+		map269.put("countryName", "Samoa US");
+		map269.put("countryCode", "+1684");
+		map269.put("countryId", "238");
+		
+	    list.add(map269);
+		
+		Map<String, Object> map270=new HashMap<String, Object>();
+		map270.put("countryFlag", R.drawable.sm);
+		map270.put("countryName", "San Marino");
+		map270.put("countryCode", "+378");
+		map270.put("countryId", "238");
+		
+	    list.add(map270);
+		
+		Map<String, Object> map271=new HashMap<String, Object>();
+		map271.put("countryFlag", R.drawable.serbia );
+		map271.put("countryName", "Serbia ");
+		map271.put("countryCode", "+381");
+		map271.put("countryId", "238");
+		
+	    list.add(map271);
+		
+		Map<String, Object> map272=new HashMap<String, Object>();
+		map272.put("countryFlag", R.drawable.seychelles);
+		map272.put("countryName", "Seychelles");
+		map272.put("countryCode", "+248");
+		map272.put("countryId", "238");
+		
+	    list.add(map272);
+		
+		Map<String, Object> map273=new HashMap<String, Object>();
+		map273.put("countryFlag", R.drawable.sl);
+		map273.put("countryName", "Sierra Leone");
+		map273.put("countryCode", "+232");
+		map273.put("countryId", "238");
+		
+	    list.add(map273);
+		
+		Map<String, Object> map274=new HashMap<String, Object>();
+		map274.put("countryFlag", R.drawable.slovakia);
+		map274.put("countryName", "Slovakia");
+		map274.put("countryCode", "+421");
+		map274.put("countryId", "238");
+		
+	    list.add(map274);
+		
+		Map<String, Object> map275=new HashMap<String, Object>();
+		map275.put("countryFlag", R.drawable.slovenia);
+		map275.put("countryName", "Slovenia");
+		map275.put("countryCode", "+386");
+		map275.put("countryId", "238");
+		
+	    list.add(map275);
+		
+		
+		
+		Map<String, Object> map276=new HashMap<String, Object>();
+		map276.put("countryFlag", R.drawable.ss);
+		map276.put("countryName", "South Sudan");
+		map276.put("countryCode", "+211");
+		map276.put("countryId", "238");
+		
+	    list.add(map276);
+		
+		
+		Map<String, Object> map277=new HashMap<String, Object>();
+		map277.put("countryFlag", R.drawable.kn);
+		map277.put("countryName", "St Kitts & Nevis");
+		map277.put("countryCode", "+1869");
+		map277.put("countryId", "238");
+		
+	    list.add(map277);
+		
+		
+		Map<String, Object> map278=new HashMap<String, Object>();
+		map278.put("countryFlag", R.drawable.lc);
+		map278.put("countryName", "St Lucia");
+		map278.put("countryCode", "+1758");
+		map278.put("countryId", "238");
+		
+	    list.add(map278);
+		
+		
+		Map<String, Object> map279=new HashMap<String, Object>();
+		map279.put("countryFlag", R.drawable.ph);
+		map279.put("countryName", "St Maarten");
+		map279.put("countryCode", "+1721");
+		map279.put("countryId", "238");
+		
+	    list.add(map279);
+		
+		
+		Map<String, Object> map280=new HashMap<String, Object>();
+		map280.put("countryFlag", R.drawable.www);
+		map280.put("countryName", "St Pierre & Miquelon");
+		map280.put("countryCode", "+508");
+		map280.put("countryId", "238");
+		
+	    list.add(map280);
+		
+		
+		Map<String, Object> map281=new HashMap<String, Object>();
+		map281.put("countryFlag", R.drawable.vc);
+		map281.put("countryName", "St Vincent & Grenadines");
+		map281.put("countryCode", "+1784");
+		map281.put("countryId", "238");
+		
+	    list.add(map281);
+		
+		
+		Map<String, Object> map282=new HashMap<String, Object>();
+		map282.put("countryFlag", R.drawable.suriname);
+		map282.put("countryName", "Suriname");
+		map282.put("countryCode", "+597");
+		map282.put("countryId", "238");
+		
+	    list.add(map282);
+		
+		
+		Map<String, Object> map283=new HashMap<String, Object>();
+		map283.put("countryFlag", R.drawable.swaziland);
+		map283.put("countryName", "Swaziland");
+		map283.put("countryCode", "+268");
+		map283.put("countryId", "238");
+		
+	    list.add(map283);
+		
+	
+		
 		Map<String, Object> map91=new HashMap<String, Object>();
 		map91.put("countryFlag", R.drawable.saudiarabia);
 		map91.put("countryName", "Saudi Arabia");
-		map91.put("countryCode", "196");
+		map91.put("countryCode", "966");
 		
 		list.add(map91);
 		
@@ -960,7 +1735,7 @@ public class CountryDialog extends Activity implements SearchView.OnQueryTextLis
 		Map<String, Object> map99=new HashMap<String, Object>();
 		map99.put("countryFlag", R.drawable.sweden);
 		map99.put("countryName", "Sweden");
-		map99.put("countryCode", "204");
+		map99.put("countryCode", "+46");
 		map99.put("countryId", "204");
 		
 		list.add(map99);
@@ -969,7 +1744,7 @@ public class CountryDialog extends Activity implements SearchView.OnQueryTextLis
 		Map<String, Object> map100=new HashMap<String, Object>();
 		map100.put("countryFlag", R.drawable.switzerland);
 		map100.put("countryName", "Switzerland");
-		map100.put("countryCode", "205");
+		map100.put("countryCode", "+41");
 		map100.put("countryId", "205");
 		
 		list.add(map100);
@@ -981,6 +1756,66 @@ public class CountryDialog extends Activity implements SearchView.OnQueryTextLis
 		map101.put("countryId", "206");
 		
 		list.add(map101);
+		
+			
+		Map<String, Object> map284=new HashMap<String, Object>();
+		map284.put("countryFlag", R.drawable.taiwan);
+		map284.put("countryName", "Taiwan");
+		map284.put("countryCode", "+886");
+		map284.put("countryId", "238");
+		
+	    list.add(map284);
+			
+		Map<String, Object> map285=new HashMap<String, Object>();
+		map285.put("countryFlag", R.drawable.tajikistan);
+		map285.put("countryName", "Tajikistan");
+		map285.put("countryCode", "+268");
+		map285.put("countryId", "238");
+		
+	    list.add(map285);
+			
+		Map<String, Object> map286=new HashMap<String, Object>();
+		map286.put("countryFlag", R.drawable.togo);
+		map286.put("countryName", "Togo");
+		map286.put("countryCode", "+228");
+		map286.put("countryId", "238");
+		
+	    list.add(map286);
+			
+		Map<String, Object> map287=new HashMap<String, Object>();
+		map287.put("countryFlag", R.drawable.tonga);
+		map287.put("countryName", "Tonga");
+		map287.put("countryCode", "+676");
+		map287.put("countryId", "238");
+		
+	    list.add(map287);
+			
+		Map<String, Object> map288=new HashMap<String, Object>();
+		map288.put("countryFlag", R.drawable.tunisia);
+		map288.put("countryName", "Tunisia");
+		map288.put("countryCode", "+216");
+		map288.put("countryId", "238");
+		
+	    list.add(map288);
+			
+		Map<String, Object> map289=new HashMap<String, Object>();
+		map289.put("countryFlag", R.drawable.tm);
+		map289.put("countryName", "Turkmenistan");
+		map289.put("countryCode", "+993");
+		map289.put("countryId", "238");
+		
+	    list.add(map289);
+			
+		Map<String, Object> map290=new HashMap<String, Object>();
+		map290.put("countryFlag", R.drawable.tc);
+		map290.put("countryName", "Turks & Caicos Islands");
+		map290.put("countryCode", "+1649");
+		map290.put("countryId", "238");
+		
+	    list.add(map290);
+		
+
+		
 		
 		Map<String, Object> map102=new HashMap<String, Object>();
 		map102.put("countryFlag", R.drawable.tanzania);
@@ -1006,6 +1841,23 @@ public class CountryDialog extends Activity implements SearchView.OnQueryTextLis
 		
 		list.add(map104);
 		
+		Map<String, Object> map291=new HashMap<String, Object>();
+		map291.put("countryFlag", R.drawable.ae);
+		map291.put("countryName", "United Arab Emirates");
+		map291.put("countryCode", "+971");
+		map291.put("countryId", "238");
+		
+	    list.add(map291);
+		
+        Map<String, Object> map292=new HashMap<String, Object>();
+		map292.put("countryFlag", R.drawable.uruguay);
+		map292.put("countryName", "Uruguay");
+		map292.put("countryCode", "+598");
+		map292.put("countryId", "238");
+		
+	    list.add(map292);
+		
+ 		
 		Map<String, Object> map105=new HashMap<String, Object>();
 		map105.put("countryFlag", R.drawable.ukraine);
 		map105.put("countryName", "Ukraine");
@@ -1048,10 +1900,21 @@ public class CountryDialog extends Activity implements SearchView.OnQueryTextLis
 		
 		
 		
+        Map<String, Object> map293=new HashMap<String, Object>();
+		map293.put("countryFlag", R.drawable.vanuatu);
+		map293.put("countryName", "Vanuatu");
+		map293.put("countryCode", "+678");
+		map293.put("countryId", "238");
+		
+	    list.add(map293);
+		
+   
+	
+		
 		Map<String, Object> map110=new HashMap<String, Object>();
 		map110.put("countryFlag", R.drawable.vietnam);
 		map110.put("countryName", "Vietnam");
-		map110.put("countryCode", "84");
+		map110.put("countryCode", "+84");
 		map110.put("countryId", "231");
 		
 		list.add(map110);
@@ -1063,6 +1926,23 @@ public class CountryDialog extends Activity implements SearchView.OnQueryTextLis
 		map111.put("countryId", "230");
 			
 		list.add(map111);
+		
+	/*	  Map<String, Object> map294=new HashMap<String, Object>();
+		map294.put("countryFlag", R.drawable.wwf);
+		map294.put("countryName", "Wallis and Futuna");
+		map294.put("countryCode", "+681");
+		map294.put("countryId", "238");
+		
+	    list.add(map294);*/
+		
+		  Map<String, Object> map295=new HashMap<String, Object>();
+		map295.put("countryFlag", R.drawable.ws);
+		map295.put("countryName", "Western Samoa");
+		map295.put("countryCode", "+685");
+		map295.put("countryId", "238");
+		
+	    list.add(map295);
+		
 		
 		Map<String, Object> map112=new HashMap<String, Object>();
 		map112.put("countryFlag", R.drawable.yemen);

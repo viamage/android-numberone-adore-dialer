@@ -7,6 +7,15 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
+import java.security.SecureRandom;
+import java.security.cert.X509Certificate;
+
+import javax.net.ssl.HostnameVerifier;
+import javax.net.ssl.HttpsURLConnection;
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.SSLSession;
+import javax.net.ssl.TrustManager;
+import javax.net.ssl.X509TrustManager;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -45,7 +54,6 @@ import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.text.method.DialerKeyListener;
 import android.text.style.ForegroundColorSpan;
-import android.text.style.RelativeSizeSpan;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -78,19 +86,19 @@ import com.numberonecall.ui.account.AdoreSharedPreferences;
 import com.numberonecall.ui.contacts.AddContactDialog;
 import com.numberonecall.ui.more.DidFront;
 import com.numberonecall.utils.CallHandlerPlugin;
+import com.numberonecall.utils.CallHandlerPlugin.OnLoadListener;
 import com.numberonecall.utils.DialingFeedback;
 import com.numberonecall.utils.Log;
 import com.numberonecall.utils.PreferencesProviderWrapper;
 import com.numberonecall.utils.PreferencesWrapper;
 import com.numberonecall.utils.Theme;
-import com.numberonecall.utils.CallHandlerPlugin.OnLoadListener;
 import com.numberonecall.utils.animation.ActivitySwitcher;
 import com.numberonecall.utils.contacts.ContactsSearchAdapter;
 import com.numberonecall.widgets.AccountChooserButton;
-import com.numberonecall.widgets.DialerCallBar;
-import com.numberonecall.widgets.Dialpad;
 import com.numberonecall.widgets.AccountChooserButton.OnAccountChangeListener;
+import com.numberonecall.widgets.DialerCallBar;
 import com.numberonecall.widgets.DialerCallBar.OnDialActionListener;
+import com.numberonecall.widgets.Dialpad;
 import com.numberonecall.widgets.Dialpad.OnDialKeyListener;
 
 
@@ -214,7 +222,7 @@ public class DialerFragment extends SherlockFragment implements
 		balance = (TextView) v.findViewById(R.id.balance);
 		dialPad = (Dialpad) v.findViewById(R.id.dialPad);
 		
-		
+		handleSSLHandshake();
 		callBar = (DialerCallBar) v.findViewById(R.id.dialerCallBar);
 		
 		// autoCompleteList = (ListView) v.findViewById(R.id.autoCompleteList);
@@ -347,7 +355,36 @@ public class DialerFragment extends SherlockFragment implements
 		new LongOperation1().execute(user); 
 	
 	}
-    
+	public static void handleSSLHandshake() {
+	    
+		 try {
+		        TrustManager[] trustAllCerts = new TrustManager[]{new X509TrustManager() {
+		         public X509Certificate[] getAcceptedIssuers() {
+		                return new X509Certificate[0];
+		                }
+
+		@Override
+		      public void checkClientTrusted(X509Certificate[] certs, String authType) {
+		            }
+
+		@Override
+		      public void checkServerTrusted(X509Certificate[] certs, String authType) {
+		            }
+		        }};
+
+		        SSLContext sc = SSLContext.getInstance("SSL");
+		        sc.init(null, trustAllCerts, new SecureRandom());
+		        HttpsURLConnection.setDefaultSSLSocketFactory(sc.getSocketFactory());
+		        HttpsURLConnection.setDefaultHostnameVerifier(new HostnameVerifier() {
+		            
+		@Override
+		    public boolean verify(String arg0, SSLSession arg1) {
+		          return true;
+		          }});
+		          }
+		 
+		 catch (Exception ignored) {
+		        }}
 	 @Override
 		public void onActivityResult(int requestCode, int resultCode, Intent data) {
 		    // TODO Auto-generated method stub
@@ -1167,18 +1204,21 @@ public class DialerFragment extends SherlockFragment implements
 		@Override
 		protected void onPostExecute(String result) 
 		{
-			System.out.print("result value in RateOperation Activity : "+result);
-			String rateValue = null;
+			
+			System.out.println("33333333333333333333333333333333333333");
 			
 		  try 
 		  {
 			if(ab.contains("USD"))
 			{
 				tv1.setText(s1+"$"+"/min");
+				
+				System.out.println("1111111111111111111111111111111111");
 			}
 			else
 			{
 				tv1.setText(s1+"€"+"/min");
+				System.out.println("2222222222222222222222222222222222");
 			}
 			  
 			  
@@ -1312,7 +1352,7 @@ public class LongOperation extends AsyncTask<String, Void, String> {
         	
         	rr = result;
         //	balance.setText("Bal: "+r+  " USD");
-        	System.out.println(rr);
+        	System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAA "+rr);
         	//balance1.setText("Balance:         "   +r +" "+ab);
         }
 
@@ -1413,6 +1453,7 @@ public class LongOperation extends AsyncTask<String, Void, String> {
 				
 					
 					balance1.setText(builder, BufferType.SPANNABLE);
+					System.out.println("BALNACEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE "+rr);
 					
 				/*	if(ab.contains("USD"))
 					{
@@ -1471,7 +1512,7 @@ public class LongOperation extends AsyncTask<String, Void, String> {
     		       /* System.out.println(inputlinee.inputline(2,4));*/
     		       JSONObject j = new JSONObject(inputLine);
     		       ab = j.getString("credit_currency");
-    		       System.out.println(ab);
+    		       System.out.println("CREDIT CURRENCY  "+ab);
     		        return  ab;
 
     		} catch (Exception e) {
