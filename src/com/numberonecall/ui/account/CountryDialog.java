@@ -416,7 +416,7 @@ public class CountryDialog extends Activity implements SearchView.OnQueryTextLis
 		
 		Map<String, Object> map15=new HashMap<String, Object>();
 		map15.put("countryFlag", R.drawable.belgiumcivil);
-		map15.put("countryName", "Belgium Civil");
+		map15.put("countryName", "Belgium");
 		map15.put("countryCode", "+21");
 		
 		list.add(map15);
@@ -652,7 +652,7 @@ public class CountryDialog extends Activity implements SearchView.OnQueryTextLis
 		
 		Map<String, Object> map32=new HashMap<String, Object>();
 		map32.put("countryFlag", R.drawable.denmark);
-		map32.put("countryName", "denmark");
+		map32.put("countryName", "Denmark");
 		map32.put("countryCode", "+45");
 		map32.put("countryId", "58");
 		
@@ -748,7 +748,7 @@ public class CountryDialog extends Activity implements SearchView.OnQueryTextLis
 		
 		Map<String, Object> map38=new HashMap<String, Object>();
 		map38.put("countryFlag", R.drawable.finland);
-		map38.put("countryName", "finland");
+		map38.put("countryName", "Finland");
 		map38.put("countryCode", "+358");
 		map38.put("countryId", "72");
 		
@@ -1343,14 +1343,14 @@ public class CountryDialog extends Activity implements SearchView.OnQueryTextLis
 		
 		Map<String, Object> map71=new HashMap<String, Object>();
 		map71.put("countryFlag", R.drawable.namibia);
-		map71.put("countryName", "namibia");
+		map71.put("countryName", "Namibia");
 		map71.put("countryCode", "+264");
 		map71.put("countryId", "147");
 		list.add(map71);
 		
 		Map<String, Object> map72=new HashMap<String, Object>();
 		map72.put("countryFlag", R.drawable.nepal);
-		map72.put("countryName", "nepal");
+		map72.put("countryName", "Nepal");
 		map72.put("countryCode", "+977");
 		map72.put("countryId", "149");
 		
@@ -1472,7 +1472,7 @@ public class CountryDialog extends Activity implements SearchView.OnQueryTextLis
 		
 		Map<String, Object> map85=new HashMap<String, Object>();
 		map85.put("countryFlag", R.drawable.portugal);
-		map85.put("countryName", "portugal");
+		map85.put("countryName", "Portugal");
 		map85.put("countryCode", "351");
 		
 		list.add(map85);
