@@ -67,15 +67,15 @@ public class SipHome extends SherlockFragmentActivity {
 
 
     private static final String THIS_FILE = "SIP_HOME";
-   // private final static int CONTACTS = 0;
+    // private final static int CONTACTS = 0;
     private final static int TAB_ID_CONTACTS = 1;
-    
+
     private final static int TAB_ID_DIALER = 0;
-  
+
     private final static int TAB_ID_CALL_LOG = 2;
     private final static int TAB_ID_FAVORITES = 3;
 
-    public static String user,pass;
+    public static String user, pass;
     SipProfile account;
 
     // protected static final int PICKUP_PHONE = 0;
@@ -92,7 +92,7 @@ public class SipHome extends SherlockFragmentActivity {
     private Thread asyncSanityChecker;
     private Tab warningTab;
     private ObjectAnimator warningTabfadeAnim;
-	private boolean done=false;
+    private boolean done = false;
 
     /**
      * Listener interface for Fragments accommodated in {@link ViewPager}
@@ -111,42 +111,41 @@ public class SipHome extends SherlockFragmentActivity {
 
         super.onCreate(savedInstanceState);
 
-     
+
         setContentView(R.layout.sip_home);
-        
+
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        
+
         final ActionBar ab = getSupportActionBar();
         ab.setDisplayShowHomeEnabled(false);
         ab.setDisplayShowTitleEnabled(false);
-       ab.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+        ab.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 //         ab.setNavigationMode(ActionBar.NAVIGATION_MODE_LIST);
 
         // showAbTitle = Compatibility.hasPermanentMenuKey
 
-       Tab contactsTab = ab.newTab()
-               .setContentDescription(R.string.contact)
-              .setIcon(R.drawable.phone_book);
-       
-       
-       Tab contactsTab1 = ab.newTab()
-               .setContentDescription(R.string.contact)
-              .setIcon(R.drawable.tab_contacts);
-       
-       
+        Tab contactsTab = ab.newTab()
+                .setContentDescription(R.string.contact)
+                .setIcon(R.drawable.phone_book);
+
+
+        Tab contactsTab1 = ab.newTab()
+                .setContentDescription(R.string.contact)
+                .setIcon(R.drawable.tab_contacts);
+
+
         Tab dialerTab = ab.newTab()
-                 .setContentDescription(R.string.dial_tab_name_text)
+                .setContentDescription(R.string.dial_tab_name_text)
                 .setIcon(R.drawable.ic_ab_dialer_holo_dark);
 
-     
 
         Tab callLogTab = ab.newTab()
-                 .setContentDescription(R.string.calllog_tab_name_text)
+                .setContentDescription(R.string.calllog_tab_name_text)
                 .setIcon(R.drawable.ic_ab_history_holo_dark);
-        
-        
-              Tab favoritesTab = ab.newTab()
-                 .setContentDescription(R.string.favorites_tab_name_text)
+
+
+        Tab favoritesTab = ab.newTab()
+                .setContentDescription(R.string.favorites_tab_name_text)
                 .setIcon(R.drawable.ic_more);
               /*         
         Tab messagingTab = null;
@@ -154,25 +153,25 @@ public class SipHome extends SherlockFragmentActivity {
             messagingTab = ab.newTab()
                     .setContentDescription(R.string.messages_tab_name_text)
                     .setIcon(R.drawable.ic_ab_text_holo_dark);
-        }*/  
-              
-              setTheme(R.style.DarkTheme2);
+        }*/
+
+        setTheme(R.style.DarkTheme2);
         mDualPane = getResources().getBoolean(R.bool.use_dual_panes);
 
         mViewPager = (ViewPager) findViewById(R.id.pager);
         mViewPager.setOffscreenPageLimit(4);
         mTabsAdapter = new TabsAdapter(this, getSupportActionBar(), mViewPager);
-       // mTabsAdapter.addTab(contactsTab1, ContactManager.class, CONTACTS);
+        // mTabsAdapter.addTab(contactsTab1, ContactManager.class, CONTACTS);
         mTabsAdapter.addTab(dialerTab, DialerFragment.class, TAB_ID_DIALER);
-      //  mTabsAdapter.addTab(contactsTab, NewAccount.class, TAB_ID_CONTACTS);
-     
+        //  mTabsAdapter.addTab(contactsTab, NewAccount.class, TAB_ID_CONTACTS);
+
         mTabsAdapter.addTab(callLogTab, CallLogListFragment.class, TAB_ID_CALL_LOG);
         mTabsAdapter.addTab(favoritesTab, More.class, TAB_ID_FAVORITES);
 
        /*         if (messagingTab != null) {
             mTabsAdapter.addTab(messagingTab, ConversationsListFragment.class, TAB_ID_MESSAGES);
         }
-*/        
+*/
 
         hasTriedOnceActivateAcc = false;
 
@@ -184,7 +183,7 @@ public class SipHome extends SherlockFragmentActivity {
         Log.setLogLevel(prefProviderWrapper.getLogLevel());
      
      /*   LocalBroadcastManager.getInstance(this).registerReceiver(mMessageReceiver,
-        	      new IntentFilter(SipManager.ACTION_SIP_DIALER));*/
+                  new IntentFilter(SipManager.ACTION_SIP_DIALER));*/
     }
 
 /*    private BroadcastReceiver mMessageReceiver = new BroadcastReceiver() {
@@ -214,6 +213,7 @@ public class SipHome extends SherlockFragmentActivity {
             }
     	  }
     	};*/
+
     /**
      * This is a helper class that implements the management of tabs and all
      * details of connecting a ViewPager with associated TabHost. It relies on a
@@ -233,7 +233,7 @@ public class SipHome extends SherlockFragmentActivity {
         private final List<String> mTabs = new ArrayList<String>();
         private final List<Integer> mTabsId = new ArrayList<Integer>();
         private boolean hasClearedDetails = false;
-        
+
 
         private int mCurrentPosition = -1;
         /**
@@ -257,24 +257,24 @@ public class SipHome extends SherlockFragmentActivity {
             mActionBar.addTab(tab.setTabListener(this));
             notifyDataSetChanged();
         }
-        
+
         public void removeTabAt(int location) {
             mTabs.remove(location);
             mTabsId.remove(location);
             mActionBar.removeTabAt(location);
             notifyDataSetChanged();
         }
-        
+
         public Integer getIdForPosition(int position) {
-            if(position >= 0 && position < mTabsId.size()) {
+            if (position >= 0 && position < mTabsId.size()) {
                 return mTabsId.get(position);
             }
             return null;
         }
-        
+
         public Integer getPositionForId(int id) {
             int fPos = mTabsId.indexOf(id);
-            if(fPos >= 0) {
+            if (fPos >= 0) {
                 return fPos;
             }
             return null;
@@ -294,7 +294,7 @@ public class SipHome extends SherlockFragmentActivity {
         public void onTabSelected(Tab tab, FragmentTransaction ft) {
             clearDetails();
             if (mViewPager.getCurrentItem() != tab.getPosition()) {
-            	Log.e(THIS_FILE+"Anurag debugging","ISSUE HERE");
+                Log.e(THIS_FILE + "Anurag debugging", "ISSUE HERE");
                 mViewPager.setCurrentItem(tab.getPosition(), true);
             }
         }
@@ -317,10 +317,12 @@ public class SipHome extends SherlockFragmentActivity {
         public void onTabReselected(Tab tab, FragmentTransaction ft) {
             // Nothing to do
         }
+
         @Override
-        public int getItemPosition(Object object){
-			return mCurrentPosition;
-			}
+        public int getItemPosition(Object object) {
+            return mCurrentPosition;
+        }
+
         @Override
         public void onTabUnselected(Tab tab, FragmentTransaction ft) {
             // Nothing to do
@@ -331,13 +333,14 @@ public class SipHome extends SherlockFragmentActivity {
             // Nothing to do
         }
 
-        @SuppressLint("NewApi") @Override
+        @SuppressLint("NewApi")
+        @Override
         public void onPageScrollStateChanged(int state) {
             switch (state) {
                 case ViewPager.SCROLL_STATE_IDLE: {
-                	Log.e(THIS_FILE, "SCROLL_STATE_IDLE"+mCurrentPosition);
+                    Log.e(THIS_FILE, "SCROLL_STATE_IDLE" + mCurrentPosition);
                     if (mCurrentPosition >= 0) {
-                    	//TODO: TAB GAYAB TESTING
+                        //TODO: TAB GAYAB TESTING
                         sendFragmentVisibilityChange(mCurrentPosition, false);
                     }
                     if (mNextPosition >= 0) {
@@ -349,12 +352,12 @@ public class SipHome extends SherlockFragmentActivity {
                     break;
                 }
                 case ViewPager.SCROLL_STATE_DRAGGING:
-                	Log.e(THIS_FILE, "SCROLL_STATE_DRAGGING");
+                    Log.e(THIS_FILE, "SCROLL_STATE_DRAGGING");
                     clearDetails();
                     hasClearedDetails = true;
                     break;
                 case ViewPager.SCROLL_STATE_SETTLING:
-                	Log.e(THIS_FILE, "SCROLL_STATE_SETTLING");
+                    Log.e(THIS_FILE, "SCROLL_STATE_SETTLING");
                     hasClearedDetails = false;
                     break;
                 default:
@@ -364,7 +367,7 @@ public class SipHome extends SherlockFragmentActivity {
 
         private void clearDetails() {
             if (mDualPane && !hasClearedDetails) {
-            	Log.e(THIS_FILE, "check in clear detalis");
+                Log.e(THIS_FILE, "check in clear detalis");
                 FragmentTransaction ft = SipHome.this.getSupportFragmentManager()
                         .beginTransaction();
                 ft.replace(R.id.details, new Fragment(), null);
@@ -378,12 +381,12 @@ public class SipHome extends SherlockFragmentActivity {
     private CallLogListFragment mCallLogFragment;
     private ConversationsListFragment mMessagesFragment;
     private ContactManager mContactManager;
-    private More mPhoneFavoriteFragment; 
+    private More mPhoneFavoriteFragment;
 //    private WarningFragment mWarningFragment;
 
     private Fragment getFragmentAt(int position) {
         Integer id = mTabsAdapter.getIdForPosition(position);
-        if(id != null) {
+        if (id != null) {
             if (id == TAB_ID_DIALER) {
                 return mDialpadFragment;
             } else if (id == TAB_ID_CALL_LOG) {
@@ -392,8 +395,7 @@ public class SipHome extends SherlockFragmentActivity {
                 return mPhoneFavoriteFragment;
             } /*else if (position == TAB_ID_FAVORITES) {
                 return mPhoneFavoriteFragment;
-            }*/
-            else if (position == TAB_ID_CONTACTS) {
+            }*/ else if (position == TAB_ID_CONTACTS) {
                 return mContactManager;
             }
             /* else if (position == TAB_ID_WARNING) {
@@ -416,68 +418,64 @@ public class SipHome extends SherlockFragmentActivity {
             if (fragment instanceof ViewPagerVisibilityListener) {
                 ((ViewPagerVisibilityListener) fragment).onVisibilityChanged(visibility);
             }
-        }catch(IllegalStateException e) {
+        } catch (IllegalStateException e) {
             Log.e(THIS_FILE, "Fragment not anymore managed");
 
-        	e.printStackTrace();
-        }catch(Exception e) {
+            e.printStackTrace();
+        } catch (Exception e) {
             Log.e(THIS_FILE, "Fragment not anymore managed");
 
-        	e.printStackTrace();
+            e.printStackTrace();
         }
     }
- @Override
+
+    @Override
     public void onAttachFragment(Fragment fragment) {
         // This method can be called before onCreate(), at which point we cannot
         // rely on ViewPager.
         // In that case, we will setup the "current position" soon after the
         // ViewPager is ready.
         final int currentPosition = mViewPager != null ? mViewPager.getCurrentItem() : -1;
-        Integer tabId = null; 
-        if(mTabsAdapter != null) {
+        Integer tabId = null;
+        if (mTabsAdapter != null) {
             tabId = mTabsAdapter.getIdForPosition(currentPosition);
         }
         if (fragment instanceof DialerFragment) {
-        	Log.e(THIS_FILE+"*Test","DialerFragment" );
+            Log.e(THIS_FILE + "*Test", "DialerFragment");
             mDialpadFragment = (DialerFragment) fragment;
             if (initTabId == tabId && tabId != null && tabId == TAB_ID_DIALER) {
                 mDialpadFragment.onVisibilityChanged(true);
                 initTabId = null;
             }
-            if(initDialerWithText != null) {
-            //    mDialpadFragment.setTextDialing(true);
+            if (initDialerWithText != null) {
+                //    mDialpadFragment.setTextDialing(true);
                 mDialpadFragment.setTextFieldValue(initDialerWithText);
                 initDialerWithText = null;
             }
         } else if (fragment instanceof CallLogListFragment) {
-        	Log.e(THIS_FILE+"*Test","Call log Fragment" );
+            Log.e(THIS_FILE + "*Test", "Call log Fragment");
             mCallLogFragment = (CallLogListFragment) fragment;
             if (initTabId == tabId && tabId != null && tabId == TAB_ID_CALL_LOG) {
                 mCallLogFragment.onVisibilityChanged(true);
                 initTabId = null;
             }
-        } 
-        else if (fragment instanceof ContactManager) {
-        	Log.e(THIS_FILE+"*Test","Contact Fragment" );
+        } else if (fragment instanceof ContactManager) {
+            Log.e(THIS_FILE + "*Test", "Contact Fragment");
             mContactManager = (ContactManager) fragment;
             if (initTabId == tabId && tabId != null && tabId == TAB_ID_CONTACTS) {
-            	mContactManager.onVisibilityChanged(true);
+                mContactManager.onVisibilityChanged(true);
                 initTabId = null;
             }
-        }
- else if (fragment instanceof More) {
-	 Log.e(THIS_FILE+"*Test","More Fragment" );
+        } else if (fragment instanceof More) {
+            Log.e(THIS_FILE + "*Test", "More Fragment");
             mPhoneFavoriteFragment = (More) fragment;
             if (initTabId == tabId && tabId != null && tabId == TAB_ID_FAVORITES) {
                 mPhoneFavoriteFragment.onVisibilityChanged(true);
                 initTabId = null;
             }
         }
-       
-        }
 
-
-
+    }
 
 
     // Service monitoring stuff
@@ -487,10 +485,12 @@ public class SipHome extends SherlockFragmentActivity {
                 Intent serviceIntent = new Intent(SipManager.INTENT_SIP_SERVICE);
                 serviceIntent.putExtra(SipManager.EXTRA_OUTGOING_ACTIVITY, new ComponentName(SipHome.this, SipHome.class));
                 startService(serviceIntent);
-                if(user==null||user==""){
+                if (user == null || user == "") {
                     postStartSipService();
-                    }
-            };
+                }
+            }
+
+            ;
         };
         t.start();
     }
@@ -498,17 +498,17 @@ public class SipHome extends SherlockFragmentActivity {
     private void postStartSipService() {
         // If we have never set fast settings
 
-    	 Intent accountIntent = null;
-    	AccountStatusDisplay accountStatusDisplay = AccountListUtils
-					.getAccountDisplay(getApplicationContext(), 1);
-			if(accountStatusDisplay.statusLabel!=getString(R.string.acct_registered))
-				 accountIntent=new Intent(this, AccountWizard.class);
-            if (accountIntent != null) {
-                accountIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(accountIntent);
-                hasTriedOnceActivateAcc = true;
-                return;
-            }
+        Intent accountIntent = null;
+        AccountStatusDisplay accountStatusDisplay = AccountListUtils
+                .getAccountDisplay(getApplicationContext(), 1);
+        if (accountStatusDisplay.statusLabel != getString(R.string.acct_registered))
+            accountIntent = new Intent(this, AccountWizard.class);
+        if (accountIntent != null) {
+            accountIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(accountIntent);
+            hasTriedOnceActivateAcc = true;
+            return;
+        }
 /*            if (accountCount == 0) {
                 Intent accountIntent = null;
 
@@ -532,8 +532,8 @@ public class SipHome extends SherlockFragmentActivity {
     protected void onPause() {
         Log.d(THIS_FILE, "On Pause SIPHOME");
         onForeground = false;
-        if(asyncSanityChecker != null) {
-            if(asyncSanityChecker.isAlive()) {
+        if (asyncSanityChecker != null) {
+            if (asyncSanityChecker.isAlive()) {
                 asyncSanityChecker.interrupt();
                 asyncSanityChecker = null;
             }
@@ -548,28 +548,28 @@ public class SipHome extends SherlockFragmentActivity {
         super.onResume();
         onForeground = true;
         long accountId = 1;
-		account = SipProfile.getProfileFromDbId(this, accountId,
-				DBProvider.ACCOUNT_FULL_PROJECTION);
-		user=account.getSipUserName();
-		pass=account.getPassword();
+        account = SipProfile.getProfileFromDbId(this, accountId,
+                DBProvider.ACCOUNT_FULL_PROJECTION);
+        user = account.getSipUserName();
+        pass = account.getPassword();
         prefProviderWrapper.setPreferenceBooleanValue(PreferencesWrapper.HAS_BEEN_QUIT, false);
-        
+
         // Set visible the currently selected account
         sendFragmentVisibilityChange(mViewPager.getCurrentItem(), true);
-        
+
         Log.d(THIS_FILE, "WE CAN NOW start SIP service");
         startSipService();
-        
-      //  applyTheme();
+
+        //  applyTheme();
     }
-    
+
     private ArrayList<View> getVisibleLeafs(View v) {
         ArrayList<View> res = new ArrayList<View>();
-        if(v.getVisibility() != View.VISIBLE) {
+        if (v.getVisibility() != View.VISIBLE) {
             return res;
         }
-        if(v instanceof ViewGroup) {
-            for(int i = 0; i < ((ViewGroup) v).getChildCount(); i++) {
+        if (v instanceof ViewGroup) {
+            for (int i = 0; i < ((ViewGroup) v).getChildCount(); i++) {
                 ArrayList<View> subLeafs = getVisibleLeafs(((ViewGroup) v).getChildAt(i));
                 res.addAll(subLeafs);
             }
@@ -638,15 +638,15 @@ public class SipHome extends SherlockFragmentActivity {
                         }
                     }
                 }
-                if(i > 0) {
+                if (i > 0) {
                     t.applyBackgroundDrawable((View) leafs.get(0).getParent().getParent(), "abs_background");
                 }
-                
+
                 Drawable d = t.getDrawableResource("split_background");
                 if (d != null) {
                     ab.setSplitBackgroundDrawable(d);
                 }
-                
+
                 t.applyBackgroundDrawable(vg, "content_background");
             }
         }
@@ -660,6 +660,7 @@ public class SipHome extends SherlockFragmentActivity {
 
     private String initDialerWithText = null;
     Integer initTabId = null;
+
     private void selectTabWithAction(Intent intent) {
         if (intent != null) {
             String callAction = intent.getAction();
@@ -672,36 +673,36 @@ public class SipHome extends SherlockFragmentActivity {
                         || callAction.equalsIgnoreCase(Intent.ACTION_VIEW)
                         || callAction.equalsIgnoreCase(Intent.ACTION_SENDTO) /* TODO : sendto should im if not csip? */) {
                     Integer pos = mTabsAdapter.getPositionForId(TAB_ID_DIALER);
-                    if(pos != null) {
+                    if (pos != null) {
                         toSelectTab = ab.getTabAt(pos);
                         Uri data = intent.getData();
-                        String nbr = UriUtils.extractNumberFromIntent(intent, this);                                        
+                        String nbr = UriUtils.extractNumberFromIntent(intent, this);
                         if (!TextUtils.isEmpty(nbr)) {
                             if (data != null && mDialpadFragment != null) {
-                               // mDialpadFragment.setTextDialing(true);
+                                // mDialpadFragment.setTextDialing(true);
                                 mDialpadFragment.setTextFieldValue(nbr);
                             } else {
-                            	Boolean b=mDialpadFragment == null;
-                            	   Log.e(b.toString(),nbr);                               
+                                Boolean b = mDialpadFragment == null;
+                                Log.e(b.toString(), nbr);
                             }
                         }
                         toSelectId = TAB_ID_DIALER;
                     }
                 } else if (callAction.equalsIgnoreCase(SipManager.ACTION_SIP_CALLLOG)) {
                     Integer pos = mTabsAdapter.getPositionForId(TAB_ID_CALL_LOG);
-                    if(pos != null) {
+                    if (pos != null) {
                         toSelectTab = ab.getTabAt(pos);
                         toSelectId = TAB_ID_CALL_LOG;
                     }
                 } else if (callAction.equalsIgnoreCase(SipManager.ACTION_SIP_FAVORITES)) {
                     Integer pos = mTabsAdapter.getPositionForId(TAB_ID_FAVORITES);
-                    if(pos != null) {
+                    if (pos != null) {
                         toSelectTab = ab.getTabAt(pos);
                         toSelectId = TAB_ID_FAVORITES;
                     }
                 } else if (callAction.equalsIgnoreCase(SipManager.ACTION_SIP_MESSAGES)) {
                     Integer pos = mTabsAdapter.getPositionForId(TAB_ID_CONTACTS);
-                    if(pos != null) {
+                    if (pos != null) {
                         toSelectTab = ab.getTabAt(pos);
                         toSelectId = TAB_ID_CONTACTS;
                     }
@@ -709,10 +710,10 @@ public class SipHome extends SherlockFragmentActivity {
                 if (toSelectTab != null) {
                     ab.selectTab(toSelectTab);
                     initTabId = toSelectId;
-                }else {
+                } else {
                     initTabId = null;
                 }
-                
+
             }
         }
     }
@@ -721,7 +722,7 @@ public class SipHome extends SherlockFragmentActivity {
     protected void onDestroy() {
         disconnect(false);
         super.onDestroy();
-    //    LocalBroadcastManager.getInstance(this).unregisterReceiver(mMessageReceiver);
+        //    LocalBroadcastManager.getInstance(this).unregisterReceiver(mMessageReceiver);
         Log.d(THIS_FILE, "---DESTROY SIP HOME END---");
     }
 
@@ -730,7 +731,7 @@ public class SipHome extends SherlockFragmentActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
 
         int actionRoom = getResources().getBoolean(R.bool.menu_in_bar) ? MenuItem.SHOW_AS_ACTION_IF_ROOM : MenuItem.SHOW_AS_ACTION_NEVER;
-        
+
         WizardInfo distribWizard = CustomDistribution.getCustomDistributionWizard();
         if (distribWizard != null) {
             menu.add(Menu.NONE, DISTRIB_ACCOUNT_MENU, Menu.NONE, "My " + distribWizard.label)
@@ -739,7 +740,7 @@ public class SipHome extends SherlockFragmentActivity {
         }
         if (CustomDistribution.distributionWantsOtherAccounts()) {
             int accountRoom = actionRoom;
-            if(Compatibility.isCompatible(13)) {
+            if (Compatibility.isCompatible(13)) {
                 accountRoom |= MenuItem.SHOW_AS_ACTION_WITH_TEXT;
             }
 /*            menu.add(Menu.NONE, ACCOUNTS_MENU, Menu.NONE,
@@ -773,33 +774,29 @@ public class SipHome extends SherlockFragmentActivity {
                 return true;
             case CLOSE_MENU:
                 Log.d(THIS_FILE, "CLOSE");
-                
+
                 new AlertDialog.Builder(this)
-                .setTitle("Quit Dialer ?")
-                .setMessage("Are you sure to quit the dialer")
-                .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        // prefWrapper.disableAllForIncoming();
-                    	  prefProviderWrapper.setPreferenceBooleanValue(PreferencesWrapper.HAS_BEEN_QUIT, true);
-                          disconnect(true);
-                    }
-                })
-                .setNegativeButton("Cancel", null)
-                .show();
-                
-                
-                
-                
-              
-                
+                        .setTitle("Quit Dialer ?")
+                        .setMessage("Are you sure to quit the dialer")
+                        .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                // prefWrapper.disableAllForIncoming();
+                                prefProviderWrapper.setPreferenceBooleanValue(PreferencesWrapper.HAS_BEEN_QUIT, true);
+                                disconnect(true);
+                            }
+                        })
+                        .setNegativeButton("Cancel", null)
+                        .show();
+
+
                 return true;
 
             case DISTRIB_ACCOUNT_MENU:
                 WizardInfo distribWizard = CustomDistribution.getCustomDistributionWizard();
 
-                Cursor c = getContentResolver().query(SipProfile.ACCOUNT_URI, new String[] {
+                Cursor c = getContentResolver().query(SipProfile.ACCOUNT_URI, new String[]{
                         SipProfile.FIELD_ID
-                }, SipProfile.FIELD_WIZARD + "=?", new String[] {
+                }, SipProfile.FIELD_WIZARD + "=?", new String[]{
                         distribWizard.id
                 }, null);
 
@@ -827,11 +824,12 @@ public class SipHome extends SherlockFragmentActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-    
+
     private final static int CHANGE_PREFS = 1;
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if(requestCode == CHANGE_PREFS) {
+        if (requestCode == CHANGE_PREFS) {
             sendBroadcast(new Intent(SipManager.ACTION_SIP_REQUEST_RESTART));
         }
         super.onActivityResult(requestCode, resultCode, data);
@@ -842,9 +840,9 @@ public class SipHome extends SherlockFragmentActivity {
         Intent intent = new Intent(SipManager.ACTION_OUTGOING_UNREGISTER);
         intent.putExtra(SipManager.EXTRA_OUTGOING_ACTIVITY, new ComponentName(this, SipHome.class));
         sendBroadcast(intent);
-        if(quit) {
+        if (quit) {
             finish();
         }
     }
-    
+
 }

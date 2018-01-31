@@ -174,6 +174,7 @@ public final class R {
 		public static final int abs__tab_selected_holo = 0x7f02002d;
 		public static final int abs__tab_selected_pressed_holo = 0x7f02002e;
 		public static final int abs__tab_unselected_pressed_holo = 0x7f02002f;
+		public static final int drop_down = 0x7f0200ed;
 	}
 	public static final class id {
 		public static final int abs__action_bar = 0x7f060025;
@@ -240,8 +241,8 @@ public final class R {
 		public static final int abs__screen_action_bar_overlay = 0x7f030012;
 		public static final int abs__screen_simple = 0x7f030013;
 		public static final int abs__screen_simple_overlay_action_mode = 0x7f030014;
-		public static final int sherlock_spinner_dropdown_item = 0x7f030064;
-		public static final int sherlock_spinner_item = 0x7f030065;
+		public static final int sherlock_spinner_dropdown_item = 0x7f030065;
+		public static final int sherlock_spinner_item = 0x7f030066;
 	}
 	public static final class string {
 		public static final int abs__action_bar_home_description = 0x7f0b0000;

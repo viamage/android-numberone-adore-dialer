@@ -1,6 +1,6 @@
 /*
  * This file is auto-generated.  DO NOT MODIFY.
- * Original file: D:\\Florin\\updatedcode\\florin updatedCSipSimple\\CSipSimple\\src\\com\\numberonecall\\api\\ISipService.aidl
+ * Original file: E:\\Sunil Prpjects\\sip1\\prifix\\FLORIN NUBER ONE\\CSipSimple\\src\\com\\numberonecall\\api\\ISipService.aidl
  */
 package com.numberonecall.api;
 public interface ISipService extends android.os.IInterface

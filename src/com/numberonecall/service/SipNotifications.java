@@ -76,7 +76,7 @@ public class SipNotifications {
 	public SipNotifications(Context aContext) {
 		context = aContext;
 		notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
-
+		notificationManager.cancelAll();
 		if (!isInit) {
 			cancelAll();
 			cancelCalls();

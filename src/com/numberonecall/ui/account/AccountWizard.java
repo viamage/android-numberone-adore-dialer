@@ -54,6 +54,7 @@ import com.numberonecall.api.SipManager;
 import com.numberonecall.api.SipProfile;
 import com.numberonecall.db.DBProvider;
 import com.numberonecall.models.Filter;
+import com.numberonecall.ui.ScreenSplash;
 import com.numberonecall.ui.SipHome;
 import com.numberonecall.ui.dialpad.DialerFragment;
 import com.numberonecall.ui.more.Signup;
@@ -73,12 +74,12 @@ public class AccountWizard extends SherlockActivity {
 	
 	CheckBox cbS;
 	 TextView tv;
-	TextView status;
+	TextView status ;
 	public static TextView tv1;
 	TextView status1;
 	// CheckBox cb;
 	boolean toggle=false;
-	public static EditText pass, user, sip, proxy,mobilenumber,acc_Mobile,textView11;
+	public static EditText pass, user, sip, proxy,mobilenumber,acc_Mobile,textView11,textView22;
 	String no;
 	protected static SipProfile account;
 	private WizardIface wizard = null;
@@ -87,7 +88,7 @@ public class AccountWizard extends SherlockActivity {
 	private BroadcastReceiver mReceiver;
 	ImageView imageView11;
 	public static Button register,button11;
-	public static String str,b,accountvalue,message,a,num,code,ss="";
+	public static String str,b,c,accountvalue,message,a,num,code,ss="";
 	IntentFilter intentFilter;
 	private ProgressDialog dialog;
 	protected void onCreate(Bundle savedInstanceState) {
@@ -104,6 +105,7 @@ public class AccountWizard extends SherlockActivity {
 		pass = (EditText) findViewById(R.id.acc_pass);
 		tv1 = (TextView) findViewById(R.id.textView1);
 		user = (EditText) findViewById(R.id.acc_user);
+		textView22 = (EditText) findViewById(R.id.textView2);
 		register = (Button) findViewById(R.id.acc_Register);
 	//	button11 = (Button) findViewById(R.id.button1);
 		//proxy = (EditText) findViewById(R.id.acc_proxy);
@@ -126,12 +128,16 @@ public class AccountWizard extends SherlockActivity {
 	
 	public void onResume() {
 		super.onResume();
+		
 		ActivitySwitcher.animationIn(findViewById(R.id.account_layout),
 				getWindowManager());
 		
-		
-		
-		
+		CountryDialog cd  = new CountryDialog();
+		cd.getListData();
+		CountryDialog.sortinggg(CountryDialog.list);
+		textView22.setText(ScreenSplash.anj);
+		imageView11.setImageResource(CountryDialog.flagg);
+		tv1.setText(CountryDialog.cc);
 		//sip.setText(account.getSipDomain());
 		try {
 			 no = user.getText().toString();
@@ -143,7 +149,9 @@ public class AccountWizard extends SherlockActivity {
 				pass.setText(account.getPassword());
 				
 				b = CountryDialog.countryCode;
-				
+				c = ScreenSplash.anj;
+				System.out.println("Value of country code iss 3333 :"+b);
+				System.out.println("Value of country code iss 3222 :"+c);
 				if(num != null && num != "")
 				{
 					user.setText(num);
@@ -153,23 +161,38 @@ public class AccountWizard extends SherlockActivity {
 				{
 					tv1.setText(code);
 					pass.setText(account.getPassword());
+					System.out.println("Value of country code iss 44444 :"+tv1);
 				}
 				if( CountryDialog.countryCode != null)
-				{
+				{   
 					tv1.setText(CountryDialog.countryCode);
 					pass.setText(account.getPassword());
+					System.out.println("Value of country code iss 5555 :"+tv1);
+				}
+				if( CountryDialog.countryName != null)
+				{   imageView11.setImageResource(CountryDialog.countryFlag);
+					textView22.setText(CountryDialog.countryName);
+					pass.setText(account.getPassword());
+					System.out.println("Value of country code iss 6666 :"+textView22);
 				}
 				
+				/*if( c != null)
+				{   
+					
+					tv1.setText(CountryDialog.cc);
 				
+					//textView22.setText(CountryDialog.countryName);
+					//pass.setText(account.getPassword());
+					System.out.println("Value of country code iss 8999 :");
+					System.out.println("Value of country code iss 8777 :"+CountryDialog.cc);
+					System.out.println("Value of country code iss 8888 :"+textView22);
+				}*/
 			
+			//imageView11.setImageResource(CountryDialog.countryFlag);
 			
-			
-		
-			
-			
-			imageView11.setImageResource(CountryDialog.countryFlag);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
+			//tv1.setText(b);
 			e.printStackTrace();
 		}
 		
@@ -811,7 +834,7 @@ System.out.println("DEVTADIYAL RATE"+ bal);
 //TODO Auto-generated catch block
 e.printStackTrace();
 }
-System.out.println(bal+"}}}}}}}}}}}}}}}}}}}}}}"+inputLine);  		
+System.out.println(bal+"}}}}}}}}}}}}}}}}}}}}}}2221"+inputLine);  		
 
 return bal+lab;
 
@@ -995,7 +1018,7 @@ bal=json.getString("OTP");
 //TODO Auto-generated catch block
 e.printStackTrace();
 }
-System.out.println(bal+"}}}}}}}}}}}}}}}}}}}}}}"+inputLine);  		
+System.out.println(bal+"}}}}}}}}}}}}}}}}}}}}}}1222"+inputLine);  		
 
 return bal;
 

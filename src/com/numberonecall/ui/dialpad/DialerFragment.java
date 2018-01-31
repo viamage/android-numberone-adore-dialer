@@ -109,7 +109,7 @@ public class DialerFragment extends SherlockFragment implements
 	
 	
     Context contx;
-	private static final String THIS_FILE = "DialerFragment";
+	private static  final String THIS_FILE = "DialerFragment";
 	public static boolean wasAccount = false;
 	private PreferencesProviderWrapper prefProviderWrapper;
 	protected static final int PICKUP_PHONE = 0;
@@ -1173,9 +1173,13 @@ public class DialerFragment extends SherlockFragment implements
 	@Override
 	public void phonebook() {
 		// TODO Auto-generated method stub
-		Intent pickContactIntent = new Intent(Intent.ACTION_PICK,ContactsContract.Contacts.CONTENT_URI);
+		/*Intent pickContactIntent = new Intent(Intent.ACTION_PICK,ContactsContract.Contacts.CONTENT_URI);
 	    pickContactIntent.setType(ContactsContract.CommonDataKinds.Phone.CONTENT_TYPE);
-	    startActivityForResult(pickContactIntent, PICK_CONTACT);
+	    startActivityForResult(pickContactIntent, PICK_CONTACT);*/
+		
+		
+		
+		
 		
 	}  
 	private void disconnect(boolean quit) {      
@@ -1374,7 +1378,7 @@ public class LongOperation extends AsyncTask<String, Void, String> {
     			String user1, pass1;
     			user1 = account.getSipUserName();
     			pass1 = account.getPassword();
-    			System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@DEVTADIYAL "+pass1);
+    			System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@DEVTADIYAL123 "+pass1);
 
     			
     			 URL oracle = new URL("http://91.212.52.5/VSServices//Export.ashx?f=getClientBalance&pin="+user1);
@@ -1495,7 +1499,7 @@ public class LongOperation extends AsyncTask<String, Void, String> {
     			user1 = account.getSipUserName();
     			pass1 = account.getPassword();
 
-    			System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@DEVTADIYAL "+pass1);
+    			System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@DEVTADIYAL456 "+pass1);
 
     			
     			 URL oracle = new URL("https://api-v1.numberonecall.com/api/v1/profile/"+user1+"?key=834cu9sA7vhS721bjXng9v7a6v118");

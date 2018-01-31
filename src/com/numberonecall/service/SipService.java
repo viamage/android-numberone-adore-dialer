@@ -292,6 +292,7 @@ public class SipService extends Service {
     						SipService.this.notifyUserOfMessage( getString(R.string.invalid_sip_uri)+ " : "+callee );
     					}
 					}else {
+						System.out.println(" iam number 1");
 					    SipService.this.notifyUserOfMessage( getString(R.string.connection_not_valid) );
 					}
 				}
@@ -1133,6 +1134,7 @@ public class SipService extends Service {
         // Check connectivity, else just finish itself
         if (!isConnectivityValid()) {
             notifyUserOfMessage(R.string.connection_not_valid);
+        	System.out.println(" iam number 2");
             Log.d(THIS_FILE, "Harakiri... we are not needed since no way to use self");
             cleanStop();
             return;
@@ -1252,6 +1254,7 @@ public class SipService extends Service {
 		if(!isConnectivityValid()) {
 		    notifyUserOfMessage(R.string.connection_not_valid);
 			Log.e(THIS_FILE, "No need to start sip");
+			System.out.println(" iam number 3");
 			return;
 		}
 		Log.d(THIS_FILE, "Start was asked and we should actually start now");

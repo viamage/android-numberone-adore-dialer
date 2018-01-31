@@ -8,6 +8,7 @@ import java.util.Map;
 import com.numberonecall.R;
 import com.numberonecall.api.SipProfile;
 import com.numberonecall.db.DBProvider;
+import com.numberonecall.ui.ScreenSplash;
 
 import android.annotation.SuppressLint;
 import android.app.Activity; 
@@ -29,12 +30,12 @@ public class CountryDialog extends Activity implements SearchView.OnQueryTextLis
 	  
 	ListView listview;
 	SearchView searchView;
-	List<Map<String, Object>> list;
+	public static List<Map<String, Object>> list;
 	protected static SipProfile account;
 	public static String countryCode,code;
 	public static String countryName;
-	public static int countryFlag;
-	public static String countryId;
+	public static int countryFlag,flagg;
+	public static String countryId,cc;
 	public static ImageView flag;
 	
 	 Object f,c,n;
@@ -185,7 +186,7 @@ public class CountryDialog extends Activity implements SearchView.OnQueryTextLis
 	public List<Map<String, Object>> getListData() 
 	{
 		list=new ArrayList<Map<String, Object>>();
-		
+		{
 	/*	Map<String, Object> map1=new HashMap<String, Object>();
 		map1.put("countryFlag", R.drawable.unitedstates);
 		map1.put("countryName", "USA");
@@ -1884,7 +1885,7 @@ public class CountryDialog extends Activity implements SearchView.OnQueryTextLis
 		
 		Map<String, Object> map108=new HashMap<String, Object>();
 		map108.put("countryFlag", R.drawable.unitedstates);
-		map108.put("countryName", "USA");
+		map108.put("countryName", "United States");
 		map108.put("countryCode", "+1");
 		map108.put("countryId", "1");
 		
@@ -1986,12 +1987,38 @@ public class CountryDialog extends Activity implements SearchView.OnQueryTextLis
 		//////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
 	
-		
 		return list;
+		
+	}
+		
+		
 	}
 	
-	
-
+	public static void sortinggg(List<Map<String, Object>> listsort ) {
+		   System.out.println("I am in Sorting1"+listsort.size());
+		
+		for (int i=0; i< listsort.size(); i++)
+		{
+			 System.out.println("I am in Sorting2");
+			
+			 Map<String, Object> myObjsm = listsort.get(i);
+			 //System.out.println(myObjsm.size());
+			 
+				 //System.out.println(myObjsm.get("countryName"));
+				 if((myObjsm.get("countryName").toString()).contains(ScreenSplash.anj)){
+					 
+					 cc=(String) myObjsm.get("countryCode");
+			 flagg   =		 (Integer) myObjsm.get("countryFlag");
+			        System.out.println("Matched key = "+flagg);
+			       break;
+			    } else{
+			        System.out.println("Key not matched with ID"); 
+			    }
+				 
+			 
+			
+		}
+	}
 
 
 	private void setupSearchView() {
