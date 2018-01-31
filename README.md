@@ -1,6 +1,6 @@
 ### NumberOne SIP Dialer
 
-Fork of CSipSimple created by Adore Technologies. GNU licensed now as it was *designated* to be.
+Fork of CSipSimple created by Adore Technologies. GPL2 licensed now as it was *designated* to be.
 
 ---
 
