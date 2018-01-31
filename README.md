@@ -1,6 +1,10 @@
 ### NumberOne SIP Dialer
 
-Fork of CSipSimple, GNU licensed as it should be. Uses PjSIP.
+Fork of CSipSimple created by Adore Technologies. GNU licensed now as it was *designated* to be.
+
+---
+
+https://play.google.com/store/apps/details?id=com.csipsimple&hl=en
 
 http://www.pjsip.org/
 
