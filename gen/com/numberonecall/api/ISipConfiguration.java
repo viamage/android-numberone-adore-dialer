@@ -1,6 +1,6 @@
 /*
  * This file is auto-generated.  DO NOT MODIFY.
- * Original file: E:\\Sunil Prpjects\\sip1\\prifix\\FLORIN NUBER ONE\\CSipSimple\\src\\com\\numberonecall\\api\\ISipConfiguration.aidl
+ * Original file: /Users/m8/pajeet/android-numberone-adore-dialer/src/com/numberonecall/api/ISipConfiguration.aidl
  */
 package com.numberonecall.api;
 public interface ISipConfiguration extends android.os.IInterface
