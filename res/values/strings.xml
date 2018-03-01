@@ -117,43 +117,40 @@
     <string name="login">Login</string>
     <string name="clear">Clear</string>
     <string name="contact">Contacts</string>
-    
-       <!-- Login page -->
-       
-        <string name="balance">Help</string>
+
+    <!-- Login page -->
+
+    <string name="balance">Help</string>
     <string name="balance_desc"></string>
-       
-       
-         <string name="voucher">Top Up</string>
+    <string name="voucher">Top Up</string>
     <string name="voucher_desc"></string>
-    
-     <string name="authorise">Authorize Your Number</string>
-  <string name="authorise_desc"></string>
-       
+    <string name="authorise">Authorize Your Number</string>
+    <string name="authorise_desc"></string>
     <string name="access">Call without internet</string>
     <string name="access_desc"></string>
-    
-      <string name="account">Log out</string>
+    <string name="account">Log out</string>
     <string name="account_desc"></string>
-    
-     <string name="profile">Rate</string>
+    <string name="profile">Rate</string>
     <string name="profile_desc"></string>
-    
-      <string name="msg">Mobile Message</string>
+    <string name="msg">Mobile Message</string>
     <string name="msg_desc"></string>
-    
     <string name="hint_sip">SIP Server IP</string>
     <string name="hint_proxy">Enter Proxy(Optional)</string>
     <string name="hint_pass">Enter PIN/Password</string>
     <string name="hint_user">Enter User Name</string>
-<string name="hint_did">Enter Access Number(DID)</string>
+    <string name="hint_did">Enter Access Number(DID)</string>
     <string name="type_prompt">Select Pin Type</string>
     <string name="about">About</string>
     <string name="about_desc">About us</string>
     <string name="exit">Exit</string>
     <string name="exit_desc"></string>
-      <string-array name="type_array">
-         <item>Pinless</item>
-         <item>PinBase</item>
-         </string-array>
+
+    <string-array name="type_array">
+        <item>Pinless</item>
+        <item>PinBase</item>
+    </string-array>
+
+    <string name="title_activity_sign_up_web_view">Sign Up</string>
+    <string name="hello_world">Hello world!</string>
+
 </resources>

@@ -11,7 +11,6 @@
         android:normalScreens="true"
         android:smallScreens="true"
         android:xlargeScreens="true" />
-   
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -36,7 +35,6 @@
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.READ_LOGS" />
     <uses-permission android:name="android.permission.USE_SIP" />
- 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.BROADCAST_STICKY" />
@@ -58,7 +56,6 @@
         android:label="@string/permlab_configureSip"
         android:permissionGroup="android.permission-group.COST_MONEY"
         android:protectionLevel="dangerous" />
-    
 
     <!-- END OF COMMENT THIS -->
 
@@ -106,24 +103,23 @@
             android:value="trunk" />
 
         <activity
-            android:name="com.numberonecall.ui.ScreenSplash"
+            android:name=".ui.ScreenSplash"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/DarkTheme" >
-         <intent-filter>
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name="com.numberonecall.ui.SipHome"
+            android:name=".ui.SipHome"
             android:label="@string/app_name"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/DarkTheme1"
             android:uiOptions="splitActionBarWhenNarrow" >
-               
             <intent-filter android:priority="10" >
                 <action android:name="com.numberonecall.phone.action.DIALER" />
 
@@ -155,10 +151,10 @@
         </activity>
 
         <activity-alias
-            android:name="com.numberonecall.ui.SipDialer"
+            android:name=".ui.SipDialer"
             android:label="@string/app_name"
             android:launchMode="singleTask"
-            android:targetActivity="com.numberonecall.ui.SipHome"
+            android:targetActivity=".ui.SipHome"
             android:theme="@style/DarkTheme"
             android:uiOptions="splitActionBarWhenNarrow" >
             <intent-filter>
@@ -194,7 +190,7 @@
         <!-- Main service -->
         <!-- Require at least the configure permission to use -->
         <service
-            android:name="com.numberonecall.service.SipService"
+            android:name=".service.SipService"
             android:exported="true"
             android:permission="android.permission.CONFIGURE_SIP"
             android:process=":sipStack" >
@@ -203,10 +199,10 @@
                 <action android:name="com.numberonecall.service.SipConfiguration" />
             </intent-filter>
         </service>
-        <service android:name="com.numberonecall.service.Downloader" />
+        <service android:name=".service.Downloader" />
 
         <receiver
-            android:name="com.numberonecall.service.DeviceStateReceiver"
+            android:name=".service.DeviceStateReceiver"
             android:process=":sipStack" >
 
             <!-- Here filter for protected-broadcasts -->
@@ -222,8 +218,7 @@
             </intent-filter>
         </receiver>
         <receiver
-            android:name="com.numberonecall.service.DeviceStateReceiver"
-           
+            android:name=".service.DeviceStateReceiver"
             android:process=":sipStack" >
             <intent-filter>
                 <action android:name="com.numberonecall.accounts.activate" />
@@ -232,34 +227,33 @@
 
         <!-- Main ui -->
         <activity
-            android:name="com.numberonecall.ui.calllog.CallLogDetailsActivity"
+            android:name=".ui.calllog.CallLogDetailsActivity"
             android:theme="@style/DarkTheme" />
 
         <!-- Accounts -->
         <activity
-            android:name="com.numberonecall.ui.filters.AccountFilters"
+            android:name=".ui.filters.AccountFilters"
             android:configChanges="orientation"
             android:label="@string/filters"
             android:theme="@style/DarkTheme" />
         <activity
-            android:name="com.numberonecall.ui.filters.EditFilter"
+            android:name=".ui.filters.EditFilter"
             android:configChanges="orientation"
             android:label="@string/filters"
             android:theme="@style/DarkTheme" />
         <activity
-            android:name="com.numberonecall.wizards.WizardChooser"
+            android:name=".wizards.WizardChooser"
             android:configChanges="orientation"
             android:label="@string/choose_wizard"
             android:theme="@style/DarkTheme.Dialog" />
 
         <!-- Preferences -->
         <activity
-            android:name="com.numberonecall.ui.prefs.hc.MainPrefs"
+            android:name=".ui.prefs.hc.MainPrefs"
             android:configChanges="orientation"
             android:enabled="@bool/use_hc_prefs"
             android:label="@string/prefs"
-          
-            android:theme="@style/Sherlock.__Theme.Light">
+            android:theme="@style/Sherlock.__Theme.Light" >
             <intent-filter>
                 <action android:name="com.numberonecall.ui.action.PREFS_GLOBAL" />
 
@@ -267,11 +261,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.numberonecall.ui.prefs.cupcake.MainPrefs"
+            android:name=".ui.prefs.cupcake.MainPrefs"
             android:configChanges="orientation"
             android:enabled="@bool/use_cupcake_prefs"
             android:label="@string/prefs"
-        
             android:theme="@style/DarkTheme" >
             <intent-filter>
                 <action android:name="com.numberonecall.ui.action.PREFS_GLOBAL" />
@@ -280,16 +273,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.numberonecall.ui.prefs.cupcake.PrefsLoaderActivity"
+            android:name=".ui.prefs.cupcake.PrefsLoaderActivity"
             android:label=""
             android:theme="@style/DarkTheme" />
         <activity
-            android:name="com.numberonecall.ui.prefs.PrefsFilters"
+            android:name=".ui.prefs.PrefsFilters"
             android:configChanges="orientation"
             android:label="@string/filters"
             android:theme="@style/DarkTheme" />
         <activity
-            android:name="com.numberonecall.ui.prefs.PrefsFast"
+            android:name=".ui.prefs.PrefsFast"
             android:configChanges="orientation"
             android:label="@string/prefs_fast"
             android:permission="android.permission.CONFIGURE_SIP"
@@ -301,32 +294,33 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.numberonecall.ui.prefs.Codecs"
+            android:name=".ui.prefs.Codecs"
             android:configChanges="orientation"
             android:label="@string/codecs"
             android:theme="@style/DarkTheme" />
         <activity
-            android:name="com.numberonecall.ui.prefs.AudioTester"
+            android:name=".ui.prefs.AudioTester"
             android:label="@string/test_audio"
             android:screenOrientation="portrait"
             android:theme="@style/DarkTheme.Dialog" />
 
         <!-- Wizards -->
         <activity
-            android:name="com.numberonecall.wizards.BasePrefsWizard"
+            android:name=".wizards.BasePrefsWizard"
             android:configChanges="orientation"
             android:label="@string/edit"
             android:theme="@style/DarkTheme" />
 
         <!-- Test Intent -->
         <activity
-            android:name="com.numberonecall.ui.account.AccountWizard"
-            android:screenOrientation="portrait"
+            android:name=".ui.account.AccountWizard"
             android:label="Log in"
+            android:screenOrientation="portrait"
             android:theme="@style/DarkTheme" />
 
         <!-- Call management -->
-        <!-- <receiver
+        <!--
+        <receiver
             android:name="com.numberonecall.service.OutgoingCall"
             android:permission="android.permission.CALL_PHONE"
             android:process=":sipStack" >
@@ -335,10 +329,11 @@
             <intent-filter android:priority="0" >
                 <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
             </intent-filter>
-        </receiver> -->
+        </receiver>
+        -->
 
         <activity
-            android:name="com.numberonecall.ui.outgoingcall.OutgoingCallChooser"
+            android:name=".ui.outgoingcall.OutgoingCallChooser"
             android:allowTaskReparenting="false"
             android:configChanges="orientation"
             android:excludeFromRecents="true"
@@ -369,12 +364,12 @@
         </activity>
 
         <activity-alias
-            android:name="com.numberonecall.ui.PrivilegedOutgoingSipCallBroadcaster"
+            android:name=".ui.PrivilegedOutgoingSipCallBroadcaster"
             android:configChanges="orientation"
             android:excludeFromRecents="true"
             android:launchMode="singleTask"
             android:permission="android.permission.CALL_PRIVILEGED"
-            android:targetActivity="com.numberonecall.ui.outgoingcall.OutgoingCallChooser"
+            android:targetActivity=".ui.outgoingcall.OutgoingCallChooser"
             android:theme="@style/DarkTheme.Dialog" >
             <intent-filter>
                 <action android:name="android.intent.action.CALL_PRIVILEGED" />
@@ -385,14 +380,14 @@
             </intent-filter>
         </activity-alias>
         <activity-alias
-            android:name="com.numberonecall.ui.PrivilegedOutgoingCallBroadcaster"
+            android:name=".ui.PrivilegedOutgoingCallBroadcaster"
             android:configChanges="orientation"
             android:enabled="false"
             android:excludeFromRecents="true"
             android:label="@string/sip_call"
             android:launchMode="singleTask"
             android:permission="android.permission.CALL_PRIVILEGED"
-            android:targetActivity="com.numberonecall.ui.outgoingcall.OutgoingCallChooser"
+            android:targetActivity=".ui.outgoingcall.OutgoingCallChooser"
             android:theme="@style/DarkTheme.Dialog" >
             <intent-filter>
                 <action android:name="android.intent.action.CALL_PRIVILEGED" />
@@ -421,12 +416,11 @@
 
         <!-- To be able to do video, this has to be launched in sipStack process -->
         <activity
-            android:name="com.numberonecall.ui.incall.InCallActivity"
+            android:name=".ui.incall.InCallActivity"
             android:allowTaskReparenting="true"
             android:configChanges="orientation"
             android:excludeFromRecents="true"
             android:launchMode="singleTask"
-          
             android:process=":sipStack"
             android:taskAffinity=""
             android:theme="@style/DarkTheme.NoTitle" >
@@ -437,22 +431,22 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.numberonecall.ui.PickupSipUri"
+            android:name=".ui.PickupSipUri"
             android:configChanges="orientation"
             android:label="@string/pickup_sip_uri"
             android:theme="@style/DarkTheme" />
         <activity
-            android:name="com.numberonecall.ui.incall.InCallMediaControl"
+            android:name=".ui.incall.InCallMediaControl"
             android:configChanges="orientation"
             android:label="@string/prefs_media"
             android:taskAffinity="com.numberonecall.ui.incall.InCallActivity"
             android:theme="@style/DarkTheme.Dialog" />
 
-        <receiver android:name="com.numberonecall.service.HeadsetButtonReceiver" />
+        <receiver android:name=".service.HeadsetButtonReceiver" />
 
         <!-- Widget -->
         <receiver
-            android:name="com.numberonecall.widgets.AccountWidgetProvider"
+            android:name=".widgets.AccountWidgetProvider"
             android:icon="@drawable/ic_launcher_phone"
             android:label="@string/gadget_title" >
             <intent-filter>
@@ -467,7 +461,7 @@
         </receiver>
 
         <activity
-            android:name="com.numberonecall.widgets.AccountWidgetConfigure"
+            android:name=".widgets.AccountWidgetConfigure"
             android:theme="@style/DarkTheme" >
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
@@ -475,7 +469,7 @@
         </activity>
 
         <receiver
-            android:name="com.numberonecall.widgets.ShortcutWidgetProvider"
+            android:name=".widgets.ShortcutWidgetProvider"
             android:icon="@drawable/ic_ab_favourites_holo_dark"
             android:label="@string/csipsimple_shortcut" >
             <intent-filter>
@@ -488,7 +482,7 @@
         </receiver>
 
         <activity
-            android:name="com.numberonecall.widgets.ShortcutWidgetConfigure"
+            android:name=".widgets.ShortcutWidgetConfigure"
             android:theme="@style/DarkTheme" >
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
@@ -497,7 +491,7 @@
 
         <!-- Messages -->
         <activity
-            android:name="com.numberonecall.ui.messages.MessageActivity"
+            android:name=".ui.messages.MessageActivity"
             android:configChanges="orientation"
             android:launchMode="singleTop"
             android:theme="@style/DarkTheme"
@@ -506,7 +500,7 @@
         <!-- Embedded plugins -->
         <!-- Call handlers android:process=":telCallHandler" -->
         <receiver
-            android:name="com.numberonecall.plugins.telephony.CallHandler"
+            android:name=".plugins.telephony.CallHandler"
             android:permission="android.permission.PROCESS_OUTGOING_CALLS"
             android:process=":sipStack" >
             <intent-filter>
@@ -516,79 +510,62 @@
 
         <!-- Databases providers -->
         <provider
-            android:name="com.numberonecall.service.PreferenceProvider"
-            android:authorities="com.numberonecall.prefs"
-          />
+            android:name=".service.PreferenceProvider"
+            android:authorities="com.numberonecall.prefs" />
         <provider
-            android:name="com.numberonecall.db.DBProvider"
+            android:name=".db.DBProvider"
             android:authorities="com.numberonecall.db"
-            
             android:process=":sipStack" />
 
         <!-- New UI -->
         <activity
-            android:name="com.numberonecall.ui.account.AccountsEditList"
+            android:name=".ui.account.AccountsEditList"
             android:label="@string/accounts"
             android:theme="@style/DarkTheme" />
         <activity
-            android:name="com.numberonecall.ui.account.AccountEdit"
+            android:name=".ui.account.AccountEdit"
             android:theme="@style/DarkTheme" />
-        
-         <activity
-            android:name="com.numberonecall.ui.more.RefillVoucher"
-            android:theme="@style/DarkTheme" />
-         
-          
-         <activity
-            android:name="com.numberonecall.ui.more.Rate"
-            android:theme="@style/DarkTheme" />
-         
-           <activity
-            android:name="com.numberonecall.ui.more.DidFront"
-            android:theme="@style/DarkTheme" />
-         
-             <activity
-            android:name="com.numberonecall.ui.more.MobileMessage"
-            android:theme="@style/DarkTheme" />
-             
-              
-         <activity
-            android:name="com.numberonecall.ui.more.AccountUpdate"
-           
-            android:theme="@style/DarkTheme"  >
-        </activity>
-             
-              <activity
-            android:name="com.numberonecall.ui.more.BalanceTransfer"
-            android:theme="@style/DarkTheme" />
-        
-           <activity
-            android:name="com.numberonecall.ui.more.Support"
-            android:theme="@style/DarkTheme" />
-           
-            <activity
-            android:name="com.numberonecall.ui.more.Help"
-            android:theme="@style/DarkTheme" />
-            
-             <activity
-            android:name="com.numberonecall.ui.more.Authorised"
-            android:theme="@style/DarkTheme" />
-             
-                <activity
-            android:name="com.numberonecall.ui.account.CountryDialog"
-            android:theme="@style/DarkTheme" />
-           
-             <activity
-            android:name="com.numberonecall.ui.more.Accessno"
-            android:theme="@style/DarkTheme" />
-         
         <activity
-            android:name="com.numberonecall.ui.contacts.AddContactDialog"
+            android:name=".ui.more.RefillVoucher"
+            android:theme="@style/DarkTheme" />
+        <activity
+            android:name=".ui.more.Rate"
+            android:theme="@style/DarkTheme" />
+        <activity
+            android:name=".ui.more.DidFront"
+            android:theme="@style/DarkTheme" />
+        <activity
+            android:name=".ui.more.MobileMessage"
+            android:theme="@style/DarkTheme" />
+        <activity
+            android:name=".ui.more.AccountUpdate"
+            android:theme="@style/DarkTheme" >
+        </activity>
+        <activity
+            android:name=".ui.more.BalanceTransfer"
+            android:theme="@style/DarkTheme" />
+        <activity
+            android:name=".ui.more.Support"
+            android:theme="@style/DarkTheme" />
+        <activity
+            android:name=".ui.more.Help"
+            android:theme="@style/DarkTheme" />
+        <activity
+            android:name=".ui.more.Authorised"
+            android:theme="@style/DarkTheme" />
+        <activity
+            android:name=".ui.account.CountryDialog"
+            android:theme="@style/DarkTheme" />
+        <activity
+            android:name=".ui.more.Accessno"
+            android:theme="@style/DarkTheme" />
+        <activity
+            android:name=".ui.contacts.AddContactDialog"
             android:label="Add Contact"
             android:theme="@android:style/Theme.Dialog" >
         </activity>
         <activity
-            android:name="com.numberonecall.ui.more.AboutDialog"
+            android:name=".ui.more.AboutDialog"
             android:label="About Us.."
             android:theme="@android:style/Theme.Dialog" >
         </activity>
@@ -597,8 +574,14 @@
 
         <!-- Extra wizard creation account activities -->
         <activity
-            android:name="com.numberonecall.wizards.impl.MondotalkCreate"
+            android:name=".wizards.impl.MondotalkCreate"
             android:theme="@style/DarkTheme" />
+        <activity
+            android:name="com.numberonecall.ui.account.SignUpWebView"
+            android:label="@string/title_activity_sign_up_web_view" 
+            android:screenOrientation="portrait"
+            android:theme="@style/DarkTheme" >
+        </activity>
     </application>
 
 </manifest>

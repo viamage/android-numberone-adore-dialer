@@ -83,7 +83,7 @@ public class AccountWizard extends SherlockActivity {
 	String no;
 	protected static SipProfile account;
 	private WizardIface wizard = null;
-	LongOperation1 asyncTask2 =new LongOperation1(AccountWizard.this);
+	LongOperation1 asyncTask2 = new LongOperation1(AccountWizard.this);
 	private String wizardId = "";
 	private BroadcastReceiver mReceiver;
 	ImageView imageView11;
@@ -444,8 +444,10 @@ public class AccountWizard extends SherlockActivity {
 			
 			
 		case R.id.forget_button:
-			Intent intent= new Intent(Intent.ACTION_VIEW,Uri.parse("https://portal.numberonecall.com/signin?mobile=1"));
-			startActivity(intent);
+			Intent signUpIntent = new Intent(AccountWizard.this, SignUpWebView.class);
+			startActivity(signUpIntent);
+			//Intent intent= new Intent(Intent.ACTION_VIEW,Uri.parse("https://portal.numberonecall.com/signin?mobile=1"));
+			//startActivity(intent);
 		//	http://portal.numone.keios.eu/signup
 			  break;
 			  
