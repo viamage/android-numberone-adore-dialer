@@ -26,13 +26,12 @@ public class SignUpWebView extends SherlockActivity {
 		WebSettings webSettings = webView.getSettings();
 		webSettings.setJavaScriptEnabled(true);
 		
-      	final Intent returnIntent = new Intent(SignUpWebView.this, AccountWizard.class);
       	final SignUpWebView currentActivity = this;
 		webView.setWebViewClient(new WebViewClient() {
 			@Override
 		    public boolean shouldOverrideUrlLoading(WebView view, String url) {
 		        if (url.equals("https://portal.numberonecall.com/")) {
-					currentActivity.startActivity(returnIntent);
+					currentActivity.finish();
 		            return true;
 		        }
 		        return false;

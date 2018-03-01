@@ -150,7 +150,7 @@
         <item>PinBase</item>
     </string-array>
 
-    <string name="title_activity_sign_up_web_view">SignUpWebView</string>
+    <string name="title_activity_sign_up_web_view">Sign Up</string>
     <string name="hello_world">Hello world!</string>
 
 </resources>
