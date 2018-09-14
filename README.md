@@ -2,7 +2,7 @@
 
 Fork of CSipSimple created by Adore Technologies. GPL2 licensed now as it was *designated* to be.
 
----
+-----
 
 https://play.google.com/store/apps/details?id=com.csipsimple&hl=en
 
